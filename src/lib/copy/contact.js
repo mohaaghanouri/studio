@@ -4,7 +4,7 @@ export const site = 'https://moha.expert';
 
 export const contact = {
 	whatsapp: '491706128949',
-	telegram: '',
+	telegram: 'mohaaghanouri',
 	email: 'moha@moha.expert',
 	formspree: '',
 	city: 'Berlin'
