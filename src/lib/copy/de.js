@@ -60,7 +60,7 @@ export default {
 				label: 'Content-Creator',
 				headline: 'Creator, die mit KI arbeiten — nicht gegen sie.',
 				story: [
-					'Videomacher, Autorinnen, Podcaster — die meisten sind KI zuerst als Bedrohung begegnet, dann als Spielzeug. Ich habe in den letzten Jahren viele Creator einzeln hindurchgeführt: welche Werkzeuge wirklich zu ihrem Handwerk passen, welche nur ein Abo verschwenden und wie daraus eine Wochenroutine wird statt eines Stapels offener Tabs.',
+					'Videomacher, Autoren, Podcaster — die meisten sind KI zuerst als Bedrohung begegnet, dann als Spielzeug. Ich habe in den letzten Jahren viele Creator einzeln hindurchgeführt: welche Werkzeuge wirklich zu ihrem Handwerk passen, welche nur ein Abo verschwenden und wie daraus eine Wochenroutine wird statt eines Stapels offener Tabs.',
 					'Das Ergebnis ist immer persönlich. Skripte entstehen schneller, klingen aber weiterhin nach ihnen; Schnitt und Untertitel fressen nicht mehr den Abend; die Recherche fürs nächste Stück ist vor dem Frühstück erledigt. Die Stimme bleibt ihre eigene — genau darum geht es.'
 				],
 				handles: [
@@ -102,7 +102,7 @@ export default {
 				label: 'Forschung',
 				headline: 'Das Lesen wird schneller — das Denken bleibt Ihres.',
 				story: [
-					'Doktoranden, Wissenschaftlerinnen und Professoren verlieren ihre besten Stunden an den Teil der Arbeit, den niemand zitiert: den Lesestapel, das Referenz-Chaos, die dritte Überarbeitung desselben Absatzes, die Prüfung, die zwanzig Varianten braucht. Für sie habe ich Abläufe aufgesetzt, die genau diese Schicht wegräumen.',
+					'Doktoranden, Wissenschaftler und Professoren verlieren ihre besten Stunden an den Teil der Arbeit, den niemand zitiert: den Lesestapel, das Referenz-Chaos, die dritte Überarbeitung desselben Absatzes, die Prüfung, die zwanzig Varianten braucht. Für sie habe ich Abläufe aufgesetzt, die genau diese Schicht wegräumen.',
 					'Neue Paper werden gelesen, sortiert und in einer geordneten Bibliothek zusammengefasst; Entwürfe kommen schärfer zurück, ohne dass sich das Argument ändert; Lehrmaterial und Prüfungen brauchen einen Nachmittag statt einer Woche. Die Wissenschaft — die Fragen, die Thesen, das Urteil — bleibt vollständig ihre.'
 				],
 				handles: [
@@ -215,7 +215,7 @@ export default {
 			},
 			{
 				q: 'Wie viel meiner Zeit kostet das?',
-				a: 'Weniger, als Sie denken. Das Erstgespräch dauert keine Stunde. Danach verbringen die meisten meiner Kunden ein bis zwei Stunden pro Woche mit mir, während alles Form annimmt — innerhalb ihrer normalen Woche, nicht obendrauf.'
+				a: 'Weniger, als Sie denken. Das Erstgespräch dauert weniger als eine Stunde. Danach verbringen die meisten meiner Kunden ein bis zwei Stunden pro Woche mit mir, während alles Form annimmt — innerhalb ihrer normalen Woche, nicht obendrauf.'
 			},
 			{
 				q: 'Und wenn es in meinem Fall nicht funktioniert?',

@@ -26,12 +26,13 @@
 		der Daten über Sie speichert.
 	</p>
 
-	<h2>Server-Logs</h2>
+	<h2>Hosting und Server-Logs</h2>
 	<p>
-		Beim Aufruf der Website verarbeitet der Hosting-Anbieter technisch notwendige Daten (etwa
-		IP-Adresse, Zeitpunkt des Aufrufs, aufgerufene Seite) in sogenannten Server-Logs. Das ist für
-		den sicheren Betrieb jeder Website erforderlich (Art. 6 Abs. 1 lit. f DSGVO). Auf diese Logs
-		habe ich keinen direkten Zugriff; sie werden vom Anbieter nach kurzer Zeit gelöscht.
+		Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc. (USA). GitHub ist
+		nach dem EU-US Data Privacy Framework zertifiziert. Beim Aufruf der Website verarbeitet GitHub
+		technisch notwendige Daten (etwa IP-Adresse, Zeitpunkt des Aufrufs, aufgerufene Seite) in
+		sogenannten Server-Logs. Das ist für den sicheren Betrieb jeder Website erforderlich (Art. 6
+		Abs. 1 lit. f DSGVO). Auf diese Logs habe ich keinen direkten Zugriff.
 	</p>
 
 	<h2>Kontaktformular</h2>
