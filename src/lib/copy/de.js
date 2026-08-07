@@ -4,68 +4,87 @@ export default {
 	meta: {
 		title: 'Moha Aghanoori — KI für Ihren Arbeitsalltag, in klaren Worten',
 		description:
-			'Ich helfe Zahnärzten, Anwälten, Wissenschaftlern, Marketing-Teams und vielen anderen, KI für sich arbeiten zu lassen — in klaren Worten erklärt und an Ihre Arbeitsweise angepasst. Das erste Gespräch ist kostenlos.'
+			'Ich übernehme die eintönige Hälfte professioneller Arbeit — Dokumente, Notizen, Termine, Recherche — mit KI, erklärt in klarer Sprache. Berlin, Deutsch & Englisch. Das Erstgespräch ist kostenlos.'
 	},
 	hero: {
+		kicker: 'KI-Beratung für Berufstätige',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline:
-			'Ich bin Moha. Seit sechs Jahren helfe ich Zahnärzten, Anwälten, Wissenschaftlern, Marketing-Teams und vielen anderen, KI für sich arbeiten zu lassen — in klaren Worten erklärt und an Ihre Arbeitsweise angepasst.',
-		button: 'Schreiben Sie mir — das erste Gespräch ist kostenlos.'
+			'Ich bin Moha Aghanoori. Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Heute setze ich diese Erfahrung für Zahnärzte, Anwälte, Forschende und Führungskräfte ein — in klaren Worten, angepasst an Ihre Arbeitsweise.',
+		button: 'Schreiben Sie mir — das Erstgespräch ist kostenlos',
+		note: 'In Berlin · Deutsch & Englisch · Sie sprechen direkt mit mir'
 	},
 	who: {
 		title: 'Für wen ich arbeite',
 		cards: [
 			{
 				label: 'Praxen',
-				text: 'Zahnärzte, Therapeuten — Terminorganisation, Büro-Papierkram und gescannte Dokumente geordnet, Gesprächsaufnahmen zu sauberen, lesbaren Notizen verarbeitet.'
+				text: 'Zahnärzte, Therapeuten, Praxisinhaber — Terminorganisation, Büro-Papierkram und gescannte Dokumente geordnet, Gesprächs- und Sitzungsaufnahmen zu sauberen, lesbaren Notizen verarbeitet.'
 			},
 			{
 				label: 'Recht & Finanzen',
-				text: 'Anwälte, Finanzprofis — lange Dokumente gelesen, verglichen und zusammengefasst; Akten geordnet; die Zahlen aus PDF-Stapeln herausgeholt.'
+				text: 'Anwälte, Steuerberater, Finanzprofis — lange Dokumente gelesen, verglichen und zusammengefasst; Akten in Ordnung gehalten; die Zahlen in Minuten aus dem PDF-Stapel geholt.'
 			},
 			{
 				label: 'Wissenschaft & Lehre',
-				text: 'Doktoranden, Professoren — klarere Artikel, schnelleres Lesen der Fachliteratur, Lehrmaterialien und Prüfungen in einem Bruchteil der Zeit vorbereitet.'
+				text: 'Doktoranden, Professoren, Lehrende — Fachliteratur schneller ausgewertet, Texte geschärft, Lehrmaterial und Prüfungen in einem Bruchteil der Zeit vorbereitet.'
 			},
 			{
 				label: 'Business & Marketing',
-				text: 'Führungskräfte, Marketing- und Produktleute — Umfrage-Antworten ausgewertet, Kataloge verarbeitet, Team-Berichte auf das Wesentliche verdichtet.'
+				text: 'Führungskräfte, Marketing- und Produktteams — Umfragen ausgewertet, Kataloge verarbeitet, Berichte auf die Entscheidungen verdichtet, die zählen.'
 			},
 			{
 				label: 'Persönliche Ziele',
-				text: 'Eine richtig aufgesetzte Jobsuche, Vorbereitung auf Sprachzertifikate (IELTS, ÖSD, TELC), Immobiliensuche mit geprüften Unterlagen, bevor Sie sich festlegen.'
+				text: 'Eine gut organisierte Jobsuche, Vorbereitung auf Sprachzertifikate (IELTS, ÖSD, TELC) oder eine Immobiliensuche mit geprüften Unterlagen, bevor Sie unterschreiben.'
 			},
 			{
 				label: 'Selbst lernen',
-				text: 'Jeder Beruf — ich zeige Ihnen persönlich, wie Sie KI in Ihrem Arbeitsalltag nutzen. Architektin, Buchhalter oder Zahnärztin: kein technisches Vorwissen nötig.'
+				text: 'Jeder Beruf — ich zeige Ihnen persönlich und im Einzelgespräch, wie Sie KI in Ihrer eigenen Arbeit nutzen. Technisches Vorwissen? Nicht nötig.'
 			}
 		],
 		notListed:
-			'Ihr Beruf ist nicht dabei? Es funktioniert mit ziemlicher Sicherheit trotzdem. Fragen Sie mich.'
+			'Ihr Beruf ist nicht dabei? Es funktioniert mit großer Wahrscheinlichkeit trotzdem — fragen Sie mich.'
 	},
 	how: {
 		title: 'So läuft es ab',
 		steps: [
 			{
 				title: 'Schreiben Sie mir.',
-				text: 'WhatsApp, Telegram oder E-Mail — beschreiben Sie Ihre Arbeit in Ihren eigenen Worten.'
+				text: 'WhatsApp, Telegram oder E-Mail — beschreiben Sie Ihre Arbeit in Ihren eigenen Worten. Keine Vorbereitung nötig.'
 			},
 			{
-				title: 'Kostenloses Erstgespräch.',
-				text: 'Ich sage Ihnen ehrlich, was KI für Sie tun kann — und was nicht.'
+				title: 'Wir sprechen — kostenlos.',
+				text: 'In einem Gespräch sage ich Ihnen ehrlich, was KI für Sie tun kann und was nicht. Und wenn ich nicht der Richtige dafür bin, sage ich auch das.'
 			},
 			{
 				title: 'Ich baue es — oder bringe es Ihnen bei.',
-				text: 'Sie bekommen etwas, das in Ihrem Alltag funktioniert, keinen Vortrag.'
+				text: 'Sie bekommen etwas, das in Ihrer normalen Woche funktioniert. Keinen Vortrag, kein Abo, das Sie vergessen.'
 			}
 		],
 		noPrices:
-			'Jede Aufgabe ist anders, deshalb gibt es keine Preisliste — das erste Gespräch ist kostenlos, und Sie merken schnell, ob ich Ihnen helfen kann.'
+			'Jede Aufgabe ist anders, deshalb gibt es keine Preisliste. Nach dem Erstgespräch bekommen Sie ein klares Angebot — und das Gespräch selbst kostet nichts.'
+	},
+	principles: {
+		title: 'Worauf Sie sich verlassen können',
+		items: [
+			{
+				title: 'Klare Sprache, garantiert.',
+				text: 'Wenn ich es nicht in einem Satz erklären kann, den Sie verstehen, bin ich mit meiner Arbeit nicht fertig.'
+			},
+			{
+				title: 'Ehrlichkeit über Grenzen.',
+				text: 'KI ist wirklich nützlich — und sie wird oft überverkauft. Ich sage Ihnen, was davon auf Ihren Fall zutrifft, auch wenn es mich den Auftrag kostet.'
+			},
+			{
+				title: 'Diskretion.',
+				text: 'Patientenakten, Fallunterlagen, Kundendaten — ich arbeite so, wie Ihr Beruf es verlangt: sorgfältig, vertraulich und nach deutschen und europäischen Datenschutzregeln.'
+			}
+		]
 	},
 	about: {
 		title: 'Über mich',
 		photoAlt: 'Moha Aghanoori',
-		text: 'Ich bin ein sehr technischer Mensch — ich baue solche Systeme seit Jahren beruflich. Aber von mir werden Sie keine Fachbegriffe hören. Meine Arbeit ist Übersetzung: auf der einen Seite Ihr Arbeitsalltag, auf der anderen das, was Maschinen still übernehmen können. Ich lebe in Deutschland und arbeite auf Englisch und Deutsch.'
+		text: 'Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Die Lektion aus dieser Zeit ist einfach: Die Technik ist selten das Schwierige. Das Schwierige ist die Übersetzung — zuzuhören, wie Sie wirklich arbeiten, die Stellen zu finden, an denen eine Maschine tatsächlich hilft, und sie einzufügen, ohne alles andere zu stören. Genau das ist meine Arbeit. Ich lebe in Berlin, arbeite auf Deutsch und Englisch — und Sie haben immer direkt mit mir zu tun, ohne Agentur und ohne Zwischenstationen.'
 	},
 	contactSection: {
 		title: 'Kontakt',
@@ -75,9 +94,9 @@ export default {
 			email: 'E-Mail',
 			message: 'Nachricht',
 			send: 'Senden',
-			success: 'Vielen Dank — ich melde mich bald bei Ihnen.',
+			success: 'Vielen Dank — ich melde mich innerhalb eines Tages.',
 			error: 'Das hat nicht geklappt. Bitte nutzen Sie einen der Buttons oben.',
-			note: 'oder nutzen Sie einfach einen der Buttons oben, das geht schneller.'
+			note: 'oder nutzen Sie einfach einen der Buttons oben — das geht schneller.'
 		}
 	},
 	footer: {

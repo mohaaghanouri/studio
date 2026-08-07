@@ -1,9 +1,12 @@
 <script>
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
-	import { contact } from '$lib/copy/contact.js';
+	import { contact, site } from '$lib/copy/contact.js';
 
 	export let copy;
+
+	const isEn = copy.lang === 'en';
+	const canonical = isEn ? `${site}/` : `${site}/de/`;
 
 	let formState = ''; // '' | 'sending' | 'success' | 'error'
 
@@ -26,20 +29,36 @@
 <svelte:head>
 	<title>{copy.meta.title}</title>
 	<meta name="description" content={copy.meta.description} />
+	<link rel="canonical" href={canonical} />
+	<link rel="alternate" hreflang="en" href="{site}/" />
+	<link rel="alternate" hreflang="de" href="{site}/de/" />
+	<link rel="alternate" hreflang="x-default" href="{site}/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={copy.meta.title} />
+	<meta property="og:description" content={copy.meta.description} />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:image" content="{site}/moha.webp" />
+	<meta property="og:locale" content={isEn ? 'en_US' : 'de_DE'} />
 </svelte:head>
 
 <header class="wrap">
 	<span class="name">Moha Aghanoori</span>
 	<nav class="lang" aria-label="Language">
-		<a href="{base}{copy.otherLang.href}" data-sveltekit-reload>{copy.otherLang.label}</a>
+		{#if isEn}
+			<span aria-current="true">EN</span> · <a href="{base}/de/" data-sveltekit-reload>DE</a>
+		{:else}
+			<a href="{base}/" data-sveltekit-reload>EN</a> · <span aria-current="true">DE</span>
+		{/if}
 	</nav>
 </header>
 
 <main>
 	<section class="hero wrap" use:fade>
+		<p class="kicker">{copy.hero.kicker}</p>
 		<h1>{copy.hero.headline}</h1>
 		<p class="subline">{copy.hero.subline}</p>
-		<a class="btn" href="#contact">{copy.hero.button}</a>
+		<a class="btn btn-primary" href="#contact">{copy.hero.button}</a>
+		<p class="hero-note muted">{copy.hero.note}</p>
 	</section>
 
 	<section class="wrap" use:fade>
@@ -69,6 +88,18 @@
 			{/each}
 		</ol>
 		<p class="muted no-prices">{copy.how.noPrices}</p>
+	</section>
+
+	<section class="wrap" use:fade>
+		<h2>{copy.principles.title}</h2>
+		<div class="principles">
+			{#each copy.principles.items as item}
+				<div>
+					<h3>{item.title}</h3>
+					<p class="muted">{item.text}</p>
+				</div>
+			{/each}
+		</div>
 	</section>
 
 	<section class="wrap" use:fade>
@@ -132,8 +163,8 @@
 <footer class="wrap muted">
 	<p>
 		© Moha Aghanoori · {contact.city} ·
-		<a href="{base}/impressum">{copy.footer.impressum}</a> ·
-		<a href="{base}/datenschutz">{copy.footer.datenschutz}</a>
+		<a href="{base}/impressum/">{copy.footer.impressum}</a> ·
+		<a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>
 	</p>
 </footer>
 
@@ -151,16 +182,28 @@
 		font-size: 1.05rem;
 	}
 
-	.lang a {
-		text-decoration: none;
+	.lang {
 		font-size: 0.9rem;
 		letter-spacing: 0.08em;
+		color: var(--muted);
+	}
+
+	.lang a {
+		text-decoration: none;
 	}
 
 	.hero {
 		border-top: none;
-		padding-top: 6rem;
+		padding-top: 5.5rem;
 		padding-bottom: 6rem;
+	}
+
+	.kicker {
+		color: var(--gold);
+		font-size: 0.8rem;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		margin-bottom: 1.5rem;
 	}
 
 	.hero h1 {
@@ -172,6 +215,21 @@
 		max-width: 36rem;
 		color: var(--muted);
 		margin-bottom: 2.5rem;
+	}
+
+	.btn-primary {
+		background: var(--gold);
+		color: var(--bg);
+	}
+
+	.btn-primary:hover {
+		background: var(--gold-light);
+		color: var(--bg);
+	}
+
+	.hero-note {
+		margin-top: 1.25rem;
+		font-size: 0.85rem;
 	}
 
 	h2 {
@@ -230,7 +288,8 @@
 		min-width: 1.5rem;
 	}
 
-	.steps h3 {
+	.steps h3,
+	.principles h3 {
 		font-size: 1.25rem;
 		margin-bottom: 0.3rem;
 	}
@@ -238,6 +297,16 @@
 	.no-prices {
 		margin-top: 2.5rem;
 		max-width: 36rem;
+	}
+
+	.principles {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		gap: 2rem;
+	}
+
+	.principles p {
+		font-size: 0.95rem;
 	}
 
 	section > p {
@@ -262,6 +331,10 @@
 		.about {
 			grid-template-columns: 1fr;
 		}
+	}
+
+	#contact {
+		scroll-margin-top: 2rem;
 	}
 
 	.buttons {
