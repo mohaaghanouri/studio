@@ -185,6 +185,43 @@ export default {
 		photoAlt: 'Moha Aghanoori',
 		text: "I've spent six years building AI systems professionally. The lesson of those years is simple: the technology is rarely the hard part. The hard part is translation — listening to how you actually work, finding the places where a machine genuinely helps, and fitting it in without disturbing everything else. Today that's my work as a consultant and coach. I live in Berlin, work in English and German, and you always deal with me personally — no agency, no handoffs."
 	},
+	testimonials: {
+		eyebrow: 'Kind words',
+		title: 'What clients say',
+		// Section stays hidden until real quotes exist. Fill like:
+		// { quote: 'He explained in one hour what I had avoided for a year.', name: 'Sandra, dentist' }
+		items: []
+	},
+	faq: {
+		eyebrow: 'Common questions',
+		title: 'You might be wondering…',
+		items: [
+			{
+				q: 'Do I need any technical knowledge?',
+				a: "None at all. That's the point of hiring me — you explain your work in your own words, and everything technical stays my problem. If you can describe your week, we can work together."
+			},
+			{
+				q: 'What does it cost?',
+				a: "There's no price list, because a dentist's practice and a PhD thesis don't cost the same. After the free first conversation you get a clear, fixed quote — before any commitment. And if the honest answer is that AI won't pay off for you, I'll say that instead."
+			},
+			{
+				q: 'Is my data safe with you?',
+				a: 'Yes — and I take this promise personally. Patient files, case documents, client data: we only work with what the rules of your profession allow, under German and European privacy law. Nothing you share with me leaves the scope we agree on.'
+			},
+			{
+				q: 'Which AI tools do you use?',
+				a: "The ones that fit your work — I'm independent and don't sell any product or subscription. Sometimes the answer is one of the well-known tools; sometimes it's something small, set up around your routine. You'll never pay for something you don't need."
+			},
+			{
+				q: 'How much of my time does this take?',
+				a: "Less than you'd think. The first conversation takes under an hour. After that, most of my clients spend one or two hours a week with me while things take shape — inside their normal week, not on top of it."
+			},
+			{
+				q: "What if it doesn't work for my case?",
+				a: "Then you'll hear it from me first — in the free conversation, before you've spent anything. AI genuinely can't help everyone with everything, and pretending otherwise is how this industry loses people's trust."
+			}
+		]
+	},
 	contactSection: {
 		eyebrow: 'Get in touch',
 		title: 'The first conversation is free.',

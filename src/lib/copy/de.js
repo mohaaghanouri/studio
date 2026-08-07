@@ -186,6 +186,43 @@ export default {
 		photoAlt: 'Moha Aghanoori',
 		text: 'Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Die Lektion aus dieser Zeit ist einfach: Die Technik ist selten das Schwierige. Das Schwierige ist die Übersetzung — zuzuhören, wie Sie wirklich arbeiten, die Stellen zu finden, an denen eine Maschine tatsächlich hilft, und sie einzufügen, ohne alles andere zu stören. Heute ist genau das meine Arbeit als Berater und Coach. Ich lebe in Berlin, arbeite auf Deutsch und Englisch — und Sie haben immer direkt mit mir zu tun, ohne Agentur und ohne Zwischenstationen.'
 	},
+	testimonials: {
+		eyebrow: 'Stimmen',
+		title: 'Was Kunden sagen',
+		// Bleibt verborgen, bis echte Zitate da sind. Befüllen wie:
+		// { quote: 'Er hat mir in einer Stunde erklärt, wovor ich ein Jahr lang ausgewichen bin.', name: 'Sandra, Zahnärztin' }
+		items: []
+	},
+	faq: {
+		eyebrow: 'Häufige Fragen',
+		title: 'Vielleicht fragen Sie sich…',
+		items: [
+			{
+				q: 'Brauche ich technisches Vorwissen?',
+				a: 'Überhaupt keins. Genau dafür holen Sie mich — Sie beschreiben Ihre Arbeit in Ihren eigenen Worten, alles Technische bleibt mein Problem. Wenn Sie Ihre Woche beschreiben können, können wir zusammenarbeiten.'
+			},
+			{
+				q: 'Was kostet das?',
+				a: 'Es gibt keine Preisliste, denn eine Zahnarztpraxis und eine Doktorarbeit kosten nicht dasselbe. Nach dem kostenlosen Erstgespräch bekommen Sie ein klares, festes Angebot — vor jeder Verpflichtung. Und wenn die ehrliche Antwort ist, dass sich KI für Sie nicht lohnt, sage ich stattdessen genau das.'
+			},
+			{
+				q: 'Sind meine Daten bei Ihnen sicher?',
+				a: 'Ja — und dieses Versprechen nehme ich persönlich. Patientenakten, Fallunterlagen, Kundendaten: Wir arbeiten nur mit dem, was die Regeln Ihres Berufs erlauben, nach deutschem und europäischem Datenschutzrecht. Nichts, was Sie mir anvertrauen, verlässt den Rahmen, den wir vereinbaren.'
+			},
+			{
+				q: 'Welche KI-Werkzeuge nutzen Sie?',
+				a: 'Die, die zu Ihrer Arbeit passen — ich bin unabhängig und verkaufe kein Produkt und kein Abo. Manchmal ist die Antwort eines der bekannten Werkzeuge, manchmal etwas Kleines, eingerichtet rund um Ihre Routine. Sie zahlen nie für etwas, das Sie nicht brauchen.'
+			},
+			{
+				q: 'Wie viel meiner Zeit kostet das?',
+				a: 'Weniger, als Sie denken. Das Erstgespräch dauert keine Stunde. Danach verbringen die meisten meiner Kunden ein bis zwei Stunden pro Woche mit mir, während alles Form annimmt — innerhalb ihrer normalen Woche, nicht obendrauf.'
+			},
+			{
+				q: 'Und wenn es in meinem Fall nicht funktioniert?',
+				a: 'Dann hören Sie es zuerst von mir — im kostenlosen Gespräch, bevor Sie etwas ausgegeben haben. KI kann wirklich nicht jedem bei allem helfen, und etwas anderes zu behaupten ist der Grund, warum diese Branche Vertrauen verliert.'
+			}
+		]
+	},
 	contactSection: {
 		eyebrow: 'Kontakt',
 		title: 'Das Erstgespräch ist kostenlos.',

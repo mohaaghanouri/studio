@@ -8,6 +8,16 @@
 	const isEn = copy.lang === 'en';
 	const canonical = isEn ? `${site}/` : `${site}/de/`;
 
+	const faqJsonLd = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: copy.faq.items.map((item) => ({
+			'@type': 'Question',
+			name: item.q,
+			acceptedAnswer: { '@type': 'Answer', text: item.a }
+		}))
+	});
+
 	let formState = ''; // '' | 'sending' | 'success' | 'error'
 
 	async function submitForm(event) {
@@ -39,6 +49,7 @@
 	<meta property="og:url" content={canonical} />
 	<meta property="og:image" content="{site}/moha.webp" />
 	<meta property="og:locale" content={isEn ? 'en_US' : 'de_DE'} />
+	{@html `<script type="application/ld+json">${faqJsonLd}</script>`}
 </svelte:head>
 
 <header>
@@ -116,6 +127,23 @@
 		</div>
 	</section>
 
+	{#if copy.testimonials.items.length}
+		<section class="wrap-wide" use:fade>
+			<div class="section-head">
+				<p class="eyebrow">{copy.testimonials.eyebrow}</p>
+				<h2>{copy.testimonials.title}</h2>
+			</div>
+			<div class="quotes">
+				{#each copy.testimonials.items as t}
+					<blockquote>
+						<p>“{t.quote}”</p>
+						<footer class="muted">— {t.name}</footer>
+					</blockquote>
+				{/each}
+			</div>
+		</section>
+	{/if}
+
 	<section class="wrap-wide" use:fade>
 		<div class="section-head">
 			<p class="eyebrow">{copy.how.eyebrow}</p>
@@ -162,6 +190,21 @@
 				loading="lazy"
 			/>
 			<p>{copy.about.text}</p>
+		</div>
+	</section>
+
+	<section class="wrap-wide" use:fade>
+		<div class="section-head">
+			<p class="eyebrow">{copy.faq.eyebrow}</p>
+			<h2>{copy.faq.title}</h2>
+		</div>
+		<div class="faq">
+			{#each copy.faq.items as item}
+				<details>
+					<summary>{item.q}</summary>
+					<p class="muted">{item.a}</p>
+				</details>
+			{/each}
 		</div>
 	</section>
 
@@ -598,6 +641,77 @@
 		.about {
 			grid-template-columns: 1fr;
 		}
+	}
+
+	/* ---- testimonials ---- */
+	.quotes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		gap: clamp(1.5rem, 3vw, 3rem);
+	}
+
+	blockquote {
+		margin: 0;
+		border-top: 1px solid var(--rule);
+		padding-top: 1.5rem;
+	}
+
+	blockquote p {
+		font-family: var(--serif);
+		font-style: italic;
+		font-size: 1.15rem;
+		margin-bottom: 1rem;
+	}
+
+	blockquote footer {
+		font-size: 0.9rem;
+	}
+
+	/* ---- faq ---- */
+	.faq {
+		max-width: 44rem;
+	}
+
+	.faq details {
+		border-top: 1px solid var(--rule);
+	}
+
+	.faq details:last-child {
+		border-bottom: 1px solid var(--rule);
+	}
+
+	.faq summary {
+		cursor: pointer;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1.5rem;
+		padding: 1.25rem 0;
+		font-family: var(--serif);
+		font-size: 1.15rem;
+	}
+
+	.faq summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.faq summary::after {
+		content: '+';
+		color: var(--gold);
+		font-family: var(--sans);
+		font-size: 1.2rem;
+		flex-shrink: 0;
+	}
+
+	.faq details[open] summary::after {
+		content: '−';
+	}
+
+	.faq details p {
+		padding-bottom: 1.5rem;
+		max-width: 38rem;
+		font-size: 0.975rem;
 	}
 
 	/* ---- contact ---- */
