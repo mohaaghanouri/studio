@@ -73,7 +73,16 @@
 
 	<section class="wrap" use:fade>
 		<h2>{copy.about.title}</h2>
-		<p>{copy.about.text}</p>
+		<div class="about">
+			<img
+				src="{base}/moha.webp"
+				alt={copy.about.photoAlt}
+				width="960"
+				height="694"
+				loading="lazy"
+			/>
+			<p>{copy.about.text}</p>
+		</div>
 	</section>
 
 	<section class="wrap" id="contact" use:fade>
@@ -233,6 +242,26 @@
 
 	section > p {
 		max-width: 36rem;
+	}
+
+	.about {
+		display: grid;
+		grid-template-columns: minmax(14rem, 18rem) 1fr;
+		gap: 2rem;
+		align-items: start;
+	}
+
+	.about img {
+		width: 100%;
+		height: auto;
+		border-radius: 6px;
+		border: 1px solid var(--rule);
+	}
+
+	@media (max-width: 40rem) {
+		.about {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.buttons {

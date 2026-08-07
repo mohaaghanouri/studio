@@ -64,6 +64,7 @@ export default {
 	},
 	about: {
 		title: 'Über mich',
+		photoAlt: 'Moha Aghanoori',
 		text: 'Ich bin ein sehr technischer Mensch — ich baue solche Systeme seit Jahren beruflich. Aber von mir werden Sie keine Fachbegriffe hören. Meine Arbeit ist Übersetzung: auf der einen Seite Ihr Arbeitsalltag, auf der anderen das, was Maschinen still übernehmen können. Ich lebe in Deutschland und arbeite auf Englisch und Deutsch.'
 	},
 	contactSection: {

@@ -63,6 +63,7 @@ export default {
 	},
 	about: {
 		title: 'About me',
+		photoAlt: 'Moha Aghanoori',
 		text: "I'm a very technical person — I've been building these systems professionally for years. But you will never hear technical words from me. My job is translation: your daily work on one side, what machines can quietly take over on the other. Based in Germany. I work in English and German."
 	},
 	contactSection: {

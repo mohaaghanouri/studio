@@ -12,11 +12,10 @@
 	<h1>Impressum</h1>
 
 	<h2>Angaben gemäß § 5 DDG</h2>
-	<!-- TODO before go-live: full legal name (as in the passport) and postal address -->
 	<p>
 		Moha Aghanoori<br />
-		[Straße Hausnummer]<br />
-		[PLZ] {contact.city}<br />
+		Silbersteinstr. 131<br />
+		12051 {contact.city}<br />
 		Deutschland
 	</p>
 
