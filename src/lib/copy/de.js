@@ -6,6 +6,9 @@ export default {
 		description:
 			'Ich begleite Berufstätige — Zahnärzte, Anwälte, Wissenschaftler, Marketing-Teams — dabei, KI in ihrer täglichen Arbeit zu nutzen, in klarer Sprache. Berlin, Deutsch & Englisch. Das Erstgespräch ist kostenlos.'
 	},
+	nav: {
+		contact: 'Kontakt'
+	},
 	hero: {
 		kicker: 'KI-Beratung & Coaching für Berufstätige',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
@@ -15,7 +18,8 @@ export default {
 		note: 'In Berlin · Deutsch & Englisch · Sie sprechen direkt mit mir'
 	},
 	who: {
-		title: 'Für wen ich arbeite',
+		eyebrow: 'Für wen ich arbeite',
+		title: 'Jeder Beruf hat eine langweilige Hälfte.',
 		cards: [
 			{
 				label: 'Praxen',
@@ -45,8 +49,102 @@ export default {
 		notListed:
 			'Ihr Beruf ist nicht dabei? Es funktioniert mit großer Wahrscheinlichkeit trotzdem — fragen Sie mich.'
 	},
+	built: {
+		eyebrow: 'Erfahrung',
+		title: 'Woher mein Rat kommt',
+		intro:
+			'Ich berate nicht aus der Theorie. Diese Dinge habe ich selbst gebaut und betrieben — für echte Menschen mit echten Fristen. Sie sind die Erfahrung hinter jedem Gespräch, das wir führen werden.',
+		handlesTitle: 'Was es übernimmt',
+		items: [
+			{
+				label: 'Content-Creator',
+				headline: 'Creator, die mit KI arbeiten — nicht gegen sie.',
+				story: [
+					'Videomacher, Autorinnen, Podcaster — die meisten sind KI zuerst als Bedrohung begegnet, dann als Spielzeug. Ich habe in den letzten Jahren viele Creator einzeln hindurchgeführt: welche Werkzeuge wirklich zu ihrem Handwerk passen, welche nur ein Abo verschwenden und wie daraus eine Wochenroutine wird statt eines Stapels offener Tabs.',
+					'Das Ergebnis ist immer persönlich. Skripte entstehen schneller, klingen aber weiterhin nach ihnen; Schnitt und Untertitel fressen nicht mehr den Abend; die Recherche fürs nächste Stück ist vor dem Frühstück erledigt. Die Stimme bleibt ihre eigene — genau darum geht es.'
+				],
+				handles: [
+					'Die Handvoll Werkzeuge finden, die ihr Geld wert sind',
+					'Skripte, Untertitel und Zweitverwertung über alle Plattformen',
+					'Recherche- und Ideensammlungen, die sich selbst füllen',
+					'Eine Wochenroutine, die wirklich hält'
+				]
+			},
+			{
+				label: 'Immobilienkauf',
+				headline: 'Eine Haussuche, die jedes Inserat liest — damit Sie es nicht müssen.',
+				story: [
+					'Eine Immobiliensuche ist ein zweiter Job: fünf Portale, immer dieselben vierzig Inserate, Unterlagen, die spät kommen und enttäuschen. Für Kunden auf Haussuche habe ich eine Plattform gebaut, die diesen Job rund um die Uhr macht — sie beobachtet die Portale, prüft jedes Angebot gegen Budget, Lage und die Punkte, bei denen es keine Kompromisse gibt, und sortiert leise alles aus, was keine Besichtigung verdient.',
+					'Bevor sich jemand in eine Küche verliebt, sind die Unterlagen schon gesammelt und geprüft, und die richtigen Leute — Makler, Bank, Gutachter — stehen schon bereit. Meine Kunden besichtigen weniger Objekte, stellen bessere Fragen und unterschreiben mit klarem Kopf.'
+				],
+				handles: [
+					'Alle großen Portale rund um die Uhr beobachtet',
+					'Angebote nach Budget, Lage und Wünschen sortiert',
+					'Unterlagen gesammelt und geprüft — vor der Besichtigung',
+					'Die richtigen Leute im richtigen Moment verbunden'
+				]
+			},
+			{
+				label: 'Jobsuche',
+				headline: 'Rund zwanzig Menschen haben mit meinem Werkzeug einen Job gefunden.',
+				story: [
+					'Stellenanzeigen lügen — der Titel verspricht einen Job, die Beschreibung meint einen anderen, und nach hundert offenen Tabs bewerben sich die meisten überall mit denselben müden Unterlagen. Mefkat ist ein Werkzeug, das ich gebaut habe, um es richtig zu machen: Es liest jede Anzeige vollständig, so aufmerksam wie ein Mensch, und gleicht sie ehrlich mit dem ab, was jemand wirklich getan hat. Ohne Schlagwort-Tricks, ohne Übertreibung.',
+					'Lohnt sich eine Anzeige, bereitet es eine Bewerbung vor, die auf genau dieses Unternehmen zugeschnitten ist — und hält die ganze Suche geordnet: was raus ist, was zurückkam, was als Nächstes ansteht. Etwa zwanzig Menschen haben damit ihre heutige Stelle gefunden.'
+				],
+				handles: [
+					'Liest die ganze Anzeige, nicht nur den Titel',
+					'Ehrlicher Abgleich mit der echten Erfahrung',
+					'Bewerbungen, zugeschnitten auf je ein Unternehmen',
+					'Die ganze Suche an einem Ort im Blick'
+				]
+			},
+			{
+				label: 'Forschung',
+				headline: 'Das Lesen wird schneller — das Denken bleibt Ihres.',
+				story: [
+					'Doktoranden, Wissenschaftlerinnen und Professoren verlieren ihre besten Stunden an den Teil der Arbeit, den niemand zitiert: den Lesestapel, das Referenz-Chaos, die dritte Überarbeitung desselben Absatzes, die Prüfung, die zwanzig Varianten braucht. Für sie habe ich Abläufe aufgesetzt, die genau diese Schicht wegräumen.',
+					'Neue Paper werden gelesen, sortiert und in einer geordneten Bibliothek zusammengefasst; Entwürfe kommen schärfer zurück, ohne dass sich das Argument ändert; Lehrmaterial und Prüfungen brauchen einen Nachmittag statt einer Woche. Die Wissenschaft — die Fragen, die Thesen, das Urteil — bleibt vollständig ihre.'
+				],
+				handles: [
+					'Paper-Stapel gelesen und in eine geordnete Bibliothek verwandelt',
+					'Entwürfe geschärft, ohne das Argument anzutasten',
+					'Lehrmaterial und Prüfungen in einem Bruchteil der Zeit',
+					'Referenzen, die sich von selbst ordnen'
+				]
+			},
+			{
+				label: 'Marketing & Produkt',
+				headline: 'Ein Kollege, der jedes Dokument gelesen hat.',
+				story: [
+					'Jedes Marketing- und Produktteam sitzt auf einem Berg, den niemand ganz gelesen hat: Umfrage-Antworten, Kataloge, Berichte, Meeting-Notizen, Jahre an Recherche. Für solche Teams habe ich einen Assistenten gebaut, der all das gelesen hat — und Fragen dazu in klarer Sprache beantwortet, mit Belegen zu jeder Antwort.',
+					'Tausend Umfrage-Antworten werden zu den fünf Dingen, die Kunden wirklich gesagt haben. Ein Katalog mit zehntausend Produkten bekommt saubere, einheitliche Texte. Der Montagsbericht verdichtet sich selbst auf die Entscheidungen, die zählen. Das Team hört auf zu graben und fängt an zu entscheiden.'
+				],
+				handles: [
+					'Umfragen verdichtet auf das, was Kunden wirklich sagen',
+					'Kataloge verarbeitet und konsistent gehalten',
+					'Berichte reduziert auf die Entscheidungen, die zählen',
+					'Antworten in klarer Sprache — mit Quellen'
+				]
+			},
+			{
+				label: 'Sprachen & Prüfungen',
+				headline: 'Prüfungsvorbereitung, die zuerst Sie studiert.',
+				story: [
+					'Die meisten, die sich auf IELTS, ÖSD, GMAT und ähnliche Prüfungen vorbereiten, üben alles gleichmäßig — also vor allem das, was sie schon können. Ich habe einen Ablauf gebaut, der am anderen Ende anfängt: Er wertet frühere Prüfungen und Transkripte aus und zeichnet ein präzises Bild davon, wo die Punkte wirklich verloren gehen.',
+					'Dann ändert das Üben seine Form. Texte werden im eigenen Stil korrigiert, die wiederkehrenden Fehler beim Namen genannt; das Hörtraining konzentriert sich auf genau die Muster, die durchrutschen; jede Woche zielt auf die Schwäche, die am meisten kostet. Weniger üben, besser gezielt.'
+				],
+				handles: [
+					'Frühere Prüfungen und Transkripte ausgewertet',
+					'Texte korrigiert, wiederkehrende Fehler benannt',
+					'Hörtraining auf die eigenen Lücken ausgerichtet',
+					'Ein Plan, der immer auf die teuerste Schwäche zielt'
+				]
+			}
+		]
+	},
 	how: {
-		title: 'So läuft es ab',
+		eyebrow: 'So läuft es ab',
+		title: 'Drei Schritte, kein Risiko.',
 		steps: [
 			{
 				title: 'Schreiben Sie mir.',
@@ -64,45 +162,9 @@ export default {
 		noPrices:
 			'Jede Aufgabe ist anders, deshalb gibt es keine Preisliste. Nach dem Erstgespräch bekommen Sie ein klares Angebot — und das Gespräch selbst kostet nichts.'
 	},
-	built: {
-		title: 'Woher mein Rat kommt',
-		intro:
-			'Ich berate nicht aus der Theorie. Diese Dinge habe ich selbst gebaut und betrieben — sie sind die Erfahrung hinter jedem Gespräch, das wir führen werden.',
-		items: [
-			{
-				label: 'Content-Creator',
-				headline: 'Creator, die mit KI arbeiten — nicht gegen sie.',
-				text: 'Ich habe viele Content-Creator im Umgang mit KI-Werkzeugen begleitet — welche ihre Zeit wert sind, wie man sie gut einsetzt und wie sie in eine kreative Routine passen, ohne die eigene Stimme zu verlieren.'
-			},
-			{
-				label: 'Immobilienkauf',
-				headline: 'Eine Haussuche, die jedes Inserat liest — damit Sie es nicht müssen.',
-				text: 'Für Kunden auf Haussuche habe ich eine Plattform gebaut, die die Immobilienportale beobachtet, Angebote nach Budget, Lage und Wünschen sortiert, die Unterlagen sammelt und prüft und Käufer mit den richtigen Leuten verbindet — damit sie nur Häuser besichtigen, die ihre Zeit wert sind.'
-			},
-			{
-				label: 'Jobsuche',
-				headline: 'Rund zwanzig Menschen haben mit meinem Werkzeug einen Job gefunden.',
-				text: 'Mefkat liest Stellenanzeigen so aufmerksam wie ein Mensch, gleicht sie ehrlich mit der echten Erfahrung einer Person ab und bereitet passgenaue Bewerbungen vor. Etwa zwanzig Menschen haben damit ihre heutige Stelle gefunden.'
-			},
-			{
-				label: 'Forschung',
-				headline: 'Das Lesen wird schneller — das Denken bleibt Ihres.',
-				text: 'Für Doktoranden, Wissenschaftler und Professoren habe ich Abläufe aufgesetzt, die sich durch Paper-Stapel arbeiten, die Literatur geordnet halten, Entwürfe schärfen und Lehrmaterial vorbereiten — die Fleißarbeit verschwindet, die Wissenschaft bleibt.'
-			},
-			{
-				label: 'Marketing & Produkt',
-				headline: 'Ein Kollege, der jedes Dokument gelesen hat.',
-				text: 'Für Marketing- und Produktteams habe ich einen Assistenten gebaut, der sich durch Dokumentenberge gräbt, die entscheidenden Erkenntnisse herauszieht und Fragen in klarer Sprache beantwortet — wie ein Kollege mit perfektem Gedächtnis.'
-			},
-			{
-				label: 'Sprachen & Prüfungen',
-				headline: 'Prüfungsvorbereitung, die zuerst Sie studiert.',
-				text: 'Für Menschen, die sich auf IELTS, ÖSD, GMAT und ähnliche Prüfungen vorbereiten, habe ich einen Ablauf gebaut, der frühere Prüfungen und Transkripte auswertet, die echten Schwächen beim Schreiben und Hören findet und das Üben danach ausrichtet.'
-			}
-		]
-	},
 	principles: {
-		title: 'Worauf Sie sich verlassen können',
+		eyebrow: 'Worauf Sie sich verlassen können',
+		title: 'Drei Versprechen.',
 		items: [
 			{
 				title: 'Klare Sprache, garantiert.',
@@ -119,12 +181,14 @@ export default {
 		]
 	},
 	about: {
-		title: 'Über mich',
+		eyebrow: 'Über mich',
+		title: 'Der Übersetzer zwischen Ihnen und den Maschinen.',
 		photoAlt: 'Moha Aghanoori',
 		text: 'Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Die Lektion aus dieser Zeit ist einfach: Die Technik ist selten das Schwierige. Das Schwierige ist die Übersetzung — zuzuhören, wie Sie wirklich arbeiten, die Stellen zu finden, an denen eine Maschine tatsächlich hilft, und sie einzufügen, ohne alles andere zu stören. Heute ist genau das meine Arbeit als Berater und Coach. Ich lebe in Berlin, arbeite auf Deutsch und Englisch — und Sie haben immer direkt mit mir zu tun, ohne Agentur und ohne Zwischenstationen.'
 	},
 	contactSection: {
-		title: 'Kontakt',
+		eyebrow: 'Kontakt',
+		title: 'Das Erstgespräch ist kostenlos.',
 		lead: 'Erzählen Sie mir, wie Ihre Woche aussieht. Ich sage Ihnen, welche Teile Sie abgeben können.',
 		form: {
 			name: 'Name',
