@@ -64,7 +64,10 @@
 		<p class="subline rise rise-3">{copy.hero.subline}</p>
 		<div class="rise rise-4">
 			<a class="btn btn-primary" href="#contact">{copy.hero.button}</a>
-			<p class="hero-note muted">{copy.hero.note}</p>
+			<p class="hero-note muted">
+				<img src="{base}/moha-face.webp" alt="" width="240" height="240" />
+				{copy.hero.note}
+			</p>
 		</div>
 	</section>
 
@@ -330,6 +333,17 @@
 		margin-top: 1.5rem;
 		font-size: 0.85rem;
 		letter-spacing: 0.02em;
+		display: flex;
+		align-items: center;
+		gap: 0.85rem;
+	}
+
+	/* circle only at avatar scale — faces read faster in a circle when small */
+	.hero-note img {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		border: 1px solid var(--rule);
 	}
 
 	.rise {
