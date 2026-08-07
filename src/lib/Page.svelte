@@ -75,6 +75,20 @@
 	</section>
 
 	<section class="wrap" use:fade>
+		<h2>{copy.built.title}</h2>
+		<p class="built-intro">{copy.built.intro}</p>
+		<div class="built">
+			{#each copy.built.items as item}
+				<article>
+					<span class="label">{item.label}</span>
+					<h3>{item.headline}</h3>
+					<p class="muted">{item.text}</p>
+				</article>
+			{/each}
+		</div>
+	</section>
+
+	<section class="wrap" use:fade>
 		<h2>{copy.how.title}</h2>
 		<ol class="steps">
 			{#each copy.how.steps as step, i}
@@ -266,6 +280,50 @@
 	.not-listed {
 		margin-top: 2rem;
 		font-family: var(--serif);
+	}
+
+	.built-intro {
+		max-width: 36rem;
+		margin-bottom: 3rem;
+	}
+
+	.built {
+		display: grid;
+	}
+
+	.built article {
+		border-top: 1px solid var(--rule);
+		padding: 2rem 0;
+		display: grid;
+		grid-template-columns: 11rem 1fr;
+		gap: 0.4rem 2.5rem;
+	}
+
+	.built .label {
+		margin-bottom: 0;
+		padding-top: 0.45rem;
+	}
+
+	.built h3 {
+		font-size: 1.45rem;
+		font-style: italic;
+		grid-column: 2;
+	}
+
+	.built p {
+		grid-column: 2;
+		font-size: 0.95rem;
+		max-width: 34rem;
+	}
+
+	@media (max-width: 44rem) {
+		.built article {
+			grid-template-columns: 1fr;
+		}
+		.built h3,
+		.built p {
+			grid-column: 1;
+		}
 	}
 
 	.steps {
