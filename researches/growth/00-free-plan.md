@@ -208,14 +208,22 @@ Without the outreach half, halve those and expect no movement on the commercial 
 
 ---
 
-## Two paid things with deadlines, so they don't get lost
+## Decided 2026-08-08: zero spend
 
-Not free, but time-boxed, so worth knowing now:
+Moha reviewed the paid options and declined all of them for now. **Budget is €0.** Do not
+reopen the ad channels, AZAV, or paid tooling without a fresh decision from him —
+`03-advertising-rates.md` and `04-monetisation.md` stay as reference, not as a to-do list.
 
-- **BAFA consulting subsidy ends 31 December 2026, no successor announced.** Berlin
-  qualifies for the **80%** rate — a €4,000 engagement costs a Berlin SME €800. Listing in
-  the consultant database is administrative. ~5 months of runway.
-- **INQA-Coaching** pays 80% at up to €1,200/day for 12 days, but the coach-pool window is
-  **16 March – 16 April annually** and closed for 2026. It also wants a process-consulting
-  qualification of ≥120 theory + 60 practice hours. **Start accumulating that now, apply
-  spring 2027.**
+Two consequences worth remembering, because both are free and both have clocks:
+
+- **BAFA consultant-database listing.** The *listing* is free administrative registration;
+  it's the client who claims the subsidy. Berlin qualifies for the **80%** rate, so a €4,000
+  engagement costs a Berlin SME €800. **The programme ends 31 December 2026 with no
+  successor announced** — so this is a free action with a hard deadline, and it pays him
+  rather than costing him.
+- **INQA-Coaching** pays 80% at up to €1,200/day for 12 days. Applying is free, but the
+  coach-pool window is **16 March – 16 April annually** (closed for 2026) and it wants a
+  process-consulting qualification of ≥120 theory + 60 practice hours — **that course
+  costs money**, so it's parked with everything else until he says otherwise.
+
+Everything else in this plan remains free and unaffected.
