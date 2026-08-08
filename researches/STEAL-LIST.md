@@ -2,7 +2,12 @@
 
 Concrete, ranked by leverage. Each names the source so you can go look at it.
 
-Your current state, for reference: dark `#0e0e0c` + gold `#d4a54a`, Fraunces over Inter,
+**Superseded 2026-08-08:** the site has since moved to an acedesign.io-derived system —
+`#060606` ground, Anton/Geist/Geist Mono, acid lime `#e1f435` (decided, gold retired). The
+palette and type notes below describe the *previous* design; the conversion and proof
+advice still applies unchanged.
+
+Your state when this was written: dark `#0e0e0c` + gold `#d4a54a`, Fraunces over Inter,
 one 44rem column, no price list, free first conversation, testimonials section built but
 empty, Berlin, DE/EN.
 
