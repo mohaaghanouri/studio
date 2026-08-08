@@ -10,6 +10,8 @@ export default {
 		contact: 'Contact'
 	},
 	hero: {
+		// Keep this current or delete it — a stale availability line reads worse than none.
+		availability: 'Taking 2 new clients this month',
 		kicker: 'AI consulting & coaching for professionals',
 		headline: 'The boring half of your job can do itself.',
 		subline:
@@ -188,9 +190,24 @@ export default {
 	testimonials: {
 		eyebrow: 'Kind words',
 		title: 'What clients say',
-		// Section stays hidden until real quotes exist. Fill like:
-		// { quote: 'He explained in one hour what I had avoided for a year.', name: 'Sandra, dentist' }
-		items: []
+		// MOCK CONTENT — replace with real quotes, then set PLACEHOLDERS = false in lib/preview.js.
+		// Lengths deliberately differ so the grid gets tested at short, medium and long.
+		items: [
+			{
+				quote: 'Short placeholder quote, roughly one line long.',
+				name: 'PLACEHOLDER — name, profession, city'
+			},
+			{
+				quote:
+					'Medium placeholder quote. Two sentences is the most common length a real client gives you, so this one sets the expected height of the card.',
+				name: 'PLACEHOLDER — name, profession, city'
+			},
+			{
+				quote:
+					'Long placeholder quote, here to prove the layout survives someone who writes a whole paragraph. It keeps going past the point where the other two stopped, wraps several times, and shows what happens to the card that ends up tallest in the row.',
+				name: 'PLACEHOLDER — name, profession, city'
+			}
+		]
 	},
 	faq: {
 		eyebrow: 'Common questions',

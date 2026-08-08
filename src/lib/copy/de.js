@@ -10,6 +10,8 @@ export default {
 		contact: 'Kontakt'
 	},
 	hero: {
+		// Aktuell halten oder löschen — eine veraltete Verfügbarkeitszeile wirkt schlechter als keine.
+		availability: 'Diesen Monat 2 neue Mandate frei',
 		kicker: 'KI-Beratung & Coaching für Berufstätige',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline:
@@ -189,9 +191,24 @@ export default {
 	testimonials: {
 		eyebrow: 'Stimmen',
 		title: 'Was Kunden sagen',
-		// Bleibt verborgen, bis echte Zitate da sind. Befüllen wie:
-		// { quote: 'Er hat mir in einer Stunde erklärt, wovor ich ein Jahr lang ausgewichen bin.', name: 'Sandra, Zahnärztin' }
-		items: []
+		// PLATZHALTER — durch echte Zitate ersetzen, dann PLACEHOLDERS = false in lib/preview.js.
+		// Die Längen sind absichtlich unterschiedlich, damit das Raster kurz/mittel/lang testet.
+		items: [
+			{
+				quote: 'Kurzes Platzhalter-Zitat, etwa eine Zeile lang.',
+				name: 'PLATZHALTER — Name, Beruf, Stadt'
+			},
+			{
+				quote:
+					'Mittleres Platzhalter-Zitat. Zwei Sätze sind die häufigste Länge, die man von echten Kunden bekommt — das setzt die erwartete Höhe der Karte.',
+				name: 'PLATZHALTER — Name, Beruf, Stadt'
+			},
+			{
+				quote:
+					'Langes Platzhalter-Zitat, um zu prüfen, ob das Layout jemanden übersteht, der einen ganzen Absatz schreibt. Es läuft deutlich über die anderen beiden hinaus, bricht mehrfach um und zeigt, was mit der höchsten Karte einer Reihe passiert.',
+				name: 'PLATZHALTER — Name, Beruf, Stadt'
+			}
+		]
 	},
 	faq: {
 		eyebrow: 'Häufige Fragen',

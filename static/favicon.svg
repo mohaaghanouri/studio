@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-	<rect width="64" height="64" rx="12" fill="#0e0e0c"/>
-	<text x="32" y="44" font-family="Georgia, serif" font-size="34" fill="#d4a54a" text-anchor="middle">M.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="M">
+  <rect width="64" height="64" rx="12" fill="#060606"/>
+  <!-- Condensed M drawn as paths so the mark needs no webfont -->
+  <g fill="#e1f435">
+    <rect x="14" y="16" width="7" height="32"/>
+    <rect x="43" y="16" width="7" height="32"/>
+    <polygon points="21,16 28,16 32,30 36,16 43,16 43,24 35,44 29,44 21,24"/>
+  </g>
 </svg>
