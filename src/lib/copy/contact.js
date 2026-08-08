@@ -12,8 +12,8 @@ export const contact = {
 	// → embeds cal.com/moha/discovery-call. Free plan is enough (1 user,
 	// unlimited event types). Leave cal empty and the booking section is not
 	// rendered at all.
-	cal: '',
-	calEvent: 'discovery-call'
+	cal: 'mohaaghanouri',
+	calEvent: '30min'
 };
 
 // Tools actually in use. Language-neutral, so it lives here rather than being
