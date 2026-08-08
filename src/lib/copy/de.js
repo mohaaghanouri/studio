@@ -76,87 +76,27 @@ export default {
 		items: [
 			{
 				label: 'Content-Creator',
-				headline: 'Creator, die mit KI arbeiten — nicht gegen sie.',
-				story: [
-					'Videomacher, Autoren, Podcaster — die meisten sind KI zuerst als Bedrohung begegnet, dann als Spielzeug. Ich habe in den letzten Jahren viele Creator einzeln hindurchgeführt: welche Werkzeuge wirklich zu ihrem Handwerk passen, welche nur ein Abo verschwenden und wie daraus eine Wochenroutine wird statt eines Stapels offener Tabs.',
-					'Das Ergebnis ist immer persönlich. Skripte entstehen schneller, klingen aber weiterhin nach ihnen; Schnitt und Untertitel fressen nicht mehr den Abend; die Recherche fürs nächste Stück ist vor dem Frühstück erledigt. Die Stimme bleibt ihre eigene — genau darum geht es.'
-				],
-				handles: [
-					'Die Handvoll Werkzeuge finden, die ihr Geld wert sind',
-					'Skripte, Untertitel und Zweitverwertung über alle Plattformen',
-					'Recherche- und Ideensammlungen, die sich selbst füllen',
-					'Eine Wochenroutine, die wirklich hält'
-				]
+				headline: 'Creator, die mit KI arbeiten — nicht gegen sie.'
 			},
 			{
 				label: 'Immobilienkauf',
-				headline: 'Eine Haussuche, die jedes Inserat liest — damit Sie es nicht müssen.',
-				story: [
-					'Eine Immobiliensuche ist ein zweiter Job: fünf Portale, immer dieselben vierzig Inserate, Unterlagen, die spät kommen und enttäuschen. Für Kunden auf Haussuche habe ich eine Plattform gebaut, die diesen Job rund um die Uhr macht — sie beobachtet die Portale, prüft jedes Angebot gegen Budget, Lage und die Punkte, bei denen es keine Kompromisse gibt, und sortiert leise alles aus, was keine Besichtigung verdient.',
-					'Bevor sich jemand in eine Küche verliebt, sind die Unterlagen schon gesammelt und geprüft, und die richtigen Leute — Makler, Bank, Gutachter — stehen schon bereit. Meine Kunden besichtigen weniger Objekte, stellen bessere Fragen und unterschreiben mit klarem Kopf.'
-				],
-				handles: [
-					'Alle großen Portale rund um die Uhr beobachtet',
-					'Angebote nach Budget, Lage und Wünschen sortiert',
-					'Unterlagen gesammelt und geprüft — vor der Besichtigung',
-					'Die richtigen Leute im richtigen Moment verbunden'
-				]
+				headline: 'Eine Haussuche, die jedes Inserat liest — damit Sie es nicht müssen.'
 			},
 			{
 				label: 'Jobsuche',
-				headline: 'Rund zwanzig Menschen haben mit meinem Werkzeug einen Job gefunden.',
-				story: [
-					'Stellenanzeigen lügen — der Titel verspricht einen Job, die Beschreibung meint einen anderen, und nach hundert offenen Tabs bewerben sich die meisten überall mit denselben müden Unterlagen. Mefkat ist ein Werkzeug, das ich gebaut habe, um es richtig zu machen: Es liest jede Anzeige vollständig, so aufmerksam wie ein Mensch, und gleicht sie ehrlich mit dem ab, was jemand wirklich getan hat. Ohne Schlagwort-Tricks, ohne Übertreibung.',
-					'Lohnt sich eine Anzeige, bereitet es eine Bewerbung vor, die auf genau dieses Unternehmen zugeschnitten ist — und hält die ganze Suche geordnet: was raus ist, was zurückkam, was als Nächstes ansteht. Etwa zwanzig Menschen haben damit ihre heutige Stelle gefunden.'
-				],
-				handles: [
-					'Liest die ganze Anzeige, nicht nur den Titel',
-					'Ehrlicher Abgleich mit der echten Erfahrung',
-					'Bewerbungen, zugeschnitten auf je ein Unternehmen',
-					'Die ganze Suche an einem Ort im Blick'
-				]
+				headline: 'Rund zwanzig Menschen haben mit meinem Werkzeug einen Job gefunden.'
 			},
 			{
 				label: 'Forschung',
-				headline: 'Das Lesen wird schneller — das Denken bleibt Ihres.',
-				story: [
-					'Doktoranden, Wissenschaftler und Professoren verlieren ihre besten Stunden an den Teil der Arbeit, den niemand zitiert: den Lesestapel, das Referenz-Chaos, die dritte Überarbeitung desselben Absatzes, die Prüfung, die zwanzig Varianten braucht. Für sie habe ich Abläufe aufgesetzt, die genau diese Schicht wegräumen.',
-					'Neue Paper werden gelesen, sortiert und in einer geordneten Bibliothek zusammengefasst; Entwürfe kommen schärfer zurück, ohne dass sich das Argument ändert; Lehrmaterial und Prüfungen brauchen einen Nachmittag statt einer Woche. Die Wissenschaft — die Fragen, die Thesen, das Urteil — bleibt vollständig ihre.'
-				],
-				handles: [
-					'Paper-Stapel gelesen und in eine geordnete Bibliothek verwandelt',
-					'Entwürfe geschärft, ohne das Argument anzutasten',
-					'Lehrmaterial und Prüfungen in einem Bruchteil der Zeit',
-					'Referenzen, die sich von selbst ordnen'
-				]
+				headline: 'Das Lesen wird schneller — das Denken bleibt Ihres.'
 			},
 			{
 				label: 'Marketing & Produkt',
-				headline: 'Ein Kollege, der jedes Dokument gelesen hat.',
-				story: [
-					'Jedes Marketing- und Produktteam sitzt auf einem Berg, den niemand ganz gelesen hat: Umfrage-Antworten, Kataloge, Berichte, Meeting-Notizen, Jahre an Recherche. Für solche Teams habe ich einen Assistenten gebaut, der all das gelesen hat — und Fragen dazu in klarer Sprache beantwortet, mit Belegen zu jeder Antwort.',
-					'Tausend Umfrage-Antworten werden zu den fünf Dingen, die Kunden wirklich gesagt haben. Ein Katalog mit zehntausend Produkten bekommt saubere, einheitliche Texte. Der Montagsbericht verdichtet sich selbst auf die Entscheidungen, die zählen. Das Team hört auf zu graben und fängt an zu entscheiden.'
-				],
-				handles: [
-					'Umfragen verdichtet auf das, was Kunden wirklich sagen',
-					'Kataloge verarbeitet und konsistent gehalten',
-					'Berichte reduziert auf die Entscheidungen, die zählen',
-					'Antworten in klarer Sprache — mit Quellen'
-				]
+				headline: 'Ein Kollege, der jedes Dokument gelesen hat.'
 			},
 			{
 				label: 'Sprachen & Prüfungen',
-				headline: 'Prüfungsvorbereitung, die zuerst Sie studiert.',
-				story: [
-					'Die meisten, die sich auf IELTS, ÖSD, GMAT und ähnliche Prüfungen vorbereiten, üben alles gleichmäßig — also vor allem das, was sie schon können. Ich habe einen Ablauf gebaut, der am anderen Ende anfängt: Er wertet frühere Prüfungen und Transkripte aus und zeichnet ein präzises Bild davon, wo die Punkte wirklich verloren gehen.',
-					'Dann ändert das Üben seine Form. Texte werden im eigenen Stil korrigiert, die wiederkehrenden Fehler beim Namen genannt; das Hörtraining konzentriert sich auf genau die Muster, die durchrutschen; jede Woche zielt auf die Schwäche, die am meisten kostet. Weniger üben, besser gezielt.'
-				],
-				handles: [
-					'Frühere Prüfungen und Transkripte ausgewertet',
-					'Texte korrigiert, wiederkehrende Fehler benannt',
-					'Hörtraining auf die eigenen Lücken ausgerichtet',
-					'Ein Plan, der immer auf die teuerste Schwäche zielt'
-				]
+				headline: 'Prüfungsvorbereitung, die zuerst Sie studiert.'
 			}
 		]
 	},
