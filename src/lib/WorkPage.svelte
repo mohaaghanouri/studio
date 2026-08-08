@@ -16,6 +16,22 @@
 	const index = copy.built.items.findIndex((i) => i.slug === item.slug) + 1;
 	const total = copy.built.items.length;
 	const pad = (n) => String(n).padStart(2, '0');
+
+	// Two levels only: /work/ has no index page, so an intermediate crumb would
+	// point at a 404. Google's spec omits `item` on the final crumb.
+	const breadcrumbLd = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: isEn ? 'Home' : 'Startseite',
+				item: `${site}${isEn ? '/' : '/de/'}`
+			},
+			{ '@type': 'ListItem', position: 2, name: item.label }
+		]
+	});
 </script>
 
 <svelte:head>
@@ -25,18 +41,38 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{item.label} — Moha Aghanoori" />
 	<meta property="og:description" content={item.headline} />
+	<link rel="alternate" hreflang="en" href="{site}/work/{item.slug}/" />
+	<link rel="alternate" hreflang="de" href="{site}/de/work/{item.slug}/" />
+	<link rel="alternate" hreflang="x-default" href="{site}/work/{item.slug}/" />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:locale" content={isEn ? 'en_US' : 'de_DE'} />
 	<meta property="og:image" content="{site}/og.png" />
 	{#if PLACEHOLDERS}
 		<meta name="robots" content="noindex, nofollow" />
 	{/if}
+	{@html `<script type="application/ld+json">${breadcrumbLd}</script>`}
 </svelte:head>
 
 <div class="shell">
 	<!-- Left rail: metadata stays put while the case scrolls past it -->
 	<aside class="rail">
-		<a class="back" href={home}>
-			<span aria-hidden="true">←</span> {copy.studio.workBack}
-		</a>
+		<div class="rail-top">
+			<a class="back" href={home}>
+				<span aria-hidden="true">←</span> {copy.studio.workBack}
+			</a>
+			<span class="rail-lang">
+				{#if isEn}
+					<span aria-current="true">EN</span><a
+						href="{base}/de/work/{item.slug}/"
+						data-sveltekit-reload>DE</a
+					>
+				{:else}
+					<a href="{base}/work/{item.slug}/" data-sveltekit-reload>EN</a><span
+						aria-current="true">DE</span
+					>
+				{/if}
+			</span>
+		</div>
 
 		<dl>
 			<dt>{copy.studio.workName}</dt>
@@ -123,6 +159,41 @@
 		padding: 2rem;
 		border-right: 1px solid var(--line);
 		overflow-y: auto;
+	}
+
+	.rail-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.rail-lang {
+		display: flex;
+		gap: 0.5rem;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
+		color: var(--faint);
+	}
+
+	.rail-lang a,
+	.rail-lang span {
+		min-width: 1.5rem;
+		min-height: 1.5rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		color: var(--faint);
+	}
+
+	.rail-lang [aria-current] {
+		color: var(--text);
+	}
+
+	.rail-lang a:hover {
+		color: var(--accent);
 	}
 
 	.back {
