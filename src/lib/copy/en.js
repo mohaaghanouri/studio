@@ -275,8 +275,8 @@ export default {
 	},
 	contactSection: {
 		eyebrow: 'Get in touch',
-		title: 'The first conversation is free.',
-		lead: "Tell me what your week looks like. I'll tell you which parts you can hand over.",
+		title: 'Tell me what your week looks like.',
+		lead: "I'll tell you honestly which parts you can hand over — and which you can't.",
 		form: {
 			name: 'Name',
 			email: 'Email',

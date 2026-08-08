@@ -276,8 +276,8 @@ export default {
 	},
 	contactSection: {
 		eyebrow: 'Kontakt',
-		title: 'Das Erstgespräch ist kostenlos.',
-		lead: 'Erzählen Sie mir, wie Ihre Woche aussieht. Ich sage Ihnen, welche Teile Sie abgeben können.',
+		title: 'Erzählen Sie mir, wie Ihre Woche aussieht.',
+		lead: 'Ich sage Ihnen ehrlich, welche Teile Sie abgeben können — und welche nicht.',
 		form: {
 			subject: 'Worum geht es',
 			// Sortiert die Anfrage, bevor sie bei Ihnen landet.

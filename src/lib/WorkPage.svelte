@@ -31,12 +31,6 @@
 	{/if}
 </svelte:head>
 
-{#if PLACEHOLDERS}
-	<p class="preview-flag">
-		Preview build — client quotes are not in place yet
-	</p>
-{/if}
-
 <div class="shell">
 	<!-- Left rail: metadata stays put while the case scrolls past it -->
 	<aside class="rail">
@@ -112,22 +106,6 @@
 </div>
 
 <style>
-	.preview-flag {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		z-index: 100;
-		text-align: center;
-		padding: 0.6rem 1.25rem;
-		background: var(--accent);
-		color: var(--accent-ink);
-		font-family: var(--mono);
-		font-size: var(--t-meta);
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-	}
-
 	.shell {
 		display: grid;
 		grid-template-columns: 22rem minmax(0, 1fr);
