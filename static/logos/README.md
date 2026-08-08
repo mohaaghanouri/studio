@@ -1,40 +1,48 @@
 # Tool logos
 
-Drop official SVGs here, then set the matching `logo` field in
-`src/lib/copy/contact.js`:
+Each entry in `tools` (`src/lib/copy/contact.js`) takes an optional `logo` naming a
+file here. The tool's name is always shown next to it, so a missing logo degrades
+to a plain wordmark rather than a gap.
 
-```js
-{ name: 'OpenAI', logo: 'openai.svg' }
+## What's here
+
+Seven marks generated from [simple-icons](https://simpleicons.org) (CC0):
+`anthropic`, `googlegemini`, `langgraph`, `n8n`, `github`, `gitkraken`, `figma`.
+
+The package itself is not a dependency — the SVGs are committed as static assets,
+which is all the site needs. To add more:
+
+```bash
+npm i -D simple-icons
+node -e "
+const si=require('simple-icons'), fs=require('fs');
+const icon=Object.values(si).find(i=>i.slug==='SLUG_HERE');
+fs.writeFileSync('static/logos/'+icon.slug+'.svg',
+  '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><title>'+icon.title+
+  '</title><path fill=\"#ffffff\" d=\"'+icon.path+'\"/></svg>');
+"
+npm uninstall simple-icons
 ```
 
-Until a `logo` is set, the site renders the wordmark in Geist Mono instead, which
-looks deliberate rather than broken — so you can add these one at a time.
+Then set `logo: 'slug.svg'` on that tool.
 
-## Why these aren't already here
+## What's deliberately missing
 
-These are trademarks, and the only correct versions are the ones each vendor
-publishes. Redrawn approximations look wrong to anyone who knows the brand and
-aren't ours to ship. Take them from the official brand pages:
+**OpenAI and Microsoft are not in simple-icons at all.** That set removes brands when
+the trademark holder asks it to, so their absence is a request, not an oversight — they
+stay as wordmarks rather than being sourced from somewhere less careful. Langfuse,
+Kraken, ImmoScout24, Higgsfield and HeyGen simply aren't in the set yet.
 
-| Tool | Where |
-|---|---|
-| OpenAI | openai.com/brand |
-| Anthropic | anthropic.com — press/brand assets |
-| Gemini / Google | about.google/brand-resource-center |
-| LangGraph / Langfuse | their GitHub repos — both ship SVG marks in-repo |
-| n8n | n8n.io — press kit |
-| Figma | figma.com/using-figma/brand-assets |
-| Higgsfield | higgsfield.ai — check footer for brand assets |
-| HeyGen | heygen.com — press/brand page |
-| Microsoft | microsoft.com/legal/intellectualproperty/trademarks |
+For any of those, take the SVG from the vendor's own brand page (usually linked in the
+footer, or at `/brand`, `/press`, `/legal/trademarks`). Avoid logo-aggregator sites —
+they mostly redistribute marks they have no right to.
 
 ## Requirements
 
-- **SVG**, monochrome if a mono version is offered — the row is set on near-black,
-  so single-colour white or light-grey marks sit best.
-- Trim the artboard so the mark fills its box; padding inside the file makes
-  logos look randomly sized next to each other.
-- Check each vendor's brand terms. Naming a tool you genuinely use is normally
-  fine; implying endorsement or partnership is not. The row is labelled
-  "tools I work with" rather than "clients" for exactly that reason — keep it
-  that way.
+- **SVG**, single-colour white (`fill="#ffffff"`); the row sits on near-black and CSS
+  drops it to 70% opacity.
+- 24×24 viewBox with the artboard trimmed so the mark fills it. Padding inside the file
+  makes logos look randomly sized next to each other.
+- Naming a tool you genuinely use is normal descriptive use. Implying endorsement or
+  partnership is not — which is why the row is labelled **"tools I work with"** rather
+  than "clients". Keep it that way.

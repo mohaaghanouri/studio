@@ -28,16 +28,16 @@ export const contact = {
 // each vendor's official SVG.
 export const tools = [
 	{ name: 'OpenAI', logo: '' },
-	{ name: 'Anthropic', logo: '' },
-	{ name: 'Gemini', logo: '' },
-	{ name: 'LangGraph', logo: '' },
+	{ name: 'Anthropic', logo: 'anthropic.svg' },
+	{ name: 'Gemini', logo: 'googlegemini.svg' },
+	{ name: 'LangGraph', logo: 'langgraph.svg' },
 	{ name: 'Langfuse', logo: '' },
-	{ name: 'n8n', logo: '' },
-	{ name: 'GitHub', logo: '' },
-	{ name: 'GitKraken', logo: '' },
+	{ name: 'n8n', logo: 'n8n.svg' },
+	{ name: 'GitHub', logo: 'github.svg' },
+	{ name: 'GitKraken', logo: 'gitkraken.svg' },
 	{ name: 'Kraken', logo: '' },
 	{ name: 'ImmoScout24', logo: '' },
-	{ name: 'Figma', logo: '' },
+	{ name: 'Figma', logo: 'figma.svg' },
 	{ name: 'Higgsfield', logo: '' },
 	{ name: 'HeyGen', logo: '' },
 	{ name: 'Microsoft', logo: '' }
