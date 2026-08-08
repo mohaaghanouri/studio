@@ -47,6 +47,32 @@ delivery.
 No DMARC and no DKIM records currently exist. Nothing to migrate there, though adding DMARC
 later is worth doing on its own merits.
 
+## Progress 2026-08-08
+
+Cloudflare account created (`moha.aghanouri@gmail.com`), `moha.expert` added on the **Free**
+plan, DNS Setup **Full**. Cloudflare's scan found exactly the eight records inventoried
+below — 4 A, 1 CNAME, 2 MX, 1 TXT — and the three email-critical rows were **verified
+correct**: `fwd1.porkbun.com` priority 10 and `fwd2.porkbun.com` priority 20, both DNS-only,
+plus the SPF TXT. The outage risk is cleared.
+
+Cloudflare's onboarding now includes AI crawler policies. Its default for **Training** was
+"Block on pages with ads", which contradicts the shipped `robots.txt`. **All three (Search,
+Agent, Training) set to Allow**, so the dashboard and the file now agree.
+
+**Your Cloudflare nameservers:**
+```
+ben.ns.cloudflare.com
+kimora.ns.cloudflare.com
+```
+
+**Not yet done — deliberately stopped here.** The nameserver change happens in the Porkbun
+account and is the step that both activates everything and carries the email risk.
+
+**Still to check after activation:** whether the 4 A records and the `www` CNAME are
+**Proxied** (orange) rather than DNS-only. Proxying is what delivers Brotli and HTTP/3 — the
+whole point of the migration. If they are grey, flip them in the DNS tab afterwards; the site
+keeps working either way, it just stays uncompressed.
+
 ## Order of operations
 
 Doing this in the wrong order is what causes the outage.
