@@ -1215,24 +1215,66 @@
 	/* ============================================================
 	   Who — compact index, not cards
 	   ============================================================ */
+	/* Crosshair marks on every cell corner. One SVG tiled to four positions and
+	   inset past the edges so each cross centres exactly on an intersection —
+	   adjacent cells overlap theirs precisely, so the grid reads as one measured
+	   object rather than a set of boxes. */
+	.who,
+	.grid-cells {
+		--cross: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11'%3E%3Cpath d='M5.5 0v11M0 5.5h11' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E");
+	}
+
+	.who li::before,
+	.grid-cells li::before {
+		content: '';
+		position: absolute;
+		inset: -5.5px;
+		pointer-events: none;
+		opacity: 0.32;
+		background-image: var(--cross), var(--cross), var(--cross), var(--cross);
+		background-repeat: no-repeat;
+		background-position: left top, right top, left bottom, right bottom;
+		background-size: 11px 11px;
+	}
+
 	.who {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-		gap: 0;
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.who li {
-		border-top: 1px solid var(--line);
-		padding: 1.5rem clamp(1rem, 2vw, 2rem) 1.5rem 0;
+		position: relative;
+		min-height: 13rem;
+		padding: 1.5rem;
+		border: 1px solid var(--line);
+		margin: 0 0 -1px -1px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.9rem;
 	}
 
 	.who p {
-		margin-top: 0.75rem;
+		margin-top: auto;
 		font-size: 0.9375rem;
 		color: var(--muted);
+	}
+
+	@media (max-width: 60rem) {
+		.who {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 40rem) {
+		.who {
+			grid-template-columns: 1fr;
+		}
+		.who li {
+			min-height: 0;
+		}
 	}
 
 	/* ============================================================
@@ -1262,27 +1304,6 @@
 		transform: translateY(3.5rem);
 	}
 
-	/* Crosshair at the top-left corner of every cell */
-	.grid-cells li::before,
-	.grid-cells li::after {
-		content: '';
-		position: absolute;
-		background: var(--line-strong);
-	}
-
-	.grid-cells li::before {
-		top: -0.3rem;
-		left: -1px;
-		width: 1px;
-		height: 0.6rem;
-	}
-
-	.grid-cells li::after {
-		top: -1px;
-		left: -0.3rem;
-		width: 0.6rem;
-		height: 1px;
-	}
 
 	.cell-idx {
 		font-family: var(--mono);
