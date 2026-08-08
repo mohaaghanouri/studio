@@ -14,7 +14,7 @@ export default {
 		availability: 'Taking 2 new clients this month',
 		headline: 'The boring half of your job can do itself.',
 		subline:
-			"I'm Moha Aghanoori. I've spent four years building AI systems professionally. Today I coach dentists, lawyers, researchers and executives on putting AI to work — in plain language, shaped around how you already work.",
+			"I'm Moha Aghanoori. I've spent six years building AI systems professionally. Today I coach dentists, lawyers, researchers and executives on putting AI to work — in plain language, shaped around how you already work.",
 		button: 'Message me — the first conversation is free',
 		note: 'Based in Berlin · English & German · You deal with me directly'
 	},
@@ -39,7 +39,7 @@ export default {
 		// $$$$ placeholders — fill these in with real figures.
 		stats: [
 			{ value: '70+', label: 'People helped through a job search' },
-			{ value: '4', label: 'Years building AI systems' },
+			{ value: '6', label: 'Years building AI systems' },
 			{ value: '18', label: 'Professions served' }
 		]
 	},
@@ -208,7 +208,7 @@ export default {
 		eyebrow: 'About me',
 		title: 'The translator between you and the machines.',
 		photoAlt: 'Moha Aghanoori',
-		text: "I've spent four years building AI systems professionally. The lesson of those years is simple: the technology is rarely the hard part. The hard part is translation — listening to how you actually work, finding the places where a machine genuinely helps, and fitting it in without disturbing everything else. Today that's my work as a consultant and coach. I live in Berlin, work in English and German, and you always deal with me personally — no agency, no handoffs."
+		text: "I've spent six years building AI systems professionally. The lesson of those years is simple: the technology is rarely the hard part. The hard part is translation — listening to how you actually work, finding the places where a machine genuinely helps, and fitting it in without disturbing everything else. Today that's my work as a consultant and coach. I live in Berlin, work in English and German, and you always deal with me personally — no agency, no handoffs."
 	},
 	testimonials: {
 		eyebrow: 'Kind words',
