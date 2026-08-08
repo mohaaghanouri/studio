@@ -28,6 +28,11 @@ export default {
 		bookNote: 'Thirty minutes, free, no preparation needed.',
 		sound: 'Sound',
 		workBack: 'All use cases',
+		worksHeading: 'Six things AI already does for people like you.',
+		worksIntro:
+			"Each of these is something I built and ran myself, for real people with real deadlines. Pick the one closest to your work.",
+		worksMeta:
+			'Six real use cases: content, house hunting, job search, research, marketing and exam prep. Built and run by Moha Aghanoori, AI coaching in Berlin.',
 		workName: 'Use case',
 		workOverview: 'Overview',
 		workCovers: 'What it takes over',
@@ -76,6 +81,9 @@ export default {
 		items: [
 			{
 				slug: 'content-creators',
+				title: 'AI for content creators: faster scripts, same voice — AI coaching Berlin',
+				metaDescription:
+					'How video makers, writers and podcasters use AI for scripts, captions and research without losing their own voice. One-to-one coaching from Berlin.',
 				label: 'Content creators',
 				headline: 'Creators who work with AI, not against it.',
 				story: [
@@ -91,6 +99,9 @@ export default {
 			},
 			{
 				slug: 'buying-a-home',
+				title: 'AI for a house hunt: fewer viewings, checked papers — AI coaching Berlin',
+				metaDescription:
+					'A property search that watches every portal, ranks offers against your budget, and has the documents checked before you view. Built for buyers in Berlin.',
 				label: 'Buying a home',
 				headline: "A house hunt that reads every listing, so you don't have to.",
 				story: [
@@ -106,6 +117,9 @@ export default {
 			},
 			{
 				slug: 'finding-a-job',
+				title: 'AI for a job search: around twenty people placed — AI coaching Berlin',
+				metaDescription:
+					'A tool that reads each job ad in full and matches it honestly against real experience. Around twenty people found their current job with it.',
 				label: 'Finding a job',
 				headline: 'Around twenty people found jobs with a tool I built.',
 				story: [
@@ -121,6 +135,9 @@ export default {
 			},
 			{
 				slug: 'research',
+				title: 'AI for research: faster reading, your own thinking — AI coaching Berlin',
+				metaDescription:
+					'Workflows for PhD students and professors: papers read and summarised, drafts sharpened, teaching material prepared. The scholarship stays entirely yours.',
 				label: 'Research',
 				headline: 'The reading gets faster; the thinking stays yours.',
 				story: [
@@ -136,6 +153,9 @@ export default {
 			},
 			{
 				slug: 'marketing-product',
+				title: 'AI for marketing teams: an assistant that read everything — AI coaching Berlin',
+				metaDescription:
+					'Surveys distilled into what customers actually said, catalogues processed, reports condensed to the decisions that matter. Answers with the receipts.',
 				label: 'Marketing & product',
 				headline: 'A colleague who has read every document.',
 				story: [
@@ -151,6 +171,9 @@ export default {
 			},
 			{
 				slug: 'language-exams',
+				title: 'AI for IELTS and exam prep: practice aimed at weak spots — AI coaching Berlin',
+				metaDescription:
+					'Exam preparation that reviews your past tests first, names the recurring mistakes, and aims each week at the weakness costing you the most points.',
 				label: 'Language & exams',
 				headline: 'Exam preparation that studies you first.',
 				story: [

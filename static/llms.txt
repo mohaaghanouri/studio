@@ -1,0 +1,35 @@
+# moha.expert
+
+> Moha Aghanoori — AI consulting and one-to-one coaching for working professionals
+> (dentists, lawyers, tax advisors, researchers, marketers). Berlin, English and German.
+> Six years building AI systems. You deal with him directly; no agency, no handoffs.
+
+Honest note on this file: as of 2026 no major LLM provider consumes /llms.txt as a
+ranking or citation signal, and Google Search states in writing that it ignores it.
+It exists here because it costs nothing to maintain and the agentic-browsing
+convention may yet go somewhere. The file every engine actually reads is
+/sitemap.xml.
+
+## Pages
+
+- [Home (English)](https://moha.expert/): what he does, who he helps, how it works, pricing approach, FAQ.
+- [Startseite (Deutsch)](https://moha.expert/de/): dieselben Inhalte auf Deutsch.
+
+## Use cases
+
+- [Content creators](https://moha.expert/work/content-creators/): scripts, captions and research without losing your own voice.
+- [Buying a home](https://moha.expert/work/buying-a-home/): a property search that reads every listing and checks documents before viewing.
+- [Finding a job](https://moha.expert/work/finding-a-job/): a matching tool that reads each ad in full; around twenty people placed.
+- [Research](https://moha.expert/work/research/): reading, summarising and reference workflows for PhD students and professors.
+- [Marketing & product](https://moha.expert/work/marketing-product/): surveys, catalogues and reports distilled, with sources.
+- [Language & exams](https://moha.expert/work/language-exams/): IELTS and exam prep aimed at the weakness costing the most points.
+
+## Legal
+
+- [Impressum](https://moha.expert/impressum/)
+- [Datenschutz](https://moha.expert/datenschutz/)
+
+## Contact
+
+- Book a 30-minute discovery call: https://cal.com/mohaaghanouri/discovery-call
+- Email: moha@moha.expert

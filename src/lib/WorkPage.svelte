@@ -35,12 +35,12 @@
 </script>
 
 <svelte:head>
-	<title>{item.label} — Moha Aghanoori</title>
-	<meta name="description" content={item.headline} />
+	<title>{item.title ?? `${item.label} — Moha Aghanoori`}</title>
+	<meta name="description" content={item.metaDescription ?? item.headline} />
 	<link rel="canonical" href={canonical} />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="{item.label} — Moha Aghanoori" />
-	<meta property="og:description" content={item.headline} />
+	<meta property="og:title" content={item.title ?? `${item.label} — Moha Aghanoori`} />
+	<meta property="og:description" content={item.metaDescription ?? item.headline} />
 	<link rel="alternate" hreflang="en" href="{site}/work/{item.slug}/" />
 	<link rel="alternate" hreflang="de" href="{site}/de/work/{item.slug}/" />
 	<link rel="alternate" hreflang="x-default" href="{site}/work/{item.slug}/" />
@@ -57,7 +57,7 @@
 	<!-- Left rail: metadata stays put while the case scrolls past it -->
 	<aside class="rail">
 		<div class="rail-top">
-			<a class="back" href={home}>
+			<a class="back" href="{base}{isEn ? '' : '/de'}/work/">
 				<span aria-hidden="true">←</span> {copy.studio.workBack}
 			</a>
 			<span class="rail-lang">
