@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
 	import { contact, site } from '$lib/copy/contact.js';
@@ -8,6 +9,37 @@
 
 	const isEn = copy.lang === 'en';
 	const canonical = isEn ? `${site}/` : `${site}/de/`;
+
+	// Nav sections. Indices are real positions in the page, so the numbering
+	// carries information rather than decorating.
+	const sections = [
+		{ id: 'work', label: copy.studio.worksLabel },
+		{ id: 'process', label: copy.studio.capabilitiesLabel },
+		{ id: 'about', label: copy.about.eyebrow },
+		{ id: 'contact', label: copy.nav.contact }
+	];
+
+	let activeId = '';
+	let menuOpen = false;
+
+	// Scroll-spy: whichever tracked section owns the middle of the viewport wins.
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) if (entry.isIntersecting) activeId = entry.target.id;
+			},
+			{ rootMargin: '-45% 0px -50% 0px' }
+		);
+		for (const { id } of sections) {
+			const el = document.getElementById(id);
+			if (el) observer.observe(el);
+		}
+		return () => observer.disconnect();
+	});
+
+	function onKeydown(event) {
+		if (event.key === 'Escape') menuOpen = false;
+	}
 
 	// Four use cases carry the work grid. Art direction is presentational, so it
 	// lives here rather than in the copy files.
@@ -76,13 +108,26 @@
 	</p>
 {/if}
 
+<svelte:window on:keydown={onKeydown} />
+
 <header>
 	<div class="bar wrap">
-		<span class="name">Moha Aghanoori</span>
-		<nav aria-label="Site">
-			<a href="#work">{copy.studio.worksLabel}</a>
-			<a href="#about">{copy.about.eyebrow}</a>
-			<a href="#contact">{copy.nav.contact}</a>
+		<a class="name" href="#top">Moha Aghanoori</a>
+
+		<nav class="desk" aria-label="Sections">
+			{#each sections as section, i}
+				<a
+					href="#{section.id}"
+					aria-current={activeId === section.id ? 'true' : undefined}
+					class:on={activeId === section.id}
+				>
+					<span class="idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+					{section.label}
+				</a>
+			{/each}
+		</nav>
+
+		<div class="bar-end">
 			<span class="lang">
 				{#if isEn}
 					<span aria-current="true">EN</span><a href="{base}/de/" data-sveltekit-reload>DE</a>
@@ -90,12 +135,37 @@
 					<a href="{base}/" data-sveltekit-reload>EN</a><span aria-current="true">DE</span>
 				{/if}
 			</span>
-		</nav>
+			<button
+				class="burger"
+				type="button"
+				aria-expanded={menuOpen}
+				aria-controls="menu"
+				on:click={() => (menuOpen = !menuOpen)}
+			>
+				<span class="bars" aria-hidden="true" class:x={menuOpen}></span>
+				<span class="sr">{copy.nav.contact}</span>
+			</button>
+		</div>
 	</div>
+
+	<!-- Mobile panel. Replaces the old behaviour, which hid the links entirely
+	     below 34rem and left them unreachable on a phone. -->
+	<nav id="menu" class="sheet" aria-label="Sections" hidden={!menuOpen}>
+		{#each sections as section, i}
+			<a
+				href="#{section.id}"
+				aria-current={activeId === section.id ? 'true' : undefined}
+				on:click={() => (menuOpen = false)}
+			>
+				<span class="idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+				{section.label}
+			</a>
+		{/each}
+	</nav>
 </header>
 
 <main>
-	<section class="hero wrap">
+	<section class="hero wrap" id="top">
 		{#if copy.hero.availability}
 			<p class="pill rise"><span class="dot" aria-hidden="true"></span>{copy.hero.availability}</p>
 		{/if}
@@ -172,7 +242,7 @@
 		<p class="aside">{copy.who.notListed}</p>
 	</section>
 
-	<section class="wrap" use:fade>
+	<section class="wrap" id="process" use:fade>
 		<div class="row-head">
 			<span class="meta">{copy.studio.capabilitiesLabel}</span>
 		</div>
@@ -274,22 +344,55 @@
 					>
 						<label>
 							<span class="meta">{copy.contactSection.form.name}</span>
-							<input type="text" name="name" required />
+							<input type="text" name="name" autocomplete="name" required />
 						</label>
+
 						<label>
 							<span class="meta">{copy.contactSection.form.email}</span>
-							<input type="email" name="email" required />
+							<input
+								type="email"
+								name="email"
+								autocomplete="email"
+								required
+								aria-describedby="email-hint"
+							/>
+							<small id="email-hint">{copy.contactSection.form.emailHint}</small>
 						</label>
+
+						<label>
+							<span class="meta">{copy.contactSection.form.subject}</span>
+							<select name="subject" required>
+								{#each copy.contactSection.form.subjects as subject}
+									<option value={subject}>{subject}</option>
+								{/each}
+							</select>
+						</label>
+
 						<label>
 							<span class="meta">{copy.contactSection.form.message}</span>
-							<textarea name="message" rows="5" required></textarea>
+							<textarea
+								name="message"
+								rows="5"
+								required
+								aria-describedby="message-hint"
+							></textarea>
+							<small id="message-hint">{copy.contactSection.form.messageHint}</small>
 						</label>
-						<button class="btn btn-primary" type="submit" disabled={formState === 'sending'}>
-							{copy.contactSection.form.send}
-						</button>
-						{#if formState === 'error'}
-							<p class="form-status">{copy.contactSection.form.error}</p>
-						{/if}
+
+						<div class="submit">
+							<button class="btn btn-primary" type="submit" disabled={formState === 'sending'}>
+								{formState === 'sending'
+									? copy.contactSection.form.sending
+									: copy.contactSection.form.send}
+							</button>
+							<p class="reply-time">{copy.contactSection.form.reply}</p>
+						</div>
+
+						<!-- Announced to screen readers without stealing focus -->
+						<p class="form-status" role="status" aria-live="polite">
+							{formState === 'error' ? copy.contactSection.form.error : ''}
+						</p>
+
 						<p class="form-note">{copy.contactSection.form.note}</p>
 					</form>
 				{/if}
@@ -374,44 +477,165 @@
 	}
 
 	.name,
-	nav {
+	nav,
+	.bar-end {
 		font-family: var(--mono);
 		font-size: var(--t-label);
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 	}
 
-	nav {
+	.name {
+		text-decoration: none;
+		color: var(--text);
+	}
+
+	.desk {
 		display: flex;
-		gap: clamp(1rem, 2.5vw, 2rem);
+		gap: clamp(1rem, 2.5vw, 2.25rem);
 		align-items: center;
 	}
 
-	nav a {
+	.desk a {
+		display: flex;
+		align-items: baseline;
+		gap: 0.45rem;
 		text-decoration: none;
 		color: var(--faint);
+		padding: 0.35rem 0;
+		border-top: 1px solid transparent;
+		transition:
+			color 0.2s ease,
+			border-color 0.2s ease;
 	}
 
-	nav a:hover {
+	.desk a:hover {
 		color: var(--text);
+	}
+
+	/* Active section, set by the scroll-spy observer */
+	.desk a.on {
+		color: var(--text);
+		border-top-color: var(--accent);
+	}
+
+	.idx {
+		font-size: 0.625rem;
+		color: var(--ghost);
+	}
+
+	.desk a.on .idx {
+		color: var(--accent);
+	}
+
+	.bar-end {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	.lang {
 		display: flex;
 		gap: 0.5rem;
 		color: var(--faint);
-		border-left: 1px solid var(--line);
-		padding-left: clamp(1rem, 2.5vw, 2rem);
+	}
+
+	.lang a {
+		text-decoration: none;
+		color: var(--faint);
+	}
+
+	.lang a:hover {
+		color: var(--text);
 	}
 
 	.lang [aria-current] {
 		color: var(--text);
 	}
 
-	@media (max-width: 34rem) {
-		nav a[href='#work'],
-		nav a[href='#about'] {
+	/* ---- mobile menu ---- */
+	.burger {
+		display: none;
+		background: none;
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		padding: 0.55rem 0.6rem;
+		cursor: pointer;
+		color: var(--text);
+	}
+
+	.bars,
+	.bars::before,
+	.bars::after {
+		display: block;
+		width: 1rem;
+		height: 1px;
+		background: currentColor;
+		transition: transform 0.25s ease;
+	}
+
+	.bars::before,
+	.bars::after {
+		content: '';
+		position: relative;
+	}
+
+	.bars::before {
+		top: -5px;
+	}
+	.bars::after {
+		top: 4px;
+	}
+
+	.bars.x::before {
+		transform: translateY(5px) rotate(45deg);
+	}
+	.bars.x::after {
+		transform: translateY(-4px) rotate(-45deg);
+	}
+	.bars.x {
+		background: transparent;
+	}
+
+	.sr {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+
+	.sheet {
+		display: none;
+		flex-direction: column;
+		border-top: 1px solid var(--line);
+		background: var(--raised);
+	}
+
+	.sheet a {
+		display: flex;
+		align-items: baseline;
+		gap: 0.7rem;
+		padding: 1.1rem clamp(1.25rem, 4vw, 3rem);
+		text-decoration: none;
+		color: var(--muted);
+		border-bottom: 1px solid var(--line);
+	}
+
+	.sheet a[aria-current] {
+		color: var(--accent);
+	}
+
+	@media (max-width: 56rem) {
+		.desk {
 			display: none;
+		}
+		.burger {
+			display: block;
+		}
+		.sheet:not([hidden]) {
+			display: flex;
 		}
 	}
 
@@ -888,7 +1112,8 @@
 	}
 
 	input,
-	textarea {
+	textarea,
+	select {
 		background: var(--bg);
 		border: 1px solid var(--line);
 		border-radius: var(--r);
@@ -899,19 +1124,77 @@
 		width: 100%;
 	}
 
+	textarea {
+		resize: vertical;
+		min-height: 7rem;
+	}
+
+	select {
+		appearance: none;
+		/* caret drawn in CSS so it matches the palette instead of the OS */
+		background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+			linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+		background-position:
+			calc(100% - 1.1rem) 1.35rem,
+			calc(100% - 0.75rem) 1.35rem;
+		background-size:
+			0.35rem 0.35rem,
+			0.35rem 0.35rem;
+		background-repeat: no-repeat;
+		padding-right: 2.5rem;
+	}
+
 	input:focus,
-	textarea:focus {
+	textarea:focus,
+	select:focus {
 		border-color: var(--accent);
 		outline: none;
 	}
 
+	/* :user-invalid, not :invalid — only flags a field the person actually
+	   touched and left wrong, so an untouched form is never pre-reddened. */
+	input:user-invalid,
+	textarea:user-invalid,
+	select:user-invalid {
+		border-color: #f4643b;
+	}
+
+	form small {
+		font-size: 0.8125rem;
+		color: var(--faint);
+	}
+
+	.submit {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1.25rem;
+	}
+
 	form .btn {
-		justify-self: start;
 		cursor: pointer;
 	}
 
+	form .btn:disabled {
+		opacity: 0.6;
+		cursor: progress;
+	}
+
+	.reply-time {
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--faint);
+	}
+
 	.form-status {
-		color: var(--muted);
+		color: #f4643b;
+		font-size: 0.9375rem;
+	}
+
+	.form-status:empty {
+		display: none;
 	}
 
 	.form-note {
