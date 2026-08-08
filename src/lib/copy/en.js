@@ -19,6 +19,22 @@ export default {
 		button: 'Message me — the first conversation is free',
 		note: 'Based in Berlin · English & German · You deal with me directly'
 	},
+	studio: {
+		// Labelled tools, NOT clients — every name here is something actually used,
+		// so the row reads as true rather than as an implied client list.
+		toolsLabel: 'Tools I work with',
+		tools: ['OpenAI', 'Anthropic', 'Google', 'Microsoft', 'n8n'],
+		worksLabel: 'Use cases',
+		capabilitiesLabel: 'How it works',
+		statsLabel: 'By the numbers',
+		// $$$$ placeholders — fill these in with real figures.
+		stats: [
+			{ value: '$$$$', label: 'People placed with Mefkat' },
+			{ value: '$$$$', label: 'Hours given back per week' },
+			{ value: '$$$$', label: 'Years building AI systems' },
+			{ value: '$$$$', label: 'Professions served' }
+		]
+	},
 	who: {
 		eyebrow: 'Who I help',
 		title: 'Every profession has a boring half.',
@@ -190,22 +206,22 @@ export default {
 	testimonials: {
 		eyebrow: 'Kind words',
 		title: 'What clients say',
-		// MOCK CONTENT — replace with real quotes, then set PLACEHOLDERS = false in lib/preview.js.
-		// Lengths deliberately differ so the grid gets tested at short, medium and long.
+		// MOCK CONTENT — football quotes standing in for client testimonials, so nobody
+		// could mistake them for real ones. Replace, then set PLACEHOLDERS = false
+		// in lib/preview.js. Lengths differ on purpose to test the grid.
 		items: [
 			{
-				quote: 'Short placeholder quote, roughly one line long.',
-				name: 'PLACEHOLDER — name, profession, city'
+				quote: 'Aim for the sky and you’ll reach the ceiling.',
+				name: 'Alex Ferguson · placeholder'
 			},
 			{
 				quote:
-					'Medium placeholder quote. Two sentences is the most common length a real client gives you, so this one sets the expected height of the card.',
-				name: 'PLACEHOLDER — name, profession, city'
+					'Football is a simple game made complicated by people who should know better.',
+				name: 'Bill Shankly · placeholder'
 			},
 			{
-				quote:
-					'Long placeholder quote, here to prove the layout survives someone who writes a whole paragraph. It keeps going past the point where the other two stopped, wraps several times, and shows what happens to the card that ends up tallest in the row.',
-				name: 'PLACEHOLDER — name, profession, city'
+				quote: 'I learned all about life with a ball at my feet.',
+				name: 'Ronaldinho · placeholder'
 			}
 		]
 	},

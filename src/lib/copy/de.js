@@ -19,6 +19,22 @@ export default {
 		button: 'Schreiben Sie mir — das Erstgespräch ist kostenlos',
 		note: 'In Berlin · Deutsch & Englisch · Sie sprechen direkt mit mir'
 	},
+	studio: {
+		// Als Werkzeuge gekennzeichnet, NICHT als Kunden — jeder Name hier wird
+		// wirklich eingesetzt, die Zeile ist also wahr und keine Kundenliste.
+		toolsLabel: 'Womit ich arbeite',
+		tools: ['OpenAI', 'Anthropic', 'Google', 'Microsoft', 'n8n'],
+		worksLabel: 'Anwendungsfälle',
+		capabilitiesLabel: 'So läuft es',
+		statsLabel: 'In Zahlen',
+		// $$$$ Platzhalter — mit echten Werten füllen.
+		stats: [
+			{ value: '$$$$', label: 'Menschen mit Mefkat vermittelt' },
+			{ value: '$$$$', label: 'Stunden pro Woche zurück' },
+			{ value: '$$$$', label: 'Jahre KI-Systeme gebaut' },
+			{ value: '$$$$', label: 'Berufsgruppen betreut' }
+		]
+	},
 	who: {
 		eyebrow: 'Für wen ich arbeite',
 		title: 'Jeder Beruf hat eine langweilige Hälfte.',
@@ -191,22 +207,21 @@ export default {
 	testimonials: {
 		eyebrow: 'Stimmen',
 		title: 'Was Kunden sagen',
-		// PLATZHALTER — durch echte Zitate ersetzen, dann PLACEHOLDERS = false in lib/preview.js.
-		// Die Längen sind absichtlich unterschiedlich, damit das Raster kurz/mittel/lang testet.
+		// PLATZHALTER — Fußball-Zitate anstelle echter Kundenstimmen, damit sie
+		// niemand verwechseln kann. Ersetzen, dann PLACEHOLDERS = false in lib/preview.js.
 		items: [
 			{
-				quote: 'Kurzes Platzhalter-Zitat, etwa eine Zeile lang.',
-				name: 'PLATZHALTER — Name, Beruf, Stadt'
+				quote: 'Ziele auf den Himmel, dann erreichst du die Decke.',
+				name: 'Alex Ferguson · Platzhalter'
 			},
 			{
 				quote:
-					'Mittleres Platzhalter-Zitat. Zwei Sätze sind die häufigste Länge, die man von echten Kunden bekommt — das setzt die erwartete Höhe der Karte.',
-				name: 'PLATZHALTER — Name, Beruf, Stadt'
+					'Fußball ist ein einfaches Spiel, das von Leuten verkompliziert wird, die es besser wissen müssten.',
+				name: 'Bill Shankly · Platzhalter'
 			},
 			{
-				quote:
-					'Langes Platzhalter-Zitat, um zu prüfen, ob das Layout jemanden übersteht, der einen ganzen Absatz schreibt. Es läuft deutlich über die anderen beiden hinaus, bricht mehrfach um und zeigt, was mit der höchsten Karte einer Reihe passiert.',
-				name: 'PLATZHALTER — Name, Beruf, Stadt'
+				quote: 'Ich habe alles über das Leben mit einem Ball am Fuß gelernt.',
+				name: 'Ronaldinho · Platzhalter'
 			}
 		]
 	},

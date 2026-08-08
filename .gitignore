@@ -4,3 +4,4 @@ build/
 .env
 .DS_Store
 .playwright-mcp/
+.github/workflows/deploy.yml
