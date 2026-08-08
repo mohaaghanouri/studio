@@ -26,3 +26,9 @@ with what's already shipped and what needs your hands.
 4. **Paid ads don't clear the CAC at a €2,000 ticket.** A classified ad reaching 78,000
    dentists costs ~€350 (≈€4.70 CPM) against LinkedIn's €100–200 CPM in this category — and
    Kammer speaking has *negative* CAC because they pay an honorarium.
+
+## Migration notes
+
+| File | What's in it |
+|---|---|
+| [`06-cloudflare-preflight.md`](06-cloudflare-preflight.md) | Live DNS captured before any change, the exact records to recreate, safe order of operations, rollback, and the email-outage risk that a nameserver switch creates. |

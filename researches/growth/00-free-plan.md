@@ -55,7 +55,14 @@ months to trust a new domain, so starting earlier has real value.
 
 ---
 
-## Step 2 — Cloudflare free tier **[you, 20 min]**
+## Step 2 — Cloudflare free tier **[you, 30 min — READ THE PRE-FLIGHT FIRST]**
+
+⚠️ **This is a DNS migration that carries your email, not a settings toggle.**
+`moha@moha.expert` runs on Porkbun email forwarding (`fwd1`/`fwd2.porkbun.com`) with an SPF
+record. Moving nameservers without recreating those first kills your business email
+silently. Exact records, order of operations and rollback:
+**[`06-cloudflare-preflight.md`](06-cloudflare-preflight.md)**. Do not start from the steps
+below alone.
 
 The highest-value free infrastructure change available, and it fixes three problems at once.
 
