@@ -2,8 +2,9 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
-	import { contact, site } from '$lib/copy/contact.js';
+	import { contact, site, tools } from '$lib/copy/contact.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
+	import { initSound, setSound, blip } from '$lib/sound.js';
 
 	export let copy;
 
@@ -21,9 +22,44 @@
 
 	let activeId = '';
 	let menuOpen = false;
+	let sound = false;
+
+	function toggleSound() {
+		sound = !sound;
+		setSound(sound);
+	}
+
+	// Cal.com inline embed. Only loaded when a handle is configured, so the
+	// third-party script never runs for nothing.
+	function mountCal() {
+		if (!contact.cal) return;
+		const script = document.createElement('script');
+		script.src = 'https://app.cal.com/embed/embed.js';
+		script.async = true;
+		script.onload = () => {
+			// eslint-disable-next-line no-undef
+			const Cal = window.Cal;
+			if (!Cal) return;
+			Cal('init', { origin: 'https://app.cal.com' });
+			Cal('inline', {
+				elementOrSelector: '#cal-inline',
+				calLink: `${contact.cal}/${contact.calEvent}`,
+				config: { theme: 'dark', layout: 'month_view' }
+			});
+			Cal('ui', {
+				theme: 'dark',
+				cssVarsPerTheme: { dark: { 'cal-brand': '#e1f435' } },
+				hideEventTypeDetails: false
+			});
+		};
+		document.head.appendChild(script);
+	}
 
 	// Scroll-spy: whichever tracked section owns the middle of the viewport wins.
 	onMount(() => {
+		sound = initSound();
+		mountCal();
+
 		const observer = new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) if (entry.isIntersecting) activeId = entry.target.id;
@@ -136,11 +172,26 @@
 				{/if}
 			</span>
 			<button
+				class="snd"
+				type="button"
+				aria-pressed={sound}
+				on:click={toggleSound}
+				title="{copy.studio.sound}: {sound ? 'on' : 'off'}"
+			>
+				<span class="wave" class:live={sound} aria-hidden="true">
+					<i></i><i></i><i></i>
+				</span>
+				<span class="sr">{copy.studio.sound}</span>
+			</button>
+			<button
 				class="burger"
 				type="button"
 				aria-expanded={menuOpen}
 				aria-controls="menu"
-				on:click={() => (menuOpen = !menuOpen)}
+				on:click={() => {
+					menuOpen = !menuOpen;
+					blip(menuOpen ? 'open' : 'click');
+				}}
 			>
 				<span class="bars" aria-hidden="true" class:x={menuOpen}></span>
 				<span class="sr">{copy.nav.contact}</span>
@@ -187,8 +238,14 @@
 		<div class="wrap tools">
 			<span class="meta">{copy.studio.toolsLabel}</span>
 			<ul>
-				{#each copy.studio.tools as tool}
-					<li>{tool}</li>
+				{#each tools as tool}
+					<li>
+						{#if tool.logo}
+							<img src="{base}/logos/{tool.logo}" alt={tool.name} loading="lazy" />
+						{:else}
+							<span>{tool.name}</span>
+						{/if}
+					</li>
 				{/each}
 			</ul>
 		</div>
@@ -216,11 +273,12 @@
 		<div class="row-head">
 			<span class="meta">{copy.studio.statsLabel}</span>
 		</div>
-		<dl class="stats">
-			{#each copy.studio.stats as stat}
-				<div>
+		<!-- Ascending tiles: bottoms align, heights climb left to right -->
+		<dl class="figures">
+			{#each copy.studio.stats as stat, i}
+				<div style="--step:{i}">
 					<dt>{stat.value}</dt>
-					<dd>{stat.label}</dd>
+					<dd><span class="corner" aria-hidden="true"></span>{stat.label}</dd>
 				</div>
 			{/each}
 		</dl>
@@ -312,6 +370,17 @@
 			{/each}
 		</div>
 	</section>
+
+	{#if contact.cal}
+		<section class="wrap" id="book" use:fade>
+			<div class="row-head">
+				<span class="meta">{copy.studio.bookLabel}</span>
+				<span class="meta">{copy.studio.bookNote}</span>
+			</div>
+			<h2 class="statement">{copy.studio.bookTitle}</h2>
+			<div id="cal-inline"></div>
+		</section>
+	{/if}
 
 	<section class="wrap" id="contact" use:fade>
 		<div class="row-head">
@@ -553,6 +622,70 @@
 		color: var(--text);
 	}
 
+	/* ---- sound toggle ---- */
+	.snd {
+		background: none;
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		padding: 0.5rem 0.6rem;
+		cursor: pointer;
+		color: var(--faint);
+		line-height: 0;
+	}
+
+	.snd:hover {
+		border-color: var(--line-strong);
+		color: var(--text);
+	}
+
+	.snd[aria-pressed='true'] {
+		color: var(--accent);
+		border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+	}
+
+	.wave {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		height: 0.75rem;
+	}
+
+	.wave i {
+		display: block;
+		width: 2px;
+		height: 3px;
+		background: currentColor;
+	}
+
+	/* Bars only animate while sound is on, and hold still for reduced motion */
+	.wave.live i {
+		animation: eq 0.9s ease-in-out infinite;
+	}
+
+	.wave.live i:nth-child(2) {
+		animation-delay: 0.15s;
+	}
+	.wave.live i:nth-child(3) {
+		animation-delay: 0.3s;
+	}
+
+	@keyframes eq {
+		0%,
+		100% {
+			height: 3px;
+		}
+		50% {
+			height: 11px;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.wave.live i {
+			animation: none;
+			height: 7px;
+		}
+	}
+
 	/* ---- mobile menu ---- */
 	.burger {
 		display: none;
@@ -775,6 +908,23 @@
 		font-size: var(--t-ui);
 		letter-spacing: 0.06em;
 		color: var(--muted);
+		display: flex;
+		align-items: center;
+	}
+
+	/* Logos sit at a fixed height so differing artboards line up. Wordmarks
+	   render until a vendor SVG is dropped into static/logos/. */
+	.tools img {
+		height: 1.15rem;
+		width: auto;
+		max-width: 7rem;
+		object-fit: contain;
+		opacity: 0.75;
+		transition: opacity 0.2s ease;
+	}
+
+	.tools li:hover img {
+		opacity: 1;
 	}
 
 	/* ============================================================
@@ -837,28 +987,63 @@
 	/* ============================================================
 	   Stats — $$$$ until real figures land
 	   ============================================================ */
-	.stats {
+	/* Bottoms align on a single baseline; each tile is taller than the last, so
+	   the row climbs. --step is the index, set inline. */
+	.figures {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-		gap: clamp(1.5rem, 3vw, 2.5rem);
+		grid-template-columns: repeat(4, 1fr);
+		align-items: end;
+		gap: 0;
 		margin: 0;
 	}
 
-	.stats dt {
-		font-family: var(--display);
-		font-size: clamp(2.5rem, 5vw, 3.75rem);
-		line-height: 1;
-		letter-spacing: -0.02em;
-		color: var(--accent);
+	.figures div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: calc(9rem + var(--step) * 2.75rem);
+		padding: 1.25rem;
+		border: 1px solid var(--line);
+		/* collapse shared edges so the row reads as one ruled object */
+		margin-left: -1px;
 	}
 
-	.stats dd {
-		margin: 0.75rem 0 0;
+	.figures dt {
+		font-family: var(--mono);
+		font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+		line-height: 1;
+		color: var(--text);
+	}
+
+	.figures dd {
+		margin: 2.5rem 0 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 		font-family: var(--mono);
 		font-size: var(--t-meta);
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: var(--faint);
+	}
+
+	/* Small lime corner tick before each label */
+	.corner {
+		width: 0.4rem;
+		height: 0.4rem;
+		border-top: 1px solid var(--accent);
+		border-right: 1px solid var(--accent);
+		flex-shrink: 0;
+	}
+
+	@media (max-width: 52rem) {
+		.figures {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.figures div {
+			min-height: 8rem;
+			margin-top: -1px;
+		}
 	}
 
 	/* ============================================================
@@ -1071,10 +1256,21 @@
 	}
 
 	/* ============================================================
-	   Reach out
+	   Booking + reach out
 	   ============================================================ */
-	#contact {
+	#contact,
+	#book {
 		scroll-margin-top: 4rem;
+	}
+
+	/* Cal.com renders its own widget in here; give it a framed container and a
+	   sensible min-height so the page doesn't jump when the embed loads. */
+	#cal-inline {
+		min-height: 40rem;
+		border: 1px solid var(--line);
+		border-radius: var(--r-lg);
+		overflow: hidden;
+		background: var(--raised);
 	}
 
 	.reach {

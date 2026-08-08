@@ -20,13 +20,16 @@ export default {
 		note: 'In Berlin · Deutsch & Englisch · Sie sprechen direkt mit mir'
 	},
 	studio: {
-		// Als Werkzeuge gekennzeichnet, NICHT als Kunden — jeder Name hier wird
+		// Nur das Label — die Liste steht in contact.js. Als Werkzeuge, NICHT als Kunden,
 		// wirklich eingesetzt, die Zeile ist also wahr und keine Kundenliste.
 		toolsLabel: 'Womit ich arbeite',
-		tools: ['OpenAI', 'Anthropic', 'Google', 'Microsoft', 'n8n'],
 		worksLabel: 'Anwendungsfälle',
 		capabilitiesLabel: 'So läuft es',
 		statsLabel: 'In Zahlen',
+		bookLabel: 'Termin buchen',
+		bookTitle: 'Wählen Sie eine Zeit, die Ihnen passt.',
+		bookNote: 'Dreißig Minuten, kostenlos, keine Vorbereitung nötig.',
+		sound: 'Ton',
 		// $$$$ Platzhalter — mit echten Werten füllen.
 		stats: [
 			{ value: '$$$$', label: 'Menschen mit Mefkat vermittelt' },

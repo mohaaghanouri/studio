@@ -20,13 +20,16 @@ export default {
 		note: 'Based in Berlin · English & German · You deal with me directly'
 	},
 	studio: {
-		// Labelled tools, NOT clients — every name here is something actually used,
+		// Label only — the list itself lives in contact.js. Framed as tools, NOT clients,
 		// so the row reads as true rather than as an implied client list.
 		toolsLabel: 'Tools I work with',
-		tools: ['OpenAI', 'Anthropic', 'Google', 'Microsoft', 'n8n'],
 		worksLabel: 'Use cases',
 		capabilitiesLabel: 'How it works',
 		statsLabel: 'By the numbers',
+		bookLabel: 'Book a call',
+		bookTitle: 'Pick a time that suits you.',
+		bookNote: 'Thirty minutes, free, no preparation needed.',
+		sound: 'Sound',
 		// $$$$ placeholders — fill these in with real figures.
 		stats: [
 			{ value: '$$$$', label: 'People placed with Mefkat' },
