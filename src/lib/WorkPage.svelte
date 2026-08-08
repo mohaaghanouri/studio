@@ -33,7 +33,7 @@
 
 {#if PLACEHOLDERS}
 	<p class="preview-flag">
-		Preview build — figures are placeholders and the availability line is invented
+		Preview build — client quotes are not in place yet
 	</p>
 {/if}
 
@@ -65,8 +65,8 @@
 	</aside>
 
 	<main class="body">
-		<header class="plate" style="--tint:{art.tint}">
-			<span aria-hidden="true">{art.mark}</span>
+		<header class="plate">
+			<img src="{base}/work/{item.slug}.svg" alt="" width="1200" height="750" />
 		</header>
 
 		<div class="prose">
@@ -223,22 +223,15 @@
 	/* ---- body ---- */
 	.plate {
 		aspect-ratio: 21 / 9;
-		display: grid;
-		place-items: center;
 		border-bottom: 1px solid var(--line);
-		background:
-			radial-gradient(
-				120% 140% at 50% 30%,
-				color-mix(in srgb, var(--tint) 30%, white) 0%,
-				var(--tint) 55%,
-				color-mix(in srgb, var(--tint) 72%, black) 100%
-			);
+		overflow: hidden;
 	}
 
-	.plate span {
-		font-size: clamp(3rem, 7vw, 6rem);
-		line-height: 1;
-		color: color-mix(in srgb, var(--tint) 45%, black);
+	.plate img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
 	}
 
 	.prose {
