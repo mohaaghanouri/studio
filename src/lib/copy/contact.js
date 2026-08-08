@@ -40,7 +40,13 @@ export const tools = [
 	{ name: 'Figma', logo: 'figma.svg' },
 	{ name: 'Higgsfield', logo: '' },
 	{ name: 'HeyGen', logo: '' },
-	{ name: 'Microsoft', logo: '' }
+	{ name: 'Microsoft', logo: '' },
+	{ name: 'Microsoft Teams', logo: '' },
+	{ name: 'Alpaca', logo: '' },
+	{ name: 'Binance', logo: 'binance.svg' },
+	{ name: 'Trade Republic', logo: '' },
+	{ name: 'CHECK24', logo: '' },
+	{ name: 'Doctolib', logo: '' }
 ];
 
 // Deliberately NOT in the row above. IELTS, the Goethe-Institut and the state of

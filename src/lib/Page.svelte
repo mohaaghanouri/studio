@@ -5,6 +5,7 @@
 	import { contact, site, tools } from '$lib/copy/contact.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 	import { initSound, setSound, blip } from '$lib/sound.js';
+	import { featured } from '$lib/art.js';
 
 	export let copy;
 
@@ -119,15 +120,9 @@
 		menuOpen = false;
 	}
 
-	// Four use cases carry the work grid. Art direction is presentational, so it
-	// lives here rather than in the copy files.
-	const art = [
-		{ tint: '#46bee4', mark: '✳' },
-		{ tint: '#f2f2f2', mark: '▲' },
-		{ tint: '#00dbbe', mark: '✦' },
-		{ tint: '#fb8d32', mark: '✜' }
-	];
-	const works = copy.built.items.slice(0, 4).map((item, i) => ({ ...item, ...art[i] }));
+	// Four use cases on the home page; art comes from the shared map so each card
+	// matches its detail page.
+	const works = featured(copy.built.items, 4);
 
 	const faqJsonLd = JSON.stringify({
 		'@context': 'https://schema.org',
@@ -220,9 +215,14 @@
 				on:click={toggleSound}
 				title="{copy.studio.sound}: {sound ? 'on' : 'off'}"
 			>
-				<span class="wave" class:live={sound} aria-hidden="true">
-					<i></i><i></i><i></i>
-				</span>
+				<svg class="spk" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6">
+					<path d="M4 9.5h3.2L12 5.6v12.8L7.2 14.5H4z" stroke-linejoin="round" />
+					{#if sound}
+						<path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8" stroke-linecap="round" />
+					{:else}
+						<path d="M16 9.8l4.4 4.4M20.4 9.8L16 14.2" stroke-linecap="round" />
+					{/if}
+				</svg>
 				<span class="sr">{copy.studio.sound}</span>
 			</button>
 			<button
@@ -311,11 +311,13 @@
 		<div class="works">
 			{#each works as work}
 				<article use:fade>
-					<div class="plate" style="--tint:{work.tint}">
-						<span aria-hidden="true">{work.mark}</span>
-					</div>
-					<h3>{work.label}</h3>
-					<p>{work.headline}</p>
+					<a href="{base}{isEn ? '' : '/de'}/work/{work.slug}/" on:click={() => blip('click')}>
+						<div class="plate" style="--tint:{work.tint}">
+							<span aria-hidden="true">{work.mark}</span>
+						</div>
+						<h3>{work.label} <span class="go" aria-hidden="true">↗</span></h3>
+						<p>{work.headline}</p>
+					</a>
 				</article>
 			{/each}
 		</div>
@@ -452,11 +454,7 @@
 							{copy.studio.bookLabel}
 						</button>
 					{/if}
-					<a class="btn" href="https://wa.me/{contact.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-					{#if contact.telegram}
-						<a class="btn" href="https://t.me/{contact.telegram}" target="_blank" rel="noopener noreferrer">Telegram</a>
-					{/if}
-					<a class="btn" href="mailto:{contact.email}">Email</a>
+					<a class="btn" href="mailto:{contact.email}">{copy.contactSection.form.email}</a>
 				</div>
 				<p class="hero-note">
 					<img src="{base}/moha-face.webp" alt="" width="240" height="240" />
@@ -746,47 +744,10 @@
 		border-color: color-mix(in srgb, var(--accent) 40%, transparent);
 	}
 
-	.wave {
-		display: flex;
-		align-items: center;
-		gap: 2px;
-		height: 0.75rem;
-	}
-
-	.wave i {
+	.spk {
+		width: 1.15rem;
+		height: 1.15rem;
 		display: block;
-		width: 2px;
-		height: 3px;
-		background: currentColor;
-	}
-
-	/* Bars only animate while sound is on, and hold still for reduced motion */
-	.wave.live i {
-		animation: eq 0.9s ease-in-out infinite;
-	}
-
-	.wave.live i:nth-child(2) {
-		animation-delay: 0.15s;
-	}
-	.wave.live i:nth-child(3) {
-		animation-delay: 0.3s;
-	}
-
-	@keyframes eq {
-		0%,
-		100% {
-			height: 3px;
-		}
-		50% {
-			height: 11px;
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.wave.live i {
-			animation: none;
-			height: 7px;
-		}
 	}
 
 	/* ---- mobile menu ---- */
@@ -1106,8 +1067,23 @@
 		transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
 	}
 
+	.works a {
+		text-decoration: none;
+		color: inherit;
+		display: block;
+	}
+
 	.works article:hover .plate {
 		transform: translateY(-4px);
+	}
+
+	.go {
+		color: var(--ghost);
+		transition: color 0.2s ease;
+	}
+
+	.works a:hover .go {
+		color: var(--accent);
 	}
 
 	.plate span {
