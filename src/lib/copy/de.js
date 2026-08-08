@@ -14,7 +14,7 @@ export default {
 		availability: 'Diesen Monat 2 neue Mandate frei',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline:
-			'Ich bin Moha Aghanoori. Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Heute begleite ich Zahnärzte, Anwälte, Forschende und Führungskräfte dabei, KI für sich arbeiten zu lassen — in klaren Worten, angepasst an Ihre Arbeitsweise.',
+			'Ich bin Moha Aghanoori. Vier Jahre lang habe ich beruflich KI-Systeme gebaut. Heute begleite ich Zahnärzte, Anwälte, Forschende und Führungskräfte dabei, KI für sich arbeiten zu lassen — in klaren Worten, angepasst an Ihre Arbeitsweise.',
 		button: 'Schreiben Sie mir — das Erstgespräch ist kostenlos',
 		note: 'In Berlin · Deutsch & Englisch · Sie sprechen direkt mit mir'
 	},
@@ -34,10 +34,11 @@ export default {
 		priceLabel: 'Was es kostet',
 		// $$$$ Platzhalter — mit echten Werten füllen.
 		stats: [
-			{ value: '$$$$', label: 'Menschen mit Mefkat vermittelt' },
-			{ value: '$$$$', label: 'Stunden pro Woche zurück' },
-			{ value: '$$$$', label: 'Jahre KI-Systeme gebaut' },
-			{ value: '$$$$', label: 'Berufsgruppen betreut' }
+			{ value: '70+', label: 'Menschen bei der Jobsuche begleitet' },
+			// Noch ein Platzhalter — siehe Hinweis in lib/preview.js.
+			{ value: '$$$$', label: 'Stunden pro Woche zurückgewonnen' },
+			{ value: '4', label: 'Jahre KI-Systeme gebaut' },
+			{ value: '18', label: 'Berufsgruppen betreut' }
 		]
 	},
 	who: {
@@ -140,7 +141,7 @@ export default {
 		eyebrow: 'Über mich',
 		title: 'Der Übersetzer zwischen Ihnen und den Maschinen.',
 		photoAlt: 'Moha Aghanoori',
-		text: 'Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Die Lektion aus dieser Zeit ist einfach: Die Technik ist selten das Schwierige. Das Schwierige ist die Übersetzung — zuzuhören, wie Sie wirklich arbeiten, die Stellen zu finden, an denen eine Maschine tatsächlich hilft, und sie einzufügen, ohne alles andere zu stören. Heute ist genau das meine Arbeit als Berater und Coach. Ich lebe in Berlin, arbeite auf Deutsch und Englisch — und Sie haben immer direkt mit mir zu tun, ohne Agentur und ohne Zwischenstationen.'
+		text: 'Vier Jahre lang habe ich beruflich KI-Systeme gebaut. Die Lektion aus dieser Zeit ist einfach: Die Technik ist selten das Schwierige. Das Schwierige ist die Übersetzung — zuzuhören, wie Sie wirklich arbeiten, die Stellen zu finden, an denen eine Maschine tatsächlich hilft, und sie einzufügen, ohne alles andere zu stören. Heute ist genau das meine Arbeit als Berater und Coach. Ich lebe in Berlin, arbeite auf Deutsch und Englisch — und Sie haben immer direkt mit mir zu tun, ohne Agentur und ohne Zwischenstationen.'
 	},
 	testimonials: {
 		eyebrow: 'Stimmen',
