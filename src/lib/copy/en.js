@@ -262,11 +262,23 @@ export default {
 		form: {
 			name: 'Name',
 			email: 'Email',
+			subject: 'What is this about',
+			// Lets the enquiry sort itself before it reaches you.
+			subjects: [
+				'Coaching for me personally',
+				'A project for my practice or team',
+				'A workshop or a talk',
+				'Something else'
+			],
 			message: 'Message',
-			send: 'Send',
+			messageHint: 'A sentence about your week is plenty. No preparation needed.',
+			emailHint: 'So I can reply.',
+			send: 'Send message',
+			sending: 'Sending…',
+			reply: 'I reply within one working day.',
 			success: "Thank you — I'll get back to you within a day.",
-			error: "That didn't go through. Please use one of the buttons above.",
-			note: "or just use one of the buttons above — it's faster."
+			error: "That didn't go through. Please use WhatsApp, Telegram or email instead.",
+			note: 'Prefer not to use a form? The buttons on the left reach me faster.'
 		}
 	},
 	footer: {

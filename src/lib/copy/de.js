@@ -260,13 +260,25 @@ export default {
 		title: 'Das Erstgespräch ist kostenlos.',
 		lead: 'Erzählen Sie mir, wie Ihre Woche aussieht. Ich sage Ihnen, welche Teile Sie abgeben können.',
 		form: {
+			subject: 'Worum geht es',
+			// Sortiert die Anfrage, bevor sie bei Ihnen landet.
+			subjects: [
+				'Coaching für mich persönlich',
+				'Ein Projekt für meine Praxis oder mein Team',
+				'Ein Workshop oder ein Vortrag',
+				'Etwas anderes'
+			],
+			messageHint: 'Ein Satz über Ihre Woche genügt. Keine Vorbereitung nötig.',
+			emailHint: 'Damit ich antworten kann.',
+			sending: 'Wird gesendet…',
+			reply: 'Ich antworte innerhalb eines Werktags.',
 			name: 'Name',
 			email: 'E-Mail',
 			message: 'Nachricht',
-			send: 'Senden',
+			send: 'Nachricht senden',
 			success: 'Vielen Dank — ich melde mich innerhalb eines Tages.',
-			error: 'Das hat nicht geklappt. Bitte nutzen Sie einen der Buttons oben.',
-			note: 'oder nutzen Sie einfach einen der Buttons oben — das geht schneller.'
+			error: 'Das hat nicht geklappt. Bitte nutzen Sie WhatsApp, Telegram oder E-Mail.',
+			note: 'Kein Formular? Über die Buttons links erreichen Sie mich schneller.'
 		}
 	},
 	footer: {
