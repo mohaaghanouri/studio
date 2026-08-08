@@ -1,18 +1,17 @@
 export default {
 	lang: 'en',
-	otherLang: { href: '/de', label: 'DE' },
 	meta: {
 		title: 'Moha Aghanoori — AI for your daily work, in plain words',
 		description:
 			'I coach professionals — dentists, lawyers, scientists, marketers — on putting AI to work in their daily jobs, in plain language. Berlin, English & German. The first conversation is free.'
 	},
 	nav: {
-		contact: 'Contact'
+		contact: 'Contact',
+		menu: 'Menu'
 	},
 	hero: {
 		// Keep this current or delete it — a stale availability line reads worse than none.
 		availability: 'Taking 2 new clients this month',
-		kicker: 'AI consulting & coaching for professionals',
 		headline: 'The boring half of your job can do itself.',
 		subline:
 			"I'm Moha Aghanoori. I've spent six years building AI systems professionally. Today I coach dentists, lawyers, researchers and executives on putting AI to work — in plain language, shaped around how you already work.",
@@ -73,11 +72,6 @@ export default {
 		notListed: "Your profession isn't listed? It almost certainly still applies — ask me."
 	},
 	built: {
-		eyebrow: 'Track record',
-		title: 'Where my advice comes from',
-		intro:
-			"I don't advise from theory. These are things I've built and run myself, for real people with real deadlines — and they're the experience behind every conversation we'll have.",
-		handlesTitle: 'What it takes over',
 		items: [
 			{
 				label: 'Content creators',
@@ -166,7 +160,6 @@ export default {
 		]
 	},
 	how: {
-		eyebrow: 'How it works',
 		title: 'Three steps, no risk.',
 		steps: [
 			{
@@ -186,7 +179,6 @@ export default {
 			"Every job is different, so there's no price list. After the first conversation you get a clear quote — and the conversation itself costs nothing."
 	},
 	principles: {
-		eyebrow: 'What you can count on',
 		title: 'Three promises.',
 		items: [
 			{
@@ -211,7 +203,6 @@ export default {
 	},
 	testimonials: {
 		eyebrow: 'Kind words',
-		title: 'What clients say',
 		// Section stays hidden until real quotes exist.
 		items: []
 	},

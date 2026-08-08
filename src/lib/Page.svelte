@@ -236,7 +236,7 @@
 				}}
 			>
 				<span class="bars" aria-hidden="true" class:x={menuOpen}></span>
-				<span class="sr">{copy.nav.contact}</span>
+				<span class="sr">{copy.nav.menu}</span>
 			</button>
 		</div>
 	</div>
@@ -302,8 +302,9 @@
 	</div>
 
 	<section class="wrap" id="work" use:fade>
+		<h2 class="sr">{copy.studio.worksLabel}</h2>
 		<div class="row-head">
-			<span class="meta">{copy.studio.worksLabel}</span>
+			<span class="meta" aria-hidden="true">{copy.studio.worksLabel}</span>
 			<span class="meta">/{String(works.length).padStart(2, '0')}</span>
 		</div>
 		<div class="works">
@@ -320,8 +321,9 @@
 	</section>
 
 	<section class="wrap" use:fade>
+		<h2 class="sr">{copy.studio.statsLabel}</h2>
 		<div class="row-head">
-			<span class="meta">{copy.studio.statsLabel}</span>
+			<span class="meta" aria-hidden="true">{copy.studio.statsLabel}</span>
 		</div>
 		<!-- Ascending tiles: bottoms align, heights climb left to right -->
 		<dl class="figures">
@@ -394,6 +396,7 @@
 			/>
 			<div>
 				<p>{copy.about.text}</p>
+				<h3 class="promises-title">{copy.principles.title}</h3>
 				<ul class="promises">
 					{#each copy.principles.items as item}
 						<li><span class="meta">{item.title}</span>{item.text}</li>
@@ -423,6 +426,7 @@
 		<div class="row-head">
 			<span class="meta">{copy.faq.eyebrow}</span>
 		</div>
+		<h2 class="statement">{copy.faq.title}</h2>
 		<div class="faq">
 			{#each copy.faq.items as item}
 				<details>
@@ -447,9 +451,9 @@
 							{copy.studio.bookLabel}
 						</button>
 					{/if}
-					<a class="btn" href="https://wa.me/{contact.whatsapp}">WhatsApp</a>
+					<a class="btn" href="https://wa.me/{contact.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 					{#if contact.telegram}
-						<a class="btn" href="https://t.me/{contact.telegram}">Telegram</a>
+						<a class="btn" href="https://t.me/{contact.telegram}" target="_blank" rel="noopener noreferrer">Telegram</a>
 					{/if}
 					<a class="btn" href="mailto:{contact.email}">Email</a>
 				</div>
@@ -690,8 +694,19 @@
 
 	.lang {
 		display: flex;
+		align-items: center;
 		gap: 0.5rem;
 		color: var(--faint);
+	}
+
+	/* 24px minimum touch target — these were 17x19 on a phone */
+	.lang a,
+	.lang span {
+		min-width: 1.5rem;
+		min-height: 1.5rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.lang a {
@@ -712,7 +727,9 @@
 		background: none;
 		border: 1px solid var(--line);
 		border-radius: 6px;
-		padding: 0.5rem 0.6rem;
+		padding: 0.6rem 0.7rem;
+		min-width: 2.25rem;
+		min-height: 2.25rem;
 		cursor: pointer;
 		color: var(--faint);
 		line-height: 0;
@@ -777,7 +794,11 @@
 		background: none;
 		border: 1px solid var(--line);
 		border-radius: 6px;
-		padding: 0.55rem 0.6rem;
+		padding: 0.7rem 0.75rem;
+		min-width: 2.5rem;
+		min-height: 2.5rem;
+		align-items: center;
+		justify-content: center;
 		cursor: pointer;
 		color: var(--text);
 	}
@@ -850,7 +871,7 @@
 			display: none;
 		}
 		.burger {
-			display: block;
+			display: flex;
 		}
 		.sheet:not([hidden]) {
 			display: flex;
@@ -1325,9 +1346,19 @@
 		max-width: 40rem;
 	}
 
+	.promises-title {
+		margin-top: clamp(2rem, 4vw, 3rem);
+		font-family: var(--mono);
+		font-size: var(--t-label);
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--faint);
+	}
+
 	.promises {
 		list-style: none;
-		margin: clamp(2rem, 4vw, 3rem) 0 0;
+		margin: 1.25rem 0 0;
 		padding: 0;
 		display: grid;
 		gap: 1.25rem;
