@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
 	import { contact, site } from '$lib/copy/contact.js';
+	import { PLACEHOLDERS } from '$lib/preview.js';
 
 	export let copy;
 
@@ -47,10 +48,23 @@
 	<meta property="og:title" content={copy.meta.title} />
 	<meta property="og:description" content={copy.meta.description} />
 	<meta property="og:url" content={canonical} />
-	<meta property="og:image" content="{site}/moha.webp" />
+	<meta property="og:image" content="{site}/og.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:locale" content={isEn ? 'en_US' : 'de_DE'} />
-	{@html `<script type="application/ld+json">${faqJsonLd}</script>`}
+	{#if PLACEHOLDERS}
+		<meta name="robots" content="noindex, nofollow" />
+	{:else}
+		{@html `<script type="application/ld+json">${faqJsonLd}</script>`}
+	{/if}
 </svelte:head>
+
+{#if PLACEHOLDERS}
+	<p class="preview-flag">
+		Preview build — testimonials and the availability line are placeholder text
+	</p>
+{/if}
 
 <header>
 	<div class="bar wrap-wide">
@@ -70,12 +84,17 @@
 
 <main>
 	<section class="hero wrap-wide">
-		<p class="kicker rise">{copy.hero.kicker}</p>
-		<h1 class="rise rise-2">{copy.hero.headline}</h1>
-		<p class="subline rise rise-3">{copy.hero.subline}</p>
-		<div class="rise rise-4">
+		{#if copy.hero.availability}
+			<p class="pill rise">
+				<span class="dot" aria-hidden="true"></span>{copy.hero.availability}
+			</p>
+		{/if}
+		<p class="kicker rise rise-2">{copy.hero.kicker}</p>
+		<h1 class="rise rise-3">{copy.hero.headline}</h1>
+		<p class="subline rise rise-4">{copy.hero.subline}</p>
+		<div class="rise rise-5">
 			<a class="btn btn-primary" href="#contact">{copy.hero.button}</a>
-			<p class="hero-note muted">
+			<p class="hero-note">
 				<img src="{base}/moha-face.webp" alt="" width="240" height="240" />
 				{copy.hero.note}
 			</p>
@@ -95,7 +114,7 @@
 				</div>
 			{/each}
 		</div>
-		<p class="not-listed muted"><em>{copy.who.notListed}</em></p>
+		<p class="not-listed">{copy.who.notListed}</p>
 	</section>
 
 	<section class="wrap-wide" use:fade>
@@ -137,7 +156,7 @@
 				{#each copy.testimonials.items as t}
 					<blockquote>
 						<p>“{t.quote}”</p>
-						<footer class="muted">— {t.name}</footer>
+						<footer>— {t.name}</footer>
 					</blockquote>
 				{/each}
 			</div>
@@ -152,7 +171,7 @@
 		<ol class="steps">
 			{#each copy.how.steps as step, i}
 				<li>
-					<span class="step-number" aria-hidden="true">{i + 1}</span>
+					<span class="step-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
 					<h3>{step.title}</h3>
 					<p class="muted">{step.text}</p>
 				</li>
@@ -231,25 +250,25 @@
 					on:submit={submitForm}
 				>
 					<label>
-						{copy.contactSection.form.name}
+						<span>{copy.contactSection.form.name}</span>
 						<input type="text" name="name" required />
 					</label>
 					<label>
-						{copy.contactSection.form.email}
+						<span>{copy.contactSection.form.email}</span>
 						<input type="email" name="email" required />
 					</label>
 					<label>
-						{copy.contactSection.form.message}
+						<span>{copy.contactSection.form.message}</span>
 						<textarea name="message" rows="5" required></textarea>
 					</label>
-					<button class="btn" type="submit" disabled={formState === 'sending'}>
+					<button class="btn btn-primary" type="submit" disabled={formState === 'sending'}>
 						{copy.contactSection.form.send}
 					</button>
 					{#if formState === 'error'}
 						<p class="form-status">{copy.contactSection.form.error}</p>
 					{/if}
 				</form>
-				<p class="muted form-note"><em>{copy.contactSection.form.note}</em></p>
+				<p class="form-note">{copy.contactSection.form.note}</p>
 			{/if}
 		{/if}
 	</section>
@@ -257,11 +276,11 @@
 
 <footer>
 	<div class="wrap-wide foot">
-		<p class="muted">
+		<p>
 			© Moha Aghanoori · {contact.city} ·
 			<a href="mailto:{contact.email}">{contact.email}</a>
 		</p>
-		<p class="muted">
+		<p>
 			<a href="{base}/impressum/">{copy.footer.impressum}</a> ·
 			<a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>
 		</p>
@@ -269,9 +288,11 @@
 </footer>
 
 <style>
-	/* ---- layout scale ---- */
+	/* ============================================================
+	   Layout scale
+	   ============================================================ */
 	.wrap-wide {
-		max-width: 68rem;
+		max-width: 72rem;
 		margin: 0 auto;
 		padding-left: clamp(1.25rem, 4vw, 2.5rem);
 		padding-right: clamp(1.25rem, 4vw, 2.5rem);
@@ -280,132 +301,198 @@
 	section {
 		padding-top: clamp(4.5rem, 9vw, 8rem);
 		padding-bottom: clamp(4.5rem, 9vw, 8rem);
-		border-top: 1px solid var(--rule);
+		border-top: 1px solid var(--line);
 	}
 
-	/* ---- header ---- */
+	/* ============================================================
+	   Preview flag — only rendered while PLACEHOLDERS is true.
+	   Pinned bottom so it never fights the sticky header.
+	   ============================================================ */
+	.preview-flag {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		text-align: center;
+		padding: 0.6rem 1.25rem;
+		background: var(--accent);
+		color: var(--accent-ink);
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	/* ============================================================
+	   Header — mono wordmark, hairline base
+	   ============================================================ */
 	header {
 		position: sticky;
 		top: 0;
 		z-index: 10;
-		background: color-mix(in srgb, var(--bg) 84%, transparent);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		border-bottom: 1px solid var(--rule);
+		background: color-mix(in srgb, var(--bg) 82%, transparent);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-bottom: 1px solid var(--line);
 	}
 
 	.bar {
 		display: flex;
 		justify-content: space-between;
-		align-items: baseline;
-		padding-top: 1.1rem;
-		padding-bottom: 1.1rem;
+		align-items: center;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 
-	.name {
-		font-family: var(--serif);
-		font-size: 1.05rem;
+	.name,
+	nav {
+		font-family: var(--mono);
+		font-size: var(--t-label);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
 	}
 
 	nav {
 		display: flex;
 		gap: 1.75rem;
-		align-items: baseline;
-		font-size: 0.9rem;
+		align-items: center;
 	}
 
 	.nav-contact {
 		text-decoration: none;
-		letter-spacing: 0.04em;
+		color: var(--text);
+	}
+
+	.nav-contact:hover {
+		color: var(--accent);
 	}
 
 	.lang {
-		letter-spacing: 0.08em;
-		color: var(--muted);
+		color: var(--faint);
 	}
 
 	.lang a {
 		text-decoration: none;
+		color: var(--faint);
 	}
 
-	/* ---- hero ---- */
+	.lang a:hover {
+		color: var(--text);
+	}
+
+	/* ============================================================
+	   Hero — availability pill, Anton caps, one lime CTA
+	   ============================================================ */
 	.hero {
 		border-top: none;
-		min-height: min(78vh, 52rem);
+		min-height: min(88vh, 54rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-top: clamp(5rem, 12vh, 9rem);
-		padding-bottom: clamp(5rem, 12vh, 9rem);
+		padding-top: clamp(4rem, 10vh, 7rem);
+		padding-bottom: clamp(4rem, 10vh, 7rem);
+	}
+
+	/* signature device: live-capacity line. Maintain it or delete it. */
+	.pill {
+		align-self: start;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--accent);
+		border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+		border-radius: 999px;
+		padding: 0.45rem 0.9rem;
+		margin-bottom: 2rem;
+	}
+
+	.dot {
+		width: 0.4rem;
+		height: 0.4rem;
+		border-radius: 50%;
+		background: var(--accent);
+		flex-shrink: 0;
 	}
 
 	.kicker {
-		color: var(--gold);
-		font-size: 0.8rem;
-		letter-spacing: 0.18em;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.2em;
 		text-transform: uppercase;
-		margin-bottom: 1.75rem;
+		color: var(--faint);
+		margin-bottom: 1.5rem;
 	}
 
 	.hero h1 {
-		font-size: clamp(2.6rem, 7.5vw, 5.5rem);
-		max-width: 18ch;
-		margin-bottom: 1.75rem;
+		max-width: 22ch;
+		margin-bottom: 2rem;
 	}
 
 	.subline {
-		max-width: 38rem;
+		max-width: 40rem;
 		color: var(--muted);
-		font-size: 1.125rem;
-		margin-bottom: 3rem;
+		font-size: var(--t-lead);
+		line-height: 1.5;
+		margin-bottom: 2.75rem;
 	}
 
 	.btn-primary {
-		background: var(--gold);
-		color: var(--bg);
-		border-color: var(--gold);
+		background: var(--accent);
+		border-color: var(--accent);
+		color: var(--accent-ink);
 	}
 
 	.btn-primary:hover {
-		background: var(--gold-light);
-		border-color: var(--gold-light);
-		color: var(--bg);
+		background: var(--text);
+		border-color: var(--text);
+		color: var(--accent-ink);
 	}
 
 	.hero-note {
-		margin-top: 1.5rem;
-		font-size: 0.85rem;
-		letter-spacing: 0.02em;
+		margin-top: 1.75rem;
 		display: flex;
 		align-items: center;
 		gap: 0.85rem;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--faint);
 	}
 
 	/* circle only at avatar scale — faces read faster in a circle when small */
 	.hero-note img {
-		width: 3rem;
-		height: 3rem;
+		width: 2.75rem;
+		height: 2.75rem;
 		border-radius: 50%;
-		border: 1px solid var(--rule);
+		border: 1px solid var(--line-strong);
 	}
 
 	.rise {
-		animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+		animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 	}
 	.rise-2 {
-		animation-delay: 0.12s;
+		animation-delay: 0.08s;
 	}
 	.rise-3 {
-		animation-delay: 0.24s;
+		animation-delay: 0.16s;
 	}
 	.rise-4 {
-		animation-delay: 0.36s;
+		animation-delay: 0.24s;
+	}
+	.rise-5 {
+		animation-delay: 0.32s;
 	}
 
 	@keyframes rise {
 		from {
 			opacity: 0;
-			transform: translateY(16px);
+			transform: translateY(14px);
 		}
 		to {
 			opacity: 1;
@@ -419,96 +506,101 @@
 		}
 	}
 
-	/* ---- section headers ---- */
+	/* ============================================================
+	   Section heads
+	   ============================================================ */
 	.section-head {
 		margin-bottom: clamp(2.5rem, 5vw, 4rem);
 		max-width: 44rem;
 	}
 
 	.eyebrow {
-		color: var(--gold);
-		font-size: 0.78rem;
-		letter-spacing: 0.18em;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.2em;
 		text-transform: uppercase;
-		margin-bottom: 1rem;
-	}
-
-	h2 {
-		font-size: clamp(1.9rem, 4.5vw, 3rem);
+		color: var(--faint);
+		margin-bottom: 1.25rem;
 	}
 
 	.deck {
-		margin-top: 1.25rem;
+		margin-top: 1.5rem;
 		color: var(--muted);
-		font-size: 1.05rem;
+		font-size: var(--t-body);
 		max-width: 38rem;
 	}
 
-	/* ---- who cards ---- */
+	/* ============================================================
+	   Who — panel cards on near-black, hairline borders
+	   ============================================================ */
 	.cards {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-		gap: 1.25rem;
+		gap: 1rem;
 	}
 
 	.card {
-		border: 1px solid var(--rule);
-		border-radius: 6px;
+		background: var(--raised);
+		border: 1px solid var(--line);
+		border-radius: var(--r);
 		padding: 1.75rem;
-		transition: border-color 0.3s ease;
+		transition:
+			background-color 0.25s ease,
+			border-color 0.25s ease;
 	}
 
 	.card:hover {
-		border-color: #3d382e;
+		background: var(--hover);
+		border-color: var(--line-strong);
 	}
 
 	.label {
 		display: block;
-		color: var(--gold);
-		font-size: 0.78rem;
-		letter-spacing: 0.14em;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
+		color: var(--faint);
 	}
 
 	.card .label {
-		margin-bottom: 0.8rem;
+		margin-bottom: 1rem;
 	}
 
 	.card p {
-		font-size: 0.95rem;
+		font-size: 0.9375rem;
 		color: var(--muted);
 	}
 
 	.not-listed {
 		margin-top: 2.5rem;
-		font-family: var(--serif);
-		font-size: 1.05rem;
+		color: var(--muted);
+		max-width: 38rem;
 	}
 
-	/* ---- case studies ---- */
+	/* ============================================================
+	   Case studies — hairline rows, mono index, prose at reading size
+	   ============================================================ */
 	.built article {
-		border-top: 1px solid var(--rule);
+		border-top: 1px solid var(--line);
 		padding: clamp(2.5rem, 5vw, 3.5rem) 0;
 		display: grid;
-		grid-template-columns: 10rem minmax(0, 1fr) 16rem;
+		grid-template-columns: 10rem minmax(0, 1fr) 17rem;
 		gap: 1rem clamp(2rem, 4vw, 4rem);
 		align-items: start;
 	}
 
 	.built .label {
-		padding-top: 0.55rem;
+		padding-top: 0.4rem;
 	}
 
 	.case-story h3 {
-		font-family: var(--serif);
-		font-weight: 400;
-		font-style: italic;
-		font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+		font-size: var(--t-h3);
 		margin-bottom: 1.25rem;
+		max-width: 26ch;
 	}
 
 	.case-story p {
-		font-size: 0.975rem;
 		max-width: 36rem;
 	}
 
@@ -517,16 +609,17 @@
 	}
 
 	.built aside {
-		border-top: 1px solid var(--rule);
-		padding-top: 1rem;
+		border-top: 1px solid var(--line);
+		padding-top: 1.1rem;
 	}
 
 	.handles-title {
-		color: var(--gold);
-		font-size: 0.72rem;
-		letter-spacing: 0.16em;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		margin-bottom: 0.9rem;
+		color: var(--faint);
+		margin-bottom: 1rem;
 	}
 
 	.built ul {
@@ -534,21 +627,24 @@
 		padding: 0;
 		margin: 0;
 		display: grid;
-		gap: 0.65rem;
+		gap: 0.7rem;
 	}
 
 	.built li {
-		font-size: 0.88rem;
+		font-size: var(--t-ui);
 		color: var(--muted);
 		padding-left: 1.1rem;
 		position: relative;
 	}
 
 	.built li::before {
-		content: '—';
-		color: var(--gold);
+		content: '';
 		position: absolute;
 		left: 0;
+		top: 0.62em;
+		width: 0.5rem;
+		height: 1px;
+		background: var(--accent);
 	}
 
 	@media (max-width: 64rem) {
@@ -565,7 +661,9 @@
 		}
 	}
 
-	/* ---- steps ---- */
+	/* ============================================================
+	   Steps — real sequence, so numbering earns its place
+	   ============================================================ */
 	.steps {
 		list-style: none;
 		padding: 0;
@@ -576,30 +674,31 @@
 	}
 
 	.steps li {
-		border-top: 1px solid var(--rule);
+		border-top: 1px solid var(--line);
 		padding-top: 1.5rem;
 	}
 
 	.step-number {
 		display: block;
-		font-family: var(--serif);
-		font-size: 2rem;
-		color: var(--gold);
-		margin-bottom: 1rem;
+		font-family: var(--display);
+		font-size: 2.5rem;
+		line-height: 1;
+		color: var(--ghost);
+		margin-bottom: 1.25rem;
 	}
 
 	.steps h3,
 	.principles h3 {
-		font-size: 1.25rem;
-		margin-bottom: 0.5rem;
+		font-size: 1.125rem;
+		margin-bottom: 0.6rem;
 	}
 
 	.steps p,
 	.principles p {
-		font-size: 0.95rem;
+		font-size: 0.9375rem;
 	}
 
-	@media (max-width: 44rem) {
+	@media (max-width: 48rem) {
 		.steps {
 			grid-template-columns: 1fr;
 		}
@@ -608,16 +707,26 @@
 	.no-prices {
 		margin-top: 3rem;
 		max-width: 38rem;
+		font-size: 0.9375rem;
 	}
 
-	/* ---- principles ---- */
+	/* ============================================================
+	   Principles
+	   ============================================================ */
 	.principles {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		gap: clamp(1.5rem, 3vw, 3rem);
 	}
 
-	/* ---- about ---- */
+	.principles div {
+		border-top: 1px solid var(--line);
+		padding-top: 1.5rem;
+	}
+
+	/* ============================================================
+	   About
+	   ============================================================ */
 	.about {
 		display: grid;
 		grid-template-columns: minmax(14rem, 20rem) 1fr;
@@ -628,22 +737,24 @@
 	.about img {
 		width: 100%;
 		height: auto;
-		border-radius: 6px;
-		border: 1px solid var(--rule);
+		border-radius: var(--r);
+		border: 1px solid var(--line);
 	}
 
 	.about p {
 		max-width: 38rem;
-		font-size: 1.05rem;
+		color: var(--muted);
 	}
 
-	@media (max-width: 44rem) {
+	@media (max-width: 48rem) {
 		.about {
 			grid-template-columns: 1fr;
 		}
 	}
 
-	/* ---- testimonials ---- */
+	/* ============================================================
+	   Testimonials — hidden until real quotes exist
+	   ============================================================ */
 	.quotes {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -652,32 +763,38 @@
 
 	blockquote {
 		margin: 0;
-		border-top: 1px solid var(--rule);
-		padding-top: 1.5rem;
+		background: var(--raised);
+		border: 1px solid var(--line);
+		border-radius: var(--r);
+		padding: 1.75rem;
 	}
 
 	blockquote p {
-		font-family: var(--serif);
-		font-style: italic;
-		font-size: 1.15rem;
-		margin-bottom: 1rem;
+		font-size: 1.0625rem;
+		margin-bottom: 1.25rem;
 	}
 
 	blockquote footer {
-		font-size: 0.9rem;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--faint);
 	}
 
-	/* ---- faq ---- */
+	/* ============================================================
+	   FAQ
+	   ============================================================ */
 	.faq {
-		max-width: 44rem;
+		max-width: 46rem;
 	}
 
 	.faq details {
-		border-top: 1px solid var(--rule);
+		border-top: 1px solid var(--line);
 	}
 
 	.faq details:last-child {
-		border-bottom: 1px solid var(--rule);
+		border-bottom: 1px solid var(--line);
 	}
 
 	.faq summary {
@@ -687,9 +804,9 @@
 		justify-content: space-between;
 		align-items: baseline;
 		gap: 1.5rem;
-		padding: 1.25rem 0;
-		font-family: var(--serif);
-		font-size: 1.15rem;
+		padding: 1.35rem 0;
+		font-weight: 500;
+		letter-spacing: -0.01em;
 	}
 
 	.faq summary::-webkit-details-marker {
@@ -698,9 +815,9 @@
 
 	.faq summary::after {
 		content: '+';
-		color: var(--gold);
-		font-family: var(--sans);
-		font-size: 1.2rem;
+		font-family: var(--mono);
+		color: var(--accent);
+		font-size: 1.1rem;
 		flex-shrink: 0;
 	}
 
@@ -709,70 +826,82 @@
 	}
 
 	.faq details p {
-		padding-bottom: 1.5rem;
+		padding-bottom: 1.6rem;
 		max-width: 38rem;
-		font-size: 0.975rem;
+		font-size: 0.9375rem;
 	}
 
-	/* ---- contact ---- */
+	/* ============================================================
+	   Contact
+	   ============================================================ */
 	#contact {
-		scroll-margin-top: 4.5rem;
+		scroll-margin-top: 4rem;
 	}
 
 	.buttons {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
+		gap: 0.75rem;
 	}
 
 	form {
-		margin-top: 2.5rem;
+		margin-top: 2.75rem;
 		display: grid;
 		gap: 1.25rem;
-		max-width: 28rem;
+		max-width: 30rem;
 	}
 
 	label {
 		display: grid;
-		gap: 0.4rem;
-		font-size: 0.9rem;
-		color: var(--muted);
+		gap: 0.5rem;
+	}
+
+	label span {
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--faint);
 	}
 
 	input,
 	textarea {
-		background: transparent;
-		border: 1px solid var(--rule);
-		border-radius: 4px;
-		padding: 0.7rem;
+		background: var(--raised);
+		border: 1px solid var(--line);
+		border-radius: var(--r);
+		padding: 0.85rem 1rem;
 		color: var(--text);
-		font: inherit;
+		font-family: var(--sans);
+		font-size: var(--t-body);
 	}
 
 	input:focus,
 	textarea:focus {
-		border-color: var(--gold);
+		border-color: var(--accent);
 		outline: none;
 	}
 
 	form .btn {
 		justify-self: start;
-		background: transparent;
 		cursor: pointer;
 	}
 
 	.form-status {
 		margin-top: 0.5rem;
+		color: var(--muted);
 	}
 
 	.form-note {
-		margin-top: 1rem;
-		font-size: 0.9rem;
+		margin-top: 1.25rem;
+		font-size: 0.9375rem;
+		color: var(--faint);
 	}
 
-	/* ---- footer ---- */
+	/* ============================================================
+	   Footer
+	   ============================================================ */
 	footer {
-		border-top: 1px solid var(--rule);
+		border-top: 1px solid var(--line);
 	}
 
 	.foot {
@@ -782,6 +911,19 @@
 		gap: 0.5rem 2rem;
 		padding-top: 2.25rem;
 		padding-bottom: 3rem;
-		font-size: 0.85rem;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--faint);
+	}
+
+	.foot a {
+		color: var(--faint);
+		text-decoration: none;
+	}
+
+	.foot a:hover {
+		color: var(--text);
 	}
 </style>

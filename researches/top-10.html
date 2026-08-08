@@ -1,0 +1,504 @@
+<title>AI consultant sites — top 10 · research 2026-08-08</title>
+<style>
+  :root {
+    --bg: #100f0d;
+    --panel: #171613;
+    --text: #eceae4;
+    --muted: #9a968c;
+    --faint: #6b675e;
+    --gold: #d4a54a;
+    --gold-light: #e3bc6e;
+    --rule: #2a2822;
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+    --measure: 44rem;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 1.25rem 6rem;
+  }
+  .wrap { max-width: var(--measure); margin: 0 auto; }
+  .wide { max-width: 68rem; margin: 0 auto; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; }
+  h1 { font-size: clamp(2rem, 1.5rem + 2.4vw, 3.1rem); letter-spacing: -0.015em; }
+  h2 { font-size: clamp(1.5rem, 1.25rem + 1.1vw, 2rem); margin-bottom: 0.4rem; }
+  h3 { font-size: 1.35rem; }
+  a { color: var(--gold); text-underline-offset: 3px; }
+  a:hover { color: var(--gold-light); }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+
+  header { padding: 5rem 0 3rem; }
+  .kicker {
+    font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem;
+  }
+  .lead { color: var(--muted); font-size: 1.15rem; margin-top: 1.5rem; }
+
+  .statbar {
+    display: flex; flex-wrap: wrap; gap: 2.5rem;
+    margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--rule);
+  }
+  .statbar div { min-width: 6rem; }
+  .statbar b { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 400; }
+  .statbar span { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--faint); }
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--faint); margin-bottom: 0.75rem;
+  }
+
+  .entry { padding: 2.25rem 0; border-bottom: 1px solid var(--rule); }
+  .entry:last-child { border-bottom: 0; }
+  .entry-head { display: flex; gap: 1.25rem; align-items: baseline; flex-wrap: wrap; }
+  .rank {
+    font-family: var(--serif); font-size: 2.6rem; color: var(--gold);
+    line-height: 1; min-width: 2.2rem;
+  }
+  .entry-title { flex: 1 1 16rem; }
+  .entry-title .where {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em;
+    color: var(--faint); text-transform: uppercase; margin-top: 0.3rem; display: block;
+  }
+  .total {
+    font-family: var(--serif); font-size: 1.5rem; color: var(--muted); white-space: nowrap;
+  }
+  .scores { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.1rem 0 1rem; }
+  .scores div { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--faint); }
+  .scores b { color: var(--text); font-size: 0.95rem; font-weight: 500; letter-spacing: 0; }
+  .entry p { margin-bottom: 0.9rem; color: #d8d5cd; }
+  .entry p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 1.1rem 0; padding-left: 1.1rem; border-left: 2px solid var(--gold);
+    font-family: var(--serif); font-size: 1.15rem; color: var(--text);
+  }
+  .take {
+    margin-top: 1.1rem; padding: 0.9rem 1.1rem; background: var(--panel);
+    border-left: 2px solid var(--rule); font-size: 0.96rem;
+  }
+  .take b { color: var(--gold); }
+
+  .scroll { overflow-x: auto; margin-top: 1.5rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; min-width: 40rem; }
+  th, td { text-align: left; padding: 0.65rem 0.9rem 0.65rem 0; border-bottom: 1px solid var(--rule);
+    vertical-align: top; }
+  th { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--faint); font-weight: 400; }
+  td.num { font-family: var(--mono); color: var(--muted); }
+  tbody tr:hover { background: var(--panel); }
+
+  ol.findings { padding-left: 0; list-style: none; counter-reset: f; }
+  ol.findings li {
+    counter-increment: f; padding: 1.25rem 0 1.25rem 3.25rem;
+    border-bottom: 1px solid var(--rule); position: relative;
+  }
+  ol.findings li::before {
+    content: counter(f); position: absolute; left: 0; top: 1.1rem;
+    font-family: var(--serif); font-size: 1.6rem; color: var(--gold);
+  }
+  ol.findings li:last-child { border-bottom: 0; }
+
+  footer { padding-top: 3rem; border-top: 1px solid var(--rule); color: var(--faint);
+    font-size: 0.9rem; }
+  footer a { color: var(--muted); }
+  code { font-family: var(--mono); font-size: 0.88em; color: var(--gold-light); }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="kicker">Competitor research · 8 August 2026</div>
+    <h1>The best AI consultant sites in the EU&nbsp;and&nbsp;US</h1>
+    <p class="lead">Eight parallel research agents visited roughly 200 unique sites across
+    the US, DACH, UK/Ireland, continental Europe, the coaching and keynote circuits, the
+    boutique-studio scene and the design-excellence tier. Every site was scored 1–10 on
+    design, success, quality and expertise. These are the ten that survived.</p>
+    <div class="statbar">
+      <div><b>242</b><span>site visits</span></div>
+      <div><b>~200</b><span>unique sites</span></div>
+      <div><b>8</b><span>segments</span></div>
+      <div><b>4</b><span>scoring axes</span></div>
+    </div>
+  </header>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="eyebrow">How to read this</div>
+    <h2>Scoring</h2>
+    <p style="margin-top:1rem;color:var(--muted)"><b style="color:var(--text)">Design</b> —
+    visual craft, typography, grid, colour restraint, motion, custom vs template, mobile.
+    <b style="color:var(--text)">Success</b> — named clients, case studies with numbers, real
+    testimonials, books, stages, press, pricing transparency.
+    <b style="color:var(--text)">Quality</b> — copy clarity, information architecture, trust
+    elements, conversion path, speed.
+    <b style="color:var(--text)">Expertise</b> — publications, technical writing, specific
+    niche, AI substance versus buzzwords.</p>
+    <p style="margin-top:1rem;color:var(--muted)">Agents were told to be harsh, to score
+    against a global bar rather than a local one, to name template fingerprints where
+    visible, and never to report a site they could not actually load. Where several agents
+    scored the same site, the range is shown.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">The ranking</div>
+    <h2>Top 10</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">1</div>
+        <div class="entry-title">
+          <h3>Mark van Rijmenam</h3>
+          <span class="where"><a href="https://thedigitalspeaker.com">thedigitalspeaker.com</a> · Netherlands</span>
+        </div>
+        <div class="total">34<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>8</b></div><div>Success <b>8</b></div>
+        <div>Quality <b>9</b></div><div>Expertise <b>9</b></div>
+      </div>
+      <p>The only site in the whole sweep where copy, proof and conversion all land at once.
+      The headline is an argument rather than a job title:</p>
+      <blockquote>AI is making every company smarter. It isn't making any of them wiser.</blockquote>
+      <p>The subhead then names the buyer's real fear — "Leaders don't need more information
+      about emerging tech. They need better decisions they can defend." Then he does the thing
+      nobody else does and puts a number on <em>his own performance</em>: NPS 9.2 across 200+
+      events in 32 countries. Not "clients love me" — a metric with a denominator.</p>
+      <div class="take"><b>Take:</b> the WAVE framework drawn as a diagram rather than asserted
+      as a trademark, and the conversion trio of "Check Availability" + a 24-hour response
+      promise + a downloadable brochure.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">2</div>
+        <div class="entry-title">
+          <h3>Mo Gawdat</h3>
+          <span class="where"><a href="https://mogawdat.com">mogawdat.com</a> · US / UK</span>
+        </div>
+        <div class="total">34<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>8</b></div><div>Success <b>10</b></div>
+        <div>Quality <b>8</b></div><div>Expertise <b>8</b></div>
+      </div>
+      <p>The best hero architecture found anywhere. Two words — "HAPPINESS + AI" — then the
+      name, then three labelled credentials stacked underneath, each a <em>category</em>
+      rather than a boast: <b>Leadership:</b> Former CBO, Google [X]. <b>Authorship:</b> 4×
+      bestselling author. <b>Mission:</b> One Billion Happy.</p>
+      <p>That converts a CV into a three-second read, and it is the single most portable
+      pattern in this document. The booking form is properly specified — inquiry type, date,
+      event location, organization — rather than a generic message box.</p>
+      <div class="take"><b>Caveat:</b> much of the Success score is inherited fame. The hero
+      structure transfers; the résumé behind it does not.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">3</div>
+        <div class="entry-title">
+          <h3>Alice Labs</h3>
+          <span class="where"><a href="https://alicelabs.ai">alicelabs.ai</a> · Sweden</span>
+        </div>
+        <div class="total">33<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>7</b></div><div>Success <b>9</b></div>
+        <div>Quality <b>8</b></div><div>Expertise <b>9</b></div>
+      </div>
+      <p>The reference implementation for proof. Every case study is one line containing a
+      named client, a currency figure and a delivery window: Ljusgårda, $250K/year saved, 83%
+      cost reduction, shipped in six weeks. A public-sector client freeing 6,400–8,000
+      hours/year by taking document handling from 60 hours to 3 minutes. Pricing is banded
+      honestly — pilot €25k–€60k, enterprise €80k–€250k.</p>
+      <p>And it is the only site in 200 that treats <b>European compliance as a selling
+      feature</b> rather than a legal footnote: PII redaction before the model call,
+      prompt-injection defenses, EU AI Act risk classification, audit logs, with Ragas and
+      Langfuse named as the eval stack. Five named humans, 62 KB build.</p>
+      <div class="take"><b>Directly relevant:</b> this is the EU-privacy argument done as
+      marketing rather than as an Impressum obligation.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">4</div>
+        <div class="entry-title">
+          <h3>Dr. Hubertus Porschen</h3>
+          <span class="where"><a href="https://hubertusporschen.com">hubertusporschen.com</a> · Germany</span>
+        </div>
+        <div class="total">32<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>8</b></div><div>Success <b>9</b></div>
+        <div>Quality <b>8</b></div><div>Expertise <b>7</b></div>
+      </div>
+      <p>The best site in DACH, and the only German-market one that would survive comparison
+      with good US or UK work. Genuinely custom — asymmetric grid, real whitespace discipline,
+      no Elementor fingerprints. The proof is <em>layered rather than dumped</em>: enterprise
+      logos (Commerzbank, Allianz, Bosch, Siemens), then mid-market logos, then associations,
+      then press (ARD, FAZ, Handelsblatt), then a ProvenExpert score of 4.88 with 377 reviews
+      behind it.</p>
+      <div class="take"><b>Take:</b> the dual-CTA footer splitting "book a keynote" from
+      "30-min strategy call", so two buyer intents self-sort instead of fighting over one
+      button — plus the anti-hype line <em>"KI einbauen — wie eine gute Maschine"</em>, which
+      speaks the customer's vocabulary rather than the vendor's.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">5</div>
+        <div class="entry-title">
+          <h3>Lukas Görög</h3>
+          <span class="where"><a href="https://ki-beratung-goeroeg.com">ki-beratung-goeroeg.com</a> · Austria / Switzerland</span>
+        </div>
+        <div class="total">32<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>7</b></div><div>Success <b>9</b></div>
+        <div>Quality <b>8</b></div><div>Expertise <b>8</b></div>
+      </div>
+      <p>The best proof quality in the German-speaking market. Where everyone else claims
+      "measurable results", he prints +28% dwell time, +17% app ratings, and 45 minutes saved
+      per article — backed by a verifiable prior role (AI Lead at NZZ), ZHAW lecturing, INMA
+      jury duty, and 16 named press appearances including ORF ZIB 2. Separate Swiss and
+      Austrian phone numbers is quiet, excellent cross-border execution.</p>
+      <div class="take"><b>Self-inflicted wound:</b> the blog lives off-domain at
+      akademie-ki.com, splitting his authority across two properties.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">6</div>
+        <div class="entry-title">
+          <h3>Kate O'Neill</h3>
+          <span class="where"><a href="https://koinsights.com">koinsights.com</a> · US</span>
+        </div>
+        <div class="total">32<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>7</b></div><div>Success <b>9</b></div>
+        <div>Quality <b>8</b></div><div>Expertise <b>8</b></div>
+      </div>
+      <p>The only site in 200 whose hero is a <b>question</b>:</p>
+      <blockquote>How can leaders make AI decisions that truly serve humanity?</blockquote>
+      <p>This does something a statement hero structurally cannot — it makes the visitor
+      supply their own problem before you have made a claim. Speaking topics are split by
+      buyer problem rather than by talk title, and the CTA is "Check availability", which is
+      literally what a booker types into an email. WordPress underneath, and you would not
+      guess.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">7</div>
+        <div class="entry-title">
+          <h3>Risto Uuk</h3>
+          <span class="where"><a href="https://ristouuk.com">ristouuk.com</a> · Estonia / Belgium</span>
+        </div>
+        <div class="total">32<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>8</b></div><div>Success <b>9</b></div>
+        <div>Quality <b>6</b></div><div>Expertise <b>9</b></div>
+      </div>
+      <p>The best typography of any AI-category site, and it gets there by subtraction:
+      Crimson Text at a generous measure over warm paper <code>#f9f8f5</code>, Inter for UI,
+      one photograph, no gradient, no glow, no pill badges. The entire hero is one paragraph
+      of plain biography and two buttons.</p>
+      <p>The authority is close to unmatchable — he wrote into the EU AI Act's
+      general-purpose-AI provisions, runs a 50,000-subscriber newsletter on it, sits on
+      Estonia's PM-level AI advisory board.</p>
+      <div class="take"><b>Why only seventh:</b> there is no offer, no service, no price and
+      no funnel. It converts on reputation alone, which is a luxury, not a strategy.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">8</div>
+        <div class="entry-title">
+          <h3>Zack Kass</h3>
+          <span class="where"><a href="https://zackkass.com">zackkass.com</a> · US</span>
+        </div>
+        <div class="total">~31<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>7–8</b></div><div>Success <b>9</b></div>
+        <div>Quality <b>7.5–8</b></div><div>Expertise <b>6–7</b></div>
+      </div>
+      <p>The most disciplined visual execution in the AI category — a restrained Webflow build
+      with a warm earth-toned palette that trusts photography and whitespace instead of
+      gradient-mesh AI clichés. Three devices worth taking: a persistent bar above the nav
+      carrying the book title, a "BESTSELLER" chip and the USA Today / LA Times marks, so
+      press proof lands before any content does; testimonials attributed <b>by role, not
+      name</b> ("President, Coca-Cola"); and an inquiry form opening with a type dropdown so
+      the lead self-triages, plus a committed "within one business day".</p>
+      <div class="take"><b>Docked for:</b> the unverifiable "trusted by 80% of Fortune 500
+      CEOs". The footer disclaimer clarifying he no longer represents OpenAI is a rare piece
+      of honesty worth copying.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">9</div>
+        <div class="entry-title">
+          <h3>Conor Grennan — AI Mindset</h3>
+          <span class="where"><a href="https://ai-mindset.ai">ai-mindset.ai</a> · US</span>
+        </div>
+        <div class="total">31<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>5.5–7</b></div><div>Success <b>8–8.5</b></div>
+        <div>Quality <b>7–8</b></div><div>Expertise <b>7–8</b></div>
+      </div>
+      <p>Ranked ninth on a mediocre Squarespace build, entirely because of <b>one
+      artifact</b>: the homepage centres a Microsoft Research study of 388 Gap employees
+      showing 2.07× odds of producing top-quality work after a single session, 77% hit-rate
+      versus 62% control.</p>
+      <p>Every other consultant in 200 sites is showing you where they have been. He is
+      showing you what measurably happens when someone uses him. That reframe moves him from
+      <em>speaker</em> to <em>intervention with an effect size</em>.</p>
+      <div class="take"><b>The highest-leverage lesson in this research:</b> one defensible
+      number — even from a small self-run study — beats every logo wall here.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="rank">10</div>
+        <div class="entry-title">
+          <h3>Acuity AI Advisory</h3>
+          <span class="where"><a href="https://acuityai.co">acuityai.co</a> · Ireland</span>
+        </div>
+        <div class="total">31<span style="color:var(--faint);font-size:1rem">/40</span></div>
+      </div>
+      <div class="scores">
+        <div>Design <b>7</b></div><div>Success <b>9</b></div>
+        <div>Quality <b>8</b></div><div>Expertise <b>7</b></div>
+      </div>
+      <p>The only UK/IE site that closes the loop from credibility to consequence: verifiable
+      blue-chip logos (Danske Bank, Siemens, Law Society of Ireland) <em>and</em> case studies
+      denominated in euros and weeks — "€560k hidden margin recovered in one week" — on a
+      custom Next.js build at 130 KB and 0.4s.</p>
+      <p>The hero refuses abstraction: <em>"building what's worth building, buying what's
+      better bought"</em> is a positioning statement that <b>eliminates</b> prospects, which
+      is what a positioning statement is for.</p>
+      <div class="take"><b>Standout move:</b> a Copilot honesty section publicly reporting an
+      audit finding of 80% nominal usage versus 20% genuine engagement — attacking the
+      category's dirty secret instead of selling into the hype.</div>
+    </div>
+  </section>
+</div>
+
+<div class="wide">
+  <section>
+    <div class="eyebrow">11–16</div>
+    <h2>Runners-up</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Site</th><th>Score</th><th>Why it just missed</th></tr></thead>
+        <tbody>
+          <tr><td class="num">11</td><td>Kai Spriestersbach</td><td><a href="https://afaik.de">afaik.de</a></td><td class="num">31</td>
+            <td><b>Expertise 10/10 — the highest single score in the sweep.</b> Four books including an O'Reilly title, DFKI guest researcher, PhD candidate, a blog doing real benchmark-methodology critique. Held back by a plain WordPress theme and fully opaque pricing.</td></tr>
+          <tr><td class="num">12</td><td>Crux Digits</td><td><a href="https://cruxdigits.nl">cruxdigits.nl</a></td><td class="num">31</td>
+            <td>The most complete boutique package: named enterprise clients, percentage ROI, a four-rung published ladder (€150/hr → €2,500 → €20,000 → from €50,000) and a real ML stack. <em>"By the second call, you get a working MVP — not a 60-page document."</em></td></tr>
+          <tr><td class="num">13</td><td>Vin Vashishta</td><td><a href="https://vinvashishta.com">vinvashishta.com</a></td><td class="num">31</td>
+            <td>The only US solo site with real art direction, and it treats numbers as typography ("$4B in delivered value" set bold inside the subhead). Shipped with a broken hero image and a cyan-on-cyan nav CTA.</td></tr>
+          <tr><td class="num">14</td><td>Jarno Duursma</td><td><a href="https://jarnoduursma.nl">jarnoduursma.nl</a></td><td class="num">~30</td>
+            <td>The proof-density benchmark: 18 named enterprise logos, a 9.1 average rating <b>broken out per named event</b> (9.4, 9.6), 47k subscribers, 78 KB page. Wins on evidence architecture, not craft.</td></tr>
+          <tr><td class="num">15</td><td>Azeem Azhar</td><td><a href="https://azeemazhar.com">azeemazhar.com</a></td><td class="num">31</td>
+            <td>Four words of hero copy — "CREATING CLARITY FROM COMPLEXITY" — with all persuasion outsourced to Daniel Ek and Accenture's CTO in the first scroll. Monetises keynotes only; a buyer with a project has nowhere to go.</td></tr>
+          <tr><td class="num">16</td><td>Justin McKelvey</td><td><a href="https://justinmckelvey.com">justinmckelvey.com</a></td><td class="num">26.5</td>
+            <td>Low total, but <b>structurally the best solo template in the sweep</b>: availability pill → serif display line → subhead → inline metric strip, over a fully public ladder ($2,500 → $4,500 → $25–50K). Undone by unnamed clients, so the numbers can't be checked.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Outside the category</div>
+    <h2>The design masters</h2>
+    <p style="margin-top:1rem;color:var(--muted);max-width:44rem">An honest finding: the
+    best-designed site in AI consulting (Zack Kass, ~8/10) would not make the top 20 on design
+    among independent practitioners generally. These people don't sell AI consulting, but they
+    are where the actual design lessons live — and their work transfers directly.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Name</th><th>Site</th><th>Design</th><th>What to take</th></tr></thead>
+        <tbody>
+          <tr><td>Rauno Freiberg</td><td><a href="https://rauno.me">rauno.me</a></td><td class="num">9.5</td><td>Custom typeface + a 12-step Radix gray ramp <b>and a parallel alpha ramp</b>, so every border and overlay composites correctly over any background. A "Craft" gallery of isolated interaction details demonstrates judgement without needing client sign-off.</td></tr>
+          <tr><td>Maggie Appleton</td><td><a href="https://maggieappleton.com">maggieappleton.com</a></td><td class="num">9.5</td><td>Canela serif on a three-step cream ramp (<code>#fcfbf7</code> / <code>#f6f5f1</code> / <code>#e6e3e1</code>), ink <code>#353534</code> not black, one crimson accent. Content-type taxonomy as navigation.</td></tr>
+          <tr><td>Emil Kowalski</td><td><a href="https://emilkowal.ski">emilkowal.ski</a></td><td class="num">9.5</td><td>Metric-matched fallback <code>@font-face</code> per family with tuned <code>size-adjust</code> — zero layout shift between fallback and webfont. Nine greys and nothing else.</td></tr>
+          <tr><td>Bartosz Ciechanowski</td><td><a href="https://ciechanow.ski">ciechanow.ski</a></td><td class="num">9</td><td>Near-zero chrome; the entire design budget spent on inline interactive WebGL diagrams.</td></tr>
+          <tr><td>Ethan Marcotte</td><td><a href="https://ethanmarcotte.com">ethanmarcotte.com</a></td><td class="num">9</td><td>Oxblood masthead <code>#BD222E</code> as a colour signature visible in a thumbnail; the accent flips to amber <code>#F9A31A</code> in dark mode rather than keeping the hue.</td></tr>
+          <tr><td>Matt Ström-Awn</td><td><a href="https://mattstromawn.com">mattstromawn.com</a></td><td class="num">9</td><td><b>39 <code>clamp()</code> declarations</b> — fully fluid type and space, no typographic breakpoints at all. Role-namespaced tokens make re-theming a five-line diff.</td></tr>
+          <tr><td>Paul Robert Lloyd</td><td><a href="https://paulrobertlloyd.com">paulrobertlloyd.com</a></td><td class="num">9</td><td>The entire neutral ramp derived from one <code>oklch(56% .0075 288)</code> seed via relative colour syntax. Change one line, the whole site retones.</td></tr>
+          <tr><td>Craig Mod</td><td><a href="https://craigmod.com">craigmod.com</a></td><td class="num">9</td><td>Writing → paid-membership funnel wrapped in FF Meta Serif Pro.</td></tr>
+          <tr><td>Gwern Branwen</td><td><a href="https://gwern.net">gwern.net</a></td><td class="num">9</td><td>Sidenotes, hover link-popups, historical drop-cap faces — essay pages that out-typeset a book.</td></tr>
+          <tr><td>Lynn Fisher</td><td><a href="https://lynnandtonic.com">lynnandtonic.com</a></td><td class="num">9</td><td>Two colours only, via native <code>light-dark()</code>, with a custom display serif.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="eyebrow">Across all 200 sites</div>
+    <h2>What the sweep says</h2>
+    <ol class="findings">
+      <li><b>Fame and site quality are almost uncorrelated.</b> Bernard Marr (design 3–4),
+      Sascha Lobo (4), Tom Goodwin (4) and David Shrier (1) are far more famous than anyone in
+      the top 10. Sol Rashidi — the world's first enterprise CAIO, nine patents, Harvard Senior
+      Fellow — has a hero that is a dense grey paragraph with fifteen inline blue links.</li>
+
+      <li><b>Design is a wide-open gap in this category.</b> In UK/Ireland, 14 of 24 sites run
+      WordPress, Squarespace, HubSpot or Divi/Avada with default type, and only three had a
+      deliberate font pairing. In DACH it is worse. A genuinely crafted site is a cheap and
+      durable edge here in a way it would not be in, say, product design.</li>
+
+      <li><b>Almost nobody publishes a number.</b> Across ~200 sites, roughly a dozen publish
+      prices. The ones that do — Paul Roetzer's $60,000 floor, WorkWise's 25-item menu, Crux
+      Digits' four-rung ladder, Nicola Lazzari's three-currency day rates — stand out
+      instantly. In DACH, where 20 of 24 hide behind "kostenloses Erstgespräch", a printed
+      number is the cheapest differentiation available.</li>
+
+      <li><b>A logo you can't explain is decoration.</b> Parlance Labs and Prolego both show
+      extraordinary logo walls (OpenAI, Stripe, Netflix; Lockheed, Citi, Morgan Stanley) with
+      zero numbers or descriptions attached. One qualified sentence per logo would move either
+      site two points.</li>
+
+      <li><b>Fake proof is worse than no proof.</b> Nicola Lazzari's site is beautifully built
+      and publishes real metrics — then attributes its testimonials to "Sarah Chen", "David
+      Kim", "Emma Rodriguez", with no companies. A stock-name set retroactively makes a
+      skeptical buyer doubt the metrics too. An empty testimonials section scores higher than a
+      fabricated one.</li>
+
+      <li><b>The single highest-leverage asset is one defensible number about your own
+      effect.</b> Not a logo, not a testimonial, not a framework — a measured outcome. Conor
+      Grennan's Microsoft RCT, Mark van Rijmenam's NPS 9.2, Jarno Duursma's per-event 9.4 and
+      9.6, Alice Labs' "$250K/year saved in six weeks". Every one of those beats a wall of
+      Fortune 500 badges.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Full scored tables for all 242 visits live alongside this file:
+    <a href="01-us-solo-consultants.md">US solo</a> ·
+    <a href="02-dach-consultants.md">DACH</a> ·
+    <a href="03-uk-ireland-consultants.md">UK &amp; Ireland</a> ·
+    <a href="04-eu-continental-consultants.md">Continental EU</a> ·
+    <a href="05-coaches-trainers.md">Coaches &amp; trainers</a> ·
+    <a href="06-speakers-fractional-caios.md">Speakers &amp; CAIOs</a> ·
+    <a href="07-design-excellence.md">Design excellence</a> ·
+    <a href="08-boutique-studios.md">Boutique studios</a>.</p>
+    <p style="margin-top:0.75rem">Patterns worth porting to this site are collected in
+    <a href="STEAL-LIST.md">STEAL-LIST.md</a>.</p>
+  </footer>
+</div>
