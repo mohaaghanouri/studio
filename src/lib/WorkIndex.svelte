@@ -29,14 +29,14 @@
 </script>
 
 <svelte:head>
-	<title>{copy.studio.worksLabel} — Moha Aghanoori</title>
+	<title>{copy.studio.worksLabel} — {contact.name}</title>
 	<meta name="description" content={copy.studio.worksMeta} />
 	<link rel="canonical" href={canonical} />
 	<link rel="alternate" hreflang="en" href="{site}/work/" />
 	<link rel="alternate" hreflang="de" href="{site}/de/work/" />
 	<link rel="alternate" hreflang="x-default" href="{site}/work/" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{copy.studio.worksLabel} — Moha Aghanoori" />
+	<meta property="og:title" content="{copy.studio.worksLabel} — {contact.name}" />
 	<meta property="og:description" content={copy.studio.worksMeta} />
 	<meta property="og:url" content={canonical} />
 	<meta property="og:image" content="{site}/og.png" />
@@ -94,7 +94,7 @@
 	</section>
 
 	<footer class="foot">
-		<p>© Moha Aghanoori · {contact.address || contact.city}</p>
+		<p>© {contact.name} · {contact.address || contact.city}</p>
 		<p>
 			<a href="{base}/impressum/">{copy.footer.impressum}</a>
 			· <a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>

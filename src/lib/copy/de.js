@@ -1,7 +1,11 @@
+// Prose mentions of the name are interpolated from contact.js so a rename stays a
+// one-line change. The sentences themselves are copy — rewrite them freely.
+import { contact } from './contact.js';
+
 export default {
 	lang: 'de',
 	meta: {
-		title: 'Moha Aghanoori — KI für Ihren Arbeitsalltag, in klaren Worten',
+		title: `${contact.name} — KI für Ihren Arbeitsalltag, in klaren Worten`,
 		description:
 			'Ich begleite Berufstätige — Zahnärzte, Anwälte, Wissenschaftler, Marketing-Teams — dabei, KI in ihrer täglichen Arbeit zu nutzen, in klarer Sprache. Berlin, Deutsch & Englisch. Das Erstgespräch ist kostenlos.'
 	},
@@ -12,7 +16,7 @@ export default {
 	hero: {
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline:
-			'Ich bin Moha Aghanoori. Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Heute begleite ich Zahnärzte, Anwälte, Forschende und Führungskräfte dabei, KI für sich arbeiten zu lassen — in klaren Worten, angepasst an Ihre Arbeitsweise.',
+			`Ich bin ${contact.name}. Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Heute begleite ich Zahnärzte, Anwälte, Forschende und Führungskräfte dabei, KI für sich arbeiten zu lassen — in klaren Worten, angepasst an Ihre Arbeitsweise.`,
 		button: 'Schreiben Sie mir — das Erstgespräch ist kostenlos',
 		note: 'In Berlin · Deutsch & Englisch · Sie sprechen direkt mit mir'
 	},
@@ -229,7 +233,7 @@ export default {
 	about: {
 		eyebrow: 'Über mich',
 		title: 'Der Übersetzer zwischen Ihnen und den Maschinen.',
-		photoAlt: 'Moha Aghanoori',
+		photoAlt: contact.name,
 		text: 'Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Die Lektion aus dieser Zeit ist einfach: Die Technik ist selten das Schwierige. Das Schwierige ist die Übersetzung — zuzuhören, wie Sie wirklich arbeiten, die Stellen zu finden, an denen eine Maschine tatsächlich hilft, und sie einzufügen, ohne alles andere zu stören. Heute ist genau das meine Arbeit als Berater und Coach. Ich lebe in Berlin, arbeite auf Deutsch und Englisch — und Sie haben immer direkt mit mir zu tun, ohne Agentur und ohne Zwischenstationen.'
 	},
 	testimonials: {

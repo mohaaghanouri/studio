@@ -35,11 +35,11 @@
 </script>
 
 <svelte:head>
-	<title>{item.title ?? `${item.label} — Moha Aghanoori`}</title>
+	<title>{item.title ?? `${item.label} — ${contact.name}`}</title>
 	<meta name="description" content={item.metaDescription ?? item.headline} />
 	<link rel="canonical" href={canonical} />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={item.title ?? `${item.label} — Moha Aghanoori`} />
+	<meta property="og:title" content={item.title ?? `${item.label} — ${contact.name}`} />
 	<meta property="og:description" content={item.metaDescription ?? item.headline} />
 	<link rel="alternate" hreflang="en" href="{site}/work/{item.slug}/" />
 	<link rel="alternate" hreflang="de" href="{site}/de/work/{item.slug}/" />
@@ -132,7 +132,7 @@
 		</nav>
 
 		<footer class="foot">
-			<p>© Moha Aghanoori · {contact.address || contact.city}</p>
+			<p>© {contact.name} · {contact.address || contact.city}</p>
 			<p>
 				<a href="{base}/impressum/">{copy.footer.impressum}</a>
 				· <a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>

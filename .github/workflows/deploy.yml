@@ -43,3 +43,38 @@ jobs:
           git push -q --force \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
             gh-pages
+
+      # Cloudflare only compresses responses it CACHES, so edge-caching the HTML is
+      # the only way to stop serving it uncompressed (~34 KB/page). That is safe only
+      # if a deploy also purges, otherwise a push stays invisible until the TTL runs
+      # out and looks like a broken deploy. This step is that prerequisite.
+      #
+      # No-ops with a notice until both secrets exist, so the workflow is committed
+      # ready rather than as a TODO:
+      #   CLOUDFLARE_PURGE_TOKEN — API token, "Zone → Cache Purge" on this zone ONLY
+      #   CLOUDFLARE_ZONE_ID     — the zone id (not a credential, but no reason to
+      #                            put it in a public workflow file)
+      #
+      # A purge failure annotates rather than fails: the site is already deployed by
+      # this point, so a red X would misreport a working deploy. The annotation still
+      # shows up in the run summary.
+      - name: Purge Cloudflare cache
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}
+          CF_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          if [ -z "$CF_TOKEN" ] || [ -z "$CF_ZONE" ]; then
+            echo "::notice::Cache purge skipped — CLOUDFLARE_PURGE_TOKEN / CLOUDFLARE_ZONE_ID not set."
+            exit 0
+          fi
+          code=$(curl -sS -o /tmp/purge.json -w '%{http_code}' -X POST \
+            "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" \
+            -H "Authorization: Bearer $CF_TOKEN" \
+            -H 'content-type: application/json' \
+            --data '{"purge_everything":true}')
+          if [ "$code" = "200" ] && grep -q '"success":true' /tmp/purge.json; then
+            echo "Cloudflare cache purged."
+          else
+            # Response body can echo the request, so report status only — never the body.
+            echo "::error::Cloudflare cache purge failed (HTTP $code). Site is deployed; the edge may serve stale HTML until its TTL expires."
+          fi

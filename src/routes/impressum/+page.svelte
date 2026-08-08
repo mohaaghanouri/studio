@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Impressum — Moha Aghanoori</title>
+	<title>Impressum — {contact.name}</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
@@ -13,7 +13,7 @@
 
 	<h2>Angaben gemäß § 5 DDG</h2>
 	<p>
-		Moha Aghanoori<br />
+		{contact.name}<br />
 		Geschwister-Scholl-Straße 1–3<br />
 		10117 {contact.city}<br />
 		Deutschland
@@ -25,7 +25,7 @@
 	</p>
 
 	<h2>Verantwortlich für den Inhalt</h2>
-	<p>Moha Aghanoori (Anschrift wie oben)</p>
+	<p>{contact.name} (Anschrift wie oben)</p>
 
 	<p><a href="{base}/">← Zurück zur Startseite</a></p>
 </main>

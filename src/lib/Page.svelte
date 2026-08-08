@@ -164,7 +164,7 @@
 			{
 				'@type': 'Person',
 				'@id': `${site}/#moha`,
-				name: 'Moha Aghanoori',
+				name: contact.name,
 				url: canonical,
 				image: `${site}/moha.webp`,
 				jobTitle: isEn ? 'AI Consultant' : 'KI-Berater',
@@ -183,7 +183,7 @@
 			{
 				'@type': 'ProfessionalService',
 				'@id': `${site}/#business`,
-				name: 'Moha Aghanoori — AI Consulting',
+				name: contact.business,
 				url: canonical,
 				image: `${site}/og.png`,
 				description: copy.meta.description,
@@ -275,7 +275,7 @@
 
 <header>
 	<div class="bar wrap">
-		<a class="name" href="#top">Moha Aghanoori</a>
+		<a class="name" href="#top">{contact.name}</a>
 
 		<nav class="desk" aria-label="Sections">
 			{#each sections as section, i}
@@ -657,7 +657,7 @@
 
 <footer>
 	<div class="wrap foot">
-		<p>© Moha Aghanoori · {contact.address || contact.city}</p>
+		<p>© {contact.name} · {contact.address || contact.city}</p>
 		<p>
 			<a href="mailto:{contact.email}">{contact.email}</a>
 			· <a href="{base}/impressum/">{copy.footer.impressum}</a>

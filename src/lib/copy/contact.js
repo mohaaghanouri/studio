@@ -1,7 +1,21 @@
-// Contact details shared by both languages.
+// Identity and contact details shared by both languages. This file is the single
+// source of truth: nothing below should be retyped anywhere else in the repo.
+//
+// `name` is threaded through page titles, JSON-LD, the header, both footers, both
+// legal pages, /llms.txt and the copy files. Reusing this codebase for someone
+// else is a one-line change here, not a grep across nine files.
+//
+// Two exceptions that cannot be templated, both one-liners:
+//   static/CNAME  — the custom domain, read by GitHub Pages at deploy time
+//   src/lib/copy/{en,de}.js — prose that mentions the name in a sentence gets
+//                             rewritten wholesale for a new site anyway
 export const site = 'https://moha.expert';
 
 export const contact = {
+	name: 'Moha Aghanoori',
+	// Used as the ProfessionalService name in JSON-LD — the business, not the person.
+	// Both @id-linked into one @graph so search engines fuse them into one entity.
+	business: 'Moha Aghanoori — AI Consulting',
 	whatsapp: '491706128949',
 	telegram: 'mohaaghanouri',
 	// Cloudflare Email Routing forwards this to the Gmail. Catch-all is off, so
@@ -25,7 +39,7 @@ export const contact = {
 
 // Profiles that are the same person as this site. These become Person.sameAs in
 // the JSON-LD, which is what lets search engines and LLMs fuse scattered mentions
-// of "Moha Aghanoori" into one entity — the strongest correlate of AI-search
+// of one name into a single entity — the strongest correlate of AI-search
 // visibility in the research. Add any profile you actually maintain; drop any you
 // abandon, because a dead link here is worse than a missing one.
 export const profiles = [

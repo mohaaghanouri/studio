@@ -1,7 +1,11 @@
+// Prose mentions of the name are interpolated from contact.js so a rename stays a
+// one-line change. The sentences themselves are copy — rewrite them freely.
+import { contact } from './contact.js';
+
 export default {
 	lang: 'en',
 	meta: {
-		title: 'Moha Aghanoori — AI for your daily work, in plain words',
+		title: `${contact.name} — AI for your daily work, in plain words`,
 		description:
 			'I coach professionals — dentists, lawyers, scientists, marketers — on putting AI to work in their daily jobs, in plain language. Berlin, English & German. The first conversation is free.'
 	},
@@ -12,7 +16,7 @@ export default {
 	hero: {
 		headline: 'The boring half of your job can do itself.',
 		subline:
-			"I'm Moha Aghanoori. I've spent six years building AI systems professionally. Today I coach dentists, lawyers, researchers and executives on putting AI to work — in plain language, shaped around how you already work.",
+			`I'm ${contact.name}. I've spent six years building AI systems professionally. Today I coach dentists, lawyers, researchers and executives on putting AI to work — in plain language, shaped around how you already work.`,
 		button: 'Message me — the first conversation is free',
 		note: 'Based in Berlin · English & German · You deal with me directly'
 	},
@@ -32,7 +36,7 @@ export default {
 		worksIntro:
 			"Each of these is something I built and ran myself, for real people with real deadlines. Pick the one closest to your work.",
 		worksMeta:
-			'Six real use cases: content, house hunting, job search, research, marketing and exam prep. Built and run by Moha Aghanoori, AI coaching in Berlin.',
+			`Six real use cases: content, house hunting, job search, research, marketing and exam prep. Built and run by ${contact.name}, AI coaching in Berlin.`,
 		workName: 'Use case',
 		workOverview: 'Overview',
 		workCovers: 'What it takes over',
@@ -228,7 +232,7 @@ export default {
 	about: {
 		eyebrow: 'About me',
 		title: 'The translator between you and the machines.',
-		photoAlt: 'Moha Aghanoori',
+		photoAlt: contact.name,
 		text: "I've spent six years building AI systems professionally. The lesson of those years is simple: the technology is rarely the hard part. The hard part is translation — listening to how you actually work, finding the places where a machine genuinely helps, and fitting it in without disturbing everything else. Today that's my work as a consultant and coach. I live in Berlin, work in English and German, and you always deal with me personally — no agency, no handoffs."
 	},
 	testimonials: {
