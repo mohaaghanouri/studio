@@ -623,6 +623,9 @@
 	.name {
 		text-decoration: none;
 		color: var(--text);
+		display: inline-flex;
+		align-items: center;
+		min-height: 1.5rem;
 	}
 
 	.desk {
@@ -1131,13 +1134,31 @@
 		flex-shrink: 0;
 	}
 
+	/* Three tiles never go to two columns — that would orphan the third. Hold
+	   three through tablet widths with the staircase flattened, then drop to one. */
 	@media (max-width: 52rem) {
+		.figures div {
+			min-height: 9rem;
+			padding: 1rem;
+		}
+		.figures dt {
+			font-size: 1.25rem;
+		}
+		.figures dd {
+			margin-top: 1.5rem;
+		}
+	}
+
+	@media (max-width: 40rem) {
 		.figures {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: 1fr;
 		}
 		.figures div {
-			min-height: 8rem;
-			margin-top: -1px;
+			min-height: 0;
+			margin: 0 0 -1px 0;
+		}
+		.figures dd {
+			margin-top: 1rem;
 		}
 	}
 
@@ -1353,6 +1374,10 @@
 	@media (max-width: 48rem) {
 		.about {
 			grid-template-columns: 1fr;
+		}
+		/* stacked, the portrait was filling the column at ~669px — cap it */
+		.about img {
+			max-width: 20rem;
 		}
 	}
 
@@ -1730,6 +1755,8 @@
 	.foot a {
 		color: var(--faint);
 		text-decoration: none;
+		display: inline-block;
+		padding: 0.35rem 0;
 	}
 
 	.foot a:hover {

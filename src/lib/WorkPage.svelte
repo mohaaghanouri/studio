@@ -132,6 +132,12 @@
 		text-transform: uppercase;
 		color: var(--faint);
 		text-decoration: none;
+		/* 24px minimum touch target */
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		min-height: 1.5rem;
+		align-self: start;
 	}
 
 	.back:hover {
@@ -308,6 +314,8 @@
 	.foot a {
 		color: var(--faint);
 		text-decoration: none;
+		display: inline-block;
+		padding: 0.35rem 0;
 	}
 
 	.foot a:hover {
