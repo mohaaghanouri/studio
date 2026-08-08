@@ -1,18 +1,17 @@
 export default {
 	lang: 'de',
-	otherLang: { href: '/', label: 'EN' },
 	meta: {
 		title: 'Moha Aghanoori — KI für Ihren Arbeitsalltag, in klaren Worten',
 		description:
 			'Ich begleite Berufstätige — Zahnärzte, Anwälte, Wissenschaftler, Marketing-Teams — dabei, KI in ihrer täglichen Arbeit zu nutzen, in klarer Sprache. Berlin, Deutsch & Englisch. Das Erstgespräch ist kostenlos.'
 	},
 	nav: {
-		contact: 'Kontakt'
+		contact: 'Kontakt',
+		menu: 'Menü'
 	},
 	hero: {
 		// Aktuell halten oder löschen — eine veraltete Verfügbarkeitszeile wirkt schlechter als keine.
 		availability: 'Diesen Monat 2 neue Mandate frei',
-		kicker: 'KI-Beratung & Coaching für Berufstätige',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline:
 			'Ich bin Moha Aghanoori. Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Heute begleite ich Zahnärzte, Anwälte, Forschende und Führungskräfte dabei, KI für sich arbeiten zu lassen — in klaren Worten, angepasst an Ihre Arbeitsweise.',
@@ -74,11 +73,6 @@ export default {
 			'Ihr Beruf ist nicht dabei? Es funktioniert mit großer Wahrscheinlichkeit trotzdem — fragen Sie mich.'
 	},
 	built: {
-		eyebrow: 'Erfahrung',
-		title: 'Woher mein Rat kommt',
-		intro:
-			'Ich berate nicht aus der Theorie. Diese Dinge habe ich selbst gebaut und betrieben — für echte Menschen mit echten Fristen. Sie sind die Erfahrung hinter jedem Gespräch, das wir führen werden.',
-		handlesTitle: 'Was es übernimmt',
 		items: [
 			{
 				label: 'Content-Creator',
@@ -167,7 +161,6 @@ export default {
 		]
 	},
 	how: {
-		eyebrow: 'So läuft es ab',
 		title: 'Drei Schritte, kein Risiko.',
 		steps: [
 			{
@@ -187,7 +180,6 @@ export default {
 			'Jede Aufgabe ist anders, deshalb gibt es keine Preisliste. Nach dem Erstgespräch bekommen Sie ein klares Angebot — und das Gespräch selbst kostet nichts.'
 	},
 	principles: {
-		eyebrow: 'Worauf Sie sich verlassen können',
 		title: 'Drei Versprechen.',
 		items: [
 			{
@@ -212,7 +204,6 @@ export default {
 	},
 	testimonials: {
 		eyebrow: 'Stimmen',
-		title: 'Was Kunden sagen',
 		// Bleibt verborgen, bis echte Zitate da sind.
 		items: []
 	},
