@@ -6,6 +6,7 @@ export const prerender = true;
 // EN/DE paths always pair, because en.js and de.js use the same slugs.
 const pairs = [
 	['/', '/de/'],
+	['/work/', '/de/work/'],
 	...en.built.items.map(({ slug }) => [`/work/${slug}/`, `/de/work/${slug}/`])
 ];
 

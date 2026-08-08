@@ -26,11 +26,26 @@
 	let sound = false;
 	let bookOpen = false;
 	let calMounted = false;
+	let calWarm = false;
 	let panelEl;
 
 	// "Based in Berlin · …" → the city carries trust, so it gets weight.
 	// Split rather than duplicating the sentence across both copy files.
 	const noteParts = copy.hero.note.split(contact.city);
+
+	// Warm the connection on hover, so the click→calendar wait loses a round trip.
+	// Still nothing loaded for the ~97% who never open the drawer.
+	function warmCal() {
+		if (calWarm || !contact.cal) return;
+		calWarm = true;
+		document.head.append(
+			Object.assign(document.createElement('link'), {
+				rel: 'preconnect',
+				href: 'https://app.cal.com',
+				crossOrigin: 'anonymous'
+			})
+		);
+	}
 
 	async function openBook() {
 		bookOpen = true;
@@ -120,9 +135,9 @@
 		menuOpen = false;
 	}
 
-	// Four use cases on the home page; art comes from the shared map so each card
+	// All six use cases on the home page; art comes from the shared map so each card
 	// matches its detail page.
-	const works = featured(copy.built.items, 4);
+	const works = featured(copy.built.items, 6);
 
 	// One @graph per home page. EN and DE share @ids on purpose: the two homes are
 	// hreflang alternates, so search engines resolve them to a single entity
@@ -345,7 +360,12 @@
 					<a class="btn btn-primary" href="#contact" on:click={() => blip('click')}>
 						{copy.hero.button}
 					</a>
-					<button class="btn btn-ghost" type="button" on:click={openBook}>
+					<button
+						class="btn btn-ghost"
+						type="button"
+						on:click={openBook}
+						on:pointerenter={warmCal}
+					>
 						{copy.studio.bookCta}
 					</button>
 				</div>
@@ -381,7 +401,9 @@
 		<h2 class="sr">{copy.studio.worksLabel}</h2>
 		<div class="row-head">
 			<span class="meta" aria-hidden="true">{copy.studio.worksLabel}</span>
-			<span class="meta">/{String(works.length).padStart(2, '0')}</span>
+			<a class="meta all-cases" href="{base}{isEn ? '' : '/de'}/work/"
+				>{copy.studio.workBack} ↗</a
+			>
 		</div>
 		<div class="works">
 			{#each works as work}

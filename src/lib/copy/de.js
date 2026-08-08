@@ -28,6 +28,11 @@ export default {
 		bookNote: 'Dreißig Minuten, kostenlos, keine Vorbereitung nötig.',
 		sound: 'Ton',
 		workBack: 'Alle Anwendungsfälle',
+		worksHeading: 'Sechs Dinge, die KI für Menschen wie Sie schon erledigt.',
+		worksIntro:
+			'Jedes davon habe ich selbst gebaut und betrieben — für echte Menschen mit echten Fristen. Wählen Sie das, was Ihrer Arbeit am nächsten kommt.',
+		worksMeta:
+			'Sechs echte Anwendungsfälle: Content, Immobiliensuche, Jobsuche, Forschung, Marketing und Prüfungsvorbereitung. KI-Beratung in Berlin.',
 		workName: 'Anwendungsfall',
 		workOverview: 'Überblick',
 		workCovers: 'Was es übernimmt',
@@ -77,6 +82,9 @@ export default {
 		items: [
 			{
 				slug: 'content-creators',
+				title: 'KI für Content-Creator: schneller schreiben, eigene Stimme — KI-Beratung Berlin',
+				metaDescription:
+					'Wie Videomacher, Autoren und Podcaster KI für Skripte, Untertitel und Recherche nutzen, ohne ihre eigene Stimme zu verlieren. Einzelcoaching aus Berlin.',
 				label: 'Content-Creator',
 				headline: 'Creator, die mit KI arbeiten — nicht gegen sie.',
 				story: [
@@ -92,6 +100,9 @@ export default {
 			},
 			{
 				slug: 'buying-a-home',
+				title: 'KI für die Immobiliensuche: weniger Besichtigungen — KI-Beratung Berlin',
+				metaDescription:
+					'Eine Immobiliensuche, die alle Portale beobachtet, Angebote gegen Ihr Budget prüft und die Unterlagen vor der Besichtigung kontrolliert. Aus Berlin.',
 				label: 'Immobilienkauf',
 				headline: 'Eine Haussuche, die jedes Inserat liest — damit Sie es nicht müssen.',
 				story: [
@@ -107,6 +118,9 @@ export default {
 			},
 			{
 				slug: 'finding-a-job',
+				title: 'KI für die Jobsuche: rund zwanzig Vermittlungen — KI-Beratung Berlin',
+				metaDescription:
+					'Ein Werkzeug, das jede Stellenanzeige vollständig liest und ehrlich mit der echten Erfahrung abgleicht. Rund zwanzig Menschen fanden damit ihre Stelle.',
 				label: 'Jobsuche',
 				headline: 'Rund zwanzig Menschen haben mit meinem Werkzeug einen Job gefunden.',
 				story: [
@@ -122,6 +136,9 @@ export default {
 			},
 			{
 				slug: 'research',
+				title: 'KI für die Forschung: schneller lesen, selbst denken — KI-Beratung Berlin',
+				metaDescription:
+					'Abläufe für Doktoranden und Professoren: Paper gelesen und zusammengefasst, Entwürfe geschärft, Lehrmaterial vorbereitet. Die Wissenschaft bleibt Ihre.',
 				label: 'Forschung',
 				headline: 'Das Lesen wird schneller — das Denken bleibt Ihres.',
 				story: [
@@ -137,6 +154,9 @@ export default {
 			},
 			{
 				slug: 'marketing-product',
+				title: 'KI für Marketing-Teams: ein Assistent, der alles gelesen hat — KI-Beratung Berlin',
+				metaDescription:
+					'Umfragen verdichtet auf das, was Kunden wirklich sagten, Kataloge verarbeitet, Berichte auf Entscheidungen reduziert — mit Quellen zu jeder Antwort.',
 				label: 'Marketing & Produkt',
 				headline: 'Ein Kollege, der jedes Dokument gelesen hat.',
 				story: [
@@ -152,6 +172,9 @@ export default {
 			},
 			{
 				slug: 'language-exams',
+				title: 'KI für IELTS und Prüfungen: gezielt üben — KI-Beratung Berlin',
+				metaDescription:
+					'Prüfungsvorbereitung, die zuerst Ihre alten Tests auswertet, die wiederkehrenden Fehler benennt und jede Woche auf die teuerste Schwäche zielt.',
 				label: 'Sprachen & Prüfungen',
 				headline: 'Prüfungsvorbereitung, die zuerst Sie studiert.',
 				story: [

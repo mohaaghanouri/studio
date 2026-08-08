@@ -43,6 +43,34 @@
 		Formular nicht nutzen möchten, schreiben Sie mir einfach direkt per E-Mail oder Messenger.
 	</p>
 
+	<h2>Terminbuchung (Cal.com)</h2>
+	<p>
+		Auf dieser Seite können Sie über den Button „Termin buchen" einen Kalender öffnen. Erst wenn
+		Sie diesen Button anklicken, wird ein Skript der Cal.com, Inc. (USA) geladen und ein
+		Buchungsfenster von cal.com eingebettet. Ohne diesen Klick findet keine Verbindung zu Cal.com
+		statt. Dabei werden Ihre IP-Adresse und Browserdaten an Cal.com übertragen; die von Ihnen im
+		Buchungsformular eingegebenen Daten (Name, E-Mail-Adresse, Anlass) werden dort zur
+		Terminverwaltung verarbeitet. Rechtsgrundlage ist die Anbahnung eines Vertrags bzw. Ihre
+		Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Wenn Sie das nicht möchten, erreichen Sie mich jederzeit
+		direkt per E-Mail.
+	</p>
+
+	<h2>Schriftarten</h2>
+	<p>
+		Alle Schriftarten werden von meinem eigenen Server geladen. Es besteht keine Verbindung zu
+		Google Fonts oder einem anderen externen Schriftarten-Dienst, und es werden dafür keine Daten
+		an Dritte übertragen.
+	</p>
+
+	<h2>Ton-Einstellung im Browser</h2>
+	<p>
+		Wenn Sie den Ton-Schalter im Kopfbereich benutzen, wird Ihre Auswahl („ein" oder „aus") lokal
+		in Ihrem Browser gespeichert (localStorage), damit die Seite sie beim nächsten Besuch kennt.
+		Diese Speicherung erfolgt nur auf Ihren eigenen Klick hin, verlässt Ihr Gerät nicht und
+		enthält keine personenbezogenen Daten. Sie können sie jederzeit über die Website-Daten in
+		Ihren Browser-Einstellungen löschen.
+	</p>
+
 	<h2>Ihre Rechte</h2>
 	<p>
 		Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten sowie das Recht, sich
