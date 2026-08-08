@@ -177,7 +177,7 @@
 
 {#if PLACEHOLDERS}
 	<p class="preview-flag">
-		Preview build — figures are $$$$ placeholders and the availability line is invented
+		Preview build — client quotes are not in place yet
 	</p>
 {/if}
 
@@ -312,8 +312,8 @@
 			{#each works as work}
 				<article use:fade>
 					<a href="{base}{isEn ? '' : '/de'}/work/{work.slug}/" on:click={() => blip('click')}>
-						<div class="plate" style="--tint:{work.tint}">
-							<span aria-hidden="true">{work.mark}</span>
+						<div class="plate">
+							<img src="{base}/work/{work.slug}.svg" alt="" width="1200" height="750" loading="lazy" />
 						</div>
 						<h3>{work.label} <span class="go" aria-hidden="true">↗</span></h3>
 						<p>{work.headline}</p>
@@ -1054,17 +1054,16 @@
 		aspect-ratio: 16 / 10;
 		border-radius: var(--r);
 		border: 1px solid var(--line);
-		display: grid;
-		place-items: center;
+		overflow: hidden;
 		margin-bottom: 1.25rem;
-		background:
-			radial-gradient(
-				120% 130% at 50% 30%,
-				color-mix(in srgb, var(--tint) 30%, white) 0%,
-				var(--tint) 55%,
-				color-mix(in srgb, var(--tint) 72%, black) 100%
-			);
 		transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+
+	.plate img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
 	}
 
 	.works a {
@@ -1084,12 +1083,6 @@
 
 	.works a:hover .go {
 		color: var(--accent);
-	}
-
-	.plate span {
-		font-size: clamp(2.5rem, 5vw, 3.5rem);
-		line-height: 1;
-		color: color-mix(in srgb, var(--tint) 45%, black);
 	}
 
 	.works h3 {

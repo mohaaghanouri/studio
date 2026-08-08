@@ -7,9 +7,8 @@ export const contact = {
 	email: 'moha@moha.expert',
 	formspree: 'mbgrlnng',
 	city: 'Berlin',
-	// Office address shown in the footer and reach-out section. NOTE: the
-	// Impressum still carries Silbersteinstr. 131 — that one is a legal
-	// declaration, so change it deliberately, not by copying this.
+	// Business address. Also declared in the Impressum (§5 DDG), so this must stay
+	// an address where post genuinely reaches you.
 	address: 'Geschwister-Scholl-Straße 1–3, 10117 Berlin',
 
 	// Cal.com handle + event slug, e.g. cal: 'moha', calEvent: 'discovery-call'

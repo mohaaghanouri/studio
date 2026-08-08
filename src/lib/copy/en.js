@@ -10,8 +10,6 @@ export default {
 		menu: 'Menu'
 	},
 	hero: {
-		// Keep this current or delete it — a stale availability line reads worse than none.
-		availability: 'Taking 2 new clients this month',
 		headline: 'The boring half of your job can do itself.',
 		subline:
 			"I'm Moha Aghanoori. I've spent six years building AI systems professionally. Today I coach dentists, lawyers, researchers and executives on putting AI to work — in plain language, shaped around how you already work.",

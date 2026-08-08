@@ -10,8 +10,6 @@ export default {
 		menu: 'Menü'
 	},
 	hero: {
-		// Aktuell halten oder löschen — eine veraltete Verfügbarkeitszeile wirkt schlechter als keine.
-		availability: 'Diesen Monat 2 neue Mandate frei',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline:
 			'Ich bin Moha Aghanoori. Sechs Jahre lang habe ich beruflich KI-Systeme gebaut. Heute begleite ich Zahnärzte, Anwälte, Forschende und Führungskräfte dabei, KI für sich arbeiten zu lassen — in klaren Worten, angepasst an Ihre Arbeitsweise.',

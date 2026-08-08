@@ -14,8 +14,8 @@
 	<h2>Angaben gemäß § 5 DDG</h2>
 	<p>
 		Moha Aghanoori<br />
-		Silbersteinstr. 131<br />
-		12051 {contact.city}<br />
+		Geschwister-Scholl-Straße 1–3<br />
+		10117 {contact.city}<br />
 		Deutschland
 	</p>
 
