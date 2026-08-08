@@ -30,6 +30,9 @@ export default {
 		bookTitle: 'Pick a time that suits you.',
 		bookNote: 'Thirty minutes, free, no preparation needed.',
 		sound: 'Sound',
+		bookCta: 'Or book a call',
+		close: 'Close',
+		priceLabel: 'What it costs',
 		// $$$$ placeholders — fill these in with real figures.
 		stats: [
 			{ value: '$$$$', label: 'People placed with Mefkat' },
@@ -209,24 +212,8 @@ export default {
 	testimonials: {
 		eyebrow: 'Kind words',
 		title: 'What clients say',
-		// MOCK CONTENT — football quotes standing in for client testimonials, so nobody
-		// could mistake them for real ones. Replace, then set PLACEHOLDERS = false
-		// in lib/preview.js. Lengths differ on purpose to test the grid.
-		items: [
-			{
-				quote: 'Aim for the sky and you’ll reach the ceiling.',
-				name: 'Alex Ferguson · placeholder'
-			},
-			{
-				quote:
-					'Football is a simple game made complicated by people who should know better.',
-				name: 'Bill Shankly · placeholder'
-			},
-			{
-				quote: 'I learned all about life with a ball at my feet.',
-				name: 'Ronaldinho · placeholder'
-			}
-		]
+		// Section stays hidden until real quotes exist.
+		items: []
 	},
 	faq: {
 		eyebrow: 'Common questions',

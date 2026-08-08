@@ -30,6 +30,9 @@ export default {
 		bookTitle: 'Wählen Sie eine Zeit, die Ihnen passt.',
 		bookNote: 'Dreißig Minuten, kostenlos, keine Vorbereitung nötig.',
 		sound: 'Ton',
+		bookCta: 'Oder Termin buchen',
+		close: 'Schließen',
+		priceLabel: 'Was es kostet',
 		// $$$$ Platzhalter — mit echten Werten füllen.
 		stats: [
 			{ value: '$$$$', label: 'Menschen mit Mefkat vermittelt' },
@@ -210,23 +213,8 @@ export default {
 	testimonials: {
 		eyebrow: 'Stimmen',
 		title: 'Was Kunden sagen',
-		// PLATZHALTER — Fußball-Zitate anstelle echter Kundenstimmen, damit sie
-		// niemand verwechseln kann. Ersetzen, dann PLACEHOLDERS = false in lib/preview.js.
-		items: [
-			{
-				quote: 'Ziele auf den Himmel, dann erreichst du die Decke.',
-				name: 'Alex Ferguson · Platzhalter'
-			},
-			{
-				quote:
-					'Fußball ist ein einfaches Spiel, das von Leuten verkompliziert wird, die es besser wissen müssten.',
-				name: 'Bill Shankly · Platzhalter'
-			},
-			{
-				quote: 'Ich habe alles über das Leben mit einem Ball am Fuß gelernt.',
-				name: 'Ronaldinho · Platzhalter'
-			}
-		]
+		// Bleibt verborgen, bis echte Zitate da sind.
+		items: []
 	},
 	faq: {
 		eyebrow: 'Häufige Fragen',
