@@ -7,6 +7,10 @@ export const contact = {
 	email: 'moha@moha.expert',
 	formspree: 'mbgrlnng',
 	city: 'Berlin',
+	// Office address shown in the footer and reach-out section. NOTE: the
+	// Impressum still carries Silbersteinstr. 131 — that one is a legal
+	// declaration, so change it deliberately, not by copying this.
+	address: 'Geschwister-Scholl-Straße 1–3, 10117 Berlin',
 
 	// Cal.com handle + event slug, e.g. cal: 'moha', calEvent: 'discovery-call'
 	// → embeds cal.com/moha/discovery-call. Free plan is enough (1 user,
@@ -29,8 +33,19 @@ export const tools = [
 	{ name: 'LangGraph', logo: '' },
 	{ name: 'Langfuse', logo: '' },
 	{ name: 'n8n', logo: '' },
+	{ name: 'GitHub', logo: '' },
+	{ name: 'GitKraken', logo: '' },
+	{ name: 'Kraken', logo: '' },
+	{ name: 'ImmoScout24', logo: '' },
 	{ name: 'Figma', logo: '' },
 	{ name: 'Higgsfield', logo: '' },
 	{ name: 'HeyGen', logo: '' },
 	{ name: 'Microsoft', logo: '' }
 ];
+
+// Deliberately NOT in the row above. IELTS, the Goethe-Institut and the state of
+// Berlin are institutions, not tools — their marks in a logo row read as
+// accreditation, which would be a false claim. Berlin's bear is a protected
+// state emblem on top of that. If you want them, they need a row of their own
+// with an honest label, e.g. "exams I prepare people for". Say the word.
+// export const exams = [{ name: 'IELTS' }, { name: 'Goethe-Institut' }];

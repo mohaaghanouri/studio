@@ -23,6 +23,33 @@
 	let activeId = '';
 	let menuOpen = false;
 	let sound = false;
+	let bookOpen = false;
+	let calMounted = false;
+	let panelEl;
+
+	// "Based in Berlin · …" → the city carries trust, so it gets weight.
+	// Split rather than duplicating the sentence across both copy files.
+	const noteParts = copy.hero.note.split(contact.city);
+
+	async function openBook() {
+		bookOpen = true;
+		blip('open');
+		// Cal's script only loads the first time someone actually asks for it.
+		await new Promise((r) => setTimeout(r, 0));
+		if (!calMounted) {
+			mountCal();
+			calMounted = true;
+		}
+		panelEl?.querySelector('button')?.focus();
+	}
+
+	function closeBook() {
+		bookOpen = false;
+		blip('click');
+	}
+
+	// Marquee needs the list twice so the loop has no visible seam.
+	const marquee = [...tools, ...tools];
 
 	function toggleSound() {
 		sound = !sound;
@@ -70,7 +97,8 @@
 	// Scroll-spy: whichever tracked section owns the middle of the viewport wins.
 	onMount(() => {
 		sound = initSound();
-		mountCal();
+		// Cal is NOT mounted here on purpose — openBook() does it on first open,
+		// so the third-party script never loads for visitors who never book.
 
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -86,7 +114,9 @@
 	});
 
 	function onKeydown(event) {
-		if (event.key === 'Escape') menuOpen = false;
+		if (event.key !== 'Escape') return;
+		if (bookOpen) closeBook();
+		menuOpen = false;
 	}
 
 	// Four use cases carry the work grid. Art direction is presentational, so it
@@ -152,7 +182,7 @@
 
 {#if PLACEHOLDERS}
 	<p class="preview-flag">
-		Preview build — quotes are football placeholders, figures are $$$$, availability is invented
+		Preview build — figures are $$$$ placeholders and the availability line is invented
 	</p>
 {/if}
 
@@ -236,22 +266,30 @@
 		<div class="hero-foot rise rise-3">
 			<p class="subline">{copy.hero.subline}</p>
 			<div class="hero-cta">
-				<a class="btn btn-primary" href="#contact">{copy.hero.button}</a>
+				<div class="cta-stack">
+					<a class="btn btn-primary" href="#contact" on:click={() => blip('click')}>
+						{copy.hero.button}
+					</a>
+					<button class="btn btn-ghost" type="button" on:click={openBook}>
+						{copy.studio.bookCta}
+					</button>
+				</div>
 				<p class="hero-note">
 					<img src="{base}/moha-face.webp" alt="" width="240" height="240" />
-					{copy.hero.note}
+					<span>{noteParts[0]}<strong>{contact.city}</strong>{noteParts[1] ?? ''}</span>
 				</p>
 			</div>
 		</div>
 	</section>
 
-	<!-- Tools, deliberately not framed as clients -->
+	<!-- Tools, deliberately not framed as clients. Marquee pauses on hover and
+	     holds still under prefers-reduced-motion. -->
 	<div class="tools-strip">
-		<div class="wrap tools">
-			<span class="meta">{copy.studio.toolsLabel}</span>
-			<ul>
-				{#each tools as tool}
-					<li>
+		<span class="meta tools-label">{copy.studio.toolsLabel}</span>
+		<div class="rail">
+			<ul class="track" aria-label={copy.studio.toolsLabel}>
+				{#each marquee as tool, i}
+					<li aria-hidden={i >= tools.length ? 'true' : undefined}>
 						{#if tool.logo}
 							<img src="{base}/logos/{tool.logo}" alt={tool.name} loading="lazy" />
 						{:else}
@@ -317,16 +355,28 @@
 			<span class="meta">{copy.studio.capabilitiesLabel}</span>
 		</div>
 		<h2 class="statement">{copy.how.title}</h2>
-		<ol class="steps">
+
+		<!-- Offset two-column grid: cells alternate vertically and share ruled
+		     edges, with a crosshair marking each intersection. The fourth cell
+		     carries the pricing note so the grid closes rather than dangling. -->
+		<ol class="grid-cells">
 			{#each copy.how.steps as step, i}
 				<li>
-					<span class="step-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-					<h3>{step.title}</h3>
-					<p>{step.text}</p>
+					<span class="cell-idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+					<div class="cell-body">
+						<h3>{step.title}</h3>
+						<p>{step.text}</p>
+					</div>
 				</li>
 			{/each}
+			<li class="cell-note">
+				<span class="cell-idx" aria-hidden="true">04</span>
+				<div class="cell-body">
+					<h3>{copy.studio.priceLabel}</h3>
+					<p>{copy.how.noPrices}</p>
+				</div>
+			</li>
 		</ol>
-		<p class="aside">{copy.how.noPrices}</p>
 	</section>
 
 	<section class="wrap" id="about" use:fade>
@@ -383,17 +433,6 @@
 		</div>
 	</section>
 
-	{#if contact.cal}
-		<section class="wrap" id="book" use:fade>
-			<div class="row-head">
-				<span class="meta">{copy.studio.bookLabel}</span>
-				<span class="meta">{copy.studio.bookNote}</span>
-			</div>
-			<h2 class="statement">{copy.studio.bookTitle}</h2>
-			<div id="cal-inline"></div>
-		</section>
-	{/if}
-
 	<section class="wrap" id="contact" use:fade>
 		<div class="row-head">
 			<span class="meta">{copy.contactSection.eyebrow}</span>
@@ -403,6 +442,11 @@
 			<div class="reach-side">
 				<p class="lead">{copy.contactSection.lead}</p>
 				<div class="buttons">
+					{#if contact.cal}
+						<button class="btn btn-primary" type="button" on:click={openBook}>
+							{copy.studio.bookLabel}
+						</button>
+					{/if}
 					<a class="btn" href="https://wa.me/{contact.whatsapp}">WhatsApp</a>
 					{#if contact.telegram}
 						<a class="btn" href="https://t.me/{contact.telegram}">Telegram</a>
@@ -411,8 +455,11 @@
 				</div>
 				<p class="hero-note">
 					<img src="{base}/moha-face.webp" alt="" width="240" height="240" />
-					{copy.hero.note}
+					<span>{noteParts[0]}<strong>{contact.city}</strong>{noteParts[1] ?? ''}</span>
 				</p>
+				{#if contact.address}
+					<p class="addr">{contact.address}</p>
+				{/if}
 			</div>
 			{#if contact.formspree}
 				{#if formState === 'success'}
@@ -482,9 +529,35 @@
 	</section>
 </main>
 
+{#if contact.cal}
+	<!-- Booking drawer: slides in from the left, Cal mounted on first open -->
+	<div class="scrim" class:open={bookOpen} on:click={closeBook} aria-hidden="true"></div>
+	<aside
+		class="drawer"
+		class:open={bookOpen}
+		bind:this={panelEl}
+		role="dialog"
+		aria-modal="true"
+		aria-label={copy.studio.bookTitle}
+		inert={!bookOpen || undefined}
+	>
+		<div class="drawer-head">
+			<div>
+				<span class="meta">{copy.studio.bookLabel}</span>
+				<p class="drawer-note">{copy.studio.bookNote}</p>
+			</div>
+			<button class="close" type="button" on:click={closeBook}>
+				<span aria-hidden="true">✕</span>
+				<span class="sr">{copy.studio.close}</span>
+			</button>
+		</div>
+		<div id="cal-inline"></div>
+	</aside>
+{/if}
+
 <footer>
 	<div class="wrap foot">
-		<p>© Moha Aghanoori · {contact.city}</p>
+		<p>© Moha Aghanoori · {contact.address || contact.city}</p>
 		<p>
 			<a href="mailto:{contact.email}">{contact.email}</a>
 			· <a href="{base}/impressum/">{copy.footer.impressum}</a>
@@ -895,27 +968,65 @@
 		border-top: 1px solid var(--line);
 		border-bottom: 1px solid var(--line);
 		background: var(--raised);
+		padding: 1.4rem 0;
+		display: grid;
+		gap: 1rem;
 	}
 
-	.tools {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: baseline;
-		gap: 1rem clamp(1.5rem, 4vw, 3rem);
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
+	.tools-label {
+		padding-left: clamp(1.25rem, 4vw, 3rem);
 	}
 
-	.tools ul {
+	/* Rail clips the track and fades both edges so items enter and leave */
+	.rail {
+		overflow: hidden;
+		mask-image: linear-gradient(
+			to right,
+			transparent,
+			#000 6rem,
+			#000 calc(100% - 6rem),
+			transparent
+		);
+	}
+
+	.track {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem clamp(1.5rem, 4vw, 3rem);
+		width: max-content;
+		gap: clamp(2rem, 5vw, 4rem);
+		animation: scroll 42s linear infinite;
 	}
 
-	.tools li {
+	.rail:hover .track {
+		animation-play-state: paused;
+	}
+
+	/* Half of -100% because the list is rendered twice */
+	@keyframes scroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.track {
+			animation: none;
+			flex-wrap: wrap;
+			width: auto;
+			padding-left: clamp(1.25rem, 4vw, 3rem);
+			row-gap: 0.85rem;
+		}
+		.rail {
+			mask-image: none;
+		}
+	}
+
+	.track li {
 		font-family: var(--mono);
 		font-size: var(--t-ui);
 		letter-spacing: 0.06em;
@@ -926,7 +1037,7 @@
 
 	/* Logos sit at a fixed height so differing artboards line up. Wordmarks
 	   render until a vendor SVG is dropped into static/logos/. */
-	.tools img {
+	.track img {
 		height: 1.15rem;
 		width: auto;
 		max-width: 7rem;
@@ -935,7 +1046,7 @@
 		transition: opacity 0.2s ease;
 	}
 
-	.tools li:hover img {
+	.track li:hover img {
 		opacity: 1;
 	}
 
@@ -1102,39 +1213,94 @@
 	}
 
 	/* ============================================================
-	   Steps
+	   Process — offset two-column grid with crosshair intersections
 	   ============================================================ */
-	.steps {
+	.grid-cells {
 		list-style: none;
-		padding: 0;
 		margin: 0;
+		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-		gap: clamp(1.5rem, 3vw, 3rem);
+		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.steps li {
-		border-top: 1px solid var(--line);
-		padding-top: 1.5rem;
+	.grid-cells li {
+		position: relative;
+		min-height: 17rem;
+		padding: 1.5rem;
+		border: 1px solid var(--line);
+		margin: 0 0 -1px -1px;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
-	.step-number {
-		display: block;
-		font-family: var(--display);
-		font-size: 2.5rem;
-		line-height: 1;
+	/* Odd cells sit low, even cells sit high — the offset is the whole device */
+	.grid-cells li:nth-child(odd) {
+		transform: translateY(3.5rem);
+	}
+
+	/* Crosshair at the top-left corner of every cell */
+	.grid-cells li::before,
+	.grid-cells li::after {
+		content: '';
+		position: absolute;
+		background: var(--line-strong);
+	}
+
+	.grid-cells li::before {
+		top: -0.3rem;
+		left: -1px;
+		width: 1px;
+		height: 0.6rem;
+	}
+
+	.grid-cells li::after {
+		top: -1px;
+		left: -0.3rem;
+		width: 0.6rem;
+		height: 1px;
+	}
+
+	.cell-idx {
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
 		color: var(--ghost);
-		margin-bottom: 1.25rem;
 	}
 
-	.steps h3 {
-		font-size: 1.125rem;
-		margin-bottom: 0.6rem;
+	.cell-body {
+		margin-top: auto;
 	}
 
-	.steps p {
+	.grid-cells h3 {
+		font-family: var(--mono);
+		font-size: var(--t-label);
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		margin-bottom: 0.7rem;
+	}
+
+	.grid-cells p {
 		font-size: 0.9375rem;
 		color: var(--muted);
+		max-width: 30ch;
+	}
+
+	.cell-note {
+		background: var(--raised);
+	}
+
+	@media (max-width: 44rem) {
+		.grid-cells {
+			grid-template-columns: 1fr;
+		}
+		.grid-cells li:nth-child(odd) {
+			transform: none;
+		}
+		.grid-cells li {
+			min-height: 0;
+		}
 	}
 
 	/* ============================================================
@@ -1270,19 +1436,16 @@
 	/* ============================================================
 	   Booking + reach out
 	   ============================================================ */
-	#contact,
-	#book {
+	#contact {
 		scroll-margin-top: 4rem;
 	}
 
 	/* Cal.com renders its own widget in here; give it a framed container and a
 	   sensible min-height so the page doesn't jump when the embed loads. */
 	#cal-inline {
-		min-height: 40rem;
-		border: 1px solid var(--line);
-		border-radius: var(--r-lg);
-		overflow: hidden;
-		background: var(--raised);
+		flex: 1;
+		min-height: 34rem;
+		padding: 0.5rem;
 	}
 
 	.reach {
@@ -1414,6 +1577,118 @@
 		.reach {
 			grid-template-columns: 1fr;
 		}
+	}
+
+	/* ============================================================
+	   Hero CTA pair + emphasis
+	   ============================================================ */
+	.cta-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.btn-ghost {
+		background: transparent;
+		border-color: var(--line-strong);
+		color: var(--text);
+		cursor: pointer;
+	}
+
+	.btn-ghost:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+
+	/* Berlin carries trust, so it gets weight rather than a separate sentence */
+	.hero-note strong {
+		color: var(--text);
+		font-weight: 500;
+	}
+
+	.addr {
+		margin-top: 0.85rem;
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--ghost);
+	}
+
+	/* ============================================================
+	   Booking drawer
+	   ============================================================ */
+	.scrim {
+		position: fixed;
+		inset: 0;
+		z-index: 40;
+		background: rgb(0 0 0 / 0.6);
+		backdrop-filter: blur(2px);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+	}
+
+	.scrim.open {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.drawer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 50;
+		width: min(34rem, 100vw);
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		background: var(--bg);
+		border-right: 1px solid var(--line);
+		transform: translateX(-100%);
+		transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+		overflow-y: auto;
+		overscroll-behavior: contain;
+	}
+
+	.drawer.open {
+		transform: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.drawer {
+			transition: none;
+		}
+	}
+
+	.drawer-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 1.5rem;
+		border-bottom: 1px solid var(--line);
+	}
+
+	.drawer-note {
+		margin-top: 0.5rem;
+		font-size: 0.9375rem;
+		color: var(--muted);
+	}
+
+	.close {
+		background: none;
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		color: var(--muted);
+		padding: 0.5rem 0.7rem;
+		cursor: pointer;
+		flex-shrink: 0;
+	}
+
+	.close:hover {
+		border-color: var(--accent);
+		color: var(--accent);
 	}
 
 	/* ============================================================
