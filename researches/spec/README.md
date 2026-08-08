@@ -1,32 +1,49 @@
-# Project spec — migrated from `Marekt/studio/`
+# Project spec
 
-Copied 2026-08-08. Originals were left in place in `~/Desktop/Personal/Marekt/studio/`,
-so delete that folder yourself once you're happy with what came across.
+Two live documents. Everything else that was here has been dropped — see the end.
 
-| File | Status | Why it's here |
-|---|---|---|
-| [`TESTIMONIALS.md`](TESTIMONIALS.md) | **Current — act on this** | The collection worklist: who to ask, the exact WhatsApp/Telegram message in EN and DE, and the rules (real quotes only, first name + profession, explicit OK to publish). This is the unblocker for the last placeholder on the site. |
-| [`CONCEPT.md`](CONCEPT.md) | **Current** | Positioning and audience. Still the reference for who the site talks to. |
-| [`NEXT-STEPS.md`](NEXT-STEPS.md) | **Partly stale** | Its "before go-live" list is done (domain, HTTPS, Formspree, Impressum, German pass). Its *deferred* list is still live: native-German read-through, e-recht24 Datenschutz regeneration, proof numbers, per-profession pages, analytics, productising the teaching offer. |
-| [`BUILD-PROMPT.md`](BUILD-PROMPT.md) | **Superseded** | The build spec for the original gold-and-Fraunces single-column design. The site has been rebuilt twice since (Ace-derived palette and type, then the studio restructure). Kept as history, not as instructions — following it would undo the current site. |
+| File | What it's for |
+|---|---|
+| [`TESTIMONIALS.md`](TESTIMONIALS.md) | **The only open item.** Tailored asks in EN and DE for the four clients, ten follow-up prompts that get specific answers, and the bar for publishing. |
+| [`CONCEPT.md`](CONCEPT.md) | Positioning and audience. Still the reference for who the site talks to. |
 
-## Not copied
+## Current state of the site
 
-`mohaaghanouri.png` (2.0 MB) — the source photo. `static/moha.webp` is the 30 KB
-derivative the site actually serves, and a 2 MB original doesn't belong in a web
-repo. It stays where it was.
+- **Design** — Anton / Geist / Geist Mono on `#060606`, acid lime `#e1f435` accent,
+  `rgb(255 255 255 / 0.1)` hairlines as the structural workhorse.
+- **Structure** — hero, rotating tool rail, 2×2 use-case grid, three figure tiles,
+  3×2 audience grid, offset process grid with crosshair intersections, about,
+  quotes, FAQ, split reach-out. Six prerendered case pages per language at
+  `/work/[slug]` with a sticky metadata rail.
+- **Figures** — 70+ helped through a job search, 6 years, 18 professions.
+- **Booking** — Cal.com `mohaaghanouri/discovery-call`, in a left drawer, script
+  loaded only on first open.
+- **Contact** — booking, email, and the form. WhatsApp and Telegram were removed.
+- **Deploys** — push to `main` → GitHub Actions → `gh-pages`. No manual step.
+- **`src/lib/preview.js`** — `PLACEHOLDERS` still `true`, which suppresses the FAQ
+  structured data and keeps `noindex` on while the testimonial drafts are unapproved.
+  The visible preview banner has been removed; the drafts carry their own labels.
 
-## What changed since NEXT-STEPS.md was written
+## Dropped from this folder
 
-Worth knowing before you act on it, because it describes the v1 site:
+- `BUILD-PROMPT.md` — specced the original gold-and-Fraunces design. Following it
+  would have undone the current site, so it was actively misleading rather than
+  merely stale.
+- `NEXT-STEPS.md` — its go-live checklist was complete; the surviving items are
+  listed below.
+- `TESTIMONIALS-original.md` — fully absorbed into the rewritten version.
 
-- Design is now Anton / Geist / Geist Mono on `#060606` with an acid-lime accent,
-  derived from acedesign.io's system.
-- Structure is studio-shaped: hero, rotating tool rail, 2×2 use-case grid, figures
-  row, audience index, offset process grid, about, FAQ, split reach-out.
-- The long case-study prose referenced there has been **deleted** from the copy
-  files; the four work cards carry `label` + `headline` only.
-- Booking runs through Cal.com (`mohaaghanouri/discovery-call`) in a left drawer.
-- Deploys are automatic: push to `main` → GitHub Actions → `gh-pages`.
-- Placeholder mode (`src/lib/preview.js`) gates the banner, `noindex` and FAQ
-  structured data together.
+## Still worth doing, in order
+
+1. **Real testimonials.** Five labelled drafts are live as a starting point; send
+   them to the four clients for correction. Everything else is finished.
+2. **Native-German read-through** before spending on ads for `/de`. The copy was
+   written to be reviewed, not shipped blind — watch Sie-form consistency.
+3. **Datenschutz regeneration** with the e-recht24 generator: no cookies, no
+   analytics, GitHub Pages as host, Formspree and Cal.com as processors.
+4. **Ten remaining tool wordmarks** — any vendor SVG dropped into `static/logos/`
+   plus one line in `contact.js` turns a wordmark into a mark.
+5. **Per-profession pages** (`/for/dentists`) only once there's a channel to share
+   targeted links into.
+6. **Analytics** only if a decision depends on it. Privacy-friendly keeps the
+   Datenschutz short.

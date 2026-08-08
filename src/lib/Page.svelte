@@ -175,12 +175,6 @@
 	{/if}
 </svelte:head>
 
-{#if PLACEHOLDERS}
-	<p class="preview-flag">
-		Preview build — client quotes are not in place yet
-	</p>
-{/if}
-
 <svelte:window on:keydown={onKeydown} />
 
 <header>
@@ -596,22 +590,6 @@
 		border-bottom: 1px solid var(--line);
 	}
 
-	.preview-flag {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		z-index: 100;
-		text-align: center;
-		padding: 0.6rem 1.25rem;
-		background: var(--accent);
-		color: var(--accent-ink);
-		font-family: var(--mono);
-		font-size: var(--t-meta);
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-	}
-
 	/* ============================================================
 	   Header
 	   ============================================================ */
@@ -1016,15 +994,17 @@
 		color: var(--muted);
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 0.5rem;
 		white-space: nowrap;
+		min-width: 6rem;
 	}
 
 	/* Logos sit at a fixed height so differing artboards line up. Wordmarks
 	   render until a vendor SVG is dropped into static/logos/. */
 	.track img {
-		height: 1.35rem;
-		width: 1.35rem;
+		height: 1.6rem;
+		width: 1.6rem;
 		object-fit: contain;
 		opacity: 0.7;
 		transition: opacity 0.2s ease;
@@ -1106,7 +1086,7 @@
 	   the row climbs. --step is the index, set inline. */
 	.figures {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		align-items: end;
 		gap: 0;
 		margin: 0;
@@ -1381,8 +1361,20 @@
 	   ============================================================ */
 	.quotes {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+		grid-template-columns: repeat(3, 1fr);
 		gap: clamp(1.5rem, 3vw, 2.5rem);
+	}
+
+	@media (max-width: 60rem) {
+		.quotes {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 40rem) {
+		.quotes {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	blockquote {

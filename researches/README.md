@@ -35,10 +35,10 @@ Wix, stock Framer) where visible.
 
 ## Project spec
 
-[`spec/`](spec/) holds the project documents migrated from `Marekt/studio/` —
-positioning, the testimonial collection worklist, and the original build spec.
-See [`spec/README.md`](spec/README.md) for which are current and which are
-superseded.
+[`spec/`](spec/) holds the two live project documents — positioning, and the
+testimonial worklist that is the site's last open item. See
+[`spec/README.md`](spec/README.md) for the current state of the build and what's
+still worth doing.
 
 **This folder is never published.** It sits outside `static/`, so `adapter-static`
 doesn't copy it into `build/` and it never reaches `gh-pages`. It lives in the
