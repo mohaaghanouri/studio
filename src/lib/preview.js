@@ -9,8 +9,10 @@ export const PLACEHOLDERS = true;
 
 // Checklist, kept next to the flag so it can't drift out of date.
 export const PLACEHOLDER_ITEMS = [
-	'copy/en.js + de.js → hero.availability (invented number)',
-	'copy/en.js + de.js → testimonials.items (mock quotes)',
-	'static/og.png (generated card, replace if you want a photo)',
-	'static/favicon.svg (generated mark)'
+	// The only blocker. Five drafts sit in testimonials.items, each labelled
+	// DRAFT/ENTWURF in its visible attribution and with every figure left as ⟨…⟩.
+	// They exist to be sent to the client for correction, NOT to be published:
+	// §5b UWG prohibits fake consumer testimonials. Replace with real replies
+	// before this flag goes false.
+	'copy/en.js + de.js → testimonials.items (5 unapproved drafts)'
 ];

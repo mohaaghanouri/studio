@@ -210,8 +210,38 @@ export default {
 	},
 	testimonials: {
 		eyebrow: 'Kind words',
-		// Section stays hidden until real quotes exist.
-		items: []
+		// DRAFTS, not client statements. Written to send TO each client as
+		// "is this roughly right?" — people correct a draft far more readily than
+		// they write from scratch. Every figure is left as ⟨…⟩ so no invented
+		// number can survive by accident. Replace with the real reply, keep their
+		// wording, then drop the DRAFT label and set PLACEHOLDERS = false.
+		items: [
+			{
+				quote:
+					'We viewed ⟨…⟩ flats instead of the forty I had saved. By the time we found the right one the paperwork was already checked, and I knew which questions to ask.',
+				name: 'DRAFT · house-hunt client — awaiting approval'
+			},
+			{
+				quote:
+					'I had been practising everything equally for months. He looked at my old tests and said exactly where the points were leaking. Writing went from ⟨…⟩ to ⟨…⟩.',
+				name: 'DRAFT · IELTS candidate — awaiting approval'
+			},
+			{
+				quote:
+					'The corrections came back in my own writing style, and the same three mistakes kept being named until I stopped making them.',
+				name: 'DRAFT · IELTS candidate — awaiting approval'
+			},
+			{
+				quote:
+					'I already used AI every day and thought I knew it. In one session it was clear I had been doing the slow version of almost everything.',
+				name: 'DRAFT · engineer — awaiting approval'
+			},
+			{
+				quote:
+					'Editing and captions used to eat my evenings. Now that part is finished before I sit down, and the videos still sound like me.',
+				name: 'DRAFT · content creator — awaiting approval'
+			}
+		]
 	},
 	faq: {
 		eyebrow: 'Common questions',
