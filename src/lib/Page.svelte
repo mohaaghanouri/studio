@@ -29,30 +29,42 @@
 		setSound(sound);
 	}
 
-	// Cal.com inline embed. Only loaded when a handle is configured, so the
-	// third-party script never runs for nothing.
+	// Cal.com inline embed. Only runs when a handle is configured, so the
+	// third-party script never loads for nothing.
+	//
+	// embed.js drains a queue that must already exist when it arrives — loading
+	// the script first and then calling window.Cal throws "Cal is not defined".
+	// So install a queueing stub, push the calls, and let embed.js replay them.
 	function mountCal() {
 		if (!contact.cal) return;
-		const script = document.createElement('script');
-		script.src = 'https://app.cal.com/embed/embed.js';
-		script.async = true;
-		script.onload = () => {
-			// eslint-disable-next-line no-undef
-			const Cal = window.Cal;
-			if (!Cal) return;
-			Cal('init', { origin: 'https://app.cal.com' });
-			Cal('inline', {
-				elementOrSelector: '#cal-inline',
-				calLink: `${contact.cal}/${contact.calEvent}`,
-				config: { theme: 'dark', layout: 'month_view' }
-			});
-			Cal('ui', {
-				theme: 'dark',
-				cssVarsPerTheme: { dark: { 'cal-brand': '#e1f435' } },
-				hideEventTypeDetails: false
-			});
-		};
-		document.head.appendChild(script);
+
+		if (!window.Cal) {
+			const cal = (...args) => {
+				if (!cal.loaded) {
+					cal.ns = {};
+					cal.q = cal.q || [];
+					const script = document.createElement('script');
+					script.src = 'https://app.cal.com/embed/embed.js';
+					script.async = true;
+					document.head.appendChild(script);
+					cal.loaded = true;
+				}
+				cal.q.push(args);
+			};
+			window.Cal = cal;
+		}
+
+		window.Cal('init', { origin: 'https://cal.com' });
+		window.Cal('inline', {
+			elementOrSelector: '#cal-inline',
+			calLink: `${contact.cal}/${contact.calEvent}`,
+			config: { theme: 'dark', layout: 'month_view' }
+		});
+		window.Cal('ui', {
+			theme: 'dark',
+			cssVarsPerTheme: { dark: { 'cal-brand': '#e1f435' } },
+			hideEventTypeDetails: false
+		});
 	}
 
 	// Scroll-spy: whichever tracked section owns the middle of the viewport wins.
