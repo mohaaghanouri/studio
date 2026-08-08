@@ -19,6 +19,16 @@ export const contact = {
 	calEvent: 'discovery-call'
 };
 
+// Profiles that are the same person as this site. These become Person.sameAs in
+// the JSON-LD, which is what lets search engines and LLMs fuse scattered mentions
+// of "Moha Aghanoori" into one entity — the strongest correlate of AI-search
+// visibility in the research. Add any profile you actually maintain; drop any you
+// abandon, because a dead link here is worse than a missing one.
+export const profiles = [
+	'https://www.linkedin.com/in/mohanuri',
+	'https://github.com/mohaaghanouri'
+];
+
 // Tools actually in use. Language-neutral, so it lives here rather than being
 // duplicated across en.js and de.js.
 //

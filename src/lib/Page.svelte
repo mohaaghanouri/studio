@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
-	import { contact, site, tools } from '$lib/copy/contact.js';
+	import { contact, site, tools, profiles } from '$lib/copy/contact.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 	import { initSound, setSound, blip } from '$lib/sound.js';
 	import { featured } from '$lib/art.js';
@@ -130,8 +130,6 @@
 	// the whole site — the case pages reference nothing and carry only a breadcrumb.
 	//
 	// NOT included, deliberately:
-	//   sameAs      — needs real LinkedIn/GitHub URLs. Omitted rather than guessed;
-	//                 this is the biggest remaining E-E-A-T gap on the site.
 	//   telephone   — the mobile is already public via the WhatsApp link, but putting
 	//                 it here makes it trivially scrapeable at volume. Your call.
 	//   priceRange  — no price list, and Google stopped displaying it.
@@ -157,6 +155,7 @@
 				jobTitle: isEn ? 'AI Consultant' : 'KI-Berater',
 				description: copy.hero.subline,
 				email: `mailto:${contact.email}`,
+				sameAs: profiles,
 				knowsLanguage: ['de', 'en'],
 				knowsAbout: isEn
 					? ['Artificial intelligence', 'Large language models', 'Workflow automation',
