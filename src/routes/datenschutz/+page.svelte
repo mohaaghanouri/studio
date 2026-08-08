@@ -35,6 +35,24 @@
 		Abs. 1 lit. f DSGVO). Auf diese Logs habe ich keinen direkten Zugriff.
 	</p>
 
+	<h2>Content Delivery Network (Cloudflare)</h2>
+	<p>
+		Der Zugriff auf diese Website läuft über das Netzwerk der Cloudflare, Inc. (USA), die nach dem
+		EU-US Data Privacy Framework zertifiziert ist. Cloudflare liefert die Seiten von einem Server
+		in Ihrer Nähe aus und filtert Angriffe ab. Dabei verarbeitet Cloudflare technisch notwendige
+		Verbindungsdaten (IP-Adresse, Zeitpunkt, aufgerufene Adresse, Browserkennung). Rechtsgrundlage
+		ist mein berechtigtes Interesse an einem sicheren und schnellen Betrieb der Website (Art. 6
+		Abs. 1 lit. f DSGVO). Cloudflare setzt dabei keine Cookies auf dieser Website.
+	</p>
+
+	<h2>E-Mail-Weiterleitung</h2>
+	<p>
+		E-Mails an die Adresse dieser Domain werden über Cloudflare Email Routing (Cloudflare, Inc.,
+		USA) an mein Postfach weitergeleitet. Cloudflare verarbeitet dabei die Absenderadresse und den
+		Inhalt Ihrer Nachricht ausschließlich zur Übermittlung. Rechtsgrundlage ist die Bearbeitung
+		Ihrer Anfrage bzw. die Anbahnung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO).
+	</p>
+
 	<h2>Kontaktformular</h2>
 	<p>
 		Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail-Adresse, Nachricht)
