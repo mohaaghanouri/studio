@@ -124,14 +124,97 @@
 	// matches its detail page.
 	const works = featured(copy.built.items, 4);
 
-	const faqJsonLd = JSON.stringify({
+	// One @graph per home page. EN and DE share @ids on purpose: the two homes are
+	// hreflang alternates, so search engines resolve them to a single entity
+	// described in two languages. Exactly one ProfessionalService node exists for
+	// the whole site — the case pages reference nothing and carry only a breadcrumb.
+	//
+	// NOT included, deliberately:
+	//   sameAs      — needs real LinkedIn/GitHub URLs. Omitted rather than guessed;
+	//                 this is the biggest remaining E-E-A-T gap on the site.
+	//   telephone   — the mobile is already public via the WhatsApp link, but putting
+	//                 it here makes it trivially scrapeable at volume. Your call.
+	//   priceRange  — no price list, and Google stopped displaying it.
+	//   openingHours / geo — would be fiction for a non-storefront address.
+	//   aggregateRating / Review — never without written per-quote permission.
+	const address = {
+		'@type': 'PostalAddress',
+		streetAddress: 'Geschwister-Scholl-Straße 1–3',
+		postalCode: '10117',
+		addressLocality: contact.city,
+		addressCountry: 'DE'
+	};
+
+	const jsonLd = JSON.stringify({
 		'@context': 'https://schema.org',
-		'@type': 'FAQPage',
-		mainEntity: copy.faq.items.map((item) => ({
-			'@type': 'Question',
-			name: item.q,
-			acceptedAnswer: { '@type': 'Answer', text: item.a }
-		}))
+		'@graph': [
+			{
+				'@type': 'Person',
+				'@id': `${site}/#moha`,
+				name: 'Moha Aghanoori',
+				url: canonical,
+				image: `${site}/moha.webp`,
+				jobTitle: isEn ? 'AI Consultant' : 'KI-Berater',
+				description: copy.hero.subline,
+				email: `mailto:${contact.email}`,
+				knowsLanguage: ['de', 'en'],
+				knowsAbout: isEn
+					? ['Artificial intelligence', 'Large language models', 'Workflow automation',
+					   'Prompt engineering', 'Document processing', 'AI adoption for small practices']
+					: ['Künstliche Intelligenz', 'Große Sprachmodelle', 'Prozessautomatisierung',
+					   'Prompt Engineering', 'Dokumentenverarbeitung', 'KI-Einführung in Kleinbetrieben'],
+				address,
+				worksFor: { '@id': `${site}/#business` }
+			},
+			{
+				'@type': 'ProfessionalService',
+				'@id': `${site}/#business`,
+				name: 'Moha Aghanoori — AI Consulting',
+				url: canonical,
+				image: `${site}/og.png`,
+				description: copy.meta.description,
+				inLanguage: copy.lang,
+				founder: { '@id': `${site}/#moha` },
+				employee: { '@id': `${site}/#moha` },
+				email: `mailto:${contact.email}`,
+				address,
+				areaServed: [
+					{ '@type': 'City', name: contact.city },
+					{ '@type': 'Country', name: 'Germany' }
+				],
+				availableLanguage: [
+					{ '@type': 'Language', name: 'German', alternateName: 'de' },
+					{ '@type': 'Language', name: 'English', alternateName: 'en' }
+				],
+				serviceType: isEn
+					? 'AI consulting and one-to-one coaching for professionals'
+					: 'KI-Beratung und Einzelcoaching für Berufstätige',
+				hasOfferCatalog: {
+					'@type': 'OfferCatalog',
+					name: isEn ? 'AI consulting services' : 'KI-Beratungsleistungen',
+					itemListElement: copy.built.items.map((it) => ({
+						'@type': 'Offer',
+						itemOffered: {
+							'@type': 'Service',
+							name: it.label,
+							description: it.headline,
+							url: `${site}${isEn ? '' : '/de'}/work/${it.slug}/`,
+							provider: { '@id': `${site}/#business` }
+						}
+					}))
+				}
+			},
+			{
+				'@type': 'FAQPage',
+				'@id': `${canonical}#faq`,
+				inLanguage: copy.lang,
+				mainEntity: copy.faq.items.map((item) => ({
+					'@type': 'Question',
+					name: item.q,
+					acceptedAnswer: { '@type': 'Answer', text: item.a }
+				}))
+			}
+		]
 	});
 
 	let formState = ''; // '' | 'sending' | 'success' | 'error'
@@ -170,9 +253,8 @@
 	<meta property="og:locale" content={isEn ? 'en_US' : 'de_DE'} />
 	{#if PLACEHOLDERS}
 		<meta name="robots" content="noindex, nofollow" />
-	{:else}
-		{@html `<script type="application/ld+json">${faqJsonLd}</script>`}
 	{/if}
+	{@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
 <svelte:window on:keydown={onKeydown} />
