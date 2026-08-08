@@ -1,0 +1,45 @@
+name: Deploy
+
+# Pages serves from the gh-pages branch (Pages source: gh-pages, path /), so this
+# builds on every push to main and force-pushes build/ there. No third-party actions
+# and no Pages reconfiguration needed.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      # static/CNAME and static/.nojekyll are copied into build/ by adapter-static,
+      # so the custom domain and Jekyll bypass survive each deploy.
+      - name: Publish build/ to gh-pages
+        run: |
+          test -f build/CNAME || { echo "CNAME missing from build — refusing to deploy"; exit 1; }
+          cd build
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "deploy ${GITHUB_SHA::7}"
+          git push -q --force \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
+            gh-pages
