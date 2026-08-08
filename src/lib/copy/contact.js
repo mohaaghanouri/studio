@@ -37,14 +37,14 @@ export const tools = [
 	{ name: 'Kraken', logo: '' },
 	{ name: 'ImmoScout24', logo: '' },
 	{ name: 'Figma', logo: 'figma.svg' },
-	{ name: 'Higgsfield', logo: '' },
+	{ name: 'Higgsfield', logo: 'higgsfield.svg' },
 	{ name: 'HeyGen', logo: '' },
 	{ name: 'Microsoft', logo: '' },
 	{ name: 'Microsoft Teams', logo: '' },
 	{ name: 'Alpaca', logo: '' },
 	{ name: 'Binance', logo: 'binance.svg' },
 	{ name: 'Trade Republic', logo: '' },
-	{ name: 'CHECK24', logo: '' },
+	{ name: 'CHECK24', logo: 'check24.svg' },
 	{ name: 'Doctolib', logo: '' }
 ];
 

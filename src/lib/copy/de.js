@@ -211,8 +211,38 @@ export default {
 	},
 	testimonials: {
 		eyebrow: 'Stimmen',
-		// Bleibt verborgen, bis echte Zitate da sind.
-		items: []
+		// ENTWÜRFE, keine Kundenaussagen. Gedacht zum Verschicken AN die Kundinnen
+		// und Kunden — „passt das etwa so?" wird viel eher korrigiert als ein
+		// leeres Blatt. Alle Zahlen stehen als ⟨…⟩, damit keine erfundene Zahl
+		// versehentlich stehen bleibt. Durch die echte Antwort ersetzen, Wortwahl
+		// behalten, DRAFT-Label entfernen, PLACEHOLDERS = false.
+		items: [
+			{
+				quote:
+					'Wir haben ⟨…⟩ Wohnungen besichtigt statt der vierzig, die ich gespeichert hatte. Als die richtige kam, waren die Unterlagen längst geprüft — und ich wusste, welche Fragen ich stellen muss.',
+				name: 'ENTWURF · Immobiliensuche — noch nicht freigegeben'
+			},
+			{
+				quote:
+					'Ich hatte monatelang alles gleich viel geübt. Er hat sich meine alten Tests angesehen und genau gesagt, wo die Punkte verloren gehen. Writing ging von ⟨…⟩ auf ⟨…⟩.',
+				name: 'ENTWURF · IELTS-Kandidat — noch nicht freigegeben'
+			},
+			{
+				quote:
+					'Die Korrekturen kamen in meinem eigenen Schreibstil zurück, und dieselben drei Fehler wurden immer wieder benannt, bis ich sie nicht mehr gemacht habe.',
+				name: 'ENTWURF · IELTS-Kandidatin — noch nicht freigegeben'
+			},
+			{
+				quote:
+					'Ich habe KI täglich benutzt und dachte, ich kenne das. Nach einer Sitzung war klar, dass ich fast alles in der langsamen Variante gemacht habe.',
+				name: 'ENTWURF · Ingenieur — noch nicht freigegeben'
+			},
+			{
+				quote:
+					'Schnitt und Untertitel haben früher meine Abende gefressen. Jetzt ist dieser Teil fertig, bevor ich mich hinsetze — und die Videos klingen weiter nach mir.',
+				name: 'ENTWURF · Content-Creator — noch nicht freigegeben'
+			}
+		]
 	},
 	faq: {
 		eyebrow: 'Häufige Fragen',
