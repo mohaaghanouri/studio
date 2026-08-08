@@ -4,7 +4,11 @@ export const site = 'https://moha.expert';
 export const contact = {
 	whatsapp: '491706128949',
 	telegram: 'mohaaghanouri',
-	email: 'moha@moha.expert',
+	// Cloudflare Email Routing forwards this to the Gmail. Catch-all is off, so
+	// this is the ONLY address on the domain that accepts mail — anything else
+	// (moha@, hello@) gets 550 rejected. Changing it here means changing it in
+	// Cloudflare too.
+	email: 'connect@moha.expert',
 	formspree: 'mbgrlnng',
 	city: 'Berlin',
 	// Business address. Also declared in the Impressum (§5 DDG), so this must stay
