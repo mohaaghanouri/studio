@@ -75,87 +75,27 @@ export default {
 		items: [
 			{
 				label: 'Content creators',
-				headline: 'Creators who work with AI, not against it.',
-				story: [
-					"Video makers, writers, podcasters — most of them met AI first as a threat, then as a toy. I've spent the last years walking creators through it one by one: which tools genuinely fit their craft, which ones just waste a subscription, and how to build them into a weekly routine instead of a pile of open tabs.",
-					'The result is always personal. Scripts come together faster but still sound like them; editing and captions stop eating the evening; the research for the next piece is done before breakfast. The voice stays theirs — that is the whole point.'
-				],
-				handles: [
-					'Choosing the handful of tools actually worth paying for',
-					'Scripts, captions and repurposing across platforms',
-					'Research and idea files that fill themselves',
-					'A weekly routine that actually sticks'
-				]
+				headline: 'Creators who work with AI, not against it.'
 			},
 			{
 				label: 'Buying a home',
-				headline: "A house hunt that reads every listing, so you don't have to.",
-				story: [
-					"House hunting is a second job: five portals, the same forty listings, documents that arrive late and disappoint. For clients searching for a home I built a platform that does that job around the clock — it watches the portals, checks every offer against their budget, their locations and their non-negotiables, and quietly drops everything that doesn't deserve a viewing.",
-					'Before anyone falls in love with a kitchen, the paperwork is already collected and checked, and the right people — agent, bank, appraiser — are already lined up. My clients visit fewer homes, ask sharper questions, and sign with a clear head.'
-				],
-				handles: [
-					'Every major portal watched around the clock',
-					'Offers ranked by budget, location and preferences',
-					'Documents collected and checked before the viewing',
-					'The right people connected at the right moment'
-				]
+				headline: "A house hunt that reads every listing, so you don't have to."
 			},
 			{
 				label: 'Finding a job',
-				headline: 'Around twenty people found jobs with a tool I built.',
-				story: [
-					'Job ads lie — the title promises one job, the description means another, and a hundred open tabs later most people apply everywhere with the same tired documents. Mefkat is a tool I built to do this properly: it reads every ad in full, the way a careful human would, and matches it honestly against what a person has actually done. No keyword tricks, no exaggeration.',
-					'When an ad is worth it, it prepares an application tailored to that one company — and keeps the whole search organized: what went out, what came back, what to do next. About twenty people have found their current job with it.'
-				],
-				handles: [
-					'Reads the full ad, not just the title',
-					'Honest matching against real experience',
-					'Applications tailored to one company at a time',
-					'The whole search tracked in one place'
-				]
+				headline: 'Around twenty people found jobs with a tool I built.'
 			},
 			{
 				label: 'Research',
-				headline: 'The reading gets faster; the thinking stays yours.',
-				story: [
-					'PhD students, scientists and professors lose their best hours to the part of the work nobody cites: the reading pile, the reference chaos, the third rewrite of the same paragraph, the exam that needs twenty variations. For them I have set up workflows that clear exactly that layer.',
-					'New papers get read, sorted and summarized into an organized library; drafts come back sharper without the argument changing; teaching material and exams take an afternoon instead of a week. The scholarship — the questions, the claims, the judgment — stays entirely theirs.'
-				],
-				handles: [
-					'Piles of papers turned into an ordered, summarized library',
-					'Drafts sharpened without touching the argument',
-					'Teaching materials and exams in a fraction of the time',
-					'References that keep themselves organized'
-				]
+				headline: 'The reading gets faster; the thinking stays yours.'
 			},
 			{
 				label: 'Marketing & product',
-				headline: 'A colleague who has read every document.',
-				story: [
-					'Every marketing and product team sits on a mountain nobody has fully read: survey answers, catalogs, reports, meeting notes, years of research. For teams like this I built an assistant that has read all of it — and answers questions about it in plain language, with the receipts to back every answer up.',
-					'A thousand survey answers become the five things customers actually said. A catalog of ten thousand products gets clean, consistent copy. The Monday report condenses itself to the decisions that matter. The team stops digging and starts deciding.'
-				],
-				handles: [
-					'Surveys distilled into what customers actually said',
-					'Catalogs processed and kept consistent',
-					'Reports condensed to the decisions that matter',
-					'Questions answered in plain language, with sources'
-				]
+				headline: 'A colleague who has read every document.'
 			},
 			{
 				label: 'Language & exams',
-				headline: 'Exam preparation that studies you first.',
-				story: [
-					"Most people preparing for IELTS, ÖSD, GMAT and similar exams practice everything equally — which means they mostly practice what they're already good at. I built a workflow that starts at the other end: it reviews their past exams and transcripts and draws a precise picture of where the points are actually being lost.",
-					'Then the practice changes shape. Writing gets corrected in their own style, with the recurring mistakes named; listening practice concentrates on the exact patterns they keep missing; every week targets the weakness that costs the most. Less practice, aimed better.'
-				],
-				handles: [
-					'Past exams and transcripts reviewed for real weaknesses',
-					'Writing corrected with recurring mistakes named',
-					'Listening practice aimed at what you actually miss',
-					'A plan that always targets the most expensive weakness'
-				]
+				headline: 'Exam preparation that studies you first.'
 			}
 		]
 	},

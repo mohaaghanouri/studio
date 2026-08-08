@@ -291,9 +291,11 @@
 				{#each marquee as tool, i}
 					<li aria-hidden={i >= tools.length ? 'true' : undefined}>
 						{#if tool.logo}
-							<img src="{base}/logos/{tool.logo}" alt="" loading="lazy" />
+							<!-- mark alone; alt carries the name for anyone who can't see it -->
+							<img src="{base}/logos/{tool.logo}" alt={tool.name} loading="lazy" />
+						{:else}
+							<span>{tool.name}</span>
 						{/if}
-						<span>{tool.name}</span>
 					</li>
 				{/each}
 			</ul>
@@ -1060,8 +1062,8 @@
 	/* Logos sit at a fixed height so differing artboards line up. Wordmarks
 	   render until a vendor SVG is dropped into static/logos/. */
 	.track img {
-		height: 1rem;
-		width: 1rem;
+		height: 1.35rem;
+		width: 1.35rem;
 		object-fit: contain;
 		opacity: 0.7;
 		transition: opacity 0.2s ease;

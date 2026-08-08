@@ -17,7 +17,7 @@ export const contact = {
 	// unlimited event types). Leave cal empty and the booking section is not
 	// rendered at all.
 	cal: 'mohaaghanouri',
-	calEvent: '30min'
+	calEvent: 'discovery-call'
 };
 
 // Tools actually in use. Language-neutral, so it lives here rather than being

@@ -33,6 +33,17 @@ Wix, stock Framer) where visible.
 | 7 | Design-excellent practitioner sites | [`07-design-excellence.md`](07-design-excellence.md) |
 | 8 | Boutique AI studios & automation shops | [`08-boutique-studios.md`](08-boutique-studios.md) |
 
+## Project spec
+
+[`spec/`](spec/) holds the project documents migrated from `Marekt/studio/` —
+positioning, the testimonial collection worklist, and the original build spec.
+See [`spec/README.md`](spec/README.md) for which are current and which are
+superseded.
+
+**This folder is never published.** It sits outside `static/`, so `adapter-static`
+doesn't copy it into `build/` and it never reaches `gh-pages`. It lives in the
+repo only.
+
 ## Output
 
 - [`TOP-10.md`](TOP-10.md) — the ranked cross-segment top 10 with reasoning
