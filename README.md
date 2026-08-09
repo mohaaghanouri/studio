@@ -25,6 +25,10 @@ Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.ym
 
 ## Docs
 
+- **[`outreach/NEEDS-MOHA.md`](outreach/NEEDS-MOHA.md)** — **start here.** The short list of
+  things only you can do, with the reason for each and everything prepared in advance.
+- [`outreach/REFERENT-EMAILS.md`](outreach/REFERENT-EMAILS.md) — ten German Referent pitches to
+  the Berlin chambers, ready to send. Highest-return item in the plan.
 - **[`PLAYBOOK.md`](PLAYBOOK.md)** — the reusable end-to-end roadmap for standing up another
   site like this one: repo, DNS, Cloudflare, email, search, German legal, and every trap that
   bit us. Read this before launching anything new.
