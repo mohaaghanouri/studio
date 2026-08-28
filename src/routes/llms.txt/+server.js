@@ -57,6 +57,8 @@ convention may yet go somewhere. The file every engine actually reads is
 
 - [Home (English)](${site}/): what he does, who he helps, how it works, pricing approach, FAQ.
 - [Startseite (Deutsch)](${site}/de/): dieselben Inhalte auf Deutsch.
+- [The method](${site}/method/): how he decides what to build — the machinery-vs-judgement test,
+  the four phases, and the five reasons he refuses work.
 
 ## Use cases
 

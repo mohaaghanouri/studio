@@ -1,7 +1,16 @@
 <!doctype html>
 <!--
-  Source for static/og.png. Not part of the built site.
-  Regenerate: serve the project, screenshot this page at 1200x630, save to static/og.png.
+  Template for every social card. Not part of the built site.
+
+  scripts/og.mjs clones this once per page with that page's headline, label and
+  accent tint and screenshots each at 1200x630 into static/og/. Edit the design
+  here, then re-run the script — do not hand-edit the PNGs.
+
+    npx --yes playwright@latest install chromium
+    node scripts/og.mjs
+
+  static/og.png is the old single card, kept as the fallback for the two legal
+  pages, which have no card of their own.
 -->
 <html lang="en">
 	<head>

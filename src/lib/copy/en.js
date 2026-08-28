@@ -88,6 +88,62 @@ export default {
 		},
 		notListed: "Your profession isn't listed? It almost certainly still applies — ask me."
 	},
+	method: {
+		label: 'The method',
+		title: 'How I decide what to build — the method — AI coaching Berlin',
+		metaDescription:
+			'One question decides everything: which part of this week is machinery pretending to be judgement? The four tests, the four phases, and the five reasons I say no.',
+		headline: 'Which part of this week is machinery pretending to be judgement?',
+		intro: [
+			'Every person I have worked with arrived with a different job title and the same sentence: one part of my week has become unbearable. The profession changes. The shape of the problem almost never does.',
+			'Everything I build follows from the question above. I do not ask what someone wants automated, because almost nobody knows — they know what hurts, not where the seam is. Finding the seam is the work. Building on the right side of it is the easy part.'
+		],
+		testsTitle: 'How I tell one from the other.',
+		machineryLabel: 'Machinery — all four are true',
+		machinery: [
+			'It repeats. More than once a week, in roughly the same shape.',
+			'It is rule-shaped. If you had to explain how you do it, you could — in sentences, not in gestures.',
+			'It is verifiable. A wrong output is visibly wrong to you in seconds.',
+			'It is low-consequence when caught. If the machine gets it wrong and you catch it, nothing is lost but a minute.'
+		],
+		judgementLabel: 'Judgement — any one is true',
+		judgement: [
+			'You are liable for it. Your name, licence or signature is on it.',
+			'Taste is the product. People pay you precisely because the view is yours.',
+			'The relationship is the product. A patient, a student, a client, a reader.',
+			'It is a real decision under uncertainty. Not a lookup with extra steps.'
+		],
+		seam: 'I build up to the seam. I never build across it. Nearly every failed AI project I have been asked to rescue failed because somebody built across the seam, and the person quietly stopped trusting the output.',
+		refuseTitle: 'When I say no.',
+		refuseIntro:
+			'I say no out loud, and I keep the relationship. Saying no is most of the reason people send me their friends.',
+		refuse: [
+			{
+				title: 'Volume is too low.',
+				text: 'Under roughly an hour a week, the maintenance costs more than the task.'
+			},
+			{
+				title: 'Variance is too high.',
+				text: 'If every instance is genuinely different, there is no machinery to lift — there is only skill, and skill is not a bottleneck to remove.'
+			},
+			{
+				title: 'Liability is too concentrated.',
+				text: 'If one wrong output ends a career, the machine gets to prepare and nothing else.'
+			},
+			{
+				title: 'A boring tool already exists.',
+				text: 'A calendar, a form, a shared spreadsheet, a template. I will set that up and bill for the afternoon, not the quarter.'
+			},
+			{
+				title: 'It is a decision, not a workload.',
+				text: 'Some people do not need a system. They need to decide something they have been avoiding. No software fixes that.'
+			}
+		],
+		registersTitle: 'Two registers.',
+		registersText:
+			'I work inside a company, where I own and run a production system used by a real legal department, and I work one-to-one with a yoga teacher or a chef at their kitchen table. The company work teaches me what survives contact with audits, handovers, and people who did not ask for it. The one-to-one work keeps me honest about how little most people actually need.',
+		casesCta: 'See it applied, field by field'
+	},
 	built: {
 		items: [
 			{
@@ -1566,19 +1622,23 @@ export default {
 		]
 	},
 	how: {
-		title: 'Three steps, no risk.',
+		title: 'Four phases, every time.',
 		steps: [
 			{
-				title: 'Write me.',
-				text: 'WhatsApp, Telegram or email — describe your work in your own words. No preparation needed.'
+				title: 'I sit in the week.',
+				text: 'Two to five days watching the actual working week. Not a workshop, not a questionnaire — the mailbox, the folder names, the sticky notes, the workaround you are embarrassed about. The workaround is usually where the system goes.'
 			},
 			{
-				title: 'We talk, free of charge.',
-				text: "In one conversation I'll tell you honestly what AI can do for you — and what it can't. If I'm not the right person for it, I'll say so."
+				title: 'I name the seam out loud.',
+				text: 'One page saying what is machinery and what is judgement, read back to you. If you flinch at something I called machinery, you are right and I am wrong. Your flinch is data. That page is the contract.'
 			},
 			{
-				title: 'We make it work — together.',
-				text: 'Personal coaching in your own work, or hands-on guidance until it runs inside your normal week. You stay in control — nothing depends on me forever.'
+				title: 'I build the smallest thing that removes the volume.',
+				text: 'Not a platform. The one system that takes the repetitive mass off you. It ships in weeks, not quarters, and it does one thing so completely that you stop thinking about it.'
+			},
+			{
+				title: 'I hand over the controls and leave.',
+				text: 'You must be able to change the rules without me: the filters, the thresholds, the templates, the reject reasons. If a system requires me to stay, I built it wrong.'
 			}
 		],
 		noPrices:
@@ -1588,16 +1648,16 @@ export default {
 		title: 'Three promises.',
 		items: [
 			{
-				title: 'Plain language, guaranteed.',
-				text: "If I can't explain it in one sentence you understand, I haven't finished my job."
+				title: 'I build up to the seam, never across it.',
+				text: 'The machine takes the volume. The decision, the diagnosis, the grade, the valuation, the verdict stay yours — and I will refuse to build the button that takes them away.'
 			},
 			{
-				title: 'Honesty about limits.',
-				text: "AI is genuinely useful — and it is oversold. I'll tell you which is which for your case, even when it costs me the job."
+				title: 'I say no out loud.',
+				text: "If the volume is too low, the variance too high, or a calendar would fix it, you will hear that instead of a proposal. It has cost me work and it is why people send me their friends."
 			},
 			{
-				title: 'Discretion.',
-				text: 'Patient files, case documents, client data — I work the way your profession requires: carefully, confidentially, under German and European privacy rules.'
+				title: 'If a system needs me to stay, I built it wrong.',
+				text: 'You get the controls — the filters, the thresholds, the templates — and a written page of what the system may and may not do. Nothing depends on me forever.'
 			}
 		]
 	},
@@ -1619,27 +1679,27 @@ export default {
 		items: [
 			{
 				q: 'Do I need any technical knowledge?',
-				a: "None at all. That's the point of hiring me — you explain your work in your own words, and everything technical stays my problem. If you can describe your week, we can work together."
+				a: "None at all. You explain your work in your own words and everything technical stays my problem. The first phase is me watching your actual week — not a workshop, not a questionnaire — so if you can do your job, we can work together."
+			},
+			{
+				q: 'Will it make decisions for me?',
+				a: "No, and that is the whole design. The grade stays the teacher's, the valuation the surveyor's, the diagnosis the dentist's, the prioritisation the product manager's. The machine takes the volume and prepares the material; you decide. I have refused to build the accept-all button more than once."
 			},
 			{
 				q: 'What does it cost?',
-				a: "There's no price list, because a dentist's practice and a PhD thesis don't cost the same. After the free first conversation you get a clear, fixed quote — before any commitment. And if the honest answer is that AI won't pay off for you, I'll say that instead."
+				a: "There's no price list, because a dental practice and a PhD thesis don't cost the same. After the free first conversation you get a clear, fixed quote — before any commitment. Most engagements are about four weeks from the first visit to handover."
 			},
 			{
 				q: 'Is my data safe with you?',
-				a: 'Yes — and I take this promise personally. Patient files, case documents, client data: we only work with what the rules of your profession allow, under German and European privacy law. Nothing you share with me leaves the scope we agree on.'
+				a: 'Yes, and for regulated work it is the first thing we design, not the last. Patient files, case documents, children\u2019s data, research under ethics approval: EU processing with an AV-Vertrag, no training on your content, pseudonymisation at any boundary data must cross, and a full audit trail. Where a workflow cannot meet those conditions, it does not get built.'
 			},
 			{
-				q: 'Which AI tools do you use?',
-				a: "The ones that fit your work — I'm independent and don't sell any product or subscription. Sometimes the answer is one of the well-known tools; sometimes it's something small, set up around your routine. You'll never pay for something you don't need."
+				q: 'What if AI is the wrong answer for me?',
+				a: "Then you'll hear it in the free conversation, before you have spent anything. It happens often. Three of five coaches I have worked with needed a booking system with reminders, not AI — I set that up, charged for the afternoon, and said so."
 			},
 			{
 				q: 'How much of my time does this take?',
-				a: "Less than you'd think. The first conversation takes under an hour. After that, most of my clients spend one or two hours a week with me while things take shape — inside their normal week, not on top of it."
-			},
-			{
-				q: "What if it doesn't work for my case?",
-				a: "Then you'll hear it from me first — in the free conversation, before you've spent anything. AI genuinely can't help everyone with everything, and pretending otherwise is how this industry loses people's trust."
+				a: "Less than you'd think, and it is front-loaded. The first phase costs you being observed. After handover most of my clients spend seconds, not hours: ninety seconds of dictation after a meeting, ten seconds after a training session, one photograph of an invoice."
 			}
 		]
 	},

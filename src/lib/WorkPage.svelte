@@ -49,7 +49,7 @@
 	<link rel="alternate" hreflang="x-default" href="{site}/work/{item.slug}/" />
 	<meta property="og:url" content={canonical} />
 	<meta property="og:locale" content={isEn ? 'en_US' : 'de_DE'} />
-	<meta property="og:image" content="{site}/og.png" />
+	<meta property="og:image" content="{site}/og/{isEn ? '' : 'de-'}{item.slug}.png" />
 	{#if PLACEHOLDERS}
 		<meta name="robots" content="noindex, nofollow" />
 	{/if}

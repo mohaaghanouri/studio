@@ -39,7 +39,7 @@
 	<meta property="og:title" content="{copy.studio.worksLabel} — {contact.name}" />
 	<meta property="og:description" content={copy.studio.worksMeta} />
 	<meta property="og:url" content={canonical} />
-	<meta property="og:image" content="{site}/og.png" />
+	<meta property="og:image" content="{site}/og/{isEn ? '' : 'de-'}work.png" />
 	<meta property="og:locale" content={isEn ? 'en_US' : 'de_DE'} />
 	{#if PLACEHOLDERS}
 		<meta name="robots" content="noindex, nofollow" />

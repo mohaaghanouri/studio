@@ -192,7 +192,7 @@
 				'@id': `${site}/#business`,
 				name: contact.business,
 				url: canonical,
-				image: `${site}/og.png`,
+				image: `${site}/og/${isEn ? '' : 'de-'}home.png`,
 				description: copy.meta.description,
 				inLanguage: copy.lang,
 				founder: { '@id': `${site}/#moha` },
@@ -267,7 +267,7 @@
 	<meta property="og:title" content={copy.meta.title} />
 	<meta property="og:description" content={copy.meta.description} />
 	<meta property="og:url" content={canonical} />
-	<meta property="og:image" content="{site}/og.png" />
+	<meta property="og:image" content="{site}/og/{isEn ? '' : 'de-'}home.png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -473,8 +473,9 @@
 		<h2 class="statement">{copy.how.title}</h2>
 
 		<!-- Offset two-column grid: cells alternate vertically and share ruled
-		     edges, with a crosshair marking each intersection. The fourth cell
-		     carries the pricing note so the grid closes rather than dangling. -->
+		     edges, with a crosshair marking each intersection. Four phases close
+		     the 2x2 exactly; the pricing note sits below rather than dangling as
+		     a fifth cell. -->
 		<ol class="grid-cells">
 			{#each copy.how.steps as step, i}
 				<li>
@@ -485,14 +486,16 @@
 					</div>
 				</li>
 			{/each}
-			<li class="cell-note">
-				<span class="cell-idx" aria-hidden="true">04</span>
-				<div class="cell-body">
-					<h3>{copy.studio.priceLabel}</h3>
-					<p>{copy.how.noPrices}</p>
-				</div>
-			</li>
 		</ol>
+		<p class="aside process-note">
+			<strong>{copy.studio.priceLabel}</strong>
+			{copy.how.noPrices}
+		</p>
+		<p class="aside">
+			<a class="method-link" href="{base}{isEn ? '' : '/de'}/method/"
+				>{copy.method.headline} ↗</a
+			>
+		</p>
 	</section>
 
 	<section class="wrap" id="about" use:fade>
@@ -1335,6 +1338,34 @@
 		background-size: 11px 11px;
 	}
 
+	.process-note {
+		margin-top: clamp(2rem, 4vw, 3rem);
+		max-width: 46rem;
+	}
+
+	.process-note strong {
+		font-family: var(--mono);
+		font-size: var(--t-meta);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--text);
+		font-weight: 400;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.method-link {
+		color: var(--text);
+		text-decoration: none;
+		border-bottom: 1px solid var(--line);
+		padding-bottom: 0.15rem;
+	}
+
+	.method-link:hover {
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+
 	.roster-intro {
 		max-width: 46rem;
 		margin-bottom: clamp(2rem, 4vw, 3rem);
@@ -1423,10 +1454,6 @@
 		font-size: 0.9375rem;
 		color: var(--muted);
 		max-width: 30ch;
-	}
-
-	.cell-note {
-		background: var(--raised);
 	}
 
 	@media (max-width: 44rem) {

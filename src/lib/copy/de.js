@@ -88,6 +88,62 @@ export default {
 		notListed:
 			'Ihr Beruf ist nicht dabei? Es funktioniert mit großer Wahrscheinlichkeit trotzdem — fragen Sie mich.'
 	},
+	method: {
+		label: 'Die Methode',
+		title: 'Wie ich entscheide, was ich baue — die Methode — KI-Beratung Berlin',
+		metaDescription:
+			'Eine Frage entscheidet alles: Welcher Teil dieser Woche ist Mechanik im Gewand von Urteilsvermögen? Die vier Tests, die vier Phasen und die fünf Gründe, aus denen ich Nein sage.',
+		headline: 'Welcher Teil dieser Woche ist Mechanik im Gewand von Urteilsvermögen?',
+		intro: [
+			'Jeder Mensch, mit dem ich gearbeitet habe, kam mit einer anderen Berufsbezeichnung und demselben Satz: Ein Teil meiner Woche ist unerträglich geworden. Der Beruf wechselt. Die Form des Problems fast nie.',
+			'Alles, was ich baue, folgt aus der Frage darüber. Ich frage nicht, was jemand automatisiert haben möchte, denn fast niemand weiß das — man weiß, was wehtut, nicht, wo die Naht verläuft. Die Naht zu finden ist die Arbeit. Auf der richtigen Seite zu bauen ist der leichte Teil.'
+		],
+		testsTitle: 'Wie ich das eine vom anderen unterscheide.',
+		machineryLabel: 'Mechanik — alle vier treffen zu',
+		machinery: [
+			'Es wiederholt sich. Öfter als einmal pro Woche, in ungefähr derselben Form.',
+			'Es ist regelförmig. Müssten Sie erklären, wie Sie es tun, könnten Sie es — in Sätzen, nicht in Gesten.',
+			'Es ist überprüfbar. Ein falsches Ergebnis ist für Sie in Sekunden sichtbar falsch.',
+			'Es ist folgenarm, wenn es auffällt. Irrt die Maschine und Sie merken es, ist nichts verloren außer einer Minute.'
+		],
+		judgementLabel: 'Urteilsvermögen — eines davon genügt',
+		judgement: [
+			'Sie haften dafür. Ihr Name, Ihre Zulassung oder Ihre Unterschrift steht darunter.',
+			'Der Geschmack ist das Produkt. Man zahlt Sie genau dafür, dass die Sicht Ihre ist.',
+			'Die Beziehung ist das Produkt. Eine Patientin, ein Schüler, eine Mandantin, ein Publikum.',
+			'Es ist eine echte Entscheidung unter Unsicherheit. Kein Nachschlagen mit Zwischenschritten.'
+		],
+		seam: 'Ich baue bis an die Naht. Über sie hinaus baue ich nie. Fast jedes gescheiterte KI-Projekt, das ich retten sollte, ist gescheitert, weil jemand über die Naht hinaus gebaut hat — und der Mensch dem Ergebnis still nicht mehr vertraute.',
+		refuseTitle: 'Wann ich Nein sage.',
+		refuseIntro:
+			'Ich sage laut Nein und behalte die Beziehung. Nein zu sagen ist der Hauptgrund, warum Menschen mir ihre Bekannten schicken.',
+		refuse: [
+			{
+				title: 'Zu geringes Volumen.',
+				text: 'Unter etwa einer Stunde pro Woche kostet die Pflege mehr als die Aufgabe.'
+			},
+			{
+				title: 'Zu hohe Varianz.',
+				text: 'Ist wirklich jeder Fall anders, gibt es keine Mechanik zu heben — es gibt nur Können, und Können ist kein Engpass, den man entfernt.'
+			},
+			{
+				title: 'Zu konzentrierte Haftung.',
+				text: 'Beendet ein falsches Ergebnis eine Laufbahn, darf die Maschine vorbereiten und sonst nichts.'
+			},
+			{
+				title: 'Ein langweiliges Werkzeug existiert schon.',
+				text: 'Ein Kalender, ein Formular, eine geteilte Tabelle, eine Vorlage. Das richte ich ein und berechne den Nachmittag, nicht das Quartal.'
+			},
+			{
+				title: 'Es ist eine Entscheidung, keine Arbeitslast.',
+				text: 'Manche brauchen kein System. Sie müssen etwas entscheiden, das sie vermeiden. Keine Software behebt das.'
+			}
+		],
+		registersTitle: 'Zwei Register.',
+		registersText:
+			'Ich arbeite in einem Unternehmen, in dem ich ein Produktivsystem betreibe, das eine echte Rechtsabteilung nutzt — und ich arbeite eins zu eins mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt mich, was den Kontakt mit Audits, Übergaben und Menschen übersteht, die nicht danach gefragt haben. Die Einzelarbeit hält mich ehrlich darüber, wie wenig die meisten wirklich brauchen.',
+		casesCta: 'Angewandt sehen, Feld für Feld'
+	},
 	built: {
 		items: [
 			{
@@ -1566,38 +1622,42 @@ export default {
 		]
 	},
 	how: {
-		title: 'Drei Schritte, kein Risiko.',
+		title: 'Vier Phasen, jedes Mal.',
 		steps: [
 			{
-				title: 'Schreiben Sie mir.',
-				text: 'WhatsApp, Telegram oder E-Mail — beschreiben Sie Ihre Arbeit in Ihren eigenen Worten. Keine Vorbereitung nötig.'
+				title: 'Ich setze mich in die Woche.',
+				text: 'Zwei bis fünf Tage in der tatsächlichen Arbeitswoche. Kein Workshop, kein Fragebogen — das Postfach, die Ordnernamen, die Klebezettel, der Behelf, für den Sie sich schämen. Der Behelf ist meistens die Stelle, an die das System gehört.'
 			},
 			{
-				title: 'Wir sprechen — kostenlos.',
-				text: 'In einem Gespräch sage ich Ihnen ehrlich, was KI für Sie tun kann und was nicht. Und wenn ich nicht der Richtige dafür bin, sage ich auch das.'
+				title: 'Ich benenne die Naht laut.',
+				text: 'Eine Seite darüber, was Mechanik ist und was Urteilsvermögen, Ihnen vorgelesen. Zucken Sie bei etwas, das ich Mechanik genannt habe, haben Sie recht und ich unrecht. Ihr Zucken ist Information. Diese Seite ist der Vertrag.'
 			},
 			{
-				title: 'Wir bringen es zum Laufen — gemeinsam.',
-				text: 'Persönliches Coaching in Ihrer eigenen Arbeit oder Begleitung bei der Einrichtung, bis es in Ihrer normalen Woche läuft. Sie behalten die Kontrolle — nichts hängt dauerhaft von mir ab.'
+				title: 'Ich baue das Kleinste, das die Menge wegnimmt.',
+				text: 'Keine Plattform. Das eine System, das Ihnen die wiederholende Masse abnimmt. Es geht in Wochen live, nicht in Quartalen, und es tut eine Sache so vollständig, dass Sie aufhören, daran zu denken.'
+			},
+			{
+				title: 'Ich übergebe die Regler und gehe.',
+				text: 'Sie müssen die Regeln ohne mich ändern können: die Filter, die Schwellen, die Vorlagen, die Ablehnungsgründe. Braucht ein System mich dauerhaft, habe ich es falsch gebaut.'
 			}
 		],
 		noPrices:
-			'Jede Aufgabe ist anders, deshalb gibt es keine Preisliste. Nach dem Erstgespräch bekommen Sie ein klares Angebot — und das Gespräch selbst kostet nichts.'
+			'Jede Aufgabe ist anders, deshalb gibt es keine Preisliste. Nach dem ersten Gespräch bekommen Sie ein klares Angebot — und das Gespräch selbst kostet nichts.'
 	},
 	principles: {
 		title: 'Drei Versprechen.',
 		items: [
 			{
-				title: 'Klare Sprache, garantiert.',
-				text: 'Wenn ich es nicht in einem Satz erklären kann, den Sie verstehen, bin ich mit meiner Arbeit nicht fertig.'
+				title: 'Ich baue bis an die Naht, nie darüber hinaus.',
+				text: 'Die Maschine übernimmt die Menge. Die Entscheidung, die Diagnose, die Note, der Wert, das Urteil bleiben Ihre — und ich weigere mich, den Knopf zu bauen, der sie Ihnen abnimmt.'
 			},
 			{
-				title: 'Ehrlichkeit über Grenzen.',
-				text: 'KI ist wirklich nützlich — und sie wird oft überverkauft. Ich sage Ihnen, was davon auf Ihren Fall zutrifft, auch wenn es mich den Auftrag kostet.'
+				title: 'Ich sage laut Nein.',
+				text: 'Ist das Volumen zu klein, die Varianz zu hoch, oder würde ein Kalender es lösen, hören Sie das statt eines Angebots. Das hat mich Aufträge gekostet, und es ist der Grund, warum Menschen mir ihre Bekannten schicken.'
 			},
 			{
-				title: 'Diskretion.',
-				text: 'Patientenakten, Fallunterlagen, Kundendaten — ich arbeite so, wie Ihr Beruf es verlangt: sorgfältig, vertraulich und nach deutschen und europäischen Datenschutzregeln.'
+				title: 'Braucht ein System mich dauerhaft, habe ich es falsch gebaut.',
+				text: 'Sie bekommen die Regler — Filter, Schwellen, Vorlagen — und eine schriftliche Seite darüber, was das System darf und was nicht. Nichts hängt für immer an mir.'
 			}
 		]
 	},
@@ -1615,31 +1675,31 @@ export default {
 	},
 	faq: {
 		eyebrow: 'Häufige Fragen',
-		title: 'Vielleicht fragen Sie sich…',
+		title: 'Sie fragen sich vielleicht…',
 		items: [
 			{
 				q: 'Brauche ich technisches Vorwissen?',
-				a: 'Überhaupt keins. Genau dafür holen Sie mich — Sie beschreiben Ihre Arbeit in Ihren eigenen Worten, alles Technische bleibt mein Problem. Wenn Sie Ihre Woche beschreiben können, können wir zusammenarbeiten.'
+				a: 'Überhaupt keines. Sie beschreiben Ihre Arbeit in Ihren eigenen Worten, alles Technische bleibt mein Problem. Die erste Phase ist, dass ich Ihre tatsächliche Woche beobachte — kein Workshop, kein Fragebogen. Wenn Sie Ihren Beruf können, können wir zusammenarbeiten.'
+			},
+			{
+				q: 'Trifft es Entscheidungen für mich?',
+				a: 'Nein, und darauf ist alles ausgelegt. Die Note bleibt bei der Lehrkraft, der Wert beim Gutachter, die Diagnose beim Zahnarzt, die Priorisierung bei der Produktmanagerin. Die Maschine übernimmt die Menge und bereitet das Material vor; Sie entscheiden. Den „Alle übernehmen“-Knopf habe ich mehr als einmal abgelehnt.'
 			},
 			{
 				q: 'Was kostet das?',
-				a: 'Es gibt keine Preisliste, denn eine Zahnarztpraxis und eine Doktorarbeit kosten nicht dasselbe. Nach dem kostenlosen Erstgespräch bekommen Sie ein klares, festes Angebot — vor jeder Verpflichtung. Und wenn die ehrliche Antwort ist, dass sich KI für Sie nicht lohnt, sage ich stattdessen genau das.'
+				a: 'Es gibt keine Preisliste, weil eine Zahnarztpraxis und eine Doktorarbeit nicht dasselbe kosten. Nach dem kostenlosen Erstgespräch bekommen Sie ein klares Festangebot — vor jeder Verpflichtung. Die meisten Mandate dauern etwa vier Wochen vom ersten Besuch bis zur Übergabe.'
 			},
 			{
 				q: 'Sind meine Daten bei Ihnen sicher?',
-				a: 'Ja — und dieses Versprechen nehme ich persönlich. Patientenakten, Fallunterlagen, Kundendaten: Wir arbeiten nur mit dem, was die Regeln Ihres Berufs erlauben, nach deutschem und europäischem Datenschutzrecht. Nichts, was Sie mir anvertrauen, verlässt den Rahmen, den wir vereinbaren.'
+				a: 'Ja, und bei regulierter Arbeit gestalten wir das zuerst, nicht zuletzt. Patientenakten, Handakten, Kinderdaten, Forschungsdaten unter Ethikvotum: Verarbeitung in der EU mit AV-Vertrag, kein Training auf Ihren Inhalten, Pseudonymisierung an jeder Grenze, die Daten überschreiten müssen, und ein lückenloses Audit-Log. Wo ein Ablauf diese Bedingungen nicht erfüllen kann, wird er nicht gebaut.'
 			},
 			{
-				q: 'Welche KI-Werkzeuge nutzen Sie?',
-				a: 'Die, die zu Ihrer Arbeit passen — ich bin unabhängig und verkaufe kein Produkt und kein Abo. Manchmal ist die Antwort eines der bekannten Werkzeuge, manchmal etwas Kleines, eingerichtet rund um Ihre Routine. Sie zahlen nie für etwas, das Sie nicht brauchen.'
+				q: 'Was, wenn KI für mich die falsche Antwort ist?',
+				a: 'Dann hören Sie das im kostenlosen Gespräch, bevor Sie etwas ausgegeben haben. Das kommt oft vor. Drei von fünf Coaches, mit denen ich gearbeitet habe, brauchten ein Buchungssystem mit Erinnerungen und keine KI — ich habe das eingerichtet, den Nachmittag berechnet und es gesagt.'
 			},
 			{
-				q: 'Wie viel meiner Zeit kostet das?',
-				a: 'Weniger, als Sie denken. Das Erstgespräch dauert weniger als eine Stunde. Danach verbringen die meisten meiner Kunden ein bis zwei Stunden pro Woche mit mir, während alles Form annimmt — innerhalb ihrer normalen Woche, nicht obendrauf.'
-			},
-			{
-				q: 'Und wenn es in meinem Fall nicht funktioniert?',
-				a: 'Dann hören Sie es zuerst von mir — im kostenlosen Gespräch, bevor Sie etwas ausgegeben haben. KI kann wirklich nicht jedem bei allem helfen, und etwas anderes zu behaupten ist der Grund, warum diese Branche Vertrauen verliert.'
+				q: 'Wie viel Zeit kostet mich das?',
+				a: 'Weniger, als Sie denken, und der Aufwand liegt vorn. Die erste Phase kostet Sie, beobachtet zu werden. Nach der Übergabe kostet es die meisten Sekunden statt Stunden: neunzig Sekunden Diktat nach einem Gespräch, zehn Sekunden nach einer Trainingseinheit, ein Foto von einer Rechnung.'
 			}
 		]
 	},
