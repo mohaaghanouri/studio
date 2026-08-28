@@ -33,16 +33,17 @@ tells you which commit is live.
 
 ## Docs
 
-- **[`outreach/NEEDS-MOHA.md`](outreach/NEEDS-MOHA.md)** — **start here.** The short list of
-  things only you can do, with the reason for each and everything prepared in advance.
-- [`outreach/REFERENT-EMAILS.md`](outreach/REFERENT-EMAILS.md) — ten German Referent pitches to
-  the Berlin chambers, ready to send. Highest-return item in the plan.
+- **[`researches/projects/`](researches/projects/)** — the field notes the 21 case pages are
+  written from, one per profession, plus [`00-method.md`](researches/projects/00-method.md)
+  behind `/method/` and [`testimonals.md`](researches/projects/testimonals.md) behind the
+  quotes. Edit a page here first, then in the copy files.
 - **[`PLAYBOOK.md`](PLAYBOOK.md)** — the reusable end-to-end roadmap for standing up another
   site like this one: repo, DNS, Cloudflare, email, search, German legal, and every trap that
   bit us. Read this before launching anything new.
 - [`researches/growth/00-free-plan.md`](researches/growth/00-free-plan.md) — the €0 growth plan
   for *this* site, sequenced, with what's shipped and what needs your hands.
-- [`researches/`](researches/) — the competitor research the design came out of.
+- [`outreach/REFERENT-EMAILS.md`](outreach/REFERENT-EMAILS.md) — ten German Referent pitches to
+  the Berlin chambers, ready to send. Highest-return item in the plan.
 
 ## Two things to know
 
