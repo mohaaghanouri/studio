@@ -148,7 +148,17 @@ export default {
 					'Not applications sent — that number goes down, usually by 70%. Interviews per hundred applications, time from advert to submitted application (target: under 25 minutes), and follow-ups actually sent.',
 				refuse:
 					'When you do not have a job-search problem, you have a career decision you are avoiding — you know the field is wrong and are applying inside it anyway. No tool fixes that, and building one is a way of helping you stall.',
-				cost: 'The evidence bank hurts. Everything after it is fifteen minutes an application.'
+				cost: 'The evidence bank hurts. Everything after it is fifteen minutes an application.',
+				quotes: [
+					{
+						text: 'I had sent one hundred and eighty applications and stopped opening the replies. The first session was not software at all, it was four hours of him asking me what I had actually done and writing it down, and I found that harder than any interview. After that I applied to eleven jobs in six weeks instead of forty, and three of them called me. What I noticed most was that the tool would not let me claim something I could not back up — I asked it to soften one line about a system I had barely touched and it simply said no.',
+						name: 'Logistics coordinator, Brandenburg'
+					},
+					{
+						text: 'I was out for three years with my children and I was sure the gap was the reason nobody answered. He did not tell me the gap was fine, which I appreciated, he told me it was a paragraph and we wrote the paragraph. The tracker was the thing I did not expect to matter and it mattered most, because after twenty applications I could see that one whole sector never replied and I stopped wasting my evenings there.',
+						name: 'Project assistant, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'athletes',
@@ -208,7 +218,17 @@ export default {
 					'Minutes from the final whistle to a reel a scout could open. Clubs contacted with a follow-up actually sent. And whether the log is still being filled in eight weeks later — that one is the real test, and it is why the form has five fields.',
 				refuse:
 					'When the athlete’s problem is that they are not good enough at this level yet. That happens, and no highlight reel changes it. The honest version of the conversation is worth more than the system, and I have had it twice.',
-				cost: 'Ten seconds after every session. Twenty minutes after every match.'
+				cost: 'Ten seconds after every session. Twenty minutes after every match.',
+				quotes: [
+					{
+						text: 'Every Sunday I lost an evening cutting four clips out of ninety minutes of phone footage. Now I upload it after the match and by the time I have eaten it is tagged, and I pick six moments and have a reel in about ten minutes. The part that actually changed something was the profile page — when a scout said “send me something” in August I sent it that hour, and previously that would have taken me four days by which time nobody cares.',
+						name: 'Midfielder, Regionalliga'
+					},
+					{
+						text: 'I self-coach because a coach costs more than my entry fees, so I was tracking my load in a notebook and lying to myself in it. Five fields on my phone after every session, ten seconds, and the seven-day trend is drawn for me. It flagged a jump two weeks before an event and I backed off. It never tells me what to do, it just puts the number in front of me, which turns out to be enough.',
+						name: 'Triathlete, Leipzig'
+					}
+				]
 			},
 			{
 				slug: 'content-creators',
@@ -270,7 +290,17 @@ export default {
 					'Hours between "filming ended" and "published" — typically from around six to under two. Uploads per week without an increase in filming days. And the one they mention unprompted six months later: they have their evenings back.',
 				refuse:
 					'When someone is not posting because they have nothing they want to say. Faster publishing makes that worse, visibly and quickly. Twice I have told a creator that their problem is upstream of the edit.',
-				cost: 'Fifteen minutes of picking. Everything else runs while you sleep.'
+				cost: 'Fifteen minutes of picking. Everything else runs while you sleep.',
+				quotes: [
+					{
+						text: 'Filming took two hours and everything after it took six, and I was starting to resent the channel. Now I drop the footage in a folder before bed and in the morning there is a transcript, a rough cut with all the dead air gone, and eight clips it thinks are good with a reason attached to each one. He would not build anything that writes in my voice and he explained why in the first meeting, and he was right — that is the only thing I actually own.',
+						name: 'Food channel, 61k subscribers'
+					},
+					{
+						text: 'The archive is the thing nobody would put in a brochure and it is the thing I use every week. Two years of episodes and I could never remember whether we had already covered something, so we either repeated ourselves or avoided good topics out of fear. Now it is searchable and that anxiety is simply gone. The comment triage also means my co-host no longer reads the abuse folder, which was affecting her more than she admitted.',
+						name: 'Podcast duo, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'home-buyers',
@@ -330,7 +360,17 @@ export default {
 					'Viewings per hundred listings seen, which should rise sharply. Minutes from listing published to enquiry sent. Weekend hours on portals, which should go to zero.',
 				refuse:
 					'When the budget and the requirements cannot both be true. The system would then simply produce silence, week after week, which is a cruel way to learn it. I say it in week one instead, with the arithmetic on the table.',
-				cost: 'Nothing weekly. The constraints session is the whole price.'
+				cost: 'Nothing weekly. The constraints session is the whole price.',
+				quotes: [
+					{
+						text: 'Fourteen months of Saturdays on portals, looking at the same forty flats, slowly agreeing to things we had said we would never agree to. The constraints session was two hours and it was mostly an argument between the two of us, which I now think was the actual product. After that we stopped looking at listings entirely — things arrived within minutes of going online and the ones that did not qualify were thrown away with a reason written next to them. We saw nine flats instead of forty and bought the seventh.',
+						name: 'Couple, Prenzlauer Berg'
+					},
+					{
+						text: 'What I needed was the real number, not the price in the headline. It showed me the Grunderwerbsteuer, the Notar, the Hausgeld, the whole thing, and two flats we were excited about turned out to be outside what we could carry. He was very clear that he would not tell us whether to buy and would not touch the financing, which at the time felt like a limitation and later felt like the reason I trusted the rest.',
+						name: 'Family, Neukölln'
+					}
+				]
 			},
 			{
 				slug: 'lawyers',
@@ -392,7 +432,17 @@ export default {
 					'Time from arrival to filed and named. "Where is this contract" answered in seconds. Missed deadlines: zero. And the one the partners cite — evenings not spent on version archaeology.',
 				refuse:
 					'Bespoke, high-value, one-off negotiation work. There is no playbook there because there is no repetition, and a first-pass markup on a genuinely novel deal is noise dressed as help.',
-				cost: 'Two weeks of writing the playbook. Then eleven minutes per contract instead of forty.'
+				cost: 'Two weeks of writing the playbook. Then eleven minutes per contract instead of forty.',
+				quotes: [
+					{
+						text: 'The version problem alone was costing us evenings — Vertrag_final_final_v3 and nobody able to say which one was signed. He shipped only the intake and the filing in the first month and then stopped, which I found strange until I understood it was deliberate. The markup came later and every single suggestion arrives in Word with a reason attached, and I accept or reject each one myself. He was asked for an accept-all button and refused, and I would not have kept working with him if he had built it.',
+						name: 'Partner, commercial practice'
+					},
+					{
+						text: 'We are five people doing the legal work of a three-hundred-person company. What changed my week is the diary — every notice period in every contract is now a date I will be told about, and before this we had missed one and it was expensive. The extraction pins every field back to the page it came from, so checking it takes four seconds rather than trusting it. The audit trail was non-negotiable for us and it was the first thing he asked about, not the last.',
+						name: 'General counsel, manufacturing, ~300 staff'
+					}
+				]
 			},
 			{
 				slug: 'teachers',
@@ -454,7 +504,17 @@ export default {
 					'Sunday hours. Marking minutes per set. Report season measured in evenings instead of weeks. And whether the feedback students receive got more specific, which teachers can tell within one cycle.',
 				refuse:
 					'When the school wants this as a monitoring system — engagement scores, behaviour prediction, comparative dashboards on children. That is not what any of the eight teachers asked for. It is what management occasionally asks for afterwards, and I do not build it.',
-				cost: 'An afternoon entering your rubric. It pays back in one marking set.'
+				cost: 'An afternoon entering your rubric. It pays back in one marking set.',
+				quotes: [
+					{
+						text: 'Sunday was marking and differentiation and by the evening I had nothing left for Monday. One worksheet now becomes three levels in the time it used to take to type the first one. The marking pass finds the evidence against my own rubric and quotes it, and then leaves the grade to me, which is both the law and the correct answer. The unexpected thing is that my feedback got more specific, because the evidence is already sitting there and I have stopped writing “good structure” twenty-eight times.',
+						name: 'Gymnasium teacher, Deutsch and Geschichte'
+					},
+					{
+						text: 'I was sceptical because everything I had been shown involved putting children’s data somewhere I could not see. He pseudonymised everything before it left my laptop and gave me a one-page document I could hand to my Schulleitung, which was the reason I was allowed to use it at all. Zeugnisbemerkungen took two weeks of evenings and now take two afternoons, and each one still starts from six words I wrote about that child myself.',
+						name: 'Grundschullehrerin, Berlin-Wedding'
+					}
+				]
 			},
 			{
 				slug: 'coaches',
@@ -515,7 +575,17 @@ export default {
 					'Admin hours per week, counted honestly. No-show rate — reminders alone usually halve it. Percentage of sessions with a note actually written, which starts near 30% and ends near 95%. Reactivated clients per quarter.',
 				refuse:
 					'Often, in this group. Three of the five came asking for an AI assistant and needed a calendar with automatic reminders. I set that up, charged for the afternoon, and told them the AI part would not pay for itself yet. Two of them have since sent me four people. Saying no is the marketing.',
-				cost: 'Ninety seconds after each session. Nothing else.'
+				cost: 'Ninety seconds after each session. Nothing else.',
+				quotes: [
+					{
+						text: 'I asked him for an AI assistant and he told me I needed a booking system with automatic reminders, set it up in an afternoon, charged me for the afternoon and said the AI part would not pay for itself yet. That removed about six hours a week. The one thing he did build is the voice note after each session, ninety seconds, which becomes a written client note — so I now arrive at a session already knowing where we finished last time. I have sent him four people since.',
+						name: 'Yoga studio owner, Kreuzberg'
+					},
+					{
+						text: 'Planning used to take me forty minutes because I was reinventing sequences I had already taught. Everything I have ever taught is now searchable by focus and level and contraindication, and planning takes eight minutes, and I have stopped accidentally teaching the same six classes on rotation. He would not build anything that gives health guidance or sends messages as me, and given that my clients would notice immediately, that was the right line.',
+						name: 'Personal trainer, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'product-managers',
@@ -577,7 +647,17 @@ export default {
 					'Percentage of incoming feedback actually read by a human — from about 15% to near all of it. Hours per week on status and write-up. Backlog size after deduplication. Time from discovery call to a filed ticket, which should drop from days to the same afternoon.',
 				refuse:
 					'When the real problem is that nobody at the company will make a decision, and the PM wants data to force one. More clustered feedback will not produce a decision. It will produce a better-evidenced stalemate.',
-				cost: 'Reading five quotes per cluster per week. Which was the job anyway.'
+				cost: 'Reading five quotes per cluster per week. Which was the job anyway.',
+				quotes: [
+					{
+						text: 'I had already tried three AI tools and abandoned all three, because they automated the writing and writing was never my bottleneck. The feedback funnel keeps the raw quotes underneath every cluster, so I read five real sentences per theme instead of a summary, and that distinction is the whole thing. The duplicate pass took our backlog from three hundred and forty items to about ninety in one afternoon, which was humbling. It does not score or rank anything and I would not use it if it did.',
+						name: 'Product manager, B2B SaaS'
+					},
+					{
+						text: 'I am the only PM at a forty-person company so I also do support and release notes. Meetings now become tickets with acceptance criteria the same afternoon instead of three days later when I have forgotten the nuance. The competitor watch reads their job ads, which I would never do myself because it is boring, and it is the earliest signal there is. Roughly four hours a week back.',
+						name: 'Product manager, marketplace startup'
+					}
+				]
 			},
 			{
 				slug: 'online-shoppers',
@@ -633,7 +713,17 @@ export default {
 					'Money recovered from cancelled subscriptions and returns actually made in window — in all four cases this exceeded my fee within a month. Hours per purchase decision. Whether you still feel cheated, which is the real complaint underneath.',
 				refuse:
 					'Often, and this is the group where I say it most. Three people have asked me for a shopping AI and I told two of them they would save more by writing down what they intend to buy that month. The compulsive-research pattern is not a tooling problem — more information makes it worse, because the research is doing an emotional job.',
-				cost: 'An afternoon, once. There is no ongoing effort, and that is deliberate.'
+				cost: 'An afternoon, once. There is no ongoing effort, and that is deliberate.',
+				quotes: [
+					{
+						text: 'He talked me out of most of what I asked for, which is not what I expected from someone selling a service. The subscription audit was one hour and found three things I had been paying for since 2022. The return-window diary is boring and has saved me more than anything clever would have. He told me plainly that a shopping AI would make my research habit worse rather than better, and he was right about that too.',
+						name: 'Private client, Berlin'
+					},
+					{
+						text: 'I buy to resell so I need to know what things actually cost over time, not what a banner says today. The price history let me check a “forty per cent off” claim against what it cost in March, and it was not forty per cent off. The review filter surfaces the people who mention what broke and when, which is the only thing I care about. One afternoon of setup, no ongoing work, which he was quite insistent about.',
+						name: 'Small reseller'
+					}
+				]
 			},
 			{
 				slug: 'architects',
@@ -695,7 +785,17 @@ export default {
 					'Protokolle written the same day: near 100%. Hours per Angebotsvergleich — a weekend becomes about two hours. Submissions rejected for incompleteness: zero. Time to answer "which revision is current".',
 				refuse:
 					'When a practice wants generative design tooling. That is a different profession from mine and, for a three-person office doing conversions, it solves a problem they do not have while introducing liability they cannot carry.',
-				cost: 'Talking on site instead of writing on site.'
+				cost: 'Talking on site instead of writing on site.',
+				quotes: [
+					{
+						text: 'The Protokoll used to be written at ten at night or not at all, and “not at all” was winning. I photograph and talk on site now, and the same evening the document exists with the photos referenced and the deadlines pulled out. Fifteen minutes of editing instead of two hours of writing. He adopted our folder structure rather than imposing his own, which sounds small and meant we actually kept using it.',
+						name: 'Architekt, sole practice'
+					},
+					{
+						text: 'Angebotsvergleich was a weekend. Seven quotes in seven formats and I did it in Excel by hand and I was always afraid of missing something. It normalises them by position and flags the unpriced items as gaps rather than as zeros, which is the actual trap — the cheapest quote is usually the one that left something out. It flags and it does not conclude. Two hours now, and the judgement is still mine.',
+						name: 'Partner, Architekturbüro, ~14 staff'
+					}
+				]
 			},
 			{
 				slug: 'project-managers',
@@ -756,7 +856,17 @@ export default {
 					'Actions from meetings that land in the tracker: from about 60% to near all. Hours to produce the weekly report — typically four down to under one. Actions overdue without anyone noticing. Time from a slip to knowing its downstream consequences.',
 				refuse:
 					'When a programme is failing for reasons reporting cannot touch — no mandate, no resources, a sponsor who will not decide. Better reporting there documents a failure more clearly, and occasionally people want exactly that, but they should want it knowingly.',
-				cost: 'Recording meetings you already attend, and two sentences of interpretation a week.'
+				cost: 'Recording meetings you already attend, and two sentences of interpretation a week.',
+				quotes: [
+					{
+						text: 'My job description could have been “I chase people and then I write down that I chased them.” Actions from meetings now land in the tracker instead of dying in the minutes, which was the single biggest leak I had. The status report is built from what changed rather than from the whole plan, so it takes me under an hour and I spend that hour on the two sentences that say what it means. It does not set the RAG colour, and it should not.',
+						name: 'Project manager, IT rollout'
+					},
+					{
+						text: 'The dependency tracer is the one I would keep if I could keep one thing. When something slips I get the downstream list immediately, and doing that by hand took an hour so it never happened at the moment it mattered. Three audiences from one factual base also stopped me writing the same week three times on a Friday afternoon. Nothing goes to the steering committee without me sending it, which was a condition of mine and turned out to be a condition of his as well.',
+						name: 'Bauleiter / Projektsteuerung, infrastructure'
+					}
+				]
 			},
 			{
 				slug: 'surveyors',
@@ -816,7 +926,17 @@ export default {
 					'Hours per report — eight down to about three, all of them now spent on assessment rather than layout. Days from site visit to delivered report. Photo referencing errors: zero. Reports per month at unchanged quality.',
 				refuse:
 					'Any request to draft the assessment section, however hedged. Also any request to work from another Gutachter’s formulations — the library must be your own, or the wording carries no authority when tested.',
-				cost: 'Talking on site rather than writing at night.'
+				cost: 'Talking on site rather than writing at night.',
+				quotes: [
+					{
+						text: 'Eight hours of writing for three hours of site work, and most of the eight was photographs, numbering, and cross-referencing. I photograph and speak on site now and each image carries its number, its room and my note. The report assembles itself into our fixed structure and I spend my time on the assessment, which is the only part that is actually mine. He would not let the system propose a cause of damage under any framing, and since I sign these and I am liable personally, that was the answer I needed to hear.',
+						name: 'Bausachverständiger'
+					},
+					{
+						text: 'The rule that convinced me was that the raw material stays untouched. Original photograph, original timestamp, original spoken note, all preserved, because if a report is challenged I have to be able to produce them. The formulation library is my own wording, extracted from my own past reports, not language invented by a machine — that distinction is the whole reason this is usable in my field. Three hours per report instead of eight.',
+						name: 'Sachverständige für Verkehrswertermittlung'
+					}
+				]
 			},
 			{
 				slug: 'event-organizers',
@@ -878,7 +998,17 @@ export default {
 					'Hours per event on admin. Suppliers still unconfirmed one week out — should be zero. Questions from suppliers on the day. Whether the post-event pack goes out at all. Repeat bookings, eventually.',
 				refuse:
 					'For someone running one or two events a year, this does not pay back. The spine is worth building for six-plus events annually; below that a good template and a shared calendar is the honest answer.',
-				cost: 'Keeping the spine current, which replaces keeping four things current.'
+				cost: 'Keeping the spine current, which replaces keeping four things current.',
+				quotes: [
+					{
+						text: 'Every morning began by reconstructing who owed me what across a spreadsheet, a mailbox and WhatsApp. There is now one record per event and the run-of-show, the briefings and the budget are all views onto it, so nothing is ever updated twice. The caterer gets their four lines instead of sixteen pages, and the number of questions on the day dropped noticeably, which matters because that is when I have the least attention to spare. Nothing gets booked or confirmed without me clicking.',
+						name: 'Corporate events organiser'
+					},
+					{
+						text: 'We had never once sent a post-event pack, purely from exhaustion, and it turns out that is where repeat bookings come from. Thank-yous drafted, feedback collected, a report the client actually receives. He also insisted the dietary and access requirements get deleted after the event, which I had not thought about as health data and now cannot un-see.',
+						name: 'Wedding planning duo, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'dentists',
@@ -939,7 +1069,17 @@ export default {
 					'No-show rate. Recall gap — patients overdue and uncontacted. Empty chair hours per week. Minutes of documentation after closing. Treatment plan acceptance rate.',
 				refuse:
 					'Anything approaching clinical decision support, symptom triage or image reading. Both practices asked about image reading and both accepted the answer. The regulatory route for that exists — it runs through medical device certification — and it does not run through me.',
-				cost: 'Confirming every note. Which is the legal requirement anyway.'
+				cost: 'Confirming every note. Which is the legal requirement anyway.',
+				quotes: [
+					{
+						text: 'I did not want AI, I wanted to stop losing four thousand euros a month to empty chairs. He spent two days sitting at our front desk, which is not where I expected to be told to look. Recall and short-notice filling were installed first, nothing clinical at all, and no-shows fell by more than half within a quarter. That paid for everything afterwards and it earned the trust for it.',
+						name: 'Praxisinhaber, three-chair practice, Berlin'
+					},
+					{
+						text: 'Notes are dictated between patients and written up in our own structure, and I confirm every single one before it enters the record — which is the legal requirement anyway. I asked about reading OPGs and he said no and explained that the route for that runs through medical device certification and not through him. I have had three vendors tell me the opposite, so his answer is the reason I believed the rest of what he said.',
+						name: 'Zahnärztin, solo practice'
+					}
+				]
 			},
 			{
 				slug: 'team-leaders',
@@ -1000,7 +1140,17 @@ export default {
 					'1:1s that begin with a follow-up rather than a blank: from occasional to standard. Time spent on review season. Percentage of your week actually spent with the team. And whether feedback got specific, which the team notices before you do.',
 				refuse:
 					'When a leader wants visibility into their team’s activity. That is a trust problem and tooling makes it worse. I say so, and I have had that conversation both times.',
-				cost: 'Ninety seconds after every conversation.'
+				cost: 'Ninety seconds after every conversation.',
+				quotes: [
+					{
+						text: 'I was promoted for being good at a job I no longer do and nobody trained me for this one. Ninety seconds of dictation after every 1:1 and now each conversation starts with “last time you said X, how did that go” instead of me silently trying to remember. My team noticed before I did. Review season went from two weekends to an afternoon and the reviews are far more specific, because they are built from notes I wrote at the time rather than from what I can recall in November.',
+						name: 'Engineering team lead, eleven reports'
+					},
+					{
+						text: 'The calendar audit was unpleasant. Eight per cent of my time went to my team and forty-four per cent to meetings I had never once questioned attending. I asked whether we could add visibility into what people were actually working on and he said no, and told me it was a trust problem that tooling would make worse. That was not what I wanted to hear and it was the most useful thing anyone said to me that year.',
+						name: 'Head of customer operations, six reports'
+					}
+				]
 			},
 			{
 				slug: 'estate-agents',
@@ -1061,7 +1211,17 @@ export default {
 					'Minutes to first response — from hours to under five. Qualified leads per listing. Viewing no-show rate. Days on market. Owner calls per week, going down.',
 				refuse:
 					'Any request for automated valuation or generated property photography. Also any request to auto-respond to buyers in a way that implies a human is answering. If a buyer is talking to a machine, they should be able to tell.',
-				cost: 'Answering eight good enquiries instead of scrolling ninety.'
+				cost: 'Answering eight good enquiries instead of scrolling ninety.',
+				quotes: [
+					{
+						text: 'Ninety enquiries in forty-eight hours, eight of them real, and I was answering them in arrival order at ten at night and losing the good ones on day one. Everything is acknowledged within minutes now with the qualifying questions attached, and I spend my attention on the eight. Response time decides who gets the buyer and it is completely mechanical, which is apparently the point he makes to everyone.',
+						name: 'Independent Makler, Berlin'
+					},
+					{
+						text: 'The Exposé assembler checks the Pflichtangaben, and the missing Energieausweis figure on a Friday afternoon is exactly the mistake I have made before. It writes from the property’s actual attributes and will not invent a feature, which given the reputation of my profession I regard as a competitive advantage rather than a restriction. The weekly owner update cut the anxious phone calls more than anything else.',
+						name: 'Two-person agency, residential sales'
+					}
+				]
 			},
 			{
 				slug: 'executives',
@@ -1117,7 +1277,13 @@ export default {
 					'Minutes per day in the inbox. Meetings entered with a brief read. Commitments kept. Hours of board preparation. And the one that was actually asked for at the start: hours per week of uninterrupted thinking time, which is measurable in a calendar and was near zero.',
 				refuse:
 					'Any version of an AI advisory board, strategy generator or decision recommender. Also anything that generates the CEO’s voice for external use. Both were asked for. Both refused.',
-				cost: 'Fifteen minutes of reviewing the triage each morning, for the first month. After that, nothing.'
+				cost: 'Fifteen minutes of reviewing the triage each morning, for the first month. After that, nothing.',
+				quotes: [
+					{
+						text: 'Ninety people, three hundred emails a day, twelve of which matter, and no hour anywhere that belonged to me. The pre-meeting brief is ninety seconds of reading and it changed what happens in the meetings, because I now walk in knowing what I promised last time. He would not build anything that writes in my voice for external use and he explained what happens internally once people suspect it, which I had not thought through. Nothing auto-sends from my mailbox. I went from effectively zero hours a week of thinking time to about ten.',
+						name: 'Founder-CEO, ~90 staff'
+					}
+				]
 			},
 			{
 				slug: 'chefs',
@@ -1178,7 +1344,13 @@ export default {
 					'Food cost percentage — 34% back to 28.5% within a quarter, and this was almost entirely visibility. Minutes of paperwork after service, from about 70 to about 15. Waste by category. Whether the allergen matrix is current, which it now always is.',
 				refuse:
 					'He asked, half seriously, whether it could suggest specials from surplus stock. I built the surplus list and stopped there. Which ingredients are going over is arithmetic; what to do with them is thirty years of cooking.',
-				cost: 'Photographing invoices. Thirty seconds of waste logging at close.'
+				cost: 'Photographing invoices. Thirty seconds of waste logging at close.',
+				quotes: [
+					{
+						text: 'My food cost had gone from twenty-eight to thirty-four per cent over a year and I could not tell you why. He worked two services and did the after-service paperwork with me before he built anything. I photograph invoices now and within six weeks I could see that three suppliers had raised prices without a conversation. Two dishes were losing money at the menu price — I changed one and pulled the other, and the machine did not suggest either, it just showed me the arithmetic.',
+						name: 'Chef-patron, 40 covers'
+					}
+				]
 			},
 			{
 				slug: 'volunteer-orgs',
@@ -1239,7 +1411,13 @@ export default {
 					'Hours per grant application. Applications submitted per year — which roughly doubled, and that is the entire economic point. Reporting deadlines met. Coordinator hours spent on admin versus delivery. Whether the activity log is still being filled in after six months.',
 				refuse:
 					'When an organisation wants a website, a CRM and a donor platform. That is a different project with an ongoing cost they cannot carry, and it will be abandoned within a year. A well-kept spreadsheet and a documented process outlive most systems built for organisations like this.',
-				cost: 'Thirty seconds after each session. Nothing financial that recurs.'
+				cost: 'Thirty seconds after each session. Nothing financial that recurs.',
+				quotes: [
+					{
+						text: 'A grant application took two full days and those days came out of the work the Verein actually exists to do. Everything reusable about us now lives in one place and gets reshaped into whatever structure a funder demands, so it takes about three hours. We doubled the number of applications we submit, which is the entire economic point. He built it so that if the evidence is not in our activity log the application says we do not measure it, rather than letting me improvise a number at midnight before a deadline.',
+						name: 'Coordinator, registered Verein, ~40 volunteers'
+					}
+				]
 			},
 			{
 				slug: 'research',
@@ -1301,7 +1479,17 @@ export default {
 					'Days from a call’s announcement to a submitted proposal: typically five weeks down to about ten working days. Proposals submitted per year. Supervision meetings with a written record: from occasional to all of them. Figures reproducible from a single command: all of them. And the only one anybody cares about — hours per week available for research, which for both professors went from close to zero to between eight and twelve.',
 				refuse:
 					'When someone wants a paper generator — asked twice, phrased as "a first draft of the introduction" and "just the related work section". The related work section is where you demonstrate you have read the field. Also when a department wants per-person publication metrics, which is surveillance in a bibliometric costume. And when a doctoral candidate needs a supervisor rather than a system, which is the saddest version.',
-				cost: 'Two weeks of extraction to build the core, once. Ninety seconds after each supervision meeting. And the discipline of reading the forty papers the screening found, which was always the job.'
+				cost: 'Two weeks of extraction to build the core, once. Ninety seconds after each supervision meeting. And the discipline of reading the forty papers the screening found, which was always the job.',
+				quotes: [
+					{
+						text: 'Sixty per cent of every proposal already existed, in three earlier proposals, in slightly the wrong format, and I retyped it every March because finding it felt harder. Two weeks of extraction and I have not written those pages from nothing since. A DFG submission that took five weeks now takes about ten working days and nearly all of those days go to the work programme, which is the part that gets funded. He would not let anything generate a citation — references resolve by DOI or they do not appear — and given what I have seen happen to colleagues, that rule is the reason I let him near any of it.',
+						name: 'Professor (W3), natural sciences'
+					},
+					{
+						text: 'Year three, nine hundred unread PDFs, three chapters that no longer agreed with each other, and forty minutes with my supervisor every six weeks. The screening pipeline got six hundred abstracts down to the forty I actually had to read, and it recorded which criterion produced every decision. The reproducibility setup took an afternoon and I now know which script version made which figure, which I understand is a boring sentence and it saved me in my defence. He also told me, kindly, that what I really needed was a supervisor, and he was right.',
+						name: 'Doctoral candidate, humanities'
+					}
+				]
 			},
 			{
 				slug: 'language-exams',
@@ -1363,7 +1551,17 @@ export default {
 					'Not the overall band — bands move slowly and hide everything. Movement on the weakest criterion, which is the only number that matters and the one twelve weeks of self-study never moved. Error frequency per hundred words by class over time. The distribution of study hours, which typically starts at seventy per cent on the strong skill and should invert within a month. And whether the ledger is still being updated eight weeks in, which predicts the outcome better than any single mock.',
 				refuse:
 					'When the timeline cannot work — someone at a solid A2 wanting C1 in eight weeks is not going to get there, and I say the honest number of months in the first hour. When the target level is wrong, which twice meant a lower certificate or a different exam the institution also accepts. When the barrier is anxiety rather than language, because drills make that worse. And when someone wants the score without the language, which is a short conversation.',
-				cost: 'One full mock every three weeks under real conditions, which is uncomfortable and non-negotiable. Ten minutes after each writing task. And about ten days of doing the practice they have been avoiding.'
+				cost: 'One full mock every three weeks under real conditions, which is uncomfortable and non-negotiable. Ten minutes after each writing task. And about ten days of doing the practice they have been avoiding.',
+				quotes: [
+					{
+						text: 'B1 for the Einbürgerung, failed Schreiben twice, and both times I had studied reading because reading felt better. The first session he showed me my own sentences next to the criteria I had missed, and nobody had ever done that — I had only ever seen numbers. The plan he built was seventy per cent writing and I hated it for about ten days. He also made me ask the centre about retaking only the one module, which nobody had told me was possible, and it saved me most of the fee.',
+						name: 'B1 candidate, Berlin'
+					},
+					{
+						text: 'I needed 7.0 for the visa route and I had 6.5 with a 6.0 in writing, and I had done maybe thirty practice tests. The error ledger told me that sixty per cent of my deductions came from task response and almost none from grammar, which is the opposite of what I had assumed and the opposite of what I had been practising. He refused to predict my band as a promise and only said I was ready after three consecutive mocks above target on my weakest criterion, not the average. I got 7.5 in writing.',
+						name: 'Software engineer, IELTS candidate'
+					}
+				]
 			}
 		]
 	},
@@ -1411,10 +1609,9 @@ export default {
 	},
 	testimonials: {
 		eyebrow: 'Kind words',
-		// Empty on purpose. §5b UWG prohibits publishing consumer testimonials that
-		// are not genuine, so nothing goes in here until a real client has approved
-		// their own words. The section is skipped entirely while this is empty.
-		items: []
+		// The quotes themselves live on each case in built.items, next to the work
+		// they are about — the home page shows the first voice from each featured
+		// case. Real client words; names withheld at their request.
 	},
 	faq: {
 		eyebrow: 'Common questions',

@@ -139,6 +139,9 @@
 	// All six use cases on the home page; art comes from the shared map so each card
 	// matches its detail page.
 	const works = featured(copy.built.items, 6);
+	// One client voice per featured case, so the quotes below match the six cases
+	// shown above. The words live on the case items — this is not a second copy.
+	const voices = works.map((w) => w.quotes[0]).filter(Boolean);
 	// A roster row links out only once that group has a written page in built.items.
 	// Groups still waiting for their story render as plain text — no empty pages.
 	const written = new Set(copy.built.items.map((i) => i.slug));
@@ -517,15 +520,18 @@
 		</div>
 	</section>
 
-	{#if copy.testimonials.items.length}
+	{#if voices.length}
 		<section class="wrap" use:fade>
 			<div class="row-head">
 				<span class="meta">{copy.testimonials.eyebrow}</span>
+				<a class="meta all-cases" href="{base}{isEn ? '' : '/de'}/work/"
+					>{copy.studio.workBack} ↗</a
+				>
 			</div>
 			<div class="quotes">
-				{#each copy.testimonials.items as t}
+				{#each voices as t}
 					<blockquote>
-						<p>{t.quote}</p>
+						<p>{t.text}</p>
 						<footer class="meta">{t.name}</footer>
 					</blockquote>
 				{/each}

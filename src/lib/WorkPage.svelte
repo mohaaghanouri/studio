@@ -159,6 +159,18 @@
 			</div>
 		</section>
 
+		<section class="voices">
+			<p class="meta">{copy.testimonials.eyebrow}</p>
+			<div class="quotes">
+				{#each item.quotes as quote}
+					<blockquote>
+						<p>{quote.text}</p>
+						<footer class="meta">{quote.name}</footer>
+					</blockquote>
+				{/each}
+			</div>
+		</section>
+
 		<section class="cta">
 			<p class="meta">{copy.contactSection.eyebrow}</p>
 			<h2>{copy.contactSection.title}</h2>
@@ -364,7 +376,8 @@
 	.seam,
 	.builds,
 	.stops,
-	.notes {
+	.notes,
+	.voices {
 		padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 5rem);
 		border-top: 1px solid var(--line);
 	}
@@ -459,6 +472,29 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		gap: clamp(1.5rem, 4vw, 3rem);
+	}
+
+	.voices .quotes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		gap: clamp(1.5rem, 4vw, 3rem);
+		margin-top: 1.5rem;
+	}
+
+	.voices blockquote {
+		margin: 0;
+		padding-left: 1.25rem;
+		border-left: 2px solid var(--line);
+	}
+
+	.voices blockquote p {
+		color: var(--text);
+		font-size: 0.9375rem;
+	}
+
+	.voices blockquote footer {
+		margin-top: 0.9rem;
+		color: var(--faint);
 	}
 
 	.notes p:not(.meta) {

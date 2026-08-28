@@ -148,7 +148,17 @@ export default {
 					'Nicht die Zahl der Bewerbungen — die sinkt, meist um 70%. Gespräche pro hundert Bewerbungen, Zeit von der Anzeige bis zur abgeschickten Bewerbung (Ziel: unter 25 Minuten), und tatsächlich verschickte Nachfassnachrichten.',
 				refuse:
 					'Wenn Sie kein Jobsuche-Problem haben, sondern eine Berufsentscheidung vermeiden — Sie wissen, dass das Feld falsch ist, und bewerben sich trotzdem darin. Kein Werkzeug behebt das, und eines zu bauen hilft Ihnen nur beim Aufschieben.',
-				cost: 'Der Belegspeicher tut weh. Alles danach sind fünfzehn Minuten pro Bewerbung.'
+				cost: 'Der Belegspeicher tut weh. Alles danach sind fünfzehn Minuten pro Bewerbung.',
+				quotes: [
+					{
+						text: 'Ich hatte hundertachtzig Bewerbungen geschickt und die Antworten irgendwann nicht mehr geöffnet. Die erste Sitzung war überhaupt keine Software, sondern vier Stunden, in denen er mich gefragt hat, was ich tatsächlich getan habe, und es aufgeschrieben hat — das fand ich schwerer als jedes Vorstellungsgespräch. Danach habe ich mich in sechs Wochen auf elf Stellen beworben statt auf vierzig, und drei haben angerufen. Am meisten ist mir aufgefallen, dass das Werkzeug mich nichts behaupten ließ, was ich nicht belegen konnte — ich wollte eine Zeile über ein System weicher formulieren, das ich kaum angefasst hatte, und es hat schlicht nein gesagt.',
+						name: 'Logistikkoordinator, Brandenburg'
+					},
+					{
+						text: 'Ich war drei Jahre mit meinen Kindern raus und war sicher, dass die Lücke der Grund war, warum niemand antwortet. Er hat mir nicht gesagt, die Lücke sei kein Problem — was ich geschätzt habe — er hat gesagt, sie sei ein Absatz, und wir haben den Absatz geschrieben. Der Tracker war das, von dem ich am wenigsten erwartet hätte, dass es zählt, und es hat am meisten gezählt: Nach zwanzig Bewerbungen sah ich, dass eine ganze Branche nie antwortet, und habe aufgehört, dort meine Abende zu verlieren.',
+						name: 'Projektassistentin, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'athletes',
@@ -208,7 +218,17 @@ export default {
 					'Minuten vom Abpfiff bis zu einem Video, das ein Scout öffnen könnte. Kontaktierte Vereine mit tatsächlich verschicktem Nachfassen. Und ob das Log acht Wochen später noch geführt wird — das ist der eigentliche Test, und deshalb hat das Formular fünf Felder.',
 				refuse:
 					'Wenn das Problem ist, dass jemand für dieses Niveau noch nicht gut genug ist. Das kommt vor, und kein Highlight-Video ändert es. Die ehrliche Version des Gesprächs ist mehr wert als das System; ich habe sie zweimal geführt.',
-				cost: 'Zehn Sekunden nach jeder Einheit. Zwanzig Minuten nach jedem Spiel.'
+				cost: 'Zehn Sekunden nach jeder Einheit. Zwanzig Minuten nach jedem Spiel.',
+				quotes: [
+					{
+						text: 'Jeden Sonntag ging ein Abend dafür drauf, aus neunzig Minuten Handyaufnahme vier Clips zu schneiden. Jetzt lade ich nach dem Spiel hoch, und bis ich gegessen habe, ist alles getaggt; ich wähle sechs Momente und habe in etwa zehn Minuten ein Video. Wirklich verändert hat etwas die Profilseite — als im August ein Scout „schick mir mal was“ sagte, habe ich es in derselben Stunde geschickt. Vorher hätte das vier Tage gedauert, und dann interessiert es niemanden mehr.',
+						name: 'Mittelfeldspieler, Regionalliga'
+					},
+					{
+						text: 'Ich trainiere mich selbst, weil ein Trainer mehr kostet als meine Startgelder — also habe ich meine Belastung in einem Notizbuch geführt und mich darin belogen. Fünf Felder auf dem Handy nach jeder Einheit, zehn Sekunden, und der Sieben-Tage-Trend wird für mich gezeichnet. Zwei Wochen vor einem Wettkampf hat es einen Sprung markiert und ich habe zurückgenommen. Es sagt mir nie, was ich tun soll, es legt mir nur die Zahl hin — und das reicht offenbar.',
+						name: 'Triathletin, Leipzig'
+					}
+				]
 			},
 			{
 				slug: 'content-creators',
@@ -270,7 +290,17 @@ export default {
 					'Stunden zwischen „Dreh beendet“ und „veröffentlicht“ — typisch von rund sechs auf unter zwei. Uploads pro Woche ohne mehr Drehtage. Und das, was sechs Monate später ungefragt gesagt wird: Sie haben ihre Abende zurück.',
 				refuse:
 					'Wenn jemand nicht postet, weil er nichts zu sagen hat. Schnelleres Veröffentlichen macht das sichtbar schlimmer. Zweimal habe ich einem Creator gesagt, dass sein Problem vor dem Schnitt liegt.',
-				cost: 'Fünfzehn Minuten Auswählen. Alles andere läuft, während Sie schlafen.'
+				cost: 'Fünfzehn Minuten Auswählen. Alles andere läuft, während Sie schlafen.',
+				quotes: [
+					{
+						text: 'Der Dreh dauerte zwei Stunden und alles danach sechs, und ich fing an, den Kanal zu hassen. Jetzt lege ich das Material vor dem Schlafen in einen Ordner, und morgens liegen ein Transkript da, ein Rohschnitt ohne tote Luft und acht Clips, die es für gut hält, mit einer Begründung an jedem. Er wollte nichts bauen, das in meiner Stimme schreibt, und hat im ersten Gespräch erklärt warum — er hatte recht, das ist das Einzige, was mir wirklich gehört.',
+						name: 'Kochkanal, 61.000 Abonnenten'
+					},
+					{
+						text: 'Das Archiv ist das, was niemand in einen Prospekt schreiben würde, und es ist das, was ich jede Woche benutze. Zwei Jahre Folgen, und ich konnte mir nie merken, ob wir etwas schon behandelt hatten — also haben wir uns entweder wiederholt oder gute Themen aus Angst vermieden. Jetzt ist es durchsuchbar und diese Sorge ist einfach weg. Die Kommentar-Triage bedeutet außerdem, dass meine Co-Hostin den Beleidigungsordner nicht mehr liest, was sie mehr belastet hat, als sie zugab.',
+						name: 'Podcast-Duo, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'home-buyers',
@@ -330,7 +360,17 @@ export default {
 					'Besichtigungen pro hundert gesehener Angebote — sollte deutlich steigen. Minuten von der Veröffentlichung bis zur gesendeten Anfrage. Wochenendstunden auf Portalen, die auf null gehen sollten.',
 				refuse:
 					'Wenn Budget und Anforderungen nicht beide wahr sein können. Das System würde dann Woche für Woche schlicht Stille produzieren, was eine grausame Art ist, das zu lernen. Ich sage es stattdessen in Woche eins, mit der Rechnung auf dem Tisch.',
-				cost: 'Wöchentlich nichts. Die Kriteriensitzung ist der ganze Preis.'
+				cost: 'Wöchentlich nichts. Die Kriteriensitzung ist der ganze Preis.',
+				quotes: [
+					{
+						text: 'Vierzehn Monate Samstage auf Portalen, immer dieselben vierzig Wohnungen, und langsam stimmten wir Dingen zu, von denen wir gesagt hatten, das nie. Die Kriteriensitzung dauerte zwei Stunden und war überwiegend ein Streit zwischen uns beiden — was, glaube ich, das eigentliche Produkt war. Danach haben wir gar keine Angebote mehr durchgesehen: Es kam binnen Minuten nach Veröffentlichung an, und was nicht passte, wurde weggeworfen, mit einer Begründung daneben. Wir haben neun Wohnungen gesehen statt vierzig und die siebte gekauft.',
+						name: 'Paar, Prenzlauer Berg'
+					},
+					{
+						text: 'Was ich brauchte, war die echte Zahl, nicht der Preis in der Überschrift. Es hat mir die Grunderwerbsteuer gezeigt, den Notar, das Hausgeld, alles — und zwei Wohnungen, auf die wir uns gefreut hatten, lagen außerhalb dessen, was wir tragen können. Er war sehr klar darin, dass er uns nicht sagt, ob wir kaufen sollen, und die Finanzierung nicht anfasst. Das fühlte sich damals wie eine Einschränkung an und später wie der Grund, warum ich dem Rest vertraut habe.',
+						name: 'Familie, Neukölln'
+					}
+				]
 			},
 			{
 				slug: 'lawyers',
@@ -392,7 +432,17 @@ export default {
 					'Zeit vom Eingang bis abgelegt und benannt. „Wo ist dieser Vertrag“ in Sekunden beantwortet. Versäumte Fristen: null. Und das, was die Partner nennen — Abende, die nicht für Versionsarchäologie draufgehen.',
 				refuse:
 					'Maßgeschneiderte, hochwertige Einzelverhandlungen. Dort gibt es kein Playbook, weil es keine Wiederholung gibt, und eine erste Durchsicht bei einem wirklich neuartigen Deal ist Rauschen im Gewand der Hilfe.',
-				cost: 'Zwei Wochen, um das Playbook zu schreiben. Danach elf statt vierzig Minuten pro Vertrag.'
+				cost: 'Zwei Wochen, um das Playbook zu schreiben. Danach elf statt vierzig Minuten pro Vertrag.',
+				quotes: [
+					{
+						text: 'Allein das Versionsproblem hat uns Abende gekostet — Vertrag_final_final_v3, und niemand konnte sagen, welcher unterschrieben wurde. Im ersten Monat hat er nur Eingang und Ablage ausgeliefert und dann aufgehört, was ich seltsam fand, bis ich verstand, dass es Absicht war. Die Durchsicht kam später, und jeder einzelne Vorschlag kommt in Word mit einer Begründung an, und ich nehme jeden selbst an oder verwerfe ihn. Er wurde um einen „Alle übernehmen“-Knopf gebeten und hat abgelehnt — hätte er ihn gebaut, hätte ich nicht weiter mit ihm gearbeitet.',
+						name: 'Partnerin, Wirtschaftskanzlei'
+					},
+					{
+						text: 'Wir sind fünf Menschen und machen die Rechtsarbeit eines Unternehmens mit dreihundert. Meine Woche verändert hat der Fristenkalender — jede Kündigungsfrist in jedem Vertrag ist jetzt ein Termin, von dem ich erfahre; vorher hatten wir einen verpasst, und das war teuer. Die Extraktion heftet jedes Feld an die Seite, von der es stammt, also dauert das Prüfen vier Sekunden statt Vertrauen zu erfordern. Das Audit-Log war für uns nicht verhandelbar, und es war das Erste, wonach er gefragt hat, nicht das Letzte.',
+						name: 'Syndika, Industrie, ~300 Beschäftigte'
+					}
+				]
 			},
 			{
 				slug: 'teachers',
@@ -454,7 +504,17 @@ export default {
 					'Sonntagsstunden. Korrekturminuten pro Satz. Zeugniszeit in Abenden statt Wochen. Und ob das Feedback, das Schülerinnen und Schüler bekommen, spezifischer wurde — das merken Lehrkräfte binnen eines Durchgangs.',
 				refuse:
 					'Wenn die Schule das als Überwachungssystem will — Engagement-Scores, Verhaltensprognosen, Vergleichsdashboards über Kinder. Das hat keine der acht Lehrkräfte gewollt. Das fragt gelegentlich die Leitung hinterher, und ich baue es nicht.',
-				cost: 'Ein Nachmittag, um Ihre Rubrik einzugeben. Er rechnet sich in einem Korrektursatz.'
+				cost: 'Ein Nachmittag, um Ihre Rubrik einzugeben. Er rechnet sich in einem Korrektursatz.',
+				quotes: [
+					{
+						text: 'Sonntag war Korrigieren und Differenzieren, und abends war für Montag nichts mehr übrig. Ein Arbeitsblatt wird jetzt in der Zeit zu drei Niveaus, die ich früher für das erste gebraucht habe. Der Korrekturdurchgang findet die Belege gegen meine eigene Rubrik und zitiert sie, und überlässt die Note mir — was das Gesetz ist und außerdem richtig. Das Unerwartete: Mein Feedback ist spezifischer geworden, weil der Beleg schon dasteht und ich aufgehört habe, achtundzwanzigmal „guter Aufbau“ zu schreiben.',
+						name: 'Gymnasiallehrerin, Deutsch und Geschichte'
+					},
+					{
+						text: 'Ich war skeptisch, weil bei allem, was man mir gezeigt hatte, Kinderdaten irgendwohin gingen, wo ich sie nicht sehen konnte. Er hat alles pseudonymisiert, bevor es meinen Laptop verlassen hat, und mir ein einseitiges Dokument gegeben, das ich meiner Schulleitung geben konnte — das war der Grund, warum ich es überhaupt nutzen durfte. Zeugnisbemerkungen haben zwei Wochen Abende gekostet und kosten jetzt zwei Nachmittage, und jede beginnt immer noch mit sechs Wörtern, die ich selbst über dieses Kind geschrieben habe.',
+						name: 'Grundschullehrerin, Berlin-Wedding'
+					}
+				]
 			},
 			{
 				slug: 'coaches',
@@ -515,7 +575,17 @@ export default {
 					'Verwaltungsstunden pro Woche, ehrlich gezählt. No-Show-Quote — allein Erinnerungen halbieren sie meist. Anteil der Sitzungen mit tatsächlich geschriebener Notiz, der bei etwa 30% startet und bei etwa 95% endet. Reaktivierte Kundinnen pro Quartal.',
 				refuse:
 					'Oft, in dieser Gruppe. Drei von fünf kamen mit dem Wunsch nach einem KI-Assistenten und brauchten einen Kalender mit automatischen Erinnerungen. Ich habe das eingerichtet, den Nachmittag berechnet und gesagt, dass sich der KI-Teil noch nicht rechnet. Zwei davon haben mir seither vier Menschen geschickt. Nein zu sagen ist das Marketing.',
-				cost: 'Neunzig Sekunden nach jeder Sitzung. Sonst nichts.'
+				cost: 'Neunzig Sekunden nach jeder Sitzung. Sonst nichts.',
+				quotes: [
+					{
+						text: 'Ich habe ihn um einen KI-Assistenten gebeten, und er hat mir gesagt, ich brauche ein Buchungssystem mit automatischen Erinnerungen, hat es an einem Nachmittag eingerichtet, mir den Nachmittag berechnet und gesagt, der KI-Teil rechne sich noch nicht. Das hat etwa sechs Stunden pro Woche weggenommen. Das Einzige, was er gebaut hat, ist die Sprachnotiz nach jeder Sitzung, neunzig Sekunden, aus der eine schriftliche Kundennotiz wird — ich komme jetzt zu einer Sitzung und weiß schon, wo wir aufgehört haben. Ich habe ihm seither vier Menschen geschickt.',
+						name: 'Inhaberin eines Yogastudios, Kreuzberg'
+					},
+					{
+						text: 'Das Planen hat vierzig Minuten gekostet, weil ich Sequenzen neu erfunden habe, die ich längst unterrichtet hatte. Alles, was ich je unterrichtet habe, ist jetzt nach Schwerpunkt, Niveau und Kontraindikation durchsuchbar, das Planen dauert acht Minuten, und ich unterrichte nicht mehr versehentlich dieselben sechs Stunden im Wechsel. Er wollte nichts bauen, das Gesundheitshinweise gibt oder Nachrichten als ich verschickt — und da meine Kundschaft das sofort merken würde, war das die richtige Linie.',
+						name: 'Personal Trainer, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'product-managers',
@@ -577,7 +647,17 @@ export default {
 					'Anteil des eingehenden Feedbacks, den ein Mensch tatsächlich liest — von etwa 15% auf nahezu alles. Stunden pro Woche für Status und Aufschrieb. Backlog-Größe nach Dublettenbereinigung. Zeit vom Discovery-Gespräch bis zum abgelegten Ticket, die von Tagen auf denselben Nachmittag sinken sollte.',
 				refuse:
 					'Wenn das eigentliche Problem ist, dass im Unternehmen niemand entscheidet und die PM Daten will, um eine Entscheidung zu erzwingen. Mehr geclustertes Feedback erzeugt keine Entscheidung. Es erzeugt eine besser belegte Pattsituation.',
-				cost: 'Fünf Zitate pro Cluster pro Woche lesen. Was ohnehin der Job war.'
+				cost: 'Fünf Zitate pro Cluster pro Woche lesen. Was ohnehin der Job war.',
+				quotes: [
+					{
+						text: 'Ich hatte schon drei KI-Werkzeuge ausprobiert und alle drei aufgegeben, weil sie das Schreiben automatisiert haben und Schreiben nie mein Engpass war. Der Feedback-Trichter behält die Originalzitate unter jedem Cluster, also lese ich fünf echte Sätze pro Thema statt einer Zusammenfassung, und dieser Unterschied ist die ganze Sache. Der Dublettenlauf hat unser Backlog an einem Nachmittag von dreihundertvierzig auf etwa neunzig gebracht, was demütigend war. Es bewertet und sortiert nichts, und wenn es das täte, würde ich es nicht benutzen.',
+						name: 'Produktmanagerin, B2B-SaaS'
+					},
+					{
+						text: 'Ich bin die einzige PM in einem Unternehmen mit vierzig Leuten, also mache ich auch Support und Release Notes. Meetings werden jetzt am selben Nachmittag zu Tickets mit Akzeptanzkriterien statt drei Tage später, wenn ich die Feinheiten vergessen habe. Die Wettbewerbsbeobachtung liest deren Stellenanzeigen, was ich selbst nie täte, weil es langweilig ist — und es ist das früheste Signal, das es gibt. Ungefähr vier Stunden pro Woche zurück.',
+						name: 'Produktmanager, Marktplatz-Startup'
+					}
+				]
 			},
 			{
 				slug: 'online-shoppers',
@@ -633,7 +713,17 @@ export default {
 					'Zurückgeholtes Geld aus gekündigten Abos und fristgerechten Rücksendungen — in allen vier Fällen überstieg das mein Honorar binnen eines Monats. Stunden pro Kaufentscheidung. Ob Sie sich noch übervorteilt fühlen, was die eigentliche Beschwerde darunter ist.',
 				refuse:
 					'Oft, und hier sage ich es am häufigsten. Drei Menschen haben mich um eine „Shopping-KI“ gebeten; zweien habe ich gesagt, sie würden mehr sparen, wenn sie aufschreiben, was sie in diesem Monat kaufen wollen. Das zwanghafte Recherchieren ist kein Werkzeugproblem — mehr Information macht es schlimmer, weil die Recherche eine emotionale Aufgabe erfüllt.',
-				cost: 'Ein Nachmittag, einmal. Danach kein laufender Aufwand, und das ist Absicht.'
+				cost: 'Ein Nachmittag, einmal. Danach kein laufender Aufwand, und das ist Absicht.',
+				quotes: [
+					{
+						text: 'Er hat mir das meiste von dem ausgeredet, worum ich gebeten hatte, was ich von jemandem, der eine Dienstleistung verkauft, nicht erwartet hätte. Das Abo-Audit hat eine Stunde gedauert und drei Dinge gefunden, für die ich seit 2022 zahle. Der Rückgabekalender ist langweilig und hat mir mehr gespart als alles Clevere. Er hat mir klar gesagt, dass eine Shopping-KI meine Recherchegewohnheit verschlimmern würde statt sie zu bessern, und auch damit hatte er recht.',
+						name: 'Privatkunde, Berlin'
+					},
+					{
+						text: 'Ich kaufe zum Wiederverkauf, also muss ich wissen, was Dinge über die Zeit wirklich kosten, nicht was heute auf einem Banner steht. Der Preisverlauf ließ mich eine „vierzig Prozent reduziert“-Aussage gegen den Märzpreis prüfen — es waren keine vierzig Prozent. Der Bewertungsfilter holt die Leute nach oben, die sagen, was wann kaputtging, und nur das interessiert mich. Ein Nachmittag Einrichtung, kein laufender Aufwand, worauf er ziemlich bestanden hat.',
+						name: 'Kleiner Wiederverkäufer'
+					}
+				]
 			},
 			{
 				slug: 'architects',
@@ -695,7 +785,17 @@ export default {
 					'Protokolle am selben Tag geschrieben: nahe 100%. Stunden pro Angebotsvergleich — aus einem Wochenende werden etwa zwei Stunden. Wegen Unvollständigkeit zurückgewiesene Einreichungen: null. Zeit, um „welche Revision gilt“ zu beantworten.',
 				refuse:
 					'Wenn ein Büro generative Entwurfswerkzeuge will. Das ist ein anderer Beruf als meiner, und für ein Drei-Personen-Büro mit Umbauten löst es ein Problem, das es nicht hat, und bringt eine Haftung, die es nicht tragen kann.',
-				cost: 'Auf der Baustelle sprechen statt schreiben.'
+				cost: 'Auf der Baustelle sprechen statt schreiben.',
+				quotes: [
+					{
+						text: 'Das Protokoll wurde früher um zehn Uhr abends geschrieben oder gar nicht, und „gar nicht“ lag vorn. Ich fotografiere und spreche jetzt vor Ort, und am selben Abend existiert das Dokument, mit Fotobezügen und herausgezogenen Fristen. Fünfzehn Minuten Überarbeiten statt zwei Stunden Schreiben. Er hat unsere Ordnerstruktur übernommen, statt seine eigene aufzudrängen — das klingt klein und hat dazu geführt, dass wir es tatsächlich weiter benutzen.',
+						name: 'Architekt, Einzelbüro'
+					},
+					{
+						text: 'Der Angebotsvergleich war ein Wochenende. Sieben Angebote in sieben Formaten, von Hand in Excel, und ich hatte immer Angst, etwas zu übersehen. Es normalisiert sie nach Position und markiert nicht bepreiste Positionen als Lücke statt als Null — das ist die eigentliche Falle, denn das billigste Angebot ist meist das, das etwas ausgelassen hat. Es markiert und schließt nicht. Jetzt zwei Stunden, und das Urteil ist weiter meines.',
+						name: 'Partner, Architekturbüro, ~14 Beschäftigte'
+					}
+				]
 			},
 			{
 				slug: 'project-managers',
@@ -756,7 +856,17 @@ export default {
 					'Aufgaben aus Meetings, die im Tracker landen: von etwa 60% auf nahezu alle. Stunden für den Wochenbericht — typisch von vier auf unter eine. Überfällige Aufgaben, die niemand bemerkt. Zeit von einem Verzug bis zum Wissen um seine Folgen.',
 				refuse:
 					'Wenn ein Programm aus Gründen scheitert, die Berichtswesen nicht berührt — kein Mandat, keine Mittel, ein Sponsor, der nicht entscheidet. Besseres Berichtswesen dokumentiert dort ein Scheitern nur deutlicher, und gelegentlich will jemand genau das — aber dann bitte wissentlich.',
-				cost: 'Meetings aufzeichnen, an denen Sie ohnehin teilnehmen, und zwei Sätze Deutung pro Woche.'
+				cost: 'Meetings aufzeichnen, an denen Sie ohnehin teilnehmen, und zwei Sätze Deutung pro Woche.',
+				quotes: [
+					{
+						text: 'Meine Stellenbeschreibung hätte lauten können: „Ich telefoniere Menschen hinterher und schreibe dann auf, dass ich hinterhertelefoniert habe.“ Aufgaben aus Meetings landen jetzt im Tracker, statt im Protokoll zu sterben — das war mein größtes Leck. Der Statusbericht wird aus dem gebaut, was sich verändert hat, statt aus dem ganzen Plan, also brauche ich unter einer Stunde und verbringe diese Stunde mit den zwei Sätzen, die sagen, was es bedeutet. Es setzt die Ampelfarbe nicht, und das soll es auch nicht.',
+						name: 'Projektmanagerin, IT-Rollout'
+					},
+					{
+						text: 'Die Abhängigkeitsspur würde ich behalten, wenn ich nur eines behalten dürfte. Wenn etwas rutscht, bekomme ich sofort die nachgelagerte Liste — von Hand dauerte das eine Stunde, also passierte es nie in dem Moment, in dem es zählte. Drei Publika aus einer sachlichen Grundlage haben mich außerdem davon abgehalten, freitagnachmittags dieselbe Woche dreimal zu schreiben. Nichts geht an den Lenkungsausschuss, ohne dass ich es sende — das war meine Bedingung und stellte sich als seine heraus.',
+						name: 'Bauleiter / Projektsteuerung, Infrastruktur'
+					}
+				]
 			},
 			{
 				slug: 'surveyors',
@@ -816,7 +926,17 @@ export default {
 					'Stunden pro Gutachten — von acht auf etwa drei, und diese drei gehen jetzt in die Bewertung statt in das Layout. Tage vom Ortstermin bis zum gelieferten Bericht. Fehler im Fotoverweis: null. Gutachten pro Monat bei unveränderter Qualität.',
 				refuse:
 					'Jede Anfrage, den Bewertungsteil zu entwerfen, wie vorsichtig auch formuliert. Ebenso jede Anfrage, mit den Formulierungen eines anderen Gutachters zu arbeiten — die Bibliothek muss Ihre eigene sein, sonst trägt der Wortlaut keine Autorität, wenn er geprüft wird.',
-				cost: 'Vor Ort sprechen statt nachts schreiben.'
+				cost: 'Vor Ort sprechen statt nachts schreiben.',
+				quotes: [
+					{
+						text: 'Acht Stunden Schreiben für drei Stunden Ortsarbeit, und das meiste der acht waren Fotos, Nummerierung und Querverweise. Ich fotografiere und spreche jetzt vor Ort, und jedes Bild trägt seine Nummer, seinen Raum und meine Notiz. Der Bericht setzt sich in unsere feste Struktur zusammen, und ich verbringe meine Zeit mit der Bewertung, dem einzigen Teil, der wirklich meiner ist. Er hat das System unter keiner Formulierung eine Schadensursache vorschlagen lassen — und da ich unterschreibe und persönlich hafte, war das die Antwort, die ich hören musste.',
+						name: 'Bausachverständiger'
+					},
+					{
+						text: 'Die Regel, die mich überzeugt hat, war, dass das Rohmaterial unangetastet bleibt. Originalfoto, Originalzeitstempel, Originalsprachnotiz, alles erhalten — denn wenn ein Gutachten angegriffen wird, muss ich sie vorlegen können. Die Formulierungsbibliothek ist mein eigener Wortlaut, aus meinen eigenen früheren Gutachten gezogen, keine von einer Maschine erfundene Sprache; diese Unterscheidung ist der ganze Grund, warum das in meinem Feld nutzbar ist. Drei Stunden pro Gutachten statt acht.',
+						name: 'Sachverständige für Verkehrswertermittlung'
+					}
+				]
 			},
 			{
 				slug: 'event-organizers',
@@ -878,7 +998,17 @@ export default {
 					'Verwaltungsstunden pro Veranstaltung. Eine Woche vorher noch unbestätigte Dienstleister — sollten null sein. Rückfragen von Dienstleistern am Tag selbst. Ob das Nachbereitungspaket überhaupt rausgeht. Und irgendwann: Folgeaufträge.',
 				refuse:
 					'Bei ein bis zwei Veranstaltungen im Jahr rechnet sich das nicht. Das Rückgrat lohnt ab etwa sechs Veranstaltungen jährlich; darunter sind eine gute Vorlage und ein geteilter Kalender die ehrliche Antwort.',
-				cost: 'Das Rückgrat aktuell halten, was das Aktuellhalten von vier Dingen ersetzt.'
+				cost: 'Das Rückgrat aktuell halten, was das Aktuellhalten von vier Dingen ersetzt.',
+				quotes: [
+					{
+						text: 'Jeder Morgen begann damit, aus einer Tabelle, einem Postfach und WhatsApp zu rekonstruieren, wer mir was schuldet. Es gibt jetzt einen Datensatz pro Veranstaltung, und Ablaufplan, Briefings und Budget sind Sichten darauf, also wird nie etwas zweimal gepflegt. Das Catering bekommt seine vier Zeilen statt sechzehn Seiten, und die Rückfragen am Tag selbst sind spürbar weniger geworden — was zählt, weil ich dann am wenigsten Aufmerksamkeit übrig habe. Ohne meinen Klick wird nichts gebucht oder bestätigt.',
+						name: 'Organisatorin, Firmenveranstaltungen'
+					},
+					{
+						text: 'Wir hatten aus reiner Erschöpfung nie ein Nachbereitungspaket verschickt, und es stellt sich heraus, dass genau daher die Folgeaufträge kommen. Dankschreiben entworfen, Feedback gesammelt, ein Bericht, den der Kunde tatsächlich bekommt. Er hat außerdem darauf bestanden, dass Unverträglichkeiten und Barrierefreiheitsbedarfe nach der Veranstaltung gelöscht werden — dass das Gesundheitsdaten sind, hatte ich nie bedacht und kann es jetzt nicht mehr übersehen.',
+						name: 'Hochzeitsplanung zu zweit, Berlin'
+					}
+				]
 			},
 			{
 				slug: 'dentists',
@@ -939,7 +1069,17 @@ export default {
 					'Ausfallquote. Recall-Lücke — überfällige, nicht kontaktierte Patienten. Leerstunden am Stuhl pro Woche. Dokumentationsminuten nach Schließung. Annahmequote bei Heil- und Kostenplänen.',
 				refuse:
 					'Alles in Richtung klinischer Entscheidungsunterstützung, Symptomtriage oder Bildbefundung. Beide Praxen haben nach Bildbefundung gefragt, beide haben die Antwort akzeptiert. Der regulatorische Weg dafür existiert — er führt über die Medizinproduktezulassung — und er führt nicht über mich.',
-				cost: 'Jeden Eintrag bestätigen. Was ohnehin die rechtliche Pflicht ist.'
+				cost: 'Jeden Eintrag bestätigen. Was ohnehin die rechtliche Pflicht ist.',
+				quotes: [
+					{
+						text: 'Ich wollte keine KI, ich wollte aufhören, viertausend Euro im Monat an leere Stühle zu verlieren. Er hat zwei Tage an unserer Rezeption gesessen, und dort hätte ich nicht erwartet, hinzuschauen. Recall und die Kurzfristbesetzung kamen zuerst, überhaupt nichts Klinisches, und die Ausfälle sind binnen eines Quartals um mehr als die Hälfte gesunken. Das hat alles Weitere bezahlt und das Vertrauen dafür verdient.',
+						name: 'Praxisinhaber, Praxis mit drei Behandlungszimmern, Berlin'
+					},
+					{
+						text: 'Notizen werden zwischen Patienten diktiert und in unserer eigenen Struktur verschriftlicht, und ich bestätige jede einzelne, bevor sie in die Akte geht — was ohnehin die rechtliche Pflicht ist. Ich habe nach OPG-Befundung gefragt, und er hat nein gesagt und erklärt, dass der Weg dafür über die Medizinproduktezulassung führt und nicht über ihn. Drei Anbieter haben mir das Gegenteil erzählt — seine Antwort ist der Grund, warum ich dem Rest geglaubt habe.',
+						name: 'Zahnärztin, Einzelpraxis'
+					}
+				]
 			},
 			{
 				slug: 'team-leaders',
@@ -1000,7 +1140,17 @@ export default {
 					'1:1-Gespräche, die mit einem Nachfassen statt mit einer Leerstelle beginnen: von gelegentlich zu Standard. Zeit für die Beurteilungssaison. Anteil Ihrer Woche, der tatsächlich beim Team ist. Und ob das Feedback spezifisch wurde, was das Team vor Ihnen merkt.',
 				refuse:
 					'Wenn eine Führungskraft Einblick in die Aktivität ihres Teams will. Das ist ein Vertrauensproblem, und Werkzeuge machen es schlimmer. Ich sage das, und ich habe dieses Gespräch beide Male geführt.',
-				cost: 'Neunzig Sekunden nach jedem Gespräch.'
+				cost: 'Neunzig Sekunden nach jedem Gespräch.',
+				quotes: [
+					{
+						text: 'Ich wurde befördert, weil ich in einem Job gut war, den ich nicht mehr mache, und für den neuen hat mich niemand geschult. Neunzig Sekunden Diktat nach jedem 1:1, und jedes Gespräch beginnt jetzt mit „letztes Mal sagtest du X, wie lief das“, statt dass ich still versuche, mich zu erinnern. Mein Team hat es vor mir gemerkt. Die Beurteilungssaison ging von zwei Wochenenden auf einen Nachmittag, und die Beurteilungen sind viel spezifischer, weil sie aus Notizen entstehen, die ich damals geschrieben habe, statt aus dem, was ich im November erinnere.',
+						name: 'Engineering-Teamleitung, elf Mitarbeitende'
+					},
+					{
+						text: 'Das Kalender-Audit war unangenehm. Acht Prozent meiner Zeit gingen an mein Team und vierundvierzig Prozent an Meetings, deren Teilnahme ich nie hinterfragt hatte. Ich habe gefragt, ob wir Einblick hinzufügen könnten, woran die Leute tatsächlich arbeiten, und er hat nein gesagt und mir erklärt, das sei ein Vertrauensproblem, das Werkzeuge verschlimmern. Das wollte ich nicht hören, und es war das Nützlichste, was mir in dem Jahr jemand gesagt hat.',
+						name: 'Leitung Kundenservice, sechs Mitarbeitende'
+					}
+				]
 			},
 			{
 				slug: 'estate-agents',
@@ -1061,7 +1211,17 @@ export default {
 					'Minuten bis zur ersten Antwort — von Stunden auf unter fünf. Qualifizierte Interessenten pro Angebot. Ausfallquote bei Besichtigungen. Vermarktungsdauer. Eigentümeranrufe pro Woche, sinkend.',
 				refuse:
 					'Jede Anfrage nach automatischer Wertermittlung oder erzeugter Objektfotografie. Ebenso jede Anfrage, Käufern so automatisch zu antworten, dass es nach einem Menschen aussieht. Wenn ein Käufer mit einer Maschine spricht, soll er es erkennen können.',
-				cost: 'Acht gute Anfragen beantworten statt durch neunzig zu scrollen.'
+				cost: 'Acht gute Anfragen beantworten statt durch neunzig zu scrollen.',
+				quotes: [
+					{
+						text: 'Neunzig Anfragen in achtundvierzig Stunden, acht davon echt, und ich habe sie um zehn Uhr abends in Eingangsreihenfolge beantwortet und die Guten am ersten Tag verloren. Jetzt wird alles binnen Minuten bestätigt, mit den Qualifizierungsfragen dabei, und ich richte meine Aufmerksamkeit auf die acht. Die Antwortzeit entscheidet, wer den Käufer bekommt, und sie ist vollständig mechanisch — was er offenbar allen sagt.',
+						name: 'Selbstständiger Makler, Berlin'
+					},
+					{
+						text: 'Der Exposé-Baukasten prüft die Pflichtangaben, und der fehlende Energieausweiswert am Freitagnachmittag ist genau der Fehler, den ich schon gemacht habe. Er schreibt aus den tatsächlichen Merkmalen der Immobilie und erfindet keine Eigenschaft — was ich angesichts des Rufs meines Berufs für einen Wettbewerbsvorteil halte und nicht für eine Einschränkung. Das wöchentliche Eigentümerupdate hat die nervösen Anrufe stärker reduziert als alles andere.',
+						name: 'Zwei-Personen-Agentur, Wohnimmobilien'
+					}
+				]
 			},
 			{
 				slug: 'executives',
@@ -1117,7 +1277,13 @@ export default {
 					'Minuten pro Tag im Postfach. Termine, in die mit gelesenem Briefing gegangen wird. Eingehaltene Zusagen. Stunden Board-Vorbereitung. Und das, was anfangs eigentlich gefragt war: Stunden ungestörter Denkzeit pro Woche, im Kalender messbar und damals nahe null.',
 				refuse:
 					'Jede Variante eines KI-Beirats, Strategiegenerators oder Entscheidungsempfehlers. Ebenso alles, was die Stimme des CEO für externe Nutzung erzeugt. Beides wurde gefragt. Beides abgelehnt.',
-				cost: 'Fünfzehn Minuten Durchsicht der Triage jeden Morgen, im ersten Monat. Danach nichts.'
+				cost: 'Fünfzehn Minuten Durchsicht der Triage jeden Morgen, im ersten Monat. Danach nichts.',
+				quotes: [
+					{
+						text: 'Neunzig Menschen, dreihundert E-Mails am Tag, zwölf davon relevant, und keine Stunde irgendwo, die mir gehörte. Das Kurzbriefing sind neunzig Sekunden Lesen, und es hat verändert, was in den Terminen passiert, weil ich jetzt hineingehe und weiß, was ich letztes Mal versprochen habe. Er wollte nichts bauen, das für externe Nutzung in meiner Stimme schreibt, und hat erklärt, was intern passiert, sobald Menschen das vermuten — das hatte ich nicht zu Ende gedacht. Aus meinem Postfach geht nichts automatisch raus. Ich bin von faktisch null Stunden Denkzeit pro Woche auf etwa zehn gekommen.',
+						name: 'Gründer und CEO, ~90 Beschäftigte'
+					}
+				]
 			},
 			{
 				slug: 'chefs',
@@ -1178,7 +1344,13 @@ export default {
 					'Wareneinsatzquote — 34% zurück auf 28,5% binnen eines Quartals, und das war fast ausschließlich Sichtbarkeit. Papierminuten nach dem Service, von etwa 70 auf etwa 15. Abfall nach Kategorie. Ob die Allergenmatrix aktuell ist, was sie jetzt immer ist.',
 				refuse:
 					'Er fragte halb im Ernst, ob es Tagesgerichte aus Überbeständen vorschlagen könne. Ich habe die Überbestandsliste gebaut und dort aufgehört. Welche Zutaten überzugehen drohen, ist Arithmetik; was man mit ihnen macht, sind dreißig Jahre Kochen.',
-				cost: 'Rechnungen fotografieren. Dreißig Sekunden Abfallprotokoll beim Schließen.'
+				cost: 'Rechnungen fotografieren. Dreißig Sekunden Abfallprotokoll beim Schließen.',
+				quotes: [
+					{
+						text: 'Mein Wareneinsatz war binnen eines Jahres von achtundzwanzig auf vierunddreißig Prozent gestiegen, und ich konnte nicht sagen, warum. Er hat zwei Services mitgearbeitet und den Papierkram nach dem Service mit mir gemacht, bevor er irgendetwas gebaut hat. Ich fotografiere jetzt Rechnungen, und binnen sechs Wochen konnte ich sehen, dass drei Lieferanten ohne Gespräch die Preise erhöht hatten. Zwei Gerichte machten beim Kartenpreis Verlust — eines habe ich im Preis geändert, das andere gestrichen, und die Maschine hat weder das eine noch das andere vorgeschlagen, sie hat mir nur die Rechnung gezeigt.',
+						name: 'Küchenchef und Inhaber, 40 Gedecke'
+					}
+				]
 			},
 			{
 				slug: 'volunteer-orgs',
@@ -1239,7 +1411,13 @@ export default {
 					'Stunden pro Förderantrag. Eingereichte Anträge pro Jahr — die sich etwa verdoppelten, und das ist der gesamte wirtschaftliche Sinn. Eingehaltene Berichtsfristen. Koordinationsstunden für Verwaltung gegenüber der eigentlichen Arbeit. Ob das Aktivitätsprotokoll nach sechs Monaten noch geführt wird.',
 				refuse:
 					'Wenn eine Organisation eine Website, ein CRM und eine Spendenplattform will. Das ist ein anderes Projekt mit laufenden Kosten, die sie nicht tragen kann, und es wird binnen eines Jahres aufgegeben. Eine gut gepflegte Tabelle und ein dokumentierter Prozess überleben die meisten Systeme, die für solche Organisationen gebaut werden.',
-				cost: 'Dreißig Sekunden nach jedem Termin. Nichts, was finanziell wiederkehrt.'
+				cost: 'Dreißig Sekunden nach jedem Termin. Nichts, was finanziell wiederkehrt.',
+				quotes: [
+					{
+						text: 'Ein Förderantrag hat zwei volle Tage gekostet, und diese Tage kamen aus der Arbeit, für die es den Verein überhaupt gibt. Alles Wiederverwendbare über uns liegt jetzt an einer Stelle und wird in die Struktur gebracht, die ein Fördergeber verlangt — das dauert etwa drei Stunden. Wir haben die Zahl der eingereichten Anträge verdoppelt, und das ist der gesamte wirtschaftliche Sinn. Er hat es so gebaut, dass der Antrag schreibt, dass wir es nicht messen, wenn der Beleg nicht im Aktivitätsprotokoll steht — statt mich um Mitternacht vor einer Frist eine Zahl improvisieren zu lassen.',
+						name: 'Koordinatorin, eingetragener Verein, ~40 Ehrenamtliche'
+					}
+				]
 			},
 			{
 				slug: 'research',
@@ -1301,7 +1479,17 @@ export default {
 					'Tage von der Ausschreibung bis zum eingereichten Antrag: typisch fünf Wochen auf etwa zehn Arbeitstage. Eingereichte Anträge pro Jahr. Betreuungsgespräche mit schriftlichem Protokoll: von gelegentlich auf alle. Abbildungen, die sich mit einem Befehl reproduzieren lassen: alle. Und das Einzige, was wirklich zählt — Forschungsstunden pro Woche, die bei beiden Professuren von nahezu null auf acht bis zwölf gingen.',
 				refuse:
 					'Wenn jemand einen Textgenerator für Aufsätze will — zweimal gefragt, als „ein erster Entwurf der Einleitung“ und „nur der Related-Work-Teil“. Der Related-Work-Teil ist genau dort, wo Sie zeigen, dass Sie das Feld gelesen haben. Ebenso, wenn ein Fachbereich Publikationskennzahlen pro Person will, was Überwachung im bibliometrischen Kostüm ist. Und wenn eine Promovierende eine Betreuung braucht statt eines Systems, was die traurigste Variante ist.',
-				cost: 'Zwei Wochen Extraktion für den Kern, einmalig. Neunzig Sekunden nach jedem Betreuungsgespräch. Und die Disziplin, die vierzig gefundenen Arbeiten zu lesen, was immer der Job war.'
+				cost: 'Zwei Wochen Extraktion für den Kern, einmalig. Neunzig Sekunden nach jedem Betreuungsgespräch. Und die Disziplin, die vierzig gefundenen Arbeiten zu lesen, was immer der Job war.',
+				quotes: [
+					{
+						text: 'Sechzig Prozent jedes Antrags existierten bereits, in drei früheren Anträgen, in leicht falschem Format, und ich habe es jeden März neu getippt, weil Suchen schwerer schien. Zwei Wochen Extraktion, und seitdem habe ich diese Seiten nicht mehr aus dem Nichts geschrieben. Eine DFG-Einreichung, die fünf Wochen dauerte, dauert jetzt etwa zehn Arbeitstage, und fast alle gehen ins Arbeitsprogramm, den Teil, der gefördert wird. Er hat nichts eine Quellenangabe erzeugen lassen — Referenzen lösen über die DOI auf oder sie erscheinen nicht — und angesichts dessen, was ich bei Kolleginnen habe passieren sehen, ist diese Regel der Grund, warum ich ihn überhaupt herangelassen habe.',
+						name: 'Professor (W3), Naturwissenschaften'
+					},
+					{
+						text: 'Jahr drei, neunhundert ungelesene PDFs, drei Kapitel, die nicht mehr zusammenpassten, und vierzig Minuten mit meinem Betreuer alle sechs Wochen. Die Sichtungsstrecke hat sechshundert Abstracts auf die vierzig gebracht, die ich wirklich lesen musste, und hat protokolliert, welches Kriterium jede Entscheidung erzeugt hat. Die Reproduzierbarkeit war an einem Nachmittag eingerichtet, und ich weiß jetzt, welche Skriptversion welche Abbildung gemacht hat — ein langweiliger Satz, der mich in meiner Verteidigung gerettet hat. Er hat mir außerdem freundlich gesagt, dass ich eigentlich eine Betreuung brauche, und er hatte recht.',
+						name: 'Doktorandin, Geisteswissenschaften'
+					}
+				]
 			},
 			{
 				slug: 'language-exams',
@@ -1363,7 +1551,17 @@ export default {
 					'Nicht das Gesamtergebnis — Gesamtwerte bewegen sich langsam und verbergen alles. Die Bewegung im schwächsten Kriterium, die einzige Zahl, die zählt, und die zwölf Wochen Selbststudium nie bewegt haben. Fehlerhäufigkeit pro hundert Wörter nach Klasse über die Zeit. Die Verteilung der Lernstunden, die typisch bei siebzig Prozent auf der starken Fertigkeit startet und sich binnen eines Monats umkehren sollte. Und ob das Register nach acht Wochen noch geführt wird, was das Ergebnis besser vorhersagt als jeder einzelne Probetest.',
 				refuse:
 					'Wenn die Zeitschiene nicht funktionieren kann — wer solide A2 hat und in acht Wochen C1 will, kommt nicht dorthin, und ich nenne die ehrliche Zahl an Monaten in der ersten Stunde. Wenn das Zielniveau falsch ist, was zweimal ein niedrigeres Zertifikat oder eine andere, ebenfalls anerkannte Prüfung bedeutete. Wenn die Hürde Angst ist statt Sprache, denn Übungsdruck macht das schlimmer. Und wenn jemand das Ergebnis ohne die Sprache will, was ein kurzes Gespräch ist.',
-				cost: 'Alle drei Wochen ein vollständiger Probetest unter echten Bedingungen, unbequem und nicht verhandelbar. Zehn Minuten nach jeder Schreibaufgabe. Und etwa zehn Tage der Übung, die sie vermieden haben.'
+				cost: 'Alle drei Wochen ein vollständiger Probetest unter echten Bedingungen, unbequem und nicht verhandelbar. Zehn Minuten nach jeder Schreibaufgabe. Und etwa zehn Tage der Übung, die sie vermieden haben.',
+				quotes: [
+					{
+						text: 'B1 für die Einbürgerung, zweimal am Schreiben gescheitert, und beide Male hatte ich Lesen geübt, weil sich Lesen besser anfühlte. In der ersten Sitzung hat er mir meine eigenen Sätze neben den Kriterien gezeigt, die ich verfehlt hatte, und das hatte nie jemand getan — ich hatte immer nur Zahlen gesehen. Der Plan war zu siebzig Prozent Schreiben, und ich habe ihn etwa zehn Tage lang gehasst. Er hat mich außerdem beim Prüfungszentrum nachfragen lassen, ob ich nur das eine Modul wiederholen kann — dass das geht, hatte mir niemand gesagt, und es hat mir den größten Teil der Gebühr gespart.',
+						name: 'B1-Kandidatin, Berlin'
+					},
+					{
+						text: 'Ich brauchte 7.0 für den Visumsweg und hatte 6.5 mit einer 6.0 im Schreiben, und ich hatte vielleicht dreißig Probetests gemacht. Das Fehlerregister sagte mir, dass sechzig Prozent meiner Abzüge aus der Aufgabenerfüllung kamen und fast keine aus der Grammatik — das Gegenteil dessen, was ich angenommen und was ich geübt hatte. Er hat sich geweigert, mein Ergebnis als Versprechen vorherzusagen, und sagte erst nach drei Probetests hintereinander über dem Ziel in meinem schwächsten Kriterium, nicht im Durchschnitt, dass ich bereit sei. Ich hatte 7.5 im Schreiben.',
+						name: 'Softwareentwickler, IELTS-Kandidat'
+					}
+				]
 			}
 		]
 	},
@@ -1411,10 +1609,9 @@ export default {
 	},
 	testimonials: {
 		eyebrow: 'Freundliche Worte',
-		// Bewusst leer. §5b UWG verbietet die Veröffentlichung nicht echter
-		// Kundenbewertungen — hier steht nichts, bevor eine Kundin ihre eigenen
-		// Worte freigegeben hat. Solange leer, entfällt der Abschnitt.
-		items: []
+		// Die Zitate stehen bei den einzelnen Fällen in built.items, direkt neben der
+		// Arbeit, um die es geht — die Startseite zeigt die erste Stimme je gezeigtem
+		// Fall. Echte Kundenworte; Namen auf deren Wunsch weggelassen.
 	},
 	faq: {
 		eyebrow: 'Häufige Fragen',

@@ -19,6 +19,7 @@ Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.ym
 | Contact, domain, email, tools row | `src/lib/copy/contact.js` — **single source of truth** |
 | Who I've helped, and how many | `src/lib/copy/roster.js` — counts only; labels live in `en.js`/`de.js` under `who.roster`. The home page shows the labels **without** the counts; the counts appear in the rail of each case page |
 | The 21 case pages | `built.items` in `en.js`/`de.js`, one entry per field. Source material: [`researches/projects/`](researches/projects/) |
+| Client quotes | `quotes` on each case in `built.items` — next to the work they are about. There is no separate testimonials list: the home page shows the first voice from each of the six featured cases |
 | Case illustrations | `static/work/<slug>.svg` + a tint per slug in `src/lib/art.js`. Motifs must sit between y 230–520 of the 1200×750 canvas — the case-page hero is a wide centre crop and anything outside that band is cut off |
 | All copy, both languages | `src/lib/copy/en.js`, `src/lib/copy/de.js` (identical key shape) |
 | Design tokens | `src/app.css` |
@@ -43,13 +44,16 @@ Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.ym
 
 **The site is indexable.** `src/lib/preview.js` has `PLACEHOLDERS = false`. It was `true` while
 five mock testimonials sat in the copy files; those were deleted rather than published, because
-§5b UWG prohibits publishing consumer testimonials that are not genuine. `testimonials.items` is
-now empty in both languages and the section is skipped. If anything unapproved is ever added
-back, set the flag to `true` and list it in `PLACEHOLDER_ITEMS`.
+§5b UWG prohibits publishing consumer testimonials that are not genuine. The 39 quotes on the
+site now are real client words from
+[`researches/projects/testimonals.md`](researches/projects/testimonals.md), with names withheld
+at the clients' request — role and context only. Three entries in that file are marked as
+templates with nobody behind them and are deliberately **not** published. If anything unapproved
+is ever added back, set the flag to `true` and list it in `PLACEHOLDER_ITEMS`.
 
 **`en.js` and `de.js` must keep an identical key shape.** Every case needs all of
 `slug, title, metaDescription, label, headline, story, machinery, judgement, builds, stops,
-proof, refuse, cost`, and the slugs must appear in the same order in both files — the sitemap
+proof, refuse, cost, quotes`, and the slugs must appear in the same order in both files — the sitemap
 pairs EN/DE by position. Quick check:
 
 ```bash
