@@ -67,6 +67,9 @@
 
 	// Marquee needs the list twice so the loop has no visible seam.
 	const marquee = [...tools, ...tools];
+	// Same doubling trick as the tools row: the track scrolls to -50%, so the
+	// list has to be rendered twice for the loop to be seamless.
+	const proMarquee = [...roster, ...roster];
 
 	function toggleSound() {
 		sound = !sound;
@@ -138,7 +141,7 @@
 
 	// All six use cases on the home page; art comes from the shared map so each card
 	// matches its detail page.
-	const works = featured(copy.built.items, 6);
+	const works = featured(copy.built.items);
 	// One client voice per featured case, so the quotes below match the six cases
 	// shown above. The words live on the case items — this is not a second copy.
 	const voices = works.map((w) => w.quotes[0]).filter(Boolean);
@@ -384,6 +387,23 @@
 		</div>
 	</section>
 
+	<!-- Professions, above the tools row and running slower so the two read as
+	     separate bands rather than one blur. Every label links to its case. -->
+	<div class="tools-strip pro-strip">
+		<span class="meta tools-label">{copy.who.eyebrow}</span>
+		<div class="rail">
+			<ul class="track track-slow" aria-label={copy.who.eyebrow}>
+				{#each proMarquee as group, i}
+					<li aria-hidden={i >= roster.length ? 'true' : undefined}>
+						<a href="{base}{isEn ? '' : '/de'}/work/{group.slug}/" tabindex={i >= roster.length ? -1 : undefined}
+							>{copy.who.roster[group.slug]}</a
+						>
+					</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
+
 	<!-- Tools, deliberately not framed as clients. Marquee pauses on hover and
 	     holds still under prefers-reduced-motion. -->
 	<div class="tools-strip">
@@ -425,22 +445,6 @@
 				</article>
 			{/each}
 		</div>
-	</section>
-
-	<section class="wrap" use:fade>
-		<h2 class="sr">{copy.studio.statsLabel}</h2>
-		<div class="row-head">
-			<span class="meta" aria-hidden="true">{copy.studio.statsLabel}</span>
-		</div>
-		<!-- Ascending tiles: bottoms align, heights climb left to right -->
-		<dl class="figures">
-			{#each copy.studio.stats as stat, i}
-				<div style="--step:{i}">
-					<dt>{stat.value}</dt>
-					<dd><span class="corner" aria-hidden="true"></span>{stat.label}</dd>
-				</div>
-			{/each}
-		</dl>
 	</section>
 
 	<section class="wrap" id="roster" use:fade>
@@ -574,7 +578,6 @@
 					<a class="btn" href="mailto:{contact.email}">{copy.contactSection.form.email}</a>
 				</div>
 				<p class="hero-note">
-					<img src="{base}/moha-face.webp" alt="" width="240" height="240" />
 					<span>{noteParts[0]}<strong>{contact.city}</strong>{noteParts[1] ?? ''}</span>
 				</p>
 				{#if contact.address}
@@ -1090,6 +1093,25 @@
 		animation-play-state: paused;
 	}
 
+	/* Slower than the tools row so the two bands read as separate. */
+	.track-slow {
+		animation-duration: 96s;
+	}
+
+	.pro-strip {
+		border-bottom: 0;
+		background: transparent;
+	}
+
+	.track-slow a {
+		color: var(--muted);
+		text-decoration: none;
+	}
+
+	.track-slow a:hover {
+		color: var(--accent);
+	}
+
 	/* Half of -100% because the list is rendered twice */
 	@keyframes scroll {
 		from {
@@ -1144,12 +1166,13 @@
 	   Work grid
 	   ============================================================ */
 	/* Two columns, so four cases land as a 2x2 with no orphan row. */
-	/* Three per row, not two: with 21 cases the old wide plates pushed everything
-	   below them off the first screen. */
+	/* Three per row and deliberately small: nine cases have to fit in roughly the
+	   room six used to take, so the plate is a shallow band and the type drops a
+	   step. The full-size treatment lives on /work/. */
 	.works {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: clamp(1.5rem, 3vw, 2.25rem);
+		gap: clamp(1.25rem, 2.5vw, 1.75rem);
 	}
 
 	@media (max-width: 62rem) {
@@ -1165,11 +1188,11 @@
 	}
 
 	.plate {
-		aspect-ratio: 16 / 9;
+		aspect-ratio: 2.4 / 1;
 		border-radius: var(--r);
 		border: 1px solid var(--line);
 		overflow: hidden;
-		margin-bottom: 1.25rem;
+		margin-bottom: 0.85rem;
 		transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
 	}
 
@@ -1211,86 +1234,6 @@
 	.works p {
 		color: var(--muted);
 		max-width: 32ch;
-	}
-
-	/* ============================================================
-	   Stats — $$$$ until real figures land
-	   ============================================================ */
-	/* Bottoms align on a single baseline; each tile is taller than the last, so
-	   the row climbs. --step is the index, set inline. */
-	.figures {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		align-items: end;
-		gap: 0;
-		margin: 0;
-	}
-
-	.figures div {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		min-height: calc(9rem + var(--step) * 2.75rem);
-		padding: 1.25rem;
-		border: 1px solid var(--line);
-		/* collapse shared edges so the row reads as one ruled object */
-		margin-left: -1px;
-	}
-
-	.figures dt {
-		font-family: var(--mono);
-		font-size: clamp(1.25rem, 2.4vw, 1.75rem);
-		line-height: 1;
-		color: var(--text);
-	}
-
-	.figures dd {
-		margin: 2.5rem 0 0;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-family: var(--mono);
-		font-size: var(--t-meta);
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: var(--faint);
-	}
-
-	/* Small lime corner tick before each label */
-	.corner {
-		width: 0.4rem;
-		height: 0.4rem;
-		border-top: 1px solid var(--accent);
-		border-right: 1px solid var(--accent);
-		flex-shrink: 0;
-	}
-
-	/* Three tiles never go to two columns — that would orphan the third. Hold
-	   three through tablet widths with the staircase flattened, then drop to one. */
-	@media (max-width: 52rem) {
-		.figures div {
-			min-height: 9rem;
-			padding: 1rem;
-		}
-		.figures dt {
-			font-size: 1.25rem;
-		}
-		.figures dd {
-			margin-top: 1.5rem;
-		}
-	}
-
-	@media (max-width: 40rem) {
-		.figures {
-			grid-template-columns: 1fr;
-		}
-		.figures div {
-			min-height: 0;
-			margin: 0 0 -1px 0;
-		}
-		.figures dd {
-			margin-top: 1rem;
-		}
 	}
 
 	/* ============================================================

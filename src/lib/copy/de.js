@@ -17,7 +17,7 @@ export default {
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline: `Ich bin ${contact.name}. Ich setze mich in Ihre tatsächliche Arbeitswoche, bis ich sehen kann, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und baue bis genau an diese Linie, nie darüber hinaus. Die Maschine übernimmt die Menge. Die Entscheidung bleibt bei Ihnen.`,
 		button: 'Schreiben Sie mir — das erste Gespräch ist kostenlos',
-		note: 'Berlin · Deutsch & Englisch · Sie haben direkt mit mir zu tun'
+		note: 'Berlin · Deutsch & Englisch'
 	},
 	studio: {
 		// Nur das Label — die Liste steht in contact.js. Als Werkzeuge, NICHT als Kunden,
@@ -25,7 +25,6 @@ export default {
 		toolsLabel: 'Womit ich arbeite',
 		worksLabel: 'Anwendungsfälle',
 		capabilitiesLabel: 'So läuft es',
-		statsLabel: 'In Zahlen',
 		bookLabel: 'Termin buchen',
 		bookTitle: 'Wählen Sie eine Zeit, die Ihnen passt.',
 		bookNote: 'Dreißig Minuten, kostenlos, keine Vorbereitung nötig.',
@@ -49,13 +48,7 @@ export default {
 		workCost: 'Was es Sie kostet',
 		bookCta: 'Oder Termin buchen',
 		close: 'Schließen',
-		priceLabel: 'Was es kostet',
-		// Bewusst keine Personenzahl hier — die Zahlen stehen auf den einzelnen Seiten.
-		stats: [
-			{ value: '6', label: 'Jahre KI-Systeme gebaut' },
-			{ value: '19', label: 'Berufsgruppen betreut' },
-			{ value: '4', label: 'Wochen vom ersten Besuch zur Übergabe' }
-		]
+		priceLabel: 'Was es kostet'
 	},
 	who: {
 		eyebrow: 'Für wen ich arbeite',

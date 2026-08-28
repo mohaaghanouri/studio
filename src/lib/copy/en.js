@@ -18,7 +18,7 @@ export default {
 		subline:
 			`I'm ${contact.name}. I sit inside your actual working week until I can see which part of it is machinery pretending to be judgement — then I build up to that line and never across it. The machine takes the volume. You keep the decision.`,
 		button: 'Message me — the first conversation is free',
-		note: 'Based in Berlin · English & German · You deal with me directly'
+		note: 'Based in Berlin · English & German'
 	},
 	studio: {
 		// Label only — the list itself lives in contact.js. Framed as tools, NOT clients,
@@ -26,7 +26,6 @@ export default {
 		toolsLabel: 'Tools I work with',
 		worksLabel: 'Use cases',
 		capabilitiesLabel: 'How it works',
-		statsLabel: 'By the numbers',
 		bookLabel: 'Book a call',
 		bookTitle: 'Pick a time that suits you.',
 		bookNote: 'Thirty minutes, free, no preparation needed.',
@@ -50,13 +49,7 @@ export default {
 		workCost: 'What it costs you',
 		bookCta: 'Or book a call',
 		close: 'Close',
-		priceLabel: 'What it costs',
-		// Deliberately no head-count here — the numbers live on each case page instead.
-		stats: [
-			{ value: '6', label: 'Years building AI systems' },
-			{ value: '19', label: 'Professions served' },
-			{ value: '4', label: 'Weeks from first visit to handover' }
-		]
+		priceLabel: 'What it costs'
 	},
 	who: {
 		eyebrow: 'Who I help',

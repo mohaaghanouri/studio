@@ -32,7 +32,28 @@ export function artFor(slug) {
 	return art[slug] ?? fallback;
 }
 
+// The nine shown on the home page, chosen rather than sliced: the six largest
+// groups, plus research, dentists and product managers for the professional
+// range. Online shoppers is the one large group left off — it is the group he
+// most often turns down, so it is a poor advertisement. Order is deliberate:
+// the flagship first, the strongest number second.
+const FEATURED = [
+	'lawyers',
+	'job-seekers',
+	'research',
+	'content-creators',
+	'home-buyers',
+	'teachers',
+	'dentists',
+	'athletes',
+	'product-managers'
+];
+
 /** The cases shown on the home page, in order. */
-export function featured(items, count = 6) {
-	return items.slice(0, count).map((item) => ({ ...item, ...artFor(item.slug) }));
+export function featured(items) {
+	return FEATURED.map((slug) => {
+		const item = items.find((i) => i.slug === slug);
+		if (!item) throw new Error(`featured: no case for "${slug}"`);
+		return { ...item, ...artFor(slug) };
+	});
 }
