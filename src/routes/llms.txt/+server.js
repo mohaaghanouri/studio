@@ -11,13 +11,27 @@ export const prerender = true;
 // The one-line summaries are deliberately shorter than the site copy: this file is
 // read by machines skimming for what each page covers, not by visitors.
 const blurbs = {
-	'content-creators': 'scripts, captions and research without losing your own voice.',
-	'buying-a-home':
-		'a property search that reads every listing and checks documents before viewing.',
-	'finding-a-job': 'a matching tool that reads each ad in full; around twenty people placed.',
-	research: 'reading, summarising and reference workflows for PhD students and professors.',
-	'marketing-product': 'surveys, catalogues and reports distilled, with sources.',
-	'language-exams': 'IELTS and exam prep aimed at the weakness costing the most points.'
+	'job-seekers': 'an evidence bank and an advert reader that refuses to exaggerate; thirty people placed.',
+	athletes: 'match footage tagged, a scout-ready profile, a log that flags but never prescribes.',
+	'content-creators': 'scripts, captions and clip candidates — no AI voice, no generated script.',
+	'home-buyers': 'a watcher that catches listings in minutes and a rejecter that says why.',
+	lawyers: 'contract intake, versioning and a first-pass Word markup with a reason per change.',
+	teachers: 'worksheet variants and a rubric pass that locates evidence and withholds the grade.',
+	coaches: 'booking first, then voice-note session notes; for three of five the answer was not AI.',
+	'product-managers': 'feedback clustered with raw quotes kept; it never prioritises or scores.',
+	'online-shoppers': 'price history, review filtering and a subscription audit. One afternoon.',
+	architects: 'drawing register, quote normalising, same-evening site Protokolle. Never certifies.',
+	'project-managers': 'meetings to actions and a status report built from the diff, not the state.',
+	surveyors: 'site capture and your own tested wordings; it never assesses, concludes or values.',
+	'event-organizers': 'one event spine; nothing is booked or committed by the machine.',
+	dentists: 'recall, cancellation filling and confirmed dictation notes. Nothing clinical.',
+	'team-leaders': 'a private record per person and 1:1 prep. No ratings, no activity monitoring.',
+	'estate-agents': 'lead triage in minutes and compliant Exposés. No valuation, no generated photos.',
+	executives: 'inbox triage, a pre-meeting brief and a commitment ledger. It never speaks as you.',
+	chefs: 'invoice reading and live dish costing. Food cost 34% back to 28.5%.',
+	'volunteer-orgs': 'a reusable core reshaped per funder; no impact claim is ever generated.',
+	research: 'a proposal core, supervision records and screening. Never generates a citation.',
+	'language-exams': 'a per-criterion diagnostic and an error ledger. It never promises a score.'
 };
 
 const host = site.replace(/^https?:\/\//, '');

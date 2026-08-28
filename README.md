@@ -17,6 +17,9 @@ Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.ym
 | | |
 |---|---|
 | Contact, domain, email, tools row | `src/lib/copy/contact.js` — **single source of truth** |
+| Who I've helped, and how many | `src/lib/copy/roster.js` — counts only; labels live in `en.js`/`de.js` under `who.roster`. The home page shows the labels **without** the counts; the counts appear in the rail of each case page |
+| The 21 case pages | `built.items` in `en.js`/`de.js`, one entry per field. Source material: [`researches/projects/`](researches/projects/) |
+| Case illustrations | `static/work/<slug>.svg` + a tint per slug in `src/lib/art.js`. Motifs must sit between y 230–520 of the 1200×750 canvas — the case-page hero is a wide centre crop and anything outside that band is cut off |
 | All copy, both languages | `src/lib/copy/en.js`, `src/lib/copy/de.js` (identical key shape) |
 | Design tokens | `src/app.css` |
 | The `noindex` safety gate | `src/lib/preview.js` |
@@ -36,8 +39,23 @@ Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.ym
   for *this* site, sequenced, with what's shipped and what needs your hands.
 - [`researches/`](researches/) — the competitor research the design came out of.
 
-## One thing to know before publishing
+## Two things to know
 
-`src/lib/preview.js` has `PLACEHOLDERS = true`, which sends `noindex, nofollow` on every page.
-That is deliberate: the testimonials are unapproved drafts, and publishing invented ones breaks
-§5b UWG. **Flip it only once `PLACEHOLDER_ITEMS` is empty.**
+**The site is indexable.** `src/lib/preview.js` has `PLACEHOLDERS = false`. It was `true` while
+five mock testimonials sat in the copy files; those were deleted rather than published, because
+§5b UWG prohibits publishing consumer testimonials that are not genuine. `testimonials.items` is
+now empty in both languages and the section is skipped. If anything unapproved is ever added
+back, set the flag to `true` and list it in `PLACEHOLDER_ITEMS`.
+
+**`en.js` and `de.js` must keep an identical key shape.** Every case needs all of
+`slug, title, metaDescription, label, headline, story, machinery, judgement, builds, stops,
+proof, refuse, cost`, and the slugs must appear in the same order in both files — the sitemap
+pairs EN/DE by position. Quick check:
+
+```bash
+node -e "Promise.all([import('./src/lib/copy/en.js'),import('./src/lib/copy/de.js')]).then(([a,b])=>{
+  const w=(o,p='')=>Object.entries(o).flatMap(([k,v])=>v&&typeof v==='object'&&!Array.isArray(v)?w(v,p+k+'.'):[p+k]);
+  const e=w(a.default).sort(), d=w(b.default).sort();
+  console.log(e.length===d.length && e.every((k,i)=>k===d[i]) ? 'key shapes match' : 'MISMATCH');
+})"
+```

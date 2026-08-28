@@ -3,6 +3,7 @@
 	import { contact, site } from '$lib/copy/contact.js';
 	import { artFor } from '$lib/art.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
+	import { roster } from '$lib/copy/roster.js';
 
 	export let copy;
 	export let item;
@@ -16,6 +17,8 @@
 	const index = copy.built.items.findIndex((i) => i.slug === item.slug) + 1;
 	const total = copy.built.items.length;
 	const pad = (n) => String(n).padStart(2, '0');
+	// Research and the exam work are services, not head-counted groups — hence undefined.
+	const people = roster.find((r) => r.slug === item.slug)?.count;
 
 	// Two levels only: /work/ has no index page, so an intermediate crumb would
 	// point at a 404. Google's spec omits `item` on the final crumb.
@@ -78,14 +81,16 @@
 			<dt>{copy.studio.workName}</dt>
 			<dd class="rail-name">{item.label}</dd>
 
-			<dt>{copy.studio.workOverview}</dt>
-			<dd>{item.headline}</dd>
+			{#if people}
+				<dt>{copy.studio.workPeople}</dt>
+				<dd>{people}</dd>
+			{/if}
 
 			<dt>{copy.studio.workCovers}</dt>
 			<dd>
 				<ul>
-					{#each item.handles as handle}
-						<li>{handle}</li>
+					{#each item.machinery as line}
+						<li>{line}</li>
 					{/each}
 				</ul>
 			</dd>
@@ -105,6 +110,54 @@
 				<p>{paragraph}</p>
 			{/each}
 		</div>
+
+		<!-- The seam. What the machine takes on the left, what stays the person's on
+		     the right. This split is the whole argument of the site. -->
+		<section class="seam">
+			<div>
+				<p class="meta">{copy.studio.workMachinery}</p>
+				<ul class="mach">
+					{#each item.machinery as line}<li>{line}</li>{/each}
+				</ul>
+			</div>
+			<div>
+				<p class="meta">{copy.studio.workJudgement}</p>
+				<ul class="judge">
+					{#each item.judgement as line}<li>{line}</li>{/each}
+				</ul>
+			</div>
+		</section>
+
+		<section class="builds">
+			<p class="meta">{copy.studio.workBuilds}</p>
+			<dl>
+				{#each item.builds as build}
+					<dt>{build.name}</dt>
+					<dd>{build.text}</dd>
+				{/each}
+			</dl>
+		</section>
+
+		<section class="stops">
+			<p class="meta">{copy.studio.workStops}</p>
+			<h2>{item.stops.title}</h2>
+			{#each item.stops.text as paragraph}<p>{paragraph}</p>{/each}
+		</section>
+
+		<section class="notes">
+			<div>
+				<p class="meta">{copy.studio.workProof}</p>
+				<p>{item.proof}</p>
+			</div>
+			<div>
+				<p class="meta">{copy.studio.workRefuse}</p>
+				<p>{item.refuse}</p>
+			</div>
+			<div>
+				<p class="meta">{copy.studio.workCost}</p>
+				<p>{item.cost}</p>
+			</div>
+		</section>
 
 		<section class="cta">
 			<p class="meta">{copy.contactSection.eyebrow}</p>
@@ -276,8 +329,12 @@
 	}
 
 	/* ---- body ---- */
+	/* A fixed band, not an aspect-ratio: 21/9 pushed the headline below the fold,
+	   and aspect-ratio + max-height made the box derive its width from the clamped
+	   height, so the plate stopped short of the column. */
 	.plate {
-		aspect-ratio: 21 / 9;
+		height: clamp(10rem, 20vw, 16rem);
+		width: 100%;
 		border-bottom: 1px solid var(--line);
 		overflow: hidden;
 	}
@@ -302,6 +359,112 @@
 	.prose p {
 		color: var(--muted);
 		margin-bottom: 1.25rem;
+	}
+
+	.seam,
+	.builds,
+	.stops,
+	.notes {
+		padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 5rem);
+		border-top: 1px solid var(--line);
+	}
+
+	.seam {
+		display: grid;
+		grid-template-columns: 1.35fr 1fr;
+		gap: clamp(2rem, 5vw, 4rem);
+	}
+
+	.seam ul {
+		list-style: none;
+		margin: 1.25rem 0 0;
+		padding: 0;
+		display: grid;
+		gap: 0.7rem;
+	}
+
+	.seam li {
+		position: relative;
+		padding-left: 1.25rem;
+		color: var(--muted);
+		font-size: 0.9375rem;
+	}
+
+	.seam li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.6em;
+		width: 0.55rem;
+		height: 1px;
+	}
+
+	.mach li::before {
+		background: var(--accent);
+	}
+
+	/* Judgement reads as the quieter, protected column — no accent, italic. */
+	.judge li {
+		font-style: italic;
+		color: var(--text);
+	}
+
+	.judge li::before {
+		background: var(--ghost);
+	}
+
+	@media (max-width: 52rem) {
+		.seam {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.builds dl {
+		margin: 1.5rem 0 0;
+		max-width: 46rem;
+	}
+
+	.builds dt {
+		font-family: var(--mono);
+		font-size: var(--t-label);
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--text);
+		margin-top: 1.75rem;
+	}
+
+	.builds dt:first-of-type {
+		margin-top: 0;
+	}
+
+	.builds dd {
+		margin: 0.5rem 0 0;
+		color: var(--muted);
+	}
+
+	/* The refusal section is the differentiator, so it gets the only tinted panel. */
+	.stops h2 {
+		font-size: clamp(1.375rem, 2.6vw, 1.875rem);
+		margin: 1rem 0 1.25rem;
+		max-width: 30ch;
+	}
+
+	.stops p {
+		color: var(--muted);
+		max-width: 46rem;
+		margin-bottom: 1rem;
+	}
+
+	.notes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		gap: clamp(1.5rem, 4vw, 3rem);
+	}
+
+	.notes p:not(.meta) {
+		color: var(--muted);
+		font-size: 0.9375rem;
+		margin-top: 0.75rem;
 	}
 
 	.cta,

@@ -6,6 +6,7 @@
 	import { PLACEHOLDERS } from '$lib/preview.js';
 	import { initSound, setSound, blip } from '$lib/sound.js';
 	import { featured } from '$lib/art.js';
+	import { roster } from '$lib/copy/roster.js';
 
 	export let copy;
 
@@ -138,6 +139,9 @@
 	// All six use cases on the home page; art comes from the shared map so each card
 	// matches its detail page.
 	const works = featured(copy.built.items, 6);
+	// A roster row links out only once that group has a written page in built.items.
+	// Groups still waiting for their story render as plain text — no empty pages.
+	const written = new Set(copy.built.items.map((i) => i.slug));
 
 	// One @graph per home page. EN and DE share @ids on purpose: the two homes are
 	// hreflang alternates, so search engines resolve them to a single entity
@@ -436,16 +440,23 @@
 		</dl>
 	</section>
 
-	<section class="wrap" use:fade>
+	<section class="wrap" id="roster" use:fade>
 		<div class="row-head">
-			<span class="meta">{copy.who.eyebrow}</span>
+			<span class="meta">{copy.who.rosterEyebrow}</span>
 		</div>
-		<h2 class="statement">{copy.who.title}</h2>
-		<ul class="who">
-			{#each copy.who.cards as card}
+		<h2 class="statement">{copy.who.rosterTitle}</h2>
+		<p class="aside roster-intro">{copy.who.rosterIntro}</p>
+		<!-- Counts come from roster.js; only the labels are translated. -->
+		<ul class="roster">
+			{#each roster as group}
 				<li>
-					<span class="meta">{card.label}</span>
-					<p>{card.text}</p>
+					{#if written.has(group.slug)}
+						<a class="who-label" href="{base}{isEn ? '' : '/de'}/work/{group.slug}/"
+							>{copy.who.roster[group.slug]} <span class="go" aria-hidden="true">↗</span></a
+						>
+					{:else}
+						<span class="who-label">{copy.who.roster[group.slug]}</span>
+					{/if}
 				</li>
 			{/each}
 		</ul>
@@ -1124,20 +1135,28 @@
 	   Work grid
 	   ============================================================ */
 	/* Two columns, so four cases land as a 2x2 with no orphan row. */
+	/* Three per row, not two: with 21 cases the old wide plates pushed everything
+	   below them off the first screen. */
 	.works {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.5rem);
+		grid-template-columns: repeat(3, 1fr);
+		gap: clamp(1.5rem, 3vw, 2.25rem);
 	}
 
-	@media (max-width: 44rem) {
+	@media (max-width: 62rem) {
+		.works {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 40rem) {
 		.works {
 			grid-template-columns: 1fr;
 		}
 	}
 
 	.plate {
-		aspect-ratio: 16 / 10;
+		aspect-ratio: 16 / 9;
 		border-radius: var(--r);
 		border: 1px solid var(--line);
 		overflow: hidden;
@@ -1310,44 +1329,40 @@
 		background-size: 11px 11px;
 	}
 
-	.who {
+	.roster-intro {
+		max-width: 46rem;
+		margin-bottom: clamp(2rem, 4vw, 3rem);
+	}
+
+	.roster {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+		gap: 0;
+		border-top: 1px solid var(--line);
 	}
 
-	.who li {
-		position: relative;
-		min-height: 13rem;
-		padding: 1.5rem;
-		border: 1px solid var(--line);
-		margin: 0 0 -1px -1px;
+	.roster li {
 		display: flex;
-		flex-direction: column;
-		gap: 0.9rem;
+		align-items: baseline;
+		padding: 0.9rem 0.25rem;
+		border-bottom: 1px solid var(--line);
 	}
 
-	.who p {
-		margin-top: auto;
-		font-size: 0.9375rem;
+	.roster .who-label {
 		color: var(--muted);
+		font-size: 0.9375rem;
 	}
 
-	@media (max-width: 60rem) {
-		.who {
-			grid-template-columns: repeat(2, 1fr);
-		}
+	.roster a.who-label {
+		color: var(--text);
+		text-decoration: none;
 	}
 
-	@media (max-width: 40rem) {
-		.who {
-			grid-template-columns: 1fr;
-		}
-		.who li {
-			min-height: 0;
-		}
+	.roster a.who-label:hover {
+		color: var(--accent);
 	}
 
 	/* ============================================================

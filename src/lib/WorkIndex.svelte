@@ -184,7 +184,7 @@
 
 	.cases a {
 		display: grid;
-		grid-template-columns: 3rem 12rem minmax(0, 1fr) auto;
+		grid-template-columns: 3rem 8rem minmax(0, 1fr) auto;
 		align-items: center;
 		gap: clamp(1rem, 3vw, 2.5rem);
 		padding: 1.5rem 0;
