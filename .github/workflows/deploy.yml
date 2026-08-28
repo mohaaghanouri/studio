@@ -34,6 +34,9 @@ jobs:
       - name: Publish build/ to gh-pages
         run: |
           test -f build/CNAME || { echo "CNAME missing from build — refusing to deploy"; exit 1; }
+          # Lets the purge step below tell "Pages is serving this commit" from
+          # "Pages is still serving the previous one", which a timer cannot.
+          echo "${GITHUB_SHA}" > build/version.txt
           cd build
           git init -q -b gh-pages
           git config user.name "github-actions[bot]"
@@ -43,6 +46,24 @@ jobs:
           git push -q --force \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
             gh-pages
+
+      # Pages needs roughly half a minute after the gh-pages push before it serves
+      # the new build. Purging before that point purges the old content and the
+      # next request re-caches it, so a fresh URL 404s at the edge until the TTL
+      # expires — which looks exactly like a broken deploy. Wait for our own
+      # commit to appear at the origin first. Cache-busted so Cloudflare cannot
+      # answer from the very cache we are about to purge.
+      - name: Wait for Pages to serve this commit
+        run: |
+          for i in $(seq 1 40); do
+            served=$(curl -sf "https://moha.expert/version.txt?cb=${GITHUB_RUN_ID}-$i" || true)
+            if [ "$served" = "$GITHUB_SHA" ]; then
+              echo "Pages is serving ${GITHUB_SHA::7} after $((i * 5))s."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::warning::Pages had not served ${GITHUB_SHA::7} after 200s; purging anyway."
 
       # Cloudflare only compresses responses it CACHES, so edge-caching the HTML is
       # the only way to stop serving it uncompressed (~34 KB/page). That is safe only

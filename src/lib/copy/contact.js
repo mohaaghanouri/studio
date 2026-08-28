@@ -62,13 +62,16 @@ export const tools = [
 	{ name: 'n8n', logo: 'n8n.svg' },
 	{ name: 'GitHub', logo: 'github.svg' },
 	{ name: 'GitKraken', logo: 'gitkraken.svg' },
-	{ name: 'Kraken', logo: '' },
 	{ name: 'ImmoScout24', logo: '' },
 	{ name: 'Figma', logo: 'figma.svg' },
 	{ name: 'Higgsfield', logo: 'higgsfield.svg' },
 	{ name: 'HeyGen', logo: '' },
 	{ name: 'Microsoft', logo: '' },
 	{ name: 'Microsoft Teams', logo: '' },
+	// Finance platforms, from the coaching side of the practice: several of the
+	// coaches work with clients on money as well as training, so these four are
+	// in genuine use. Kept together so they don't read as strays.
+	{ name: 'Kraken', logo: '' },
 	{ name: 'Alpaca', logo: '' },
 	{ name: 'Binance', logo: 'binance.svg' },
 	{ name: 'Trade Republic', logo: '' },

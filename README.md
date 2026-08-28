@@ -10,7 +10,11 @@ npm run build      # static site -> build/
 npm run preview    # serve the production build locally
 ```
 
-Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.yml`).
+Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.yml`). The
+deploy stamps the commit into `build/version.txt`, waits until GitHub Pages is actually
+serving that commit, and only then purges the Cloudflare cache — purging any earlier
+re-caches the old content and makes new URLs 404 at the edge. `curl https://moha.expert/version.txt`
+tells you which commit is live.
 
 ## Where things live
 
