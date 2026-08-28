@@ -58,25 +58,25 @@ export default {
 		rosterIntro:
 			'Not a target audience — the fields whose work I have already been inside, one person at a time. Pick the one closest to yours.',
 		roster: {
-			'job-seekers': 'People through a job search',
-			athletes: 'Athletes and players',
+			'job-seekers': 'Job seekers',
+			athletes: 'Athletes',
 			'content-creators': 'Content creators',
-			'home-buyers': 'People buying a home',
+			'home-buyers': 'Home buyers',
 			lawyers: 'Lawyers',
 			teachers: 'Teachers',
-			coaches: 'Coaches and yoga teachers',
+			coaches: 'Coaches & yoga teachers',
 			'product-managers': 'Product managers',
 			'online-shoppers': 'Online shoppers',
 			architects: 'Architects',
 			'project-managers': 'Project managers',
-			surveyors: 'Building surveyors (Gutachter)',
+			surveyors: 'Building surveyors',
 			'event-organizers': 'Event organisers',
 			dentists: 'Dentists',
 			'team-leaders': 'Team leaders',
 			'estate-agents': 'Estate agents',
-			executives: 'CEO',
-			chefs: 'Chef',
-			'volunteer-orgs': 'Volunteer organisation'
+			executives: 'Executives',
+			chefs: 'Chefs',
+			'volunteer-orgs': 'Non-profits'
 		},
 		notListed: "Your profession isn't listed? It almost certainly still applies — ask me."
 	},
@@ -1276,7 +1276,7 @@ export default {
 				title: 'AI for a founder-CEO: ninety seconds before every meeting — AI coaching Berlin',
 				metaDescription:
 					'Inbox triaged with the reasoning visible, a pre-meeting brief on what was last agreed, a commitment ledger, and board packs assembled. It never decides and never speaks as you.',
-				label: 'CEO',
+				label: 'Executives',
 				headline: 'Walking into a meeting knowing what was promised last time.',
 				story: [
 					'The founder-CEO of a company of about 90 people. Not a corporate chief executive with a chief of staff and two assistants — someone who still personally answers investors, still gets pulled into hiring, and whose calendar has been colonised by other people’s needs. The presenting complaint was "I have no time to think", which in my experience is the only complaint CEOs actually have.',
@@ -1338,7 +1338,7 @@ export default {
 				title: 'AI for a restaurant kitchen: food cost 34% back to 28.5% — AI coaching Berlin',
 				metaDescription:
 					'Invoices photographed, ingredient prices tracked, every dish recosted automatically, prep lists from booking counts and an allergen matrix confirmed by the chef. It never touches the plate.',
-				label: 'Chef',
+				label: 'Chefs',
 				headline: 'The machine touches money, stock and paperwork. It does not touch the plate.',
 				story: [
 					'Chef-patron of a small restaurant — about 40 covers, a changing menu, six staff. He came to me because his food cost had drifted from 28% to 34% over a year and he could not say why, and because he was doing paperwork until midnight after service. He had no interest whatsoever in AI and said so in the first sentence.',
@@ -1405,7 +1405,7 @@ export default {
 				title: 'AI for a Verein: grant applications from two days to three hours — AI coaching Berlin',
 				metaDescription:
 					'A maintained core of reusable facts, reshaped into each funder’s structure, plus rota, membership and an activity log. Free tools only, and no impact claim is ever generated.',
-				label: 'Volunteer organisation',
+				label: 'Non-profits',
 				headline: 'Free tools, boring by design, operable by whoever holds the role in two years.',
 				story: [
 					'A registered Verein — around 40 active volunteers, one part-time paid coordinator, funded by a mix of small grants, membership fees and donations. Nobody there has a technology budget, and the coordinator is doing the work of three people on 20 hours a week. This engagement was partly unpaid and I would do it again.',

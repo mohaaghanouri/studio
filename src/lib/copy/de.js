@@ -57,25 +57,25 @@ export default {
 		rosterIntro:
 			'Keine Zielgruppe — die Felder, in deren Arbeit ich schon drin war, eine Person nach der anderen. Wählen Sie das, was Ihrem am nächsten kommt.',
 		roster: {
-			'job-seekers': 'Menschen durch die Jobsuche',
-			athletes: 'Sportlerinnen und Sportler',
+			'job-seekers': 'Jobsuchende',
+			athletes: 'Sportler',
 			'content-creators': 'Content-Creator',
-			'home-buyers': 'Menschen beim Immobilienkauf',
-			lawyers: 'Anwältinnen und Anwälte',
+			'home-buyers': 'Immobilienkäufer',
+			lawyers: 'Anwälte',
 			teachers: 'Lehrkräfte',
-			coaches: 'Coaches und Yogalehrende',
+			coaches: 'Coaches & Yogalehrende',
 			'product-managers': 'Produktmanager',
 			'online-shoppers': 'Online-Käufer',
-			architects: 'Architektinnen und Architekten',
+			architects: 'Architekten',
 			'project-managers': 'Projektmanager',
 			surveyors: 'Gutachter',
 			'event-organizers': 'Veranstalter',
-			dentists: 'Zahnärztinnen und Zahnärzte',
+			dentists: 'Zahnärzte',
 			'team-leaders': 'Teamleitungen',
 			'estate-agents': 'Immobilienmakler',
-			executives: 'CEO',
-			chefs: 'Küchenchef',
-			'volunteer-orgs': 'Ehrenamtliche Organisation'
+			executives: 'Führungskräfte',
+			chefs: 'Küchenchefs',
+			'volunteer-orgs': 'Vereine'
 		},
 		notListed:
 			'Ihr Beruf ist nicht dabei? Es funktioniert mit großer Wahrscheinlichkeit trotzdem — fragen Sie mich.'
@@ -1276,7 +1276,7 @@ export default {
 				title: 'KI für Gründer-CEOs: neunzig Sekunden vor jedem Termin — KI-Beratung Berlin',
 				metaDescription:
 					'Postfach sortiert mit sichtbarer Begründung, ein Kurzbriefing zu jedem Termin, ein Zusagenregister und zusammengestellte Board-Unterlagen. Es entscheidet nie und spricht nie als Sie.',
-				label: 'CEO',
+				label: 'Führungskräfte',
 				headline: 'In ein Meeting gehen und wissen, was letztes Mal versprochen wurde.',
 				story: [
 					'Der Gründer und CEO eines Unternehmens mit etwa 90 Menschen. Kein Konzernvorstand mit Stabschef und zwei Assistenzen — jemand, der Investoren noch selbst antwortet, noch in Einstellungen hineingezogen wird und dessen Kalender von den Bedürfnissen anderer besetzt wurde. Die vorgetragene Beschwerde war „Ich habe keine Zeit zum Denken“, und das ist meiner Erfahrung nach die einzige Beschwerde, die CEOs tatsächlich haben.',
@@ -1338,7 +1338,7 @@ export default {
 				title: 'KI für die Restaurantküche: Wareneinsatz von 34% zurück auf 28,5% — KI-Beratung Berlin',
 				metaDescription:
 					'Rechnungen fotografiert, Zutatenpreise verfolgt, jedes Gericht automatisch neu kalkuliert, Vorbereitungslisten aus den Reservierungen und eine vom Küchenchef bestätigte Allergenmatrix.',
-				label: 'Küchenchef',
+				label: 'Küchenchefs',
 				headline: 'Die Maschine fasst Geld, Lager und Papier an. Den Teller fasst sie nicht an.',
 				story: [
 					'Küchenchef und Inhaber eines kleinen Restaurants — etwa 40 Gedecke, wechselnde Karte, sechs Mitarbeitende. Er kam zu mir, weil sein Wareneinsatz binnen eines Jahres von 28% auf 34% gestiegen war und er nicht sagen konnte, warum, und weil er nach dem Service bis Mitternacht Papierkram machte. An KI hatte er kein Interesse und sagte das im ersten Satz.',
@@ -1405,7 +1405,7 @@ export default {
 				title: 'KI für einen Verein: Förderanträge von zwei Tagen auf drei Stunden — KI-Beratung Berlin',
 				metaDescription:
 					'Ein gepflegter Kern wiederverwendbarer Fakten, umgeformt in die Struktur jedes Fördergebers, plus Dienstplan, Mitgliederverwaltung und Aktivitätsprotokoll. Nur kostenlose Werkzeuge.',
-				label: 'Ehrenamtliche Organisation',
+				label: 'Vereine',
 				headline: 'Kostenlose Werkzeuge, bewusst langweilig, in zwei Jahren von der nächsten Person bedienbar.',
 				story: [
 					'Ein eingetragener Verein — rund 40 aktive Ehrenamtliche, eine Teilzeitkoordinatorin, finanziert aus kleinen Förderungen, Mitgliedsbeiträgen und Spenden. Niemand dort hat ein Technologiebudget, und die Koordinatorin macht die Arbeit von drei Personen auf 20 Wochenstunden. Dieses Mandat war teilweise unbezahlt, und ich würde es wieder tun.',

@@ -17,7 +17,6 @@ import { createServer } from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const PORT = 4340;
 const TMP = '.ogtmp';
 
 const [en, de, art] = await Promise.all([
@@ -61,13 +60,16 @@ const server = createServer((req, res) => {
 	if (!file.startsWith(process.cwd()) || !fs.existsSync(file)) return res.writeHead(404).end();
 	res.writeHead(200, { 'content-type': types[path.extname(file)] ?? 'application/octet-stream' });
 	fs.createReadStream(file).pipe(res);
-}).listen(PORT);
+}).listen(0);
+// Port 0 lets the OS pick a free one — a fixed port fails outright if anything
+// else on the machine happens to be holding it.
+const { port } = server.address();
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
 fs.mkdirSync('static/og', { recursive: true });
 for (const c of cards) {
-	await page.goto(`http://localhost:${PORT}/${TMP}/${c.lang}-${c.slug}.html`, { waitUntil: 'networkidle' });
+	await page.goto(`http://localhost:${port}/${TMP}/${c.lang}-${c.slug}.html`, { waitUntil: 'networkidle' });
 	await page.evaluate(() => document.fonts.ready);
 	await page.screenshot({ path: `static/og/${c.lang === 'en' ? '' : 'de-'}${c.slug}.png` });
 }
