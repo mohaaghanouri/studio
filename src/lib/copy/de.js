@@ -17,7 +17,7 @@ export default {
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline: `Ich bin ${contact.name}. Ich setze mich in Ihre tatsächliche Arbeitswoche, bis ich sehen kann, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und baue bis genau an diese Linie, nie darüber hinaus. Die Maschine übernimmt die Menge. Die Entscheidung bleibt bei Ihnen.`,
 		button: 'Schreiben Sie mir — das erste Gespräch ist kostenlos',
-		note: 'Berlin · Deutsch & Englisch'
+		note: 'Berlin'
 	},
 	studio: {
 		// Nur das Label — die Liste steht in contact.js. Als Werkzeuge, NICHT als Kunden,
@@ -28,7 +28,6 @@ export default {
 		bookLabel: 'Termin buchen',
 		bookTitle: 'Wählen Sie eine Zeit, die Ihnen passt.',
 		bookNote: 'Dreißig Minuten, kostenlos, keine Vorbereitung nötig.',
-		sound: 'Ton',
 		workBack: 'Alle Anwendungsfälle',
 		// Keine Zahl in der Überschrift: die Liste wächst mit jeder Berufsgruppe.
 		worksHeading: 'Was KI für Menschen wie Sie schon erledigt.',

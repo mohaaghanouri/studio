@@ -4,7 +4,6 @@
 	import { fade } from '$lib/fade.js';
 	import { contact, site, tools, profiles } from '$lib/copy/contact.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
-	import { initSound, setSound, blip } from '$lib/sound.js';
 	import { featured } from '$lib/art.js';
 	import { roster } from '$lib/copy/roster.js';
 
@@ -24,7 +23,6 @@
 
 	let activeId = '';
 	let menuOpen = false;
-	let sound = false;
 	let bookOpen = false;
 	let calMounted = false;
 	let calWarm = false;
@@ -50,7 +48,6 @@
 
 	async function openBook() {
 		bookOpen = true;
-		blip('open');
 		// Cal's script only loads the first time someone actually asks for it.
 		await new Promise((r) => setTimeout(r, 0));
 		if (!calMounted) {
@@ -62,7 +59,6 @@
 
 	function closeBook() {
 		bookOpen = false;
-		blip('click');
 	}
 
 	// Marquee needs the list twice so the loop has no visible seam.
@@ -70,11 +66,6 @@
 	// Same doubling trick as the tools row: the track scrolls to -50%, so the
 	// list has to be rendered twice for the loop to be seamless.
 	const proMarquee = [...roster, ...roster];
-
-	function toggleSound() {
-		sound = !sound;
-		setSound(sound);
-	}
 
 	// Cal.com inline embed. Only runs when a handle is configured, so the
 	// third-party script never loads for nothing.
@@ -116,7 +107,6 @@
 
 	// Scroll-spy: whichever tracked section owns the middle of the viewport wins.
 	onMount(() => {
-		sound = initSound();
 		// Cal is NOT mounted here on purpose — openBook() does it on first open,
 		// so the third-party script never loads for visitors who never book.
 
@@ -142,9 +132,11 @@
 	// All six use cases on the home page; art comes from the shared map so each card
 	// matches its detail page.
 	const works = featured(copy.built.items);
-	// One client voice per featured case, so the quotes below match the six cases
-	// shown above. The words live on the case items — this is not a second copy.
-	const voices = works.map((w) => w.quotes[0]).filter(Boolean);
+	// Three voices, not one per case: this is a sampler, and every quote is on its
+	// own case page anyway. It used to be one per featured case, which silently
+	// became nine when the card count did — nine long quotes stacked to six
+	// screens on a phone. Three fills exactly one row of the desktop grid.
+	const voices = works.slice(0, 3).map((w) => w.quotes[0]).filter(Boolean);
 	// A roster row links out only once that group has a written page in built.items.
 	// Groups still waiting for their story render as plain text — no empty pages.
 	const written = new Set(copy.built.items.map((i) => i.slug));
@@ -309,31 +301,11 @@
 				{/if}
 			</span>
 			<button
-				class="snd"
-				type="button"
-				aria-pressed={sound}
-				on:click={toggleSound}
-				title="{copy.studio.sound}: {sound ? 'on' : 'off'}"
-			>
-				<svg class="spk" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6">
-					<path d="M4 9.5h3.2L12 5.6v12.8L7.2 14.5H4z" stroke-linejoin="round" />
-					{#if sound}
-						<path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8" stroke-linecap="round" />
-					{:else}
-						<path d="M16 9.8l4.4 4.4M20.4 9.8L16 14.2" stroke-linecap="round" />
-					{/if}
-				</svg>
-				<span class="sr">{copy.studio.sound}</span>
-			</button>
-			<button
 				class="burger"
 				type="button"
 				aria-expanded={menuOpen}
 				aria-controls="menu"
-				on:click={() => {
-					menuOpen = !menuOpen;
-					blip(menuOpen ? 'open' : 'click');
-				}}
+				on:click={() => (menuOpen = !menuOpen)}
 			>
 				<span class="bars" aria-hidden="true" class:x={menuOpen}></span>
 				<span class="sr">{copy.nav.menu}</span>
@@ -367,7 +339,7 @@
 			<p class="subline">{copy.hero.subline}</p>
 			<div class="hero-cta">
 				<div class="cta-stack">
-					<a class="btn btn-primary" href="#contact" on:click={() => blip('click')}>
+					<a class="btn btn-primary" href="#contact">
 						{copy.hero.button}
 					</a>
 					<button
@@ -434,7 +406,7 @@
 		<div class="works">
 			{#each works as work}
 				<article use:fade>
-					<a href="{base}{isEn ? '' : '/de'}/work/{work.slug}/" on:click={() => blip('click')}>
+					<a href="{base}{isEn ? '' : '/de'}/work/{work.slug}/">
 						<div class="plate">
 							<img src="{base}/work/{work.slug}.svg" alt="" width="1200" height="750" loading="lazy" />
 						</div>
@@ -825,35 +797,6 @@
 
 	.lang [aria-current] {
 		color: var(--text);
-	}
-
-	/* ---- sound toggle ---- */
-	.snd {
-		background: none;
-		border: 1px solid var(--line);
-		border-radius: 6px;
-		padding: 0.6rem 0.7rem;
-		min-width: 2.25rem;
-		min-height: 2.25rem;
-		cursor: pointer;
-		color: var(--faint);
-		line-height: 0;
-	}
-
-	.snd:hover {
-		border-color: var(--line-strong);
-		color: var(--text);
-	}
-
-	.snd[aria-pressed='true'] {
-		color: var(--accent);
-		border-color: color-mix(in srgb, var(--accent) 40%, transparent);
-	}
-
-	.spk {
-		width: 1.15rem;
-		height: 1.15rem;
-		display: block;
 	}
 
 	/* ---- mobile menu ---- */

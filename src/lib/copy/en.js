@@ -18,7 +18,7 @@ export default {
 		subline:
 			`I'm ${contact.name}. I sit inside your actual working week until I can see which part of it is machinery pretending to be judgement — then I build up to that line and never across it. The machine takes the volume. You keep the decision.`,
 		button: 'Message me — the first conversation is free',
-		note: 'Based in Berlin · English & German'
+		note: 'Based in Berlin'
 	},
 	studio: {
 		// Label only — the list itself lives in contact.js. Framed as tools, NOT clients,
@@ -29,7 +29,6 @@ export default {
 		bookLabel: 'Book a call',
 		bookTitle: 'Pick a time that suits you.',
 		bookNote: 'Thirty minutes, free, no preparation needed.',
-		sound: 'Sound',
 		workBack: 'All use cases',
 		// No count in the heading: the list grows as each profession gets written up.
 		worksHeading: 'What AI already does for people like you.',

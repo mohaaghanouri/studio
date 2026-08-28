@@ -86,8 +86,8 @@
 				<dd>{people}</dd>
 			{/if}
 
-			<dt>{copy.studio.workCovers}</dt>
-			<dd>
+			<dt class="covers">{copy.studio.workCovers}</dt>
+			<dd class="covers">
 				<ul>
 					{#each item.machinery as line}
 						<li>{line}</li>
@@ -606,6 +606,12 @@
 		}
 		.rail-index {
 			margin-top: 0;
+		}
+		/* Stacked, the rail stops being a sidebar and becomes a wall of text in
+		   front of the headline — and it is the same list the seam section shows
+		   further down. Keep the metadata, drop the duplicate. */
+		.covers {
+			display: none;
 		}
 	}
 </style>

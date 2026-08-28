@@ -27,7 +27,7 @@
 	<h2>Verantwortlich für den Inhalt</h2>
 	<p>{contact.name} (Anschrift wie oben)</p>
 
-	<p><a href="{base}/">← Zurück zur Startseite</a></p>
+	<p class="back-home"><a href="{base}/">← Zurück zur Startseite</a></p>
 </main>
 
 <style>
@@ -44,5 +44,13 @@
 	}
 	p:last-child {
 		margin-top: 3rem;
+	}
+	/* The back link is a standalone target, not a link inside a sentence, so it
+	   needs a real tap area on a phone. Links inside prose are exempt from the
+	   target-size minimum and are left alone — making them inline-block would
+	   break the way they wrap mid-paragraph. */
+	.back-home a {
+		display: inline-block;
+		padding: 0.6rem 0;
 	}
 </style>
