@@ -380,7 +380,6 @@
 					</button>
 				</div>
 				<p class="hero-note">
-					<img src="{base}/moha-face.webp" alt="" width="240" height="240" />
 					<span>{noteParts[0]}<strong>{contact.city}</strong>{noteParts[1] ?? ''}</span>
 				</p>
 			</div>
@@ -1000,21 +999,11 @@
 
 	.hero-note {
 		margin-top: 1.5rem;
-		display: flex;
-		align-items: center;
-		gap: 0.85rem;
 		font-family: var(--mono);
 		font-size: var(--t-meta);
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color: var(--faint);
-	}
-
-	.hero-note img {
-		width: 2.5rem;
-		height: 2.5rem;
-		border-radius: 50%;
-		border: 1px solid var(--line-strong);
 	}
 
 	@media (max-width: 56rem) {
