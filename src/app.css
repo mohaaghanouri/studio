@@ -115,10 +115,6 @@ a:hover {
 	color: var(--faint);
 }
 
-.muted {
-	color: var(--muted);
-}
-
 .wrap {
 	max-width: var(--measure);
 	margin: 0 auto;

@@ -9,8 +9,8 @@
     npx --yes playwright@latest install chromium
     node scripts/og.mjs
 
-  static/og.png is the old single card, kept as the fallback for the two legal
-  pages, which have no card of their own.
+  The Impressum and Datenschutz pages emit no og:image at all — they are legal
+  text nobody shares — so there is no fallback card to keep.
 -->
 <html lang="en">
 	<head>

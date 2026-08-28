@@ -687,6 +687,14 @@
 		border-bottom: 1px solid var(--line);
 	}
 
+	/* Negative margin keeps the baseline alignment while giving the link a real
+	   tap area — as text alone it was 18px tall. */
+	.all-cases {
+		display: inline-block;
+		padding: 0.5rem 0;
+		margin: -0.5rem 0;
+	}
+
 	/* ============================================================
 	   Header
 	   ============================================================ */
@@ -1038,6 +1046,9 @@
 	.track-slow a {
 		color: var(--muted);
 		text-decoration: none;
+		display: block;
+		padding: 0.7rem 0.5rem;
+		margin: -0.7rem -0.5rem;
 	}
 
 	.track-slow a:hover {
@@ -1195,12 +1206,10 @@
 	   inset past the edges so each cross centres exactly on an intersection —
 	   adjacent cells overlap theirs precisely, so the grid reads as one measured
 	   object rather than a set of boxes. */
-	.who,
 	.grid-cells {
 		--cross: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11'%3E%3Cpath d='M5.5 0v11M0 5.5h11' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E");
 	}
 
-	.who li::before,
 	.grid-cells li::before {
 		content: '';
 		position: absolute;
@@ -1259,13 +1268,17 @@
 	.roster li {
 		display: flex;
 		align-items: baseline;
-		padding: 0.9rem 0.25rem;
 		border-bottom: 1px solid var(--line);
 	}
 
+	/* The padding lives on the label, not the row, so the tappable area is the
+	   whole row rather than the 22px of text inside it. */
 	.roster .who-label {
 		color: var(--muted);
 		font-size: 0.9375rem;
+		display: block;
+		width: 100%;
+		padding: 0.9rem 0.25rem;
 	}
 
 	.roster a.who-label {
