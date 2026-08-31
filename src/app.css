@@ -148,6 +148,20 @@ a:hover {
 	color: var(--text);
 }
 
+/* The one filled button per view — this is where the accent is spent. */
+.btn-primary {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--accent-ink);
+	font-weight: 500;
+}
+
+.btn-primary:hover {
+	background: color-mix(in srgb, var(--accent) 82%, #ffffff);
+	border-color: var(--accent);
+	color: var(--accent-ink);
+}
+
 /* fade-and-rise on scroll; .in is added by the IntersectionObserver action */
 .fade {
 	opacity: 0;

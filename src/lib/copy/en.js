@@ -14,6 +14,7 @@ export default {
 		menu: 'Menu'
 	},
 	hero: {
+		availability: 'Taking on new clients',
 		headline: 'The boring half of your job can do itself.',
 		subline:
 			`I'm ${contact.name}. I sit inside your actual working week until I can see which part of it is machinery pretending to be judgement — then I build up to that line and never across it. The machine takes the volume. You keep the decision.`,
@@ -57,6 +58,9 @@ export default {
 		rosterTitle: 'Who I have actually worked with.',
 		rosterIntro:
 			'Not a target audience — the fields whose work I have already been inside, one person at a time. Pick the one closest to yours.',
+		// Labels for the two aggregate numbers from roster.js.
+		statPeople: 'People helped',
+		statFields: 'Professions',
 		roster: {
 			'job-seekers': 'Job seekers',
 			athletes: 'Athletes',
@@ -1688,6 +1692,10 @@ export default {
 			{
 				q: 'What if AI is the wrong answer for me?',
 				a: "Then you'll hear it in the free conversation, before you have spent anything. It happens often. Three of five coaches I have worked with needed a booking system with reminders, not AI — I set that up, charged for the afternoon, and said so."
+			},
+			{
+				q: 'Do we have to be in Berlin?',
+				a: "No. The first conversation is a call either way, and most of the work after it runs over screen shares — clients so far include Leipzig and Brandenburg. Berlin just makes the sitting-in-your-week part easier to do in person."
 			},
 			{
 				q: 'How much of my time does this take?',

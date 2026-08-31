@@ -2,10 +2,10 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
-	import { contact, site, tools, profiles } from '$lib/copy/contact.js';
+	import { contact, site, tools, profiles, profileLinks } from '$lib/copy/contact.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 	import { featured } from '$lib/art.js';
-	import { roster } from '$lib/copy/roster.js';
+	import { roster, totalHelped, groupCount } from '$lib/copy/roster.js';
 
 	export let copy;
 
@@ -293,6 +293,9 @@
 		</nav>
 
 		<div class="bar-end">
+			<button class="bar-book" type="button" on:click={openBook} on:pointerenter={warmCal}>
+				{copy.studio.bookLabel}
+			</button>
 			<span class="lang">
 				{#if isEn}
 					<span aria-current="true">EN</span><a href="{base}/de/" data-sveltekit-reload>DE</a>
@@ -326,6 +329,18 @@
 				{section.label}
 			</a>
 		{/each}
+		{#if contact.cal}
+			<button
+				class="sheet-book"
+				type="button"
+				on:click={() => {
+					menuOpen = false;
+					openBook();
+				}}
+			>
+				{copy.studio.bookLabel} <span aria-hidden="true">↗</span>
+			</button>
+		{/if}
 	</nav>
 </header>
 
@@ -424,6 +439,17 @@
 		</div>
 		<h2 class="statement">{copy.who.rosterTitle}</h2>
 		<p class="aside roster-intro">{copy.who.rosterIntro}</p>
+		<!-- The two aggregate facts from roster.js — per-group counts stay on the case pages. -->
+		<dl class="stats">
+			<div>
+				<dd>{totalHelped}</dd>
+				<dt class="meta">{copy.who.statPeople}</dt>
+			</div>
+			<div>
+				<dd>{groupCount}</dd>
+				<dt class="meta">{copy.who.statFields}</dt>
+			</div>
+		</dl>
 		<!-- Counts come from roster.js; only the labels are translated. -->
 		<ul class="roster">
 			{#each roster as group}
@@ -547,6 +573,12 @@
 						</button>
 					{/if}
 					<a class="btn" href="mailto:{contact.email}">{copy.contactSection.form.email}</a>
+					{#if contact.whatsapp}
+						<a class="btn" href="https://wa.me/{contact.whatsapp}" rel="noopener">WhatsApp</a>
+					{/if}
+					{#if contact.telegram}
+						<a class="btn" href="https://t.me/{contact.telegram}" rel="noopener">Telegram</a>
+					{/if}
 				</div>
 				<p class="hero-note">
 					<span>{noteParts[0]}<strong>{contact.city}</strong>{noteParts[1] ?? ''}</span>
@@ -626,7 +658,7 @@
 {#if contact.cal}
 	<!-- Booking drawer: slides in from the left, Cal mounted on first open -->
 	<div class="scrim" class:open={bookOpen} on:click={closeBook} aria-hidden="true"></div>
-	<aside
+	<div
 		class="drawer"
 		class:open={bookOpen}
 		bind:this={panelEl}
@@ -646,7 +678,7 @@
 			</button>
 		</div>
 		<div id="cal-inline"></div>
-	</aside>
+	</div>
 {/if}
 
 <footer>
@@ -654,6 +686,9 @@
 		<p>© {contact.name} · {contact.address || contact.city}</p>
 		<p>
 			<a href="mailto:{contact.email}">{contact.email}</a>
+			{#each profileLinks as p}
+				{' · '}<a href={p.url} rel="me noopener">{p.label}</a>
+			{/each}
 			· <a href="{base}/impressum/">{copy.footer.impressum}</a>
 			· <a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>
 		</p>
@@ -775,6 +810,49 @@
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+	}
+
+	/* Compact booking CTA, always in reach while the header is stuck. */
+	.bar-book {
+		font-family: var(--mono);
+		font-size: var(--t-label);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		background: var(--accent);
+		border: 1px solid var(--accent);
+		border-radius: 6px;
+		color: var(--accent-ink);
+		padding: 0.5rem 0.85rem;
+		cursor: pointer;
+	}
+
+	.bar-book:hover {
+		background: color-mix(in srgb, var(--accent) 82%, #ffffff);
+	}
+
+	/* On a phone the bar is full; the booking row lives in the sheet instead. */
+	@media (max-width: 56rem) {
+		.bar-book {
+			display: none;
+		}
+	}
+
+	.sheet-book {
+		display: flex;
+		align-items: baseline;
+		gap: 0.7rem;
+		width: 100%;
+		padding: 1.1rem clamp(1.25rem, 4vw, 3rem);
+		background: none;
+		border: 0;
+		border-bottom: 1px solid var(--line);
+		font-family: var(--mono);
+		font-size: var(--t-label);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		text-align: left;
+		color: var(--accent);
+		cursor: pointer;
 	}
 
 	.lang {
@@ -1255,6 +1333,25 @@
 		margin-bottom: clamp(2rem, 4vw, 3rem);
 	}
 
+	/* The two aggregate numbers, display-sized: facts, not decoration. */
+	.stats {
+		display: flex;
+		gap: clamp(2.5rem, 6vw, 5rem);
+		margin: 0 0 clamp(2rem, 4vw, 3rem);
+	}
+
+	.stats div {
+		display: grid;
+		gap: 0.35rem;
+	}
+
+	.stats dd {
+		margin: 0;
+		font-family: var(--display);
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		line-height: 1;
+	}
+
 	.roster {
 		list-style: none;
 		margin: 0;
@@ -1312,7 +1409,15 @@
 		gap: 1rem;
 	}
 
-	/* Odd cells sit low, even cells sit high — the offset is the whole device */
+	/* Odd cells sit low, even cells sit high — the offset is the whole device.
+	   The transform doesn't affect layout, so the container reserves the 3.5rem
+	   the odd cells visually spill past — without it they collide with the
+	   pricing note below. Padding, not margin: margin would collapse with the
+	   note's margin-top and reserve nothing. */
+	.grid-cells {
+		padding-bottom: 3.5rem;
+	}
+
 	.grid-cells li:nth-child(odd) {
 		transform: translateY(3.5rem);
 	}
@@ -1347,6 +1452,7 @@
 	@media (max-width: 44rem) {
 		.grid-cells {
 			grid-template-columns: 1fr;
+			padding-bottom: 0;
 		}
 		.grid-cells li:nth-child(odd) {
 			transform: none;

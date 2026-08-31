@@ -29,6 +29,7 @@ tells you which commit is live.
 | Design tokens | `src/app.css` |
 | The `noindex` safety gate | `src/lib/preview.js` |
 | Legal pages | `src/routes/impressum/`, `src/routes/datenschutz/` |
+| The 404 page | `static/404.html` — self-contained (GitHub Pages serves it for unknown paths; the app's hashed assets can't be referenced from it) |
 | Custom domain | `static/CNAME` (the deploy refuses to run without it) |
 
 ## Docs

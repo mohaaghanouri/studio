@@ -14,10 +14,11 @@ export default {
 		menu: 'Menü'
 	},
 	hero: {
+		availability: 'Nehme neue Klienten an',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline: `Ich bin ${contact.name}. Ich setze mich in Ihre tatsächliche Arbeitswoche, bis ich sehen kann, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und baue bis genau an diese Linie, nie darüber hinaus. Die Maschine übernimmt die Menge. Die Entscheidung bleibt bei Ihnen.`,
 		button: 'Schreiben Sie mir — das erste Gespräch ist kostenlos',
-		note: 'Berlin'
+		note: 'Ansässig in Berlin'
 	},
 	studio: {
 		// Nur das Label — die Liste steht in contact.js. Als Werkzeuge, NICHT als Kunden,
@@ -56,6 +57,9 @@ export default {
 		rosterTitle: 'Mit wem ich tatsächlich gearbeitet habe.',
 		rosterIntro:
 			'Keine Zielgruppe — die Felder, in deren Arbeit ich schon drin war, eine Person nach der anderen. Wählen Sie das, was Ihrem am nächsten kommt.',
+		// Labels zu den beiden Summen aus roster.js.
+		statPeople: 'Begleitete Menschen',
+		statFields: 'Berufsfelder',
 		roster: {
 			'job-seekers': 'Jobsuchende',
 			athletes: 'Sportler',
@@ -1688,6 +1692,10 @@ export default {
 			{
 				q: 'Was, wenn KI für mich die falsche Antwort ist?',
 				a: 'Dann hören Sie das im kostenlosen Gespräch, bevor Sie etwas ausgegeben haben. Das kommt oft vor. Drei von fünf Coaches, mit denen ich gearbeitet habe, brauchten ein Buchungssystem mit Erinnerungen und keine KI — ich habe das eingerichtet, den Nachmittag berechnet und es gesagt.'
+			},
+			{
+				q: 'Müssen wir in Berlin sein?',
+				a: 'Nein. Das erste Gespräch ist ohnehin ein Anruf, und die meiste Arbeit danach läuft über Bildschirmfreigaben — bisherige Klienten sitzen auch in Leipzig und Brandenburg. Berlin macht nur das Hineinsetzen in Ihre Woche vor Ort einfacher.'
 			},
 			{
 				q: 'Wie viel Zeit kostet mich das?',

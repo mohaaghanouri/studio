@@ -42,10 +42,11 @@ export const contact = {
 // of one name into a single entity — the strongest correlate of AI-search
 // visibility in the research. Add any profile you actually maintain; drop any you
 // abandon, because a dead link here is worse than a missing one.
-export const profiles = [
-	'https://www.linkedin.com/in/mohanuri',
-	'https://github.com/mohaaghanouri'
+export const profileLinks = [
+	{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/mohanuri' },
+	{ label: 'GitHub', url: 'https://github.com/mohaaghanouri' }
 ];
+export const profiles = profileLinks.map((p) => p.url);
 
 // Tools actually in use. Language-neutral, so it lives here rather than being
 // duplicated across en.js and de.js.
