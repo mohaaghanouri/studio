@@ -1,6 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { contact, site } from '$lib/copy/contact.js';
+	import { contact, site, profileLinks } from '$lib/copy/contact.js';
 	import { artFor } from '$lib/art.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 	import { roster } from '$lib/copy/roster.js';
@@ -178,6 +178,9 @@
 			<div class="cta-row">
 				<a class="btn btn-primary" href="{home}#contact">{copy.hero.button}</a>
 				<a class="btn" href="mailto:{contact.email}">{copy.contactSection.form.email}</a>
+				{#if contact.whatsapp}
+					<a class="btn" href="https://wa.me/{contact.whatsapp}" rel="noopener">WhatsApp</a>
+				{/if}
 			</div>
 		</section>
 
@@ -199,7 +202,11 @@
 		<footer class="foot">
 			<p>© {contact.name} · {contact.address || contact.city}</p>
 			<p>
-				<a href="{base}/impressum/">{copy.footer.impressum}</a>
+				<a href="mailto:{contact.email}">{contact.email}</a>
+				{#each profileLinks as p}
+					{' · '}<a href={p.url} rel="me noopener">{p.label}</a>
+				{/each}
+				· <a href="{base}/impressum/">{copy.footer.impressum}</a>
 				· <a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>
 			</p>
 		</footer>
