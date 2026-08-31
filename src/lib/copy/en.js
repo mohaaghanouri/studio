@@ -1725,7 +1725,7 @@ export default {
 			sending: 'Sending…',
 			reply: 'I reply within one working day.',
 			success: "Thank you — I'll get back to you within a day.",
-			error: "That didn't go through. Please use WhatsApp, Telegram or email instead.",
+			error: "That didn't go through. Please email me instead.",
 			note: 'Prefer not to use a form? The buttons on the left reach me faster.'
 		}
 	},

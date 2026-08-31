@@ -16,8 +16,11 @@ export const contact = {
 	// Used as the ProfessionalService name in JSON-LD — the business, not the person.
 	// Both @id-linked into one @graph so search engines fuse them into one entity.
 	business: 'Moha Aghanoori — AI Consulting',
-	whatsapp: '491706128949',
-	telegram: 'mohaaghanouri',
+	// Disabled for now — set these back to re-enable every WhatsApp/Telegram
+	// button at once (home contact section, case pages, work index):
+	// whatsapp: '491706128949', telegram: 'mohaaghanouri'
+	whatsapp: '',
+	telegram: '',
 	// Cloudflare Email Routing forwards this to the Gmail. Catch-all is off, so
 	// this is the ONLY address on the domain that accepts mail — anything else
 	// (moha@, hello@) gets 550 rejected. Changing it here means changing it in

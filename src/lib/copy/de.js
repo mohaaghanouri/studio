@@ -1725,7 +1725,7 @@ export default {
 			message: 'Nachricht',
 			send: 'Nachricht senden',
 			success: 'Vielen Dank — ich melde mich innerhalb eines Tages.',
-			error: 'Das hat nicht geklappt. Bitte nutzen Sie WhatsApp, Telegram oder E-Mail.',
+			error: 'Das hat nicht geklappt. Bitte schreiben Sie mir eine E-Mail.',
 			note: 'Kein Formular? Über die Buttons links erreichen Sie mich schneller.'
 		}
 	},
