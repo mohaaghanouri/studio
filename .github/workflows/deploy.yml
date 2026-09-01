@@ -99,3 +99,30 @@ jobs:
             # Response body can echo the request, so report status only — never the body.
             echo "::error::Cloudflare cache purge failed (HTTP $code). Site is deployed; the edge may serve stale HTML until its TTL expires."
           fi
+
+      # Tell Bing / Yandex / Seznam what changed instead of waiting to be crawled.
+      # The key is NOT a secret — it is served publicly at /1106c94de54542d3ba814595797e623c.txt,
+      # and that pairing is the whole ownership proof — so it lives here in plain
+      # sight rather than in a repo secret that implies it needs hiding.
+      #
+      # Google has no keyless equivalent; new URLs there still depend on the
+      # sitemap and Search Console.
+      #
+      # Annotates rather than fails: the deploy already succeeded by this point.
+      - name: Submit changed URLs to IndexNow
+        run: |
+          urls=$(curl -sf https://dinobridge.de/sitemap.xml \
+            | grep -o '<loc>[^<]*</loc>' | sed 's|</*loc>||g' \
+            | python3 -c 'import sys,json; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')
+          if [ -z "$urls" ] || [ "$urls" = "[]" ]; then
+            echo "::warning::Could not read the sitemap; skipping IndexNow."
+            exit 0
+          fi
+          code=$(curl -sS -o /tmp/indexnow.json -w '%{http_code}' -X POST \
+            https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "{\"host\":\"dinobridge.de\",\"key\":\"1106c94de54542d3ba814595797e623c\",\"keyLocation\":\"https://dinobridge.de/1106c94de54542d3ba814595797e623c.txt\",\"urlList\":$urls}")
+          case "$code" in
+            200|202) echo "IndexNow accepted the URL list (HTTP $code)." ;;
+            *) echo "::warning::IndexNow returned HTTP $code. Site is deployed; search engines will still find it via the sitemap." ;;
+          esac
