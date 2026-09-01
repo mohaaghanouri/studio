@@ -21,11 +21,16 @@ export const contact = {
 	// whatsapp: '491706128949', telegram: 'mohaaghanouri'
 	whatsapp: '',
 	telegram: '',
-	// Cloudflare Email Routing forwards this to the Gmail. Catch-all is off, so
-	// this is the ONLY address on the domain that accepts mail — anything else
-	// (moha@, hello@) gets 550 rejected. Changing it here means changing it in
-	// Cloudflare too.
-	email: 'connect@moha.expert',
+	// Cloudflare Email Routing on the dinobridge.de zone forwards this to the
+	// Gmail. The catch-all rule is disabled, so this is the ONLY address on the
+	// domain that accepts mail — anything else (moha@, hello@) gets rejected.
+	// Changing it here means adding the matching routing rule in Cloudflare too,
+	// or enquiries bounce silently.
+	//
+	// connect@moha.expert still works and keeps working until that domain lapses
+	// in Aug 2027: its MX records are untouched by the 301 redirect, because mail
+	// routing and HTTP redirects are independent.
+	email: 'connect@dinobridge.de',
 	formspree: 'mbgrlnng',
 	city: 'Berlin',
 	// Business address. Declared in the Impressum (§5 DDG) and in the JSON-LD
