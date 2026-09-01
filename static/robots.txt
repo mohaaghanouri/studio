@@ -82,3 +82,8 @@ User-agent: Bytespider
 Disallow: /
 
 Sitemap: https://dinobridge.de/sitemap.xml
+
+# --- IndexNow ---------------------------------------------------------------
+# The key file at /1106c94de54542d3ba814595797e623c.txt proves we own this host to Bing,
+# Yandex and Seznam, which lets new and changed URLs be pushed rather than
+# waited for. Deleting that file silently breaks submission; nothing else does.
