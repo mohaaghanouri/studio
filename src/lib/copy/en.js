@@ -5,7 +5,7 @@ import { contact } from './contact.js';
 export default {
 	lang: 'en',
 	meta: {
-		title: `${contact.name} — AI for the boring half of your job`,
+		title: `${contact.brand} — AI for the boring half of your job`,
 		description:
 			'I find the part of your week that is machinery pretending to be judgement, and I build up to that line and no further. Lawyers, teachers, dentists, surveyors and nineteen other fields. Berlin, English & German. The first conversation is free.'
 	},
@@ -17,9 +17,9 @@ export default {
 		availability: 'Taking on new clients',
 		headline: 'The boring half of your job can do itself.',
 		subline:
-			`I'm ${contact.name}. I sit inside your actual working week until I can see which part of it is machinery pretending to be judgement — then I build up to that line and never across it. The machine takes the volume. You keep the decision.`,
+			`${contact.brand} sits inside your actual working week until we can see which part of it is machinery pretending to be judgement — then builds up to that line and never across it. The machine takes the volume. You keep the decision.`,
 		button: 'Message me — the first conversation is free',
-		note: 'Based in Berlin'
+		note: `Berlin · the work is done by ${contact.name}`
 	},
 	studio: {
 		// Label only — the list itself lives in contact.js. Framed as tools, NOT clients,
@@ -36,7 +36,7 @@ export default {
 		worksIntro:
 			"Each of these is something I built and ran myself, for real people with real deadlines. Pick the one closest to your work.",
 		worksMeta:
-			`Real use cases: contract review for lawyers, content, house hunting, job search, research, marketing and exam prep. Built and run by ${contact.name}, AI coaching in Berlin.`,
+			`Real use cases: contract review for lawyers, content, house hunting, job search, research, marketing and exam prep. Built and run by ${contact.brand} — ${contact.name}, AI coaching in Berlin.`,
 		workName: 'Use case',
 		workPeople: 'People helped',
 		workCovers: 'What it takes over',
@@ -1658,10 +1658,10 @@ export default {
 		]
 	},
 	about: {
-		eyebrow: 'About me',
+		eyebrow: `Who ${contact.brand} is`,
 		title: 'The translator between you and the machines.',
 		photoAlt: contact.name,
-		text: "Almost nobody comes to me asking for AI. They come because one specific part of their week has become unbearable. What I actually do is sit inside that week until I can see which part of it is machinery pretending to be judgement — and that is the rarer skill, because most people who can build these systems cannot hear the problem, and most people who can hear the problem cannot build. I do both, one person at a time. I work in two registers: inside a company I own and run a production system used by a real legal department, and outside it I sit at a kitchen table with a yoga teacher or a chef. The company work teaches me what survives audits and handovers; the one-to-one work keeps me honest about how little most people actually need. So I listen to how you already work, I build or teach exactly that much, and I say so plainly when the answer is that AI will not pay off for you."
+		text: `${contact.brand} is one expert, not an agency: ${contact.name}, and you deal with him directly from the first call to the handover. ` + "Almost nobody comes to me asking for AI. They come because one specific part of their week has become unbearable. What I actually do is sit inside that week until I can see which part of it is machinery pretending to be judgement — and that is the rarer skill, because most people who can build these systems cannot hear the problem, and most people who can hear the problem cannot build. I do both, one person at a time. I work in two registers: inside a company I own and run a production system used by a real legal department, and outside it I sit at a kitchen table with a yoga teacher or a chef. The company work teaches me what survives audits and handovers; the one-to-one work keeps me honest about how little most people actually need. So I listen to how you already work, I build or teach exactly that much, and I say so plainly when the answer is that AI will not pay off for you."
 	},
 	testimonials: {
 		eyebrow: 'Kind words',

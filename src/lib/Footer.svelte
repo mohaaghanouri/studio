@@ -16,7 +16,7 @@
 </script>
 
 <footer class="foot" class:wrap>
-	<p>© {contact.name} · {contact.address || contact.city}</p>
+	<p>© {contact.brand} · {contact.address || contact.city}</p>
 	<p>
 		<a href="mailto:{contact.email}">{contact.email}</a>
 		{#each profileLinks as p}

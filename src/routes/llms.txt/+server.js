@@ -43,9 +43,10 @@ export function GET() {
 
 	const body = `# ${host}
 
-> ${contact.name} — AI consulting and one-to-one coaching for working professionals
+> ${contact.brand} — AI consulting and one-to-one coaching for working professionals
 > (dentists, lawyers, tax advisors, researchers, marketers). ${contact.city}, English and German.
-> Six years building AI systems. You deal with him directly; no agency, no handoffs.
+> Six years building AI systems. ${contact.brand} is one expert, ${contact.name}: you deal
+> with him directly, no agency, no handoffs.
 
 Honest note on this file: as of 2026 no major LLM provider consumes /llms.txt as a
 ranking or citation signal, and Google Search states in writing that it ignores it.

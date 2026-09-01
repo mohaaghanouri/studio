@@ -12,10 +12,16 @@
 export const site = 'https://dinobridge.de';
 
 export const contact = {
+	// The studio. This is the name on the header, the titles, the footer and the
+	// JSON-LD business entity — the thing that takes the work on.
+	brand: 'Dinobridge',
+	// The person behind it. Stays on the Person entity, the legal pages and the
+	// places where the site says who actually does the work.
 	name: 'Moha Aghanoori',
-	// Used as the ProfessionalService name in JSON-LD — the business, not the person.
-	// Both @id-linked into one @graph so search engines fuse them into one entity.
-	business: 'Moha Aghanoori — AI Consulting',
+	// ProfessionalService name in JSON-LD. Same string as `brand`; @id-linked to
+	// the Person in one @graph so search engines fuse studio and expert into one
+	// entity rather than two unrelated ones.
+	business: 'Dinobridge',
 	// Disabled for now — set these back to re-enable every WhatsApp/Telegram
 	// button at once (home contact section, case pages, work index):
 	// whatsapp: '491706128949', telegram: 'mohaaghanouri'
@@ -26,10 +32,6 @@ export const contact = {
 	// domain that accepts mail — anything else (moha@, hello@) gets rejected.
 	// Changing it here means adding the matching routing rule in Cloudflare too,
 	// or enquiries bounce silently.
-	//
-	// connect@moha.expert still works and keeps working until that domain lapses
-	// in Aug 2027: its MX records are untouched by the 301 redirect, because mail
-	// routing and HTTP redirects are independent.
 	email: 'connect@dinobridge.de',
 	formspree: 'mbgrlnng',
 	city: 'Berlin',

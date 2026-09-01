@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Impressum — {contact.name}</title>
+	<title>Impressum — {contact.brand}</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
@@ -13,7 +13,8 @@
 
 	<h2>Angaben gemäß § 5 DDG</h2>
 	<p>
-		{contact.name}<br />
+		{contact.brand}<br />
+		Inhaber: {contact.name}<br />
 		{contact.street}<br />
 		{contact.postalCode} {contact.city}<br />
 		Deutschland

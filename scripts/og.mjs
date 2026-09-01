@@ -65,7 +65,9 @@ const server = createServer((req, res) => {
 // else on the machine happens to be holding it.
 const { port } = server.address();
 
-const browser = await chromium.launch();
+// ponytail: OG_CHANNEL=chrome uses the locally installed Chrome when the bundled
+// chromium download is blocked (corporate TLS interception). Unset = bundled.
+const browser = await chromium.launch({ channel: process.env.OG_CHANNEL || undefined });
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
 fs.mkdirSync('static/og', { recursive: true });
 for (const c of cards) {

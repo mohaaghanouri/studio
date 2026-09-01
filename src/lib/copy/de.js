@@ -5,7 +5,7 @@ import { contact } from './contact.js';
 export default {
 	lang: 'de',
 	meta: {
-		title: `${contact.name} — KI für die langweilige Hälfte Ihrer Arbeit`,
+		title: `${contact.brand} — KI für die langweilige Hälfte Ihrer Arbeit`,
 		description:
 			'Ich finde den Teil Ihrer Woche, der Mechanik im Gewand von Urteilsvermögen ist, und baue bis genau an diese Linie — nie darüber hinaus. Anwälte, Lehrkräfte, Zahnärzte, Gutachter und neunzehn weitere Felder. Berlin, Deutsch & Englisch. Das erste Gespräch ist kostenlos.'
 	},
@@ -16,9 +16,9 @@ export default {
 	hero: {
 		availability: 'Nehme neue Klienten an',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
-		subline: `Ich bin ${contact.name}. Ich setze mich in Ihre tatsächliche Arbeitswoche, bis ich sehen kann, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und baue bis genau an diese Linie, nie darüber hinaus. Die Maschine übernimmt die Menge. Die Entscheidung bleibt bei Ihnen.`,
+		subline: `${contact.brand} setzt sich in Ihre tatsächliche Arbeitswoche, bis sichtbar wird, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und baut bis genau an diese Linie, nie darüber hinaus. Die Maschine übernimmt die Menge. Die Entscheidung bleibt bei Ihnen.`,
 		button: 'Schreiben Sie mir — das erste Gespräch ist kostenlos',
-		note: 'Ansässig in Berlin'
+		note: `Berlin · die Arbeit macht ${contact.name}`
 	},
 	studio: {
 		// Nur das Label — die Liste steht in contact.js. Als Werkzeuge, NICHT als Kunden,
@@ -35,7 +35,7 @@ export default {
 		worksIntro:
 			'Jedes davon habe ich selbst gebaut und betrieben — für echte Menschen mit echten Fristen. Wählen Sie das, was Ihrer Arbeit am nächsten kommt.',
 		worksMeta:
-			'Echte Anwendungsfälle: Vertragsprüfung für Anwälte, Content, Immobiliensuche, Jobsuche, Forschung, Marketing und Prüfungsvorbereitung. KI-Beratung in Berlin.',
+			`Echte Anwendungsfälle: Vertragsprüfung für Anwälte, Content, Immobiliensuche, Jobsuche, Forschung, Marketing und Prüfungsvorbereitung. Gebaut und betrieben von ${contact.brand} — ${contact.name}, KI-Beratung in Berlin.`,
 		workName: 'Anwendungsfall',
 		workPeople: 'Begleitete Menschen',
 		workCovers: 'Was es übernimmt',
@@ -1658,10 +1658,10 @@ export default {
 		]
 	},
 	about: {
-		eyebrow: 'Über mich',
+		eyebrow: `Wer ${contact.brand} ist`,
 		title: 'Der Übersetzer zwischen Ihnen und den Maschinen.',
 		photoAlt: contact.name,
-		text: 'Fast niemand kommt zu mir und fragt nach KI. Man kommt, weil ein bestimmter Teil der Woche unerträglich geworden ist. Was ich tatsächlich tue: Ich setze mich in diese Woche, bis ich sehen kann, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und das ist die seltenere Fähigkeit, denn die meisten, die solche Systeme bauen können, hören das Problem nicht, und die meisten, die das Problem hören, können nicht bauen. Ich mache beides, mit einem Menschen nach dem anderen. Ich arbeite in zwei Registern: In einem Unternehmen betreibe ich ein Produktivsystem, das eine echte Rechtsabteilung nutzt, und daneben sitze ich mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt mich, was Audits und Übergaben übersteht; die Einzelarbeit hält mich ehrlich darüber, wie wenig die meisten wirklich brauchen. Ich höre also zu, wie Sie ohnehin arbeiten, baue oder erkläre genau so viel — und sage klar, wenn die Antwort lautet, dass KI sich für Sie nicht rechnet.'
+		text: `${contact.brand} ist keine Agentur, sondern ein Experte: ${contact.name} — und Sie haben vom ersten Gespräch bis zur Übergabe direkt mit ihm zu tun. ` + 'Fast niemand kommt zu mir und fragt nach KI. Man kommt, weil ein bestimmter Teil der Woche unerträglich geworden ist. Was ich tatsächlich tue: Ich setze mich in diese Woche, bis ich sehen kann, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und das ist die seltenere Fähigkeit, denn die meisten, die solche Systeme bauen können, hören das Problem nicht, und die meisten, die das Problem hören, können nicht bauen. Ich mache beides, mit einem Menschen nach dem anderen. Ich arbeite in zwei Registern: In einem Unternehmen betreibe ich ein Produktivsystem, das eine echte Rechtsabteilung nutzt, und daneben sitze ich mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt mich, was Audits und Übergaben übersteht; die Einzelarbeit hält mich ehrlich darüber, wie wenig die meisten wirklich brauchen. Ich höre also zu, wie Sie ohnehin arbeiten, baue oder erkläre genau so viel — und sage klar, wenn die Antwort lautet, dass KI sich für Sie nicht rechnet.'
 	},
 	testimonials: {
 		eyebrow: 'Freundliche Worte',

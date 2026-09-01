@@ -30,14 +30,14 @@
 </script>
 
 <svelte:head>
-	<title>{copy.studio.worksLabel} — {contact.name}</title>
+	<title>{copy.studio.worksLabel} — {contact.brand}</title>
 	<meta name="description" content={copy.studio.worksMeta} />
 	<link rel="canonical" href={canonical} />
 	<link rel="alternate" hreflang="en" href="{site}/work/" />
 	<link rel="alternate" hreflang="de" href="{site}/de/work/" />
 	<link rel="alternate" hreflang="x-default" href="{site}/work/" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{copy.studio.worksLabel} — {contact.name}" />
+	<meta property="og:title" content="{copy.studio.worksLabel} — {contact.brand}" />
 	<meta property="og:description" content={copy.studio.worksMeta} />
 	<meta property="og:url" content={canonical} />
 	<meta property="og:image" content="{site}/og/{isEn ? '' : 'de-'}work.png" />

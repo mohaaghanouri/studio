@@ -1,6 +1,6 @@
 # studio
 
-Personal consulting site for **moha.expert**. SvelteKit + `adapter-static` — fully prerendered,
+Consulting site for **Dinobridge** (dinobridge.de) — the studio name; Moha Aghanoori is the expert behind it. SvelteKit + `adapter-static` — fully prerendered,
 no backend, hosted on GitHub Pages behind Cloudflare. Bilingual EN (`/`) + DE (`/de/`).
 
 ```bash
@@ -13,7 +13,7 @@ npm run preview    # serve the production build locally
 Pushing to `main` builds and deploys automatically (`.github/workflows/deploy.yml`). The
 deploy stamps the commit into `build/version.txt`, waits until GitHub Pages is actually
 serving that commit, and only then purges the Cloudflare cache — purging any earlier
-re-caches the old content and makes new URLs 404 at the edge. `curl https://moha.expert/version.txt`
+re-caches the old content and makes new URLs 404 at the edge. `curl https://dinobridge.de/version.txt`
 tells you which commit is live.
 
 ## Where things live

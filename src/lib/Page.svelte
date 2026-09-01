@@ -171,7 +171,7 @@
 				url: canonical,
 				image: `${site}/moha.webp`,
 				jobTitle: isEn ? 'AI Consultant' : 'KI-Berater',
-				description: copy.hero.subline,
+				description: copy.about.text,
 				email: `mailto:${contact.email}`,
 				sameAs: profiles,
 				knowsLanguage: ['de', 'en'],
@@ -278,7 +278,7 @@
 
 <header>
 	<div class="bar wrap">
-		<a class="name" href="#top">{contact.name}</a>
+		<a class="name" href="#top">{contact.brand}</a>
 
 		<nav class="desk" aria-label="Sections">
 			{#each sections as section, i}

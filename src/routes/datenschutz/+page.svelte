@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Datenschutzerklärung — {contact.name}</title>
+	<title>Datenschutzerklärung — {contact.brand}</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
@@ -14,7 +14,7 @@
 
 	<h2>Wer verantwortlich ist</h2>
 	<p>
-		{contact.name}, {contact.city} (vollständige Anschrift im
+		{contact.brand} — Inhaber {contact.name}, {contact.city} (vollständige Anschrift im
 		<a href="{base}/impressum">Impressum</a>). Bei Fragen zum Datenschutz erreichen Sie mich unter
 		<a href="mailto:{contact.email}">{contact.email}</a>.
 	</p>

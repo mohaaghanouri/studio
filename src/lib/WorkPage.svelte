@@ -39,11 +39,11 @@
 </script>
 
 <svelte:head>
-	<title>{item.title ?? `${item.label} — ${contact.name}`}</title>
+	<title>{item.title ?? `${item.label} — ${contact.brand}`}</title>
 	<meta name="description" content={item.metaDescription ?? item.headline} />
 	<link rel="canonical" href={canonical} />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={item.title ?? `${item.label} — ${contact.name}`} />
+	<meta property="og:title" content={item.title ?? `${item.label} — ${contact.brand}`} />
 	<meta property="og:description" content={item.metaDescription ?? item.headline} />
 	<link rel="alternate" hreflang="en" href="{site}/work/{item.slug}/" />
 	<link rel="alternate" hreflang="de" href="{site}/de/work/{item.slug}/" />
