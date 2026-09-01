@@ -2,7 +2,8 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
-	import { contact, site, tools, profiles, profileLinks } from '$lib/copy/contact.js';
+	import { contact, site, tools, profiles } from '$lib/copy/contact.js';
+	import Footer from '$lib/Footer.svelte';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 	import { featured } from '$lib/art.js';
 	import { roster, totalHelped, groupCount } from '$lib/copy/roster.js';
@@ -681,19 +682,7 @@
 	</div>
 {/if}
 
-<footer>
-	<div class="wrap foot">
-		<p>© {contact.name} · {contact.address || contact.city}</p>
-		<p>
-			<a href="mailto:{contact.email}">{contact.email}</a>
-			{#each profileLinks as p}
-				{' · '}<a href={p.url} rel="me noopener">{p.label}</a>
-			{/each}
-			· <a href="{base}/impressum/">{copy.footer.impressum}</a>
-			· <a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>
-		</p>
-	</div>
-</footer>
+<Footer {copy} wrap />
 
 <style>
 	/* ============================================================
@@ -1883,28 +1872,6 @@
 		border-top: 1px solid var(--line);
 	}
 
-	.foot {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		gap: 0.5rem 2rem;
-		padding-top: 2rem;
-		padding-bottom: 4rem;
-		font-family: var(--mono);
-		font-size: var(--t-meta);
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--faint);
-	}
 
-	.foot a {
-		color: var(--faint);
-		text-decoration: none;
-		display: inline-block;
-		padding: 0.35rem 0;
-	}
 
-	.foot a:hover {
-		color: var(--text);
-	}
 </style>

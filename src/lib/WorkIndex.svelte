@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths';
-	import { contact, site, profileLinks } from '$lib/copy/contact.js';
+	import { contact, site } from '$lib/copy/contact.js';
+	import Footer from '$lib/Footer.svelte';
 	import { artFor } from '$lib/art.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 
@@ -96,17 +97,7 @@
 		</div>
 	</section>
 
-	<footer class="foot">
-		<p>© {contact.name} · {contact.address || contact.city}</p>
-		<p>
-			<a href="mailto:{contact.email}">{contact.email}</a>
-			{#each profileLinks as p}
-				{' · '}<a href={p.url} rel="me noopener">{p.label}</a>
-			{/each}
-			· <a href="{base}/impressum/">{copy.footer.impressum}</a>
-			· <a href="{base}/datenschutz/">{copy.footer.datenschutz}</a>
-		</p>
-	</footer>
+	<Footer {copy} />
 </div>
 
 <style>
@@ -277,27 +268,6 @@
 		gap: 0.75rem;
 	}
 
-	.foot {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		gap: 0.5rem 2rem;
-		padding: 2rem 0 4rem;
-		font-family: var(--mono);
-		font-size: var(--t-meta);
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--faint);
-	}
 
-	.foot a {
-		color: var(--faint);
-		text-decoration: none;
-		display: inline-block;
-		padding: 0.35rem 0;
-	}
 
-	.foot a:hover {
-		color: var(--text);
-	}
 </style>
