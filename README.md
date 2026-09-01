@@ -22,7 +22,7 @@ tells you which commit is live.
 |---|---|
 | Contact, domain, email, tools row | `src/lib/copy/contact.js` — **single source of truth** |
 | Who I've helped, and how many | `src/lib/copy/roster.js` — counts only; labels live in `en.js`/`de.js` under `who.roster`. The home page shows the labels **without** the counts; the counts appear in the rail of each case page |
-| The 21 case pages | `built.items` in `en.js`/`de.js`, one entry per field. Source material: [`researches/projects/`](researches/projects/) |
+| The 21 case pages | `built.items` in `en.js`/`de.js`, one entry per field. Source material: `researches/projects/` in the private **studio-research** repo |
 | Client quotes | `quotes` on each case in `built.items` — next to the work they are about. There is no separate testimonials list: the home page shows the first voice from each of the six featured cases |
 | Case illustrations | `static/work/<slug>.svg` + a tint per slug in `src/lib/art.js`. Motifs must sit between y 230–520 of the 1200×750 canvas — the case-page hero is a wide centre crop and anything outside that band is cut off |
 | All copy, both languages | `src/lib/copy/en.js`, `src/lib/copy/de.js` (identical key shape) |
@@ -34,28 +34,32 @@ tells you which commit is live.
 
 ## Docs
 
-- **[`researches/projects/`](researches/projects/)** — the field notes the 21 case pages are
-  written from, one per profession, plus [`00-method.md`](researches/projects/00-method.md)
-  behind `/method/` and [`testimonals.md`](researches/projects/testimonals.md) behind the
-  quotes. Edit a page here first, then in the copy files.
-- **[`PLAYBOOK.md`](PLAYBOOK.md)** — the reusable end-to-end roadmap for standing up another
-  site like this one: repo, DNS, Cloudflare, email, search, German legal, and every trap that
-  bit us. Read this before launching anything new.
-- [`researches/growth/00-free-plan.md`](researches/growth/00-free-plan.md) — the €0 growth plan
-  for *this* site, sequenced, with what's shipped and what needs your hands.
-- [`outreach/REFERENT-EMAILS.md`](outreach/REFERENT-EMAILS.md) — ten German Referent pitches to
-  the Berlin chambers, ready to send. Highest-return item in the plan.
+The research, the launch playbook and the testimonial record are **not in this
+repo**. They live in the private **`mohaaghanouri/studio-research`** repo, because
+between them they published the whole go-to-market — per-segment targeting,
+day-rate strategy, the German funding playbook, the cold-outreach templates — and
+the client testimonial record with real names.
+
+| In the private repo | What it is |
+|---|---|
+| `researches/projects/` | Field notes behind the 21 case pages, `00-method.md` behind `/method/`, `testimonals.md` behind the quotes |
+| `researches/growth/00-free-plan.md` | The €0 growth plan for this site, sequenced |
+| `outreach/REFERENT-EMAILS.md` | Ten German Referent pitches to the Berlin chambers |
+| `PLAYBOOK.md` | The reusable end-to-end roadmap for standing up another site like this |
+
+Edit the field notes there first, then the copy files here.
 
 ## Two things to know
 
 **The site is indexable.** `src/lib/preview.js` has `PLACEHOLDERS = false`. It was `true` while
 five mock testimonials sat in the copy files; those were deleted rather than published, because
 §5b UWG prohibits publishing consumer testimonials that are not genuine. The 39 quotes on the
-site now are real client words from
-[`researches/projects/testimonals.md`](researches/projects/testimonals.md), with names withheld
-at the clients' request — role and context only. Three entries in that file are marked as
-templates with nobody behind them and are deliberately **not** published. If anything unapproved
-is ever added back, set the flag to `true` and list it in `PLACEHOLDER_ITEMS`.
+site are real client words, with names withheld at the clients' request — role and region only.
+The record of who said what is `researches/projects/testimonals.md` in the private
+**studio-research** repo; it holds the real names, which is why it is not here. Three entries in
+that file are marked as templates with nobody behind them and are deliberately **not** published.
+If anything unapproved is ever added back, set the flag to `true` and list it in
+`PLACEHOLDER_ITEMS`.
 
 **`en.js` and `de.js` must keep an identical key shape.** Every case needs all of
 `slug, title, metaDescription, label, headline, story, machinery, judgement, builds, stops,
