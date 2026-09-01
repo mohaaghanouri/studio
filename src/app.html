@@ -7,6 +7,24 @@
 		<meta name="theme-color" content="#060606" />
 		<meta name="color-scheme" content="dark" />
 		%sveltekit.head%
+		<!-- Cloudflare Web Analytics. Cookieless and no localStorage, so no consent
+		     banner is required under TDDDG §25 — that is the reason to prefer it
+		     over GA4, not the price.
+		
+		     This is here rather than injected at the edge because Cloudflare's
+		     "automatic setup" never fired: auto_install was true and the ruleset
+		     enabled, verified via the API, but the script was still absent from the
+		     HTML after 5+ minutes. The site is now in JS-snippet mode
+		     (auto_install false) so it cannot double-count if edge injection ever
+		     starts working.
+		
+		     The token is public by design — it identifies the site to the beacon and
+		     is visible in any page source. -->
+		<script
+			defer
+			src="https://static.cloudflareinsights.com/beacon.min.js"
+			data-cf-beacon='{"token": "cc8a528580b04d64aee4ae310465628e"}'
+		></script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
