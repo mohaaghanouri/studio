@@ -1,4 +1,4 @@
-# https://moha.expert/robots.txt
+# https://dinobridge.de/robots.txt
 #
 # Static marketing site. Nothing here is private, so there is nothing to hide
 # from a crawler. robots.txt DEFAULTS TO ALLOW, so the functional content of this
@@ -81,4 +81,4 @@ Allow: /
 User-agent: Bytespider
 Disallow: /
 
-Sitemap: https://moha.expert/sitemap.xml
+Sitemap: https://dinobridge.de/sitemap.xml

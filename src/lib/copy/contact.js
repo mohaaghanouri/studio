@@ -9,7 +9,7 @@
 //   static/CNAME  — the custom domain, read by GitHub Pages at deploy time
 //   src/lib/copy/{en,de}.js — prose that mentions the name in a sentence gets
 //                             rewritten wholesale for a new site anyway
-export const site = 'https://moha.expert';
+export const site = 'https://dinobridge.de';
 
 export const contact = {
 	name: 'Moha Aghanoori',

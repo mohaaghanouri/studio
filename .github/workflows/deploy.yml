@@ -56,7 +56,7 @@ jobs:
       - name: Wait for Pages to serve this commit
         run: |
           for i in $(seq 1 40); do
-            served=$(curl -sf "https://moha.expert/version.txt?cb=${GITHUB_RUN_ID}-$i" || true)
+            served=$(curl -sf "https://dinobridge.de/version.txt?cb=${GITHUB_RUN_ID}-$i" || true)
             if [ "$served" = "$GITHUB_SHA" ]; then
               echo "Pages is serving ${GITHUB_SHA::7} after $((i * 5))s."
               exit 0
