@@ -154,8 +154,8 @@
 	//   aggregateRating / Review — never without written per-quote permission.
 	const address = {
 		'@type': 'PostalAddress',
-		streetAddress: 'Geschwister-Scholl-Straße 1–3',
-		postalCode: '10117',
+		streetAddress: contact.street,
+		postalCode: contact.postalCode,
 		addressLocality: contact.city,
 		addressCountry: 'DE'
 	};

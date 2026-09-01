@@ -28,9 +28,19 @@ export const contact = {
 	email: 'connect@moha.expert',
 	formspree: 'mbgrlnng',
 	city: 'Berlin',
-	// Business address. Also declared in the Impressum (§5 DDG), so this must stay
-	// an address where post genuinely reaches you.
-	address: 'Geschwister-Scholl-Straße 1–3, 10117 Berlin',
+	// Business address. Declared in the Impressum (§5 DDG) and in the JSON-LD
+	// PostalAddress, so this must stay an address where post genuinely reaches
+	// you and where legal service can be effected — a Postfach does not satisfy
+	// §5. Split into parts because schema.org wants them separately; the
+	// Impressum and the JSON-LD both read these, so an address change is here
+	// and nowhere else.
+	street: 'Silbersteinstraße 131',
+	postalCode: '12051',
+	// One-line form, used by the footers and the contact block. Derived, so it
+	// can never drift from the parts above.
+	get address() {
+		return `${this.street}, ${this.postalCode} ${this.city}`;
+	},
 
 	// Cal.com handle + event slug, e.g. cal: 'moha', calEvent: 'discovery-call'
 	// → embeds cal.com/moha/discovery-call. Free plan is enough (1 user,

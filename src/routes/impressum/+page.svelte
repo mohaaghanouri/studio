@@ -14,8 +14,8 @@
 	<h2>Angaben gemäß § 5 DDG</h2>
 	<p>
 		{contact.name}<br />
-		Geschwister-Scholl-Straße 1–3<br />
-		10117 {contact.city}<br />
+		{contact.street}<br />
+		{contact.postalCode} {contact.city}<br />
 		Deutschland
 	</p>
 
