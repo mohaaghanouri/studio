@@ -1,0 +1,54 @@
+# dinobridge.de
+
+> Dinobridge — AI consulting for working professionals: small AI tools that take over the
+> repetitive part of the week while every decision stays with the person. Lawyers, teachers,
+> dentists, surveyors, researchers and other fields. Berlin, English and German.
+> Dinobridge is owned and led by Moha Aghanoori, who brings around eight years of professional
+> experience, including about five years focused on AI. Owner-led: no handoffs to a junior.
+
+Honest note on this file: as of 2026 no major LLM provider consumes /llms.txt as a
+ranking or citation signal, and Google Search states in writing that it ignores it.
+It exists here because it costs nothing to maintain and the agentic-browsing
+convention may yet go somewhere. The file every engine actually reads is
+/sitemap.xml.
+
+## Pages
+
+- [Home (English)](https://dinobridge.de/): what Dinobridge does, who it helps, how it works, pricing approach, FAQ.
+- [Startseite (Deutsch)](https://dinobridge.de/de/): dieselben Inhalte auf Deutsch.
+- [How we decide what to build](https://dinobridge.de/method/): the four tests that separate repetitive work
+  from judgement, the four steps of every project, and the five reasons we say no.
+
+## Real examples
+
+- [Job search](https://dinobridge.de/work/job-seekers/): an evidence bank and an advert reader that refuses to exaggerate; thirty people placed.
+- [Athletes](https://dinobridge.de/work/athletes/): match footage tagged, a scout-ready profile, a log that flags but never prescribes.
+- [Content creators](https://dinobridge.de/work/content-creators/): scripts, captions and clip candidates — no AI voice, no generated script.
+- [Buying a home](https://dinobridge.de/work/home-buyers/): a watcher that catches listings in minutes and a rejecter that says why.
+- [Lawyers](https://dinobridge.de/work/lawyers/): contract intake, versioning and a first-pass Word markup with a reason per change.
+- [Teachers](https://dinobridge.de/work/teachers/): worksheet variants and a rubric pass that locates evidence and withholds the grade.
+- [Coaches & yoga teachers](https://dinobridge.de/work/coaches/): booking first, then voice-note session notes; for three of five the answer was not AI.
+- [Product managers](https://dinobridge.de/work/product-managers/): feedback clustered with raw quotes kept; it never prioritises or scores.
+- [Online shoppers](https://dinobridge.de/work/online-shoppers/): price history, review filtering and a subscription audit. One afternoon.
+- [Architects](https://dinobridge.de/work/architects/): drawing register, quote normalising, same-evening site Protokolle. Never certifies.
+- [Project managers](https://dinobridge.de/work/project-managers/): meetings to actions and a status report built from what changed.
+- [Building surveyors](https://dinobridge.de/work/surveyors/): site capture and your own tested wordings; it never assesses, concludes or values.
+- [Event organisers](https://dinobridge.de/work/event-organizers/): one record per event; nothing is booked or committed automatically.
+- [Dentists](https://dinobridge.de/work/dentists/): recall, cancellation filling and confirmed dictation notes. Nothing clinical.
+- [Team leaders](https://dinobridge.de/work/team-leaders/): a private record per person and 1:1 prep. No ratings, no activity monitoring.
+- [Estate agents](https://dinobridge.de/work/estate-agents/): lead triage in minutes and compliant Exposés. No valuation, no generated photos.
+- [Executives](https://dinobridge.de/work/executives/): inbox triage, a pre-meeting brief and a commitment ledger. It never speaks as you.
+- [Chefs](https://dinobridge.de/work/chefs/): invoice reading and live dish costing. Food cost 34% back to 28.5%.
+- [Non-profits](https://dinobridge.de/work/volunteer-orgs/): a reusable core reshaped per funder; no impact claim is ever generated.
+- [Research](https://dinobridge.de/work/research/): reusable proposal text, supervision records and literature screening. Never generates a citation.
+- [Language exams](https://dinobridge.de/work/language-exams/): a per-criterion diagnostic and an error ledger. It never promises a score.
+
+## Legal
+
+- [Impressum](https://dinobridge.de/impressum/)
+- [Datenschutz](https://dinobridge.de/datenschutz/)
+
+## Contact
+
+- Book a 30-minute discovery call: https://cal.com/mohaaghanouri/discovery-call
+- Email: connect@dinobridge.de
