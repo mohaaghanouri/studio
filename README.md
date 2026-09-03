@@ -20,7 +20,7 @@ tells you which commit is live.
 
 | | |
 |---|---|
-| Contact, domain, email, tools row | `src/lib/copy/contact.js` — **single source of truth** |
+| Contact, domain, email | `src/lib/copy/contact.js` — **single source of truth** |
 | Who I've helped, and how many | `src/lib/copy/roster.js` — counts only; labels live in `en.js`/`de.js` under `who.roster`. The home page shows the labels **without** the counts; the counts appear in the rail of each case page |
 | The 21 case pages | `built.items` in `en.js`/`de.js`, one entry per field. Source material: `researches/projects/` in the private **studio-research** repo |
 | Client quotes | `quotes` on each case in `built.items` — next to the work they are about. There is no separate testimonials list: the home page shows the first voice from each of the six featured cases |

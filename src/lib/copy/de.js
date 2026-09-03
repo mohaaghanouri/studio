@@ -21,9 +21,6 @@ export default {
 		note: `Berlin · die Arbeit macht ${contact.name}`
 	},
 	studio: {
-		// Nur das Label — die Liste steht in contact.js. Als Werkzeuge, NICHT als Kunden,
-		// wirklich eingesetzt, die Zeile ist also wahr und keine Kundenliste.
-		toolsLabel: 'Womit wir arbeiten',
 		worksLabel: 'Anwendungsfälle',
 		capabilitiesLabel: 'So läuft es',
 		bookLabel: 'Termin buchen',

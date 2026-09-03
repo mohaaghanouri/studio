@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import { fade } from '$lib/fade.js';
-	import { contact, site, tools, profiles } from '$lib/copy/contact.js';
+	import { contact, site, profiles } from '$lib/copy/contact.js';
 	import Footer from '$lib/Footer.svelte';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 	import { featured } from '$lib/art.js';
@@ -62,10 +62,8 @@
 		bookOpen = false;
 	}
 
-	// Marquee needs the list twice so the loop has no visible seam.
-	const marquee = [...tools, ...tools];
-	// Same doubling trick as the tools row: the track scrolls to -50%, so the
-	// list has to be rendered twice for the loop to be seamless.
+	// The track scrolls to -50%, so the list has to be rendered twice for the
+	// loop to be seamless.
 	const proMarquee = [...roster, ...roster];
 
 	// Cal.com inline embed. Only runs when a handle is configured, so the
@@ -377,37 +375,17 @@
 		</div>
 	</section>
 
-	<!-- Professions, above the tools row and running slower so the two read as
-	     separate bands rather than one blur. Every label links to its case. -->
-	<div class="tools-strip pro-strip">
-		<span class="meta tools-label">{copy.who.eyebrow}</span>
+	<!-- Professions marquee. Pauses on hover, holds still under
+	     prefers-reduced-motion. Every label links to its case. -->
+	<div class="strip">
+		<span class="meta strip-label">{copy.who.eyebrow}</span>
 		<div class="rail">
-			<ul class="track track-slow" aria-label={copy.who.eyebrow}>
+			<ul class="track" aria-label={copy.who.eyebrow}>
 				{#each proMarquee as group, i}
 					<li aria-hidden={i >= roster.length ? 'true' : undefined}>
 						<a href="{base}{isEn ? '' : '/de'}/work/{group.slug}/" tabindex={i >= roster.length ? -1 : undefined}
 							>{copy.who.roster[group.slug]}</a
 						>
-					</li>
-				{/each}
-			</ul>
-		</div>
-	</div>
-
-	<!-- Tools, deliberately not framed as clients. Marquee pauses on hover and
-	     holds still under prefers-reduced-motion. -->
-	<div class="tools-strip">
-		<span class="meta tools-label">{copy.studio.toolsLabel}</span>
-		<div class="rail">
-			<ul class="track" aria-label={copy.studio.toolsLabel}>
-				{#each marquee as tool, i}
-					<li aria-hidden={i >= tools.length ? 'true' : undefined}>
-						{#if tool.logo}
-							<!-- mark alone; alt carries the name for anyone who can't see it -->
-							<img src="{base}/logos/{tool.logo}" alt={tool.name} loading="lazy" />
-						{:else}
-							<span>{tool.name}</span>
-						{/if}
 					</li>
 				{/each}
 			</ul>
@@ -1068,18 +1046,17 @@
 	}
 
 	/* ============================================================
-	   Tools strip — full-bleed band between sections
+	   Professions strip — full-bleed band between sections
 	   ============================================================ */
-	.tools-strip {
+	.strip {
 		border-top: 1px solid var(--line);
 		border-bottom: 1px solid var(--line);
-		background: var(--raised);
 		padding: 1.4rem 0;
 		display: grid;
 		gap: 1rem;
 	}
 
-	.tools-label {
+	.strip-label {
 		padding-left: clamp(1.25rem, 4vw, 3rem);
 	}
 
@@ -1102,24 +1079,14 @@
 		display: flex;
 		width: max-content;
 		gap: clamp(2rem, 5vw, 4rem);
-		animation: scroll 42s linear infinite;
+		animation: scroll 96s linear infinite;
 	}
 
 	.rail:hover .track {
 		animation-play-state: paused;
 	}
 
-	/* Slower than the tools row so the two bands read as separate. */
-	.track-slow {
-		animation-duration: 96s;
-	}
-
-	.pro-strip {
-		border-bottom: 0;
-		background: transparent;
-	}
-
-	.track-slow a {
+	.track a {
 		color: var(--muted);
 		text-decoration: none;
 		display: block;
@@ -1127,7 +1094,7 @@
 		margin: -0.7rem -0.5rem;
 	}
 
-	.track-slow a:hover {
+	.track a:hover {
 		color: var(--accent);
 	}
 
@@ -1167,19 +1134,6 @@
 		min-width: 6rem;
 	}
 
-	/* Logos sit at a fixed height so differing artboards line up. Wordmarks
-	   render until a vendor SVG is dropped into static/logos/. */
-	.track img {
-		height: 1.6rem;
-		width: 1.6rem;
-		object-fit: contain;
-		opacity: 0.7;
-		transition: opacity 0.2s ease;
-	}
-
-	.track li:hover img {
-		opacity: 1;
-	}
 
 	/* ============================================================
 	   Work grid

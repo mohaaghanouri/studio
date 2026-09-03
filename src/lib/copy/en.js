@@ -22,9 +22,6 @@ export default {
 		note: `Berlin · the work is done by ${contact.name}`
 	},
 	studio: {
-		// Label only — the list itself lives in contact.js. Framed as tools, NOT clients,
-		// so the row reads as true rather than as an implied client list.
-		toolsLabel: 'Tools we work with',
 		worksLabel: 'Use cases',
 		capabilitiesLabel: 'How it works',
 		bookLabel: 'Book a call',
