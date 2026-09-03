@@ -141,7 +141,7 @@ export default {
 		items: [
 			{
 				slug: 'job-seekers',
-				title: 'KI für Jobsuchende: weniger, bessere Bewerbungen — KI-Beratung Berlin',
+				title: 'KI für Jobsuchende: weniger, bessere Bewerbungen — KI-Coaching Berlin',
 				metaDescription:
 					'Ein Werkzeug, das die ganze Stellenanzeige liest, mit Ihrer echten Erfahrung abgleicht und nie schönt. Dreißig Menschen sind so in Arbeit.',
 				label: 'Jobsuche',
@@ -211,7 +211,7 @@ export default {
 			},
 			{
 					slug: 'athletes',
-					title: 'KI für Sportler: ein Highlight-Video in Minuten — KI-Beratung Berlin',
+					title: 'KI für Sportler: ein Highlight-Video in Minuten — KI-Coaching Berlin',
 					metaDescription: 'Spielaufnahmen in Szenen sortiert, ein Highlight-Video in Minuten statt an einem Abend, ein Profil für Scouts und ein Trainingslog, das warnt, aber nie vorschreibt.',
 					label: 'Sportler',
 					headline: 'Wenn ein Scout etwas sehen will, darf es nicht vier Tage dauern.',
@@ -347,7 +347,7 @@ export default {
 				},
 			{
 				slug: 'home-buyers',
-				title: 'KI für den Wohnungskauf: weniger Besichtigungen — KI-Beratung Berlin',
+				title: 'KI für den Wohnungskauf: weniger Besichtigungen — KI-Coaching Berlin',
 				metaDescription:
 					'Neue Angebote erreichen Sie in Minuten, unpassende Wohnungen werden mit Begründung aussortiert, und jede Wohnung zeigt vor der Besichtigung ihre echten Kosten.',
 				label: 'Immobilienkauf',
@@ -692,7 +692,7 @@ export default {
 				},
 			{
 					slug: 'online-shoppers',
-					title: 'KI beim Online-Kauf: Scheinrabatte erkennen — KI-Beratung Berlin',
+					title: 'KI beim Online-Kauf: Scheinrabatte erkennen — KI-Coaching Berlin',
 					metaDescription: 'Ein Preisverlauf, der Scheinrabatte entlarvt, Bewertungen gefiltert nach dem, was kaputtgeht, ein Rückgabekalender, ein Abo-Check. Meist ein Nachmittag, oft nicht viel.',
 					label: 'Online-Käufer',
 					headline: 'Der kleinste Auftrag auf dieser Liste, und der, den wir am häufigsten ablehnen.',
@@ -1497,7 +1497,7 @@ export default {
 				},
 			{
 					slug: 'language-exams',
-					title: 'KI für IELTS, ÖSD und Goethe: üben, wo Punkte fehlen — KI-Beratung Berlin',
+					title: 'KI für IELTS, ÖSD und Goethe: üben, wo Punkte fehlen — KI-Coaching Berlin',
 					metaDescription: 'Ein Probetest je Kriterium bewertet, ein Fehlerregister, das Ihren wiederkehrenden Fehler benennt, Lernstunden dort, wo Sie Punkte verlieren. Es verspricht nie ein Ergebnis.',
 					label: 'Sprachprüfungen',
 					headline: 'Hören Sie auf, das zu üben, was Sie schon können.',

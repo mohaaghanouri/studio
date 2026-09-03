@@ -141,7 +141,7 @@ export default {
 		items: [
 			{
 				slug: 'job-seekers',
-				title: 'AI for job seekers: fewer, better applications — AI consulting Berlin',
+				title: 'AI for job seekers: fewer, better applications — AI coaching Berlin',
 				metaDescription:
 					'A tool that reads the whole job advert, checks it against what you have really done and never exaggerates. Thirty people are in jobs found this way.',
 				label: 'Job search',
@@ -211,7 +211,7 @@ export default {
 			},
 			{
 					slug: 'athletes',
-					title: 'AI for athletes: a highlight reel in minutes — AI consulting Berlin',
+					title: 'AI for athletes: a highlight reel in minutes — AI coaching Berlin',
 					metaDescription: 'Match footage sorted into moments, a highlight reel in minutes instead of an evening, a profile a scout can open today, and a training log that warns but never prescribes.',
 					label: 'Athletes',
 					headline: 'When a scout says send me something, it should not take four days.',
@@ -350,7 +350,7 @@ export default {
 			},
 			{
 				slug: 'home-buyers',
-				title: 'AI for home buyers: fewer, better viewings — AI consulting Berlin',
+				title: 'AI for home buyers: fewer, better viewings — AI coaching Berlin',
 				metaDescription:
 					'New listings reach you within minutes, unsuitable flats are rejected with a written reason, and every flat shows its true cost before you book a viewing.',
 				label: 'Buying a home',
@@ -701,7 +701,7 @@ export default {
 			},
 			{
 					slug: 'online-shoppers',
-					title: 'AI for online shoppers: spot the fake discount — AI consulting Berlin',
+					title: 'AI for online shoppers: spot the fake discount — AI coaching Berlin',
 					metaDescription: 'A price history that exposes fake discounts, reviews filtered for what breaks, a return-window diary and a subscription check. Usually one afternoon, and often not much.',
 					label: 'Online shoppers',
 					headline: 'The smallest job on this list, and the one we most often turn down.',
@@ -1506,7 +1506,7 @@ export default {
 				},
 			{
 					slug: 'language-exams',
-					title: 'AI for IELTS, ÖSD and Goethe: practise where marks are lost — AI consulting Berlin',
+					title: 'AI for IELTS, ÖSD and Goethe: practise where marks are lost — AI coaching Berlin',
 					metaDescription: 'A mock exam scored per criterion, an error log that names your recurring mistake, and study hours aimed where you actually lose marks. It never promises a score.',
 					label: 'Language exams',
 					headline: 'Stop practising what you are already good at.',
