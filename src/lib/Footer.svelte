@@ -16,7 +16,10 @@
 </script>
 
 <footer class="foot" class:wrap>
-	<p>© {contact.brand} · {contact.address || contact.city}</p>
+	<p class="brand">
+		<img src="{base}/brand/dinobridge-mark-icon-white.svg" alt="" height="20" />
+		© {contact.brand} · {contact.address || contact.city}
+	</p>
 	<p>
 		<a href="mailto:{contact.email}">{contact.email}</a>
 		{#each profileLinks as p}
@@ -52,6 +55,18 @@
 	   means the shorthand in either would clobber the other, so they stay split. */
 	.wrap.foot {
 		padding: 2rem clamp(1.25rem, 4vw, 3rem) 4rem;
+	}
+
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+	}
+
+	.brand img {
+		height: 1.25rem;
+		width: auto;
+		opacity: 0.5;
 	}
 
 	.foot a {

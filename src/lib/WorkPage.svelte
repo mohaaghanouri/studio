@@ -60,6 +60,9 @@
 <div class="shell">
 	<!-- Left rail: metadata stays put while the case scrolls past it -->
 	<aside class="rail">
+		<a class="rail-home" href="{base}{isEn ? '' : '/de'}/">
+			<img src="{base}/brand/dinobridge-mark-icon-white.svg" alt={contact.brand} height="28" />
+		</a>
 		<div class="rail-top">
 			<a class="back" href="{base}{isEn ? '' : '/de'}/work/">
 				<span aria-hidden="true">←</span> {copy.studio.workBack}
@@ -222,6 +225,20 @@
 		padding: 2rem;
 		border-right: 1px solid var(--line);
 		overflow-y: auto;
+	}
+
+	/* The rail already stacks with gap: 2.5rem; the mark needs to sit tight
+	   above the back link, not a whole gap away. */
+	.rail-home {
+		display: inline-flex;
+		align-self: start;
+		margin-bottom: -1.5rem;
+	}
+
+	.rail-home img {
+		display: block;
+		height: 1.75rem;
+		width: auto;
 	}
 
 	.rail-top {

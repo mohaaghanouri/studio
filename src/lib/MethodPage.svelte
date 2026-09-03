@@ -50,7 +50,7 @@
 	<header class="top">
 		<div class="bar">
 			<a class="back" href={home}>
-				<span aria-hidden="true">←</span> {isEn ? 'Home' : 'Startseite'}
+				<img src="{base}/brand/dinobridge-horizontal-compact-white.svg" alt="{contact.brand} — {isEn ? 'Home' : 'Startseite'}" height="32" />
 			</a>
 			<span class="lang">
 				{#if isEn}
@@ -166,8 +166,15 @@
 		min-height: 1.5rem;
 	}
 
-	.back:hover {
-		color: var(--accent);
+	.back img {
+		display: block;
+		height: 2rem;
+		width: auto;
+		transition: opacity 0.2s ease;
+	}
+
+	.back:hover img {
+		opacity: 0.7;
 	}
 
 	.lang a,

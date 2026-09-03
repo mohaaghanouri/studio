@@ -46,6 +46,7 @@ for (const c of cards) {
 	const size = n <= 46 ? 96 : n <= 62 ? 80 : n <= 80 ? 68 : 58;
 	const h = tpl
 		.replaceAll("url('./node_modules", "url('../node_modules")
+		.replace('src="./static/brand/', 'src="../static/brand/')
 		.replace('<h1>The boring half of your job can do itself.</h1>', `<h1>${escape(c.headline)}</h1>`)
 		.replace('background: #e1f435;', `background: ${c.tint};`)
 		.replace('AI consulting &amp; coaching · Berlin · EN &amp; DE', `${escape(c.label)} · Berlin · EN &amp; DE`)
@@ -54,7 +55,7 @@ for (const c of cards) {
 }
 
 // Serve the repo root so the template's ../node_modules font paths resolve.
-const types = { '.html': 'text/html', '.woff2': 'font/woff2' };
+const types = { '.html': 'text/html', '.woff2': 'font/woff2', '.svg': 'image/svg+xml' };
 const server = createServer((req, res) => {
 	const file = path.join(process.cwd(), decodeURIComponent(req.url.split('?')[0]));
 	if (!file.startsWith(process.cwd()) || !fs.existsSync(file)) return res.writeHead(404).end();

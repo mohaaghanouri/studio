@@ -7,7 +7,7 @@ export default {
 	meta: {
 		title: `${contact.brand} — KI für die langweilige Hälfte Ihrer Arbeit`,
 		description:
-			'Ich finde den Teil Ihrer Woche, der Mechanik im Gewand von Urteilsvermögen ist, und baue bis genau an diese Linie — nie darüber hinaus. Anwälte, Lehrkräfte, Zahnärzte, Gutachter und neunzehn weitere Felder. Berlin, Deutsch & Englisch. Das erste Gespräch ist kostenlos.'
+			'Wir finden den Teil Ihrer Woche, der Mechanik im Gewand von Urteilsvermögen ist, und bauen bis genau an diese Linie — nie darüber hinaus. Anwälte, Lehrkräfte, Zahnärzte, Gutachter und neunzehn weitere Felder. Berlin, Deutsch & Englisch. Das erste Gespräch ist kostenlos.'
 	},
 	nav: {
 		contact: 'Kontakt',
@@ -17,13 +17,13 @@ export default {
 		availability: 'Nehme neue Klienten an',
 		headline: 'Die langweilige Hälfte Ihrer Arbeit kann sich selbst erledigen.',
 		subline: `${contact.brand} setzt sich in Ihre tatsächliche Arbeitswoche, bis sichtbar wird, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und baut bis genau an diese Linie, nie darüber hinaus. Die Maschine übernimmt die Menge. Die Entscheidung bleibt bei Ihnen.`,
-		button: 'Schreiben Sie mir — das erste Gespräch ist kostenlos',
+		button: 'Schreiben Sie uns — das erste Gespräch ist kostenlos',
 		note: `Berlin · die Arbeit macht ${contact.name}`
 	},
 	studio: {
 		// Nur das Label — die Liste steht in contact.js. Als Werkzeuge, NICHT als Kunden,
 		// wirklich eingesetzt, die Zeile ist also wahr und keine Kundenliste.
-		toolsLabel: 'Womit ich arbeite',
+		toolsLabel: 'Womit wir arbeiten',
 		worksLabel: 'Anwendungsfälle',
 		capabilitiesLabel: 'So läuft es',
 		bookLabel: 'Termin buchen',
@@ -33,7 +33,7 @@ export default {
 		// Keine Zahl in der Überschrift: die Liste wächst mit jeder Berufsgruppe.
 		worksHeading: 'Was KI für Menschen wie Sie schon erledigt.',
 		worksIntro:
-			'Jedes davon habe ich selbst gebaut und betrieben — für echte Menschen mit echten Fristen. Wählen Sie das, was Ihrer Arbeit am nächsten kommt.',
+			'Jedes davon haben wir selbst gebaut und betrieben — für echte Menschen mit echten Fristen. Wählen Sie das, was Ihrer Arbeit am nächsten kommt.',
 		worksMeta:
 			`Echte Anwendungsfälle: Vertragsprüfung für Anwälte, Content, Immobiliensuche, Jobsuche, Forschung, Marketing und Prüfungsvorbereitung. Gebaut und betrieben von ${contact.brand} — ${contact.name}, KI-Beratung in Berlin.`,
 		workName: 'Anwendungsfall',
@@ -41,22 +41,22 @@ export default {
 		workCovers: 'Was es übernimmt',
 		workMachinery: 'Was die Maschine übernimmt',
 		workJudgement: 'Was Ihres bleibt',
-		workBuilds: 'Was ich baue',
+		workBuilds: 'Was wir bauen',
 		workStops: 'Wo es aufhört',
 		workProof: 'Woran man den Erfolg sieht',
-		workRefuse: 'Wann ich Nein sage',
+		workRefuse: 'Wann wir Nein sagen',
 		workCost: 'Was es Sie kostet',
 		bookCta: 'Oder Termin buchen',
 		close: 'Schließen',
 		priceLabel: 'Was es kostet'
 	},
 	who: {
-		eyebrow: 'Für wen ich arbeite',
+		eyebrow: 'Für wen wir arbeiten',
 		// Labels zu roster.js. Dort stehen die Zahlen, hier nur die Wörter.
 		rosterEyebrow: 'Seit 2022',
-		rosterTitle: 'Mit wem ich tatsächlich gearbeitet habe.',
+		rosterTitle: 'Mit wem wir tatsächlich gearbeitet haben.',
 		rosterIntro:
-			'Keine Zielgruppe — die Felder, in deren Arbeit ich schon drin war, eine Person nach der anderen. Wählen Sie das, was Ihrem am nächsten kommt.',
+			'Keine Zielgruppe — die Felder, in deren Arbeit wir schon drin waren, eine Person nach der anderen. Wählen Sie das, was Ihrem am nächsten kommt.',
 		// Labels zu den beiden Summen aus roster.js.
 		statPeople: 'Begleitete Menschen',
 		statFields: 'Berufsfelder',
@@ -82,19 +82,19 @@ export default {
 			'volunteer-orgs': 'Vereine'
 		},
 		notListed:
-			'Ihr Beruf ist nicht dabei? Es funktioniert mit großer Wahrscheinlichkeit trotzdem — fragen Sie mich.'
+			'Ihr Beruf ist nicht dabei? Es funktioniert mit großer Wahrscheinlichkeit trotzdem — fragen Sie uns.'
 	},
 	method: {
 		label: 'Die Methode',
-		title: 'Wie ich entscheide, was ich baue — die Methode — KI-Beratung Berlin',
+		title: 'Wie wir entscheiden, was wir bauen — die Methode — KI-Beratung Berlin',
 		metaDescription:
-			'Eine Frage entscheidet alles: Welcher Teil dieser Woche ist Mechanik im Gewand von Urteilsvermögen? Die vier Tests, die vier Phasen und die fünf Gründe, aus denen ich Nein sage.',
+			'Eine Frage entscheidet alles: Welcher Teil dieser Woche ist Mechanik im Gewand von Urteilsvermögen? Die vier Tests, die vier Phasen und die fünf Gründe, aus denen wir Nein sagen.',
 		headline: 'Welcher Teil dieser Woche ist Mechanik im Gewand von Urteilsvermögen?',
 		intro: [
-			'Jeder Mensch, mit dem ich gearbeitet habe, kam mit einer anderen Berufsbezeichnung und demselben Satz: Ein Teil meiner Woche ist unerträglich geworden. Der Beruf wechselt. Die Form des Problems fast nie.',
-			'Alles, was ich baue, folgt aus der Frage darüber. Ich frage nicht, was jemand automatisiert haben möchte, denn fast niemand weiß das — man weiß, was wehtut, nicht, wo die Naht verläuft. Die Naht zu finden ist die Arbeit. Auf der richtigen Seite zu bauen ist der leichte Teil.'
+			'Jeder Mensch, mit dem wir gearbeitet haben, kam mit einer anderen Berufsbezeichnung und demselben Satz: Ein Teil meiner Woche ist unerträglich geworden. Der Beruf wechselt. Die Form des Problems fast nie.',
+			'Alles, was wir bauen, folgt aus der Frage darüber. Wir fragen nicht, was jemand automatisiert haben möchte, denn fast niemand weiß das — man weiß, was wehtut, nicht, wo die Naht verläuft. Die Naht zu finden ist die Arbeit. Auf der richtigen Seite zu bauen ist der leichte Teil.'
 		],
-		testsTitle: 'Wie ich das eine vom anderen unterscheide.',
+		testsTitle: 'Wie wir das eine vom anderen unterscheiden.',
 		machineryLabel: 'Mechanik — alle vier treffen zu',
 		machinery: [
 			'Es wiederholt sich. Öfter als einmal pro Woche, in ungefähr derselben Form.',
@@ -109,10 +109,10 @@ export default {
 			'Die Beziehung ist das Produkt. Eine Patientin, ein Schüler, eine Mandantin, ein Publikum.',
 			'Es ist eine echte Entscheidung unter Unsicherheit. Kein Nachschlagen mit Zwischenschritten.'
 		],
-		seam: 'Ich baue bis an die Naht. Über sie hinaus baue ich nie. Fast jedes gescheiterte KI-Projekt, das ich retten sollte, ist gescheitert, weil jemand über die Naht hinaus gebaut hat — und der Mensch dem Ergebnis still nicht mehr vertraute.',
-		refuseTitle: 'Wann ich Nein sage.',
+		seam: 'Wir bauen bis an die Naht. Über sie hinaus bauen wir nie. Fast jedes gescheiterte KI-Projekt, das wir retten sollten, ist gescheitert, weil jemand über die Naht hinaus gebaut hat — und der Mensch dem Ergebnis still nicht mehr vertraute.',
+		refuseTitle: 'Wann wir Nein sagen.',
 		refuseIntro:
-			'Ich sage laut Nein und behalte die Beziehung. Nein zu sagen ist der Hauptgrund, warum Menschen mir ihre Bekannten schicken.',
+			'Wir sagen laut Nein und behalten die Beziehung. Nein zu sagen ist der Hauptgrund, warum Menschen uns ihre Bekannten schicken.',
 		refuse: [
 			{
 				title: 'Zu geringes Volumen.',
@@ -128,7 +128,7 @@ export default {
 			},
 			{
 				title: 'Ein langweiliges Werkzeug existiert schon.',
-				text: 'Ein Kalender, ein Formular, eine geteilte Tabelle, eine Vorlage. Das richte ich ein und berechne den Nachmittag, nicht das Quartal.'
+				text: 'Ein Kalender, ein Formular, eine geteilte Tabelle, eine Vorlage. Das richten wir ein und berechnen den Nachmittag, nicht das Quartal.'
 			},
 			{
 				title: 'Es ist eine Entscheidung, keine Arbeitslast.',
@@ -137,7 +137,7 @@ export default {
 		],
 		registersTitle: 'Zwei Register.',
 		registersText:
-			'Ich arbeite in einem Unternehmen, in dem ich ein Produktivsystem betreibe, das eine echte Rechtsabteilung nutzt — und ich arbeite eins zu eins mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt mich, was den Kontakt mit Audits, Übergaben und Menschen übersteht, die nicht danach gefragt haben. Die Einzelarbeit hält mich ehrlich darüber, wie wenig die meisten wirklich brauchen.',
+			'Wir arbeiten in einem Unternehmen, in dem wir ein Produktivsystem betreiben, das eine echte Rechtsabteilung nutzt — und wir arbeiten eins zu eins mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt uns, was den Kontakt mit Audits, Übergaben und Menschen übersteht, die nicht danach gefragt haben. Die Einzelarbeit hält uns ehrlich darüber, wie wenig die meisten wirklich brauchen.',
 		casesCta: 'Angewandt sehen, Feld für Feld'
 	},
 	built: {
@@ -192,7 +192,7 @@ export default {
 				stops: {
 					title: 'Das Werkzeug weigert sich, Ihre Erfahrung zu übertreiben.',
 					text: [
-						'Das ist keine Einstellung. Fehlt eine Anforderung, sagt es fehlend und lässt Ihnen die Wahl: Bewerbung auslassen oder die Lücke im Anschreiben ehrlich ansprechen. Ich bin gebeten worden, das abzuschwächen. Ich tue es nicht.',
+						'Das ist keine Einstellung. Fehlt eine Anforderung, sagt es fehlend und lässt Ihnen die Wahl: Bewerbung auslassen oder die Lücke im Anschreiben ehrlich ansprechen. Wir sind gebeten worden, das abzuschwächen. Wir tun es nicht.',
 						'Es ist der Grund, warum die dreißig Menschen ihre Stellen behalten haben — im Gespräch wurde nichts versprochen, was am Montag nicht lieferbar war. Es entscheidet auch nicht, wo Sie sich bewerben. Es sortiert und filtert; Sie wählen.'
 					]
 				},
@@ -262,14 +262,14 @@ export default {
 				stops: {
 					title: 'Es verordnet nie eine Einheit und beurteilt nie eine Verletzung.',
 					text: [
-						'Es zeigt den Trend und legt die Zahl dem Sportler und, sofern vorhanden, dem Trainer oder der Physiotherapie vor. Drei Anfragen nach einer „empfohlenen Belastung für morgen“ habe ich abgelehnt. Die Folge eines Fehlers ist jemandes Saison, und die Maschine kann das Knie nicht fühlen.',
+						'Es zeigt den Trend und legt die Zahl dem Sportler und, sofern vorhanden, dem Trainer oder der Physiotherapie vor. Drei Anfragen nach einer „empfohlenen Belastung für morgen“ haben wir abgelehnt. Die Folge eines Fehlers ist jemandes Saison, und die Maschine kann das Knie nicht fühlen.',
 						'Es spricht auch nicht mit Vereinen. Entwürfe warten darauf, dass der Spieler sie sendet.'
 					]
 				},
 				proof:
 					'Minuten vom Abpfiff bis zu einem Video, das ein Scout öffnen könnte. Kontaktierte Vereine mit tatsächlich verschicktem Nachfassen. Und ob das Log acht Wochen später noch geführt wird — das ist der eigentliche Test, und deshalb hat das Formular fünf Felder.',
 				refuse:
-					'Wenn das Problem ist, dass jemand für dieses Niveau noch nicht gut genug ist. Das kommt vor, und kein Highlight-Video ändert es. Die ehrliche Version des Gesprächs ist mehr wert als das System; ich habe sie zweimal geführt.',
+					'Wenn das Problem ist, dass jemand für dieses Niveau noch nicht gut genug ist. Das kommt vor, und kein Highlight-Video ändert es. Die ehrliche Version des Gesprächs ist mehr wert als das System; wir haben sie zweimal geführt.',
 				cost: 'Zehn Sekunden nach jeder Einheit. Zwanzig Minuten nach jedem Spiel.',
 				quotes: [
 					{
@@ -334,14 +334,14 @@ export default {
 				stops: {
 					title: 'Es schreibt nicht den Inhalt und nicht in Ihrer Stimme.',
 					text: [
-						'Keine KI-Skripte, kein synthetischer Sprecher, kein „im Stil von“. Der Grund ist wirtschaftlich wie ethisch: Die Stimme ist das gesamte Kapital. Wer seine Stimme erzeugbar macht, hat das Einzige verkauft, was ihm gehörte. Ich sage das im ersten Gespräch und habe darüber ein Mandat verloren.',
-						'Hooks bleiben menschlich. Für Thumbnails erzeuge ich Varianten Ihres eigenen Fotos — Ausschnitte, Textplatzierung — nie ein synthetisches Bild.'
+						'Keine KI-Skripte, kein synthetischer Sprecher, kein „im Stil von“. Der Grund ist wirtschaftlich wie ethisch: Die Stimme ist das gesamte Kapital. Wer seine Stimme erzeugbar macht, hat das Einzige verkauft, was ihm gehörte. Wir sagen das im ersten Gespräch und haben darüber ein Mandat verloren.',
+						'Hooks bleiben menschlich. Für Thumbnails erzeugen wir Varianten Ihres eigenen Fotos — Ausschnitte, Textplatzierung — nie ein synthetisches Bild.'
 					]
 				},
 				proof:
 					'Stunden zwischen „Dreh beendet“ und „veröffentlicht“ — typisch von rund sechs auf unter zwei. Uploads pro Woche ohne mehr Drehtage. Und das, was sechs Monate später ungefragt gesagt wird: Sie haben ihre Abende zurück.',
 				refuse:
-					'Wenn jemand nicht postet, weil er nichts zu sagen hat. Schnelleres Veröffentlichen macht das sichtbar schlimmer. Zweimal habe ich einem Creator gesagt, dass sein Problem vor dem Schnitt liegt.',
+					'Wenn jemand nicht postet, weil er nichts zu sagen hat. Schnelleres Veröffentlichen macht das sichtbar schlimmer. Zweimal haben wir einem Creator gesagt, dass sein Problem vor dem Schnitt liegt.',
 				cost: 'Fünfzehn Minuten Auswählen. Alles andere läuft, während Sie schlafen.',
 				quotes: [
 					{
@@ -390,7 +390,7 @@ export default {
 					},
 					{
 						name: 'Die Echtkosten-Zeile',
-						text: 'Jedes verbleibende Angebot trägt eine Zahl: was der Gang zum Notar tatsächlich kostet, und die Monatsrate bei Ihrem angegebenen Eigenkapital — mit dem Zinssatz als Eingabe, die Sie setzen, nicht als Erfindung von mir.'
+						text: 'Jedes verbleibende Angebot trägt eine Zahl: was der Gang zum Notar tatsächlich kostet, und die Monatsrate bei Ihrem angegebenen Eigenkapital — mit dem Zinssatz als Eingabe, die Sie setzen, nicht als Erfindung von uns.'
 					},
 					{
 						name: 'Das Besichtigungsbriefing',
@@ -404,14 +404,14 @@ export default {
 				stops: {
 					title: 'Es sagt Ihnen nie, ob Sie kaufen sollen, und fasst kein Geld an.',
 					text: [
-						'Keine Wertermittlung, kein „das ist unter Wert“, keine Finanzierungsempfehlung. Ich bin kein Finanzberater und die Software auch nicht. Sie rechnet, was Arithmetik ist, und gibt die Entscheidung unangetastet zurück. Wirkt ein Angebot auffällig, sagt sie auffällig und schlägt vor, eine Fachperson zu fragen — sie schließt nicht.',
+						'Keine Wertermittlung, kein „das ist unter Wert“, keine Finanzierungsempfehlung. Wir sind keine Finanzberater und die Software auch nicht. Sie rechnet, was Arithmetik ist, und gibt die Entscheidung unangetastet zurück. Wirkt ein Angebot auffällig, sagt sie auffällig und schlägt vor, eine Fachperson zu fragen — sie schließt nicht.',
 						'Sie kontaktiert auch keine Makler. Anfragen werden entworfen; Sie senden sie.'
 					]
 				},
 				proof:
 					'Besichtigungen pro hundert gesehener Angebote — sollte deutlich steigen. Minuten von der Veröffentlichung bis zur gesendeten Anfrage. Wochenendstunden auf Portalen, die auf null gehen sollten.',
 				refuse:
-					'Wenn Budget und Anforderungen nicht beide wahr sein können. Das System würde dann Woche für Woche schlicht Stille produzieren, was eine grausame Art ist, das zu lernen. Ich sage es stattdessen in Woche eins, mit der Rechnung auf dem Tisch.',
+					'Wenn Budget und Anforderungen nicht beide wahr sein können. Das System würde dann Woche für Woche schlicht Stille produzieren, was eine grausame Art ist, das zu lernen. Wir sagen es stattdessen in Woche eins, mit der Rechnung auf dem Tisch.',
 				cost: 'Wöchentlich nichts. Die Kriteriensitzung ist der ganze Preis.',
 				quotes: [
 					{
@@ -466,7 +466,7 @@ export default {
 					},
 					{
 						name: 'Die erste Durchsicht',
-						text: 'Das Herz des Systems. Ein Word-Dokument mit Änderungsverfolgung, in dem jeder einzelne Vorschlag als Kommentar seine Begründung trägt: aus welcher Playbook-Position er kommt oder welches Risiko er adressiert. Die Juristin öffnet es in Word — ihrem eigenen Werkzeug, nicht meinem — und nimmt jeden Vorschlag von Hand an oder verwirft ihn.'
+						text: 'Das Herz des Systems. Ein Word-Dokument mit Änderungsverfolgung, in dem jeder einzelne Vorschlag als Kommentar seine Begründung trägt: aus welcher Playbook-Position er kommt oder welches Risiko er adressiert. Die Juristin öffnet es in Word — ihrem eigenen Werkzeug, nicht unserem — und nimmt jeden Vorschlag von Hand an oder verwirft ihn.'
 					},
 					{
 						name: 'Der Fristenkalender',
@@ -476,7 +476,7 @@ export default {
 				stops: {
 					title: 'Niemals juristische Bewertung, und nichts verlässt ungelesen das Haus.',
 					text: [
-						'Keine Beratung, an niemanden, zu keinem Zeitpunkt, intern wie extern. Kein automatischer Versand an die Gegenseite. Keine Klausel wird ohne genannte Begründung umformuliert. Jede Extraktion ist an ihre Fundstelle geheftet, sodass die Prüfung vier Sekunden dauert. Es gibt kein „Alle übernehmen“ — ich wurde gebeten, das zu bauen, und habe abgelehnt.',
+						'Keine Beratung, an niemanden, zu keinem Zeitpunkt, intern wie extern. Kein automatischer Versand an die Gegenseite. Keine Klausel wird ohne genannte Begründung umformuliert. Jede Extraktion ist an ihre Fundstelle geheftet, sodass die Prüfung vier Sekunden dauert. Es gibt kein „Alle übernehmen“ — wir wurden gebeten, das zu bauen, und haben abgelehnt.',
 						'Dazu die Bedingungen, die es in Deutschland überhaupt einsetzbar machen: DSGVO-Konformität mit AV-Vertrag, EU-Datenhaltung, kein Training auf Mandanteninhalten, gewahrtes Mandatsgeheimnis, lückenloses Audit-Log und eine dokumentierte Antwort auf die Kammerfrage „Wer hat das getan, und können Sie es zeigen?“ Ein juristisches KI-System ohne Audit-Log ist nicht einsatzfähig, egal was es kann.'
 					]
 				},
@@ -555,7 +555,7 @@ export default {
 				proof:
 					'Sonntagsstunden. Korrekturminuten pro Satz. Zeugniszeit in Abenden statt Wochen. Und ob das Feedback, das Schülerinnen und Schüler bekommen, spezifischer wurde — das merken Lehrkräfte binnen eines Durchgangs.',
 				refuse:
-					'Wenn die Schule das als Überwachungssystem will — Engagement-Scores, Verhaltensprognosen, Vergleichsdashboards über Kinder. Das hat keine der acht Lehrkräfte gewollt. Das fragt gelegentlich die Leitung hinterher, und ich baue es nicht.',
+					'Wenn die Schule das als Überwachungssystem will — Engagement-Scores, Verhaltensprognosen, Vergleichsdashboards über Kinder. Das hat keine der acht Lehrkräfte gewollt. Das fragt gelegentlich die Leitung hinterher, und wir bauen es nicht.',
 				cost: 'Ein Nachmittag, um Ihre Rubrik einzugeben. Er rechnet sich in einem Korrektursatz.',
 				quotes: [
 					{
@@ -597,11 +597,11 @@ export default {
 				builds: [
 					{
 						name: 'Zuerst die langweilige Infrastruktur',
-						text: 'Ein ordentliches Buchungssystem mit Erinnerungen und Kartenzahlung nahm etwa sechs der neun Stunden weg, und ich habe das in Woche eins gesagt. Keine KI darin. Die KI-Schicht danach ist dünn und konkret.'
+						text: 'Ein ordentliches Buchungssystem mit Erinnerungen und Kartenzahlung nahm etwa sechs der neun Stunden weg, und wir haben das in Woche eins gesagt. Keine KI darin. Die KI-Schicht danach ist dünn und konkret.'
 					},
 					{
 						name: 'Sprachnotiz zu Sitzungsnotiz',
-						text: 'Sie sprechen neunzig Sekunden, nachdem die Kundin gegangen ist. Daraus wird eine strukturierte Notiz — was gearbeitet wurde, worauf zu achten ist, womit man beginnt — abgelegt zur Person. Das Meistgeschätzte, was ich für diese Gruppe gebaut habe, weil die Notiz dadurch überhaupt entsteht und weil genau das der Grund ist, warum Menschen zahlen: dass jemand weiß, wo man stehen geblieben ist.'
+						text: 'Sie sprechen neunzig Sekunden, nachdem die Kundin gegangen ist. Daraus wird eine strukturierte Notiz — was gearbeitet wurde, worauf zu achten ist, womit man beginnt — abgelegt zur Person. Das Meistgeschätzte, was wir für diese Gruppe gebaut haben, weil die Notiz dadurch überhaupt entsteht und weil genau das der Grund ist, warum Menschen zahlen: dass jemand weiß, wo man stehen geblieben ist.'
 					},
 					{
 						name: 'Die Sequenzbibliothek',
@@ -609,7 +609,7 @@ export default {
 					},
 					{
 						name: 'Der Beschreibungs-Entwurf',
-						text: 'Sechs Wörter zu einer Workshopbeschreibung in Ihrer Sprache — die ich aus zwanzig Ihrer eigenen früheren Beschreibungen baue, nicht aus einer Stilanweisung.'
+						text: 'Sechs Wörter zu einer Workshopbeschreibung in Ihrer Sprache — die wir aus zwanzig Ihrer eigenen früheren Beschreibungen bauen, nicht aus einer Stilanweisung.'
 					},
 					{
 						name: 'Die Reaktivierungsliste',
@@ -620,13 +620,13 @@ export default {
 					title: 'Keine Gesundheitsberatung, und keine Nachricht geht als Sie raus, ohne dass Sie sie lesen.',
 					text: [
 						'Die Gesundheitsgrenze: keine Modifikationsempfehlung, keine Verletzungsdeutung, kein „geeignet in der Schwangerschaft“, keine Ernährung. Ihre Versicherung, Ihre Haftung, Ihr Urteil. Erwähnt eine Kundennotiz eine Erkrankung, speichert das System sie als Text und bietet nichts an.',
-						'Die Stimmgrenze zählt mehr, als man erwartet. Ihre Kundinnen merken es. Eine erzeugte Nachricht, die danebengeht, kostet mehr als die zehn gesparten Minuten, denn das Produkt ist hier, dass jemand wirklich aufpasst. Ich entwerfe; Sie senden.'
+						'Die Stimmgrenze zählt mehr, als man erwartet. Ihre Kundinnen merken es. Eine erzeugte Nachricht, die danebengeht, kostet mehr als die zehn gesparten Minuten, denn das Produkt ist hier, dass jemand wirklich aufpasst. Wir entwerfen; Sie senden.'
 					]
 				},
 				proof:
 					'Verwaltungsstunden pro Woche, ehrlich gezählt. No-Show-Quote — allein Erinnerungen halbieren sie meist. Anteil der Sitzungen mit tatsächlich geschriebener Notiz, der bei etwa 30% startet und bei etwa 95% endet. Reaktivierte Kundinnen pro Quartal.',
 				refuse:
-					'Oft, in dieser Gruppe. Drei von fünf kamen mit dem Wunsch nach einem KI-Assistenten und brauchten einen Kalender mit automatischen Erinnerungen. Ich habe das eingerichtet, den Nachmittag berechnet und gesagt, dass sich der KI-Teil noch nicht rechnet. Zwei davon haben mir seither vier Menschen geschickt. Nein zu sagen ist das Marketing.',
+					'Oft, in dieser Gruppe. Drei von fünf kamen mit dem Wunsch nach einem KI-Assistenten und brauchten einen Kalender mit automatischen Erinnerungen. Wir haben das eingerichtet, den Nachmittag berechnet und gesagt, dass sich der KI-Teil noch nicht rechnet. Zwei davon haben uns seither vier Menschen geschickt. Nein zu sagen ist das Marketing.',
 				cost: 'Neunzig Sekunden nach jeder Sitzung. Sonst nichts.',
 				quotes: [
 					{
@@ -717,9 +717,9 @@ export default {
 				metaDescription:
 					'Preisverlauf, der den Fake-Rabatt entlarvt, Bewertungen gefiltert nach dem, was kaputtgeht, ein Rückgabe- und Garantiekalender und ein Abo-Audit. Ein Nachmittag — und oft lautet die Antwort: nicht viel.',
 				label: 'Online-Käufer',
-				headline: 'Der kleinste Auftrag dieser Liste, und der, den ich am häufigsten ablehne.',
+				headline: 'Der kleinste Auftrag dieser Liste, und der, den wir am häufigsten ablehnen.',
 				story: [
-					'Zwei Menschen, die viel kaufen und den Überblick verlieren. Einer, der jeden Kauf wochenlang recherchiert und sich trotzdem übervorteilt fühlt. Ein kleiner Wiederverkäufer, der echte Preise kennen muss. Das ist die Gruppe mit dem geringsten Wert in dieser Liste, und ich führe sie ehrlich auf, weil ich hier am häufigsten sage: nicht viel.',
+					'Zwei Menschen, die viel kaufen und den Überblick verlieren. Einer, der jeden Kauf wochenlang recherchiert und sich trotzdem übervorteilt fühlt. Ein kleiner Wiederverkäufer, der echte Preise kennen muss. Das ist die Gruppe mit dem geringsten Wert in dieser Liste, und wir führen sie ehrlich auf, weil wir hier am häufigsten sagen: nicht viel.',
 					'Vor allem Vergleichslähmung. Elf Browser-Tabs, vier Testportale, die alle über Provisionen finanziert sind, ein Preis, der gestern anders war, und der nagende Verdacht, dass der Rabatt keiner ist. Dazu das langsame Leck: Abos, die niemand gekündigt hat, Rücksendungen, die niemand fristgerecht schickte, Garantien, die niemand registrierte.'
 				],
 				machinery: [
@@ -757,14 +757,14 @@ export default {
 				stops: {
 					title: 'Es kauft nichts, und es empfiehlt nichts.',
 					text: [
-						'Keine hinterlegte Karte, kein automatischer Kauf, kein „unsere Empfehlung“. Zum einen, weil ein falscher autonomer Kauf echtes Geld kostet. Zum anderen, weil eine Empfehlungsmaschine, die ich für eine Person baue, eine schlechtere Version dessen ist, was Sie in zehn Minuten mit den gefilterten Daten vor sich selbst können.',
+						'Keine hinterlegte Karte, kein automatischer Kauf, kein „unsere Empfehlung“. Zum einen, weil ein falscher autonomer Kauf echtes Geld kostet. Zum anderen, weil eine Empfehlungsmaschine, die wir für eine Person bauen, eine schlechtere Version dessen ist, was Sie in zehn Minuten mit den gefilterten Daten vor sich selbst können.',
 						'Es legt auch kein Profil an. Kein seitenübergreifendes Verfolgen Ihres eigenen Verhaltens, kein „könnte Ihnen auch gefallen“. Davon gibt es genug.'
 					]
 				},
 				proof:
-					'Zurückgeholtes Geld aus gekündigten Abos und fristgerechten Rücksendungen — in allen vier Fällen überstieg das mein Honorar binnen eines Monats. Stunden pro Kaufentscheidung. Ob Sie sich noch übervorteilt fühlen, was die eigentliche Beschwerde darunter ist.',
+					'Zurückgeholtes Geld aus gekündigten Abos und fristgerechten Rücksendungen — in allen vier Fällen überstieg das unser Honorar binnen eines Monats. Stunden pro Kaufentscheidung. Ob Sie sich noch übervorteilt fühlen, was die eigentliche Beschwerde darunter ist.',
 				refuse:
-					'Oft, und hier sage ich es am häufigsten. Drei Menschen haben mich um eine „Shopping-KI“ gebeten; zweien habe ich gesagt, sie würden mehr sparen, wenn sie aufschreiben, was sie in diesem Monat kaufen wollen. Das zwanghafte Recherchieren ist kein Werkzeugproblem — mehr Information macht es schlimmer, weil die Recherche eine emotionale Aufgabe erfüllt.',
+					'Oft, und hier sagen wir es am häufigsten. Drei Menschen haben uns um eine „Shopping-KI“ gebeten; zweien haben wir gesagt, sie würden mehr sparen, wenn sie aufschreiben, was sie in diesem Monat kaufen wollen. Das zwanghafte Recherchieren ist kein Werkzeugproblem — mehr Information macht es schlimmer, weil die Recherche eine emotionale Aufgabe erfüllt.',
 				cost: 'Ein Nachmittag, einmal. Danach kein laufender Aufwand, und das ist Absicht.',
 				quotes: [
 					{
@@ -836,7 +836,7 @@ export default {
 				proof:
 					'Protokolle am selben Tag geschrieben: nahe 100%. Stunden pro Angebotsvergleich — aus einem Wochenende werden etwa zwei Stunden. Wegen Unvollständigkeit zurückgewiesene Einreichungen: null. Zeit, um „welche Revision gilt“ zu beantworten.',
 				refuse:
-					'Wenn ein Büro generative Entwurfswerkzeuge will. Das ist ein anderer Beruf als meiner, und für ein Drei-Personen-Büro mit Umbauten löst es ein Problem, das es nicht hat, und bringt eine Haftung, die es nicht tragen kann.',
+					'Wenn ein Büro generative Entwurfswerkzeuge will. Das ist ein anderer Beruf als unserer, und für ein Drei-Personen-Büro mit Umbauten löst es ein Problem, das es nicht hat, und bringt eine Haftung, die es nicht tragen kann.',
 				cost: 'Auf der Baustelle sprechen statt schreiben.',
 				quotes: [
 					{
@@ -928,7 +928,7 @@ export default {
 				label: 'Gutachter',
 				headline: 'Die Maschine bewertet nie, schließt nie und schätzt nie einen Wert.',
 				story: [
-					'Ein Bausachverständiger für Bauschäden und Beweissicherung, einer mit Schwerpunkt Verkehrswertgutachten, und einer, der vor allem Wohnungsübergaben und kleine Mängelberichte macht. Alle drei haften persönlich für jeden Satz, den sie unterschreiben, und diese eine Tatsache bestimmt die gesamte Form dessen, was ich bauen darf.',
+					'Ein Bausachverständiger für Bauschäden und Beweissicherung, einer mit Schwerpunkt Verkehrswertgutachten, und einer, der vor allem Wohnungsübergaben und kleine Mängelberichte macht. Alle drei haften persönlich für jeden Satz, den sie unterschreiben, und diese eine Tatsache bestimmt die gesamte Form dessen, was wir bauen dürfen.',
 					'Die Ortsarbeit dauert drei Stunden, das Schreiben acht. Fotos müssen nummeriert, platziert und verwiesen werden. Mängel müssen in der Standardformulierung beschrieben sein. Normen müssen exakt zitiert werden. Die Struktur muss jedes Mal gleich sein, weil ein Gericht das erwartet. Und es muss Zeile für Zeile im Kreuzverhör haltbar sein — also wird es langsam geschrieben, nachts, zweimal.'
 				],
 				machinery: [
@@ -1068,7 +1068,7 @@ export default {
 				metaDescription:
 					'Recall-System, Ausfallmanagement und Diktat zu Karteieintrag mit Bestätigung. Keine Diagnose, keine Bildbefundung, keine Symptomtriage — und Patientendaten verlassen die Praxis nicht.',
 				label: 'Zahnärzte',
-				headline: 'Nichts Klinisches. Keine Ausnahmen, und ich habe deswegen Aufträge abgelehnt.',
+				headline: 'Nichts Klinisches. Keine Ausnahmen, und wir haben deswegen Aufträge abgelehnt.',
 				story: [
 					'Zwei inhabergeführte Zahnarztpraxen: eine mit drei Behandlungszimmern, eine Einzelpraxis mit zwei Angestellten. Keine der beiden wollte KI. Die eine wollte aufhören, monatlich 4.000 € an Terminausfälle zu verlieren. Die andere wollte aufhören, um 20 Uhr noch Karteieinträge zu schreiben.',
 					'In der ersten Praxis ist es die Recall-Liste: Patienten, deren Kontrolle fällig ist und die still nie wiederkommen, weil das Erinnern jemandes Nachmittag ist und niemand den Nachmittag hat. In der zweiten die Dokumentation — zwischen Patienten diktierte Notizen, nach Schließung verschriftlicht, dazu die Heil- und Kostenpläne, die Patienten nicht verstehen und deshalb nicht annehmen.'
@@ -1120,7 +1120,7 @@ export default {
 				proof:
 					'Ausfallquote. Recall-Lücke — überfällige, nicht kontaktierte Patienten. Leerstunden am Stuhl pro Woche. Dokumentationsminuten nach Schließung. Annahmequote bei Heil- und Kostenplänen.',
 				refuse:
-					'Alles in Richtung klinischer Entscheidungsunterstützung, Symptomtriage oder Bildbefundung. Beide Praxen haben nach Bildbefundung gefragt, beide haben die Antwort akzeptiert. Der regulatorische Weg dafür existiert — er führt über die Medizinproduktezulassung — und er führt nicht über mich.',
+					'Alles in Richtung klinischer Entscheidungsunterstützung, Symptomtriage oder Bildbefundung. Beide Praxen haben nach Bildbefundung gefragt, beide haben die Antwort akzeptiert. Der regulatorische Weg dafür existiert — er führt über die Medizinproduktezulassung — und er führt nicht über uns.',
 				cost: 'Jeden Eintrag bestätigen. Was ohnehin die rechtliche Pflicht ist.',
 				quotes: [
 					{
@@ -1162,7 +1162,7 @@ export default {
 				builds: [
 					{
 						name: 'Das Personenprotokoll',
-						text: 'Eine private Datei je Teammitglied, in Ihrer Hand: was die Person zu tun zusagte, was geschah, und Ihre eigenen Beobachtungen mit Datum. Neunzig Sekunden Diktat nach jedem 1:1. Das ist das ganze System, und es verändert Führungsqualität stärker als alles andere, was ich baue — denn Spezifität ist der Unterschied zwischen Feedback, das ankommt, und Feedback, das nicht ankommt.'
+						text: 'Eine private Datei je Teammitglied, in Ihrer Hand: was die Person zu tun zusagte, was geschah, und Ihre eigenen Beobachtungen mit Datum. Neunzig Sekunden Diktat nach jedem 1:1. Das ist das ganze System, und es verändert Führungsqualität stärker als alles andere, was wir bauen — denn Spezifität ist der Unterschied zwischen Feedback, das ankommt, und Feedback, das nicht ankommt.'
 					},
 					{
 						name: 'Das Vorbereitungsblatt',
@@ -1185,13 +1185,13 @@ export default {
 					title: 'Es erzeugt nie eine Bewertung eines Menschen, und niemand wird von der Maschine gemessen.',
 					text: [
 						'Es benotet nie, reiht nie, sagt keine Kündigungsneigung voraus, schlägt nie vor, wer unterdurchschnittlich ist, und schreibt nie das Fazit einer Beurteilung. Eine von Software erzeugte und von einer Führungskraft unterschriebene Leistungsbeurteilung ist eine Lüge, auf der die Laufbahn eines Menschen aufgebaut wird.',
-						'Es greift auch nie in die Arbeit hinein. Keine Commit-Zählungen, keine Ticket-Geschwindigkeit pro Person, keine Nachrichtenanalyse, keine Aktivitätsüberwachung. Beide Führungskräfte hatten Zugang zu Werkzeugen, die das könnten; ich habe keines empfohlen. Überwachung verändert, was ein Team Ihnen erzählt, lange bevor sie verändert, was es tut — und dann sind Sie blind, ohne es zu bemerken. Die Personenprotokolle sind Ihre eigenen Notizen über Beschäftigte, es gelten also die Betroffenenrechte der DSGVO einschließlich Auskunft: Schreiben Sie nichts, was Sie der Person nicht zeigen würden.'
+						'Es greift auch nie in die Arbeit hinein. Keine Commit-Zählungen, keine Ticket-Geschwindigkeit pro Person, keine Nachrichtenanalyse, keine Aktivitätsüberwachung. Beide Führungskräfte hatten Zugang zu Werkzeugen, die das könnten; wir haben keines empfohlen. Überwachung verändert, was ein Team Ihnen erzählt, lange bevor sie verändert, was es tut — und dann sind Sie blind, ohne es zu bemerken. Die Personenprotokolle sind Ihre eigenen Notizen über Beschäftigte, es gelten also die Betroffenenrechte der DSGVO einschließlich Auskunft: Schreiben Sie nichts, was Sie der Person nicht zeigen würden.'
 					]
 				},
 				proof:
 					'1:1-Gespräche, die mit einem Nachfassen statt mit einer Leerstelle beginnen: von gelegentlich zu Standard. Zeit für die Beurteilungssaison. Anteil Ihrer Woche, der tatsächlich beim Team ist. Und ob das Feedback spezifisch wurde, was das Team vor Ihnen merkt.',
 				refuse:
-					'Wenn eine Führungskraft Einblick in die Aktivität ihres Teams will. Das ist ein Vertrauensproblem, und Werkzeuge machen es schlimmer. Ich sage das, und ich habe dieses Gespräch beide Male geführt.',
+					'Wenn eine Führungskraft Einblick in die Aktivität ihres Teams will. Das ist ein Vertrauensproblem, und Werkzeuge machen es schlimmer. Wir sagen das, und wir haben dieses Gespräch beide Male geführt.',
 				cost: 'Neunzig Sekunden nach jedem Gespräch.',
 				quotes: [
 					{
@@ -1245,7 +1245,7 @@ export default {
 					},
 					{
 						name: 'Der Beschreibungsentwurf',
-						text: 'Aus den tatsächlichen Merkmalen, in Ihrer Sprache, ohne erfundene Eigenschaften. Maklertexte haben einen verdienten Ruf, und ich trage nichts dazu bei — hat die Maschine keine Daten für eine Aussage, macht sie die Aussage nicht.'
+						text: 'Aus den tatsächlichen Merkmalen, in Ihrer Sprache, ohne erfundene Eigenschaften. Maklertexte haben einen verdienten Ruf, und wir tragen nichts dazu bei — hat die Maschine keine Daten für eine Aussage, macht sie die Aussage nicht.'
 					},
 					{
 						name: 'Das Eigentümerupdate',
@@ -1283,7 +1283,7 @@ export default {
 				label: 'Führungskräfte',
 				headline: 'In ein Meeting gehen und wissen, was letztes Mal versprochen wurde.',
 				story: [
-					'Der Gründer und CEO eines Unternehmens mit etwa 90 Menschen. Kein Konzernvorstand mit Stabschef und zwei Assistenzen — jemand, der Investoren noch selbst antwortet, noch in Einstellungen hineingezogen wird und dessen Kalender von den Bedürfnissen anderer besetzt wurde. Die vorgetragene Beschwerde war „Ich habe keine Zeit zum Denken“, und das ist meiner Erfahrung nach die einzige Beschwerde, die CEOs tatsächlich haben.',
+					'Der Gründer und CEO eines Unternehmens mit etwa 90 Menschen. Kein Konzernvorstand mit Stabschef und zwei Assistenzen — jemand, der Investoren noch selbst antwortet, noch in Einstellungen hineingezogen wird und dessen Kalender von den Bedürfnissen anderer besetzt wurde. Die vorgetragene Beschwerde war „Ich habe keine Zeit zum Denken“, und das ist unserer Erfahrung nach die einzige Beschwerde, die CEOs tatsächlich haben.',
 					'Keine Stunde — die ganze Form der Woche. Etwa 300 E-Mails am Tag, von denen vielleicht zwölf zählen. Termine, in die man kalt geht, ohne zu wissen, was letztes Mal geschah oder versprochen wurde. Board-Vorbereitung, die pro Quartal ein Wochenende frisst. Ein Lesestapel, der inzwischen rein theoretisch ist. Und die tiefe Folge: jede Entscheidung in den elf Minuten zwischen zwei Terminen, auf Basis dessen, was zufällig im Raum war.'
 				],
 				machinery: [
@@ -1345,7 +1345,7 @@ export default {
 				label: 'Küchenchefs',
 				headline: 'Die Maschine fasst Geld, Lager und Papier an. Den Teller fasst sie nicht an.',
 				story: [
-					'Küchenchef und Inhaber eines kleinen Restaurants — etwa 40 Gedecke, wechselnde Karte, sechs Mitarbeitende. Er kam zu mir, weil sein Wareneinsatz binnen eines Jahres von 28% auf 34% gestiegen war und er nicht sagen konnte, warum, und weil er nach dem Service bis Mitternacht Papierkram machte. An KI hatte er kein Interesse und sagte das im ersten Satz.',
+					'Küchenchef und Inhaber eines kleinen Restaurants — etwa 40 Gedecke, wechselnde Karte, sechs Mitarbeitende. Er kam zu uns, weil sein Wareneinsatz binnen eines Jahres von 28% auf 34% gestiegen war und er nicht sagen konnte, warum, und weil er nach dem Service bis Mitternacht Papierkram machte. An KI hatte er kein Interesse und sagte das im ersten Satz.',
 					'Nach dem Service: Vorbereitungslisten für morgen von Hand, Bestellungen aus dem Gedächtnis, Rechnungen auf einem Stapel, der Dienstplan wöchentlich neu im Notizbuch. Und das, was tatsächlich Geld kostete — niemand wusste mehr, was irgendetwas kostet, weil sich die Lieferantenpreise bewegt hatten und die Kartenpreise nicht.'
 				],
 				machinery: [
@@ -1395,7 +1395,7 @@ export default {
 				proof:
 					'Wareneinsatzquote — 34% zurück auf 28,5% binnen eines Quartals, und das war fast ausschließlich Sichtbarkeit. Papierminuten nach dem Service, von etwa 70 auf etwa 15. Abfall nach Kategorie. Ob die Allergenmatrix aktuell ist, was sie jetzt immer ist.',
 				refuse:
-					'Er fragte halb im Ernst, ob es Tagesgerichte aus Überbeständen vorschlagen könne. Ich habe die Überbestandsliste gebaut und dort aufgehört. Welche Zutaten überzugehen drohen, ist Arithmetik; was man mit ihnen macht, sind dreißig Jahre Kochen.',
+					'Er fragte halb im Ernst, ob es Tagesgerichte aus Überbeständen vorschlagen könne. Wir haben die Überbestandsliste gebaut und dort aufgehört. Welche Zutaten überzugehen drohen, ist Arithmetik; was man mit ihnen macht, sind dreißig Jahre Kochen.',
 				cost: 'Rechnungen fotografieren. Dreißig Sekunden Abfallprotokoll beim Schließen.',
 				quotes: [
 					{
@@ -1412,7 +1412,7 @@ export default {
 				label: 'Vereine',
 				headline: 'Kostenlose Werkzeuge, bewusst langweilig, in zwei Jahren von der nächsten Person bedienbar.',
 				story: [
-					'Ein eingetragener Verein — rund 40 aktive Ehrenamtliche, eine Teilzeitkoordinatorin, finanziert aus kleinen Förderungen, Mitgliedsbeiträgen und Spenden. Niemand dort hat ein Technologiebudget, und die Koordinatorin macht die Arbeit von drei Personen auf 20 Wochenstunden. Dieses Mandat war teilweise unbezahlt, und ich würde es wieder tun.',
+					'Ein eingetragener Verein — rund 40 aktive Ehrenamtliche, eine Teilzeitkoordinatorin, finanziert aus kleinen Förderungen, Mitgliedsbeiträgen und Spenden. Niemand dort hat ein Technologiebudget, und die Koordinatorin macht die Arbeit von drei Personen auf 20 Wochenstunden. Dieses Mandat war teilweise unbezahlt, und wir würden es wieder tun.',
 					'Der akute Bruch sind Förderanträge. Jeder Fördergeber will dieselben Informationen in anderer Struktur — Organisationsbeschreibung, Projektplan, Budget, Wirkungsnachweis, bisherige Förderung — und jeder Antrag kostet zwei volle Tage, die aus der eigentlichen Arbeit kommen, um die es dem Verein geht. Dahinter: Dienstplanung über 40 Ehrenamtliche, Mitgliederverwaltung, Spenderdank und der Jahresbericht.'
 				],
 				machinery: [
@@ -1509,7 +1509,7 @@ export default {
 					},
 					{
 						name: 'Das Betreuungsprotokoll',
-						text: 'Eine private Datei je Promovierender: was vereinbart wurde, was geschah, Meilensteine gegen die Betreuungsvereinbarung, genannte Hindernisse. Neunzig Sekunden Diktat nach jedem Gespräch. Das würde ich zuerst einrichten, wenn ich nur eines einrichten dürfte — weil Gespräche derzeit damit beginnen, dass beide sich zu erinnern versuchen, weil Gutachten zwei Jahre später aus dem Nichts entstehen, und weil das Protokoll vier Monate früher zeigt, dass jemand still in Schwierigkeiten steckt.'
+						text: 'Eine private Datei je Promovierender: was vereinbart wurde, was geschah, Meilensteine gegen die Betreuungsvereinbarung, genannte Hindernisse. Neunzig Sekunden Diktat nach jedem Gespräch. Das würden wir zuerst einrichten, wenn wir nur eines einrichten dürften — weil Gespräche derzeit damit beginnen, dass beide sich zu erinnern versuchen, weil Gutachten zwei Jahre später aus dem Nichts entstehen, und weil das Protokoll vier Monate früher zeigt, dass jemand still in Schwierigkeiten steckt.'
 					},
 					{
 						name: 'Die Sichtungsstrecke',
@@ -1524,7 +1524,7 @@ export default {
 					title: 'Es erzeugt nie eine Quellenangabe und fasst nie eine Arbeit zusammen, die Sie zitieren werden.',
 					text: [
 						'Quellen kommen aus der Literaturverwaltung und werden über die DOI aufgelöst. Nichts, was Prosa erzeugt, darf eine Quellenangabe erzeugen — nie, in keiner Rahmung. Erfundene Quellen sind das häufigste und zerstörerischste Versagen von Sprachmodellen in der Forschung, und sie sind für eine müde Autorin um 23 Uhr nicht erkennbar, weil sie exakt richtig aussehen. Tausend Abstracts zu sichten, um vierzig Arbeiten zu finden, ist Mechanik; diese vierzig zu lesen ist der Beruf — die Sichtung liefert deshalb Titel, Abstracts und Links, nie eine als ausreichend präsentierte Zusammenfassung.',
-						'Kein Manuskript im Begutachtungsverfahren berührt einen externen Dienst: Peer Review ist vertraulich, und ein Manuskript ist unveröffentlichte Arbeit, die jemand anderem gehört. Es schreibt nie das Argument, die Hypothese oder die Interpretation. Es reiht nie Bewerbungen in einem Berufungsverfahren — ein solches Verfahren ist gerichtlich überprüfbar, dokumentationspflichtig und unterliegt dem AGG; ich habe das zweimal abgelehnt. Und keine Daten werden erfunden, keine Abbildung erzeugt, keine Bereinigung geschieht still: Roh bleibt roh. Jedes Mandat endet mit einer einseitigen Übersicht, die festhält, welche Aufgaben eine Maschine nutzten und welche Offenlegungsregeln von Fördergebern und Verlagen gelten.'
+						'Kein Manuskript im Begutachtungsverfahren berührt einen externen Dienst: Peer Review ist vertraulich, und ein Manuskript ist unveröffentlichte Arbeit, die jemand anderem gehört. Es schreibt nie das Argument, die Hypothese oder die Interpretation. Es reiht nie Bewerbungen in einem Berufungsverfahren — ein solches Verfahren ist gerichtlich überprüfbar, dokumentationspflichtig und unterliegt dem AGG; wir haben das zweimal abgelehnt. Und keine Daten werden erfunden, keine Abbildung erzeugt, keine Bereinigung geschieht still: Roh bleibt roh. Jedes Mandat endet mit einer einseitigen Übersicht, die festhält, welche Aufgaben eine Maschine nutzten und welche Offenlegungsregeln von Fördergebern und Verlagen gelten.'
 					]
 				},
 				proof:
@@ -1589,7 +1589,7 @@ export default {
 					},
 					{
 						name: 'Der Countdown und die Modulfrage',
-						text: 'Von heute bis zum Prüfungstag, gegen die Stunden, die wirklich da sind, mit einem frischen Probetest alle drei Wochen. Dazu die Frage nach dem Modulwiederholen: Mehrere dieser Prüfungen erlauben, ein einzelnes nicht bestandenes Modul allein zu wiederholen, was einen Bruchteil der Gebühr bedeuten kann. Das System stellt die Frage und nennt die Stelle, bei der man nachfragt — es behauptet die Antwort nicht. Ich habe jemanden eine ganze Prüfung wiederholen sehen, weil niemand ihm sagte, dass er fragen soll.'
+						text: 'Von heute bis zum Prüfungstag, gegen die Stunden, die wirklich da sind, mit einem frischen Probetest alle drei Wochen. Dazu die Frage nach dem Modulwiederholen: Mehrere dieser Prüfungen erlauben, ein einzelnes nicht bestandenes Modul allein zu wiederholen, was einen Bruchteil der Gebühr bedeuten kann. Das System stellt die Frage und nennt die Stelle, bei der man nachfragt — es behauptet die Antwort nicht. Wir haben jemanden eine ganze Prüfung wiederholen sehen, weil niemand ihm sagte, dass er fragen soll.'
 					}
 				],
 				stops: {
@@ -1602,7 +1602,7 @@ export default {
 				proof:
 					'Nicht das Gesamtergebnis — Gesamtwerte bewegen sich langsam und verbergen alles. Die Bewegung im schwächsten Kriterium, die einzige Zahl, die zählt, und die zwölf Wochen Selbststudium nie bewegt haben. Fehlerhäufigkeit pro hundert Wörter nach Klasse über die Zeit. Die Verteilung der Lernstunden, die typisch bei siebzig Prozent auf der starken Fertigkeit startet und sich binnen eines Monats umkehren sollte. Und ob das Register nach acht Wochen noch geführt wird, was das Ergebnis besser vorhersagt als jeder einzelne Probetest.',
 				refuse:
-					'Wenn die Zeitschiene nicht funktionieren kann — wer solide A2 hat und in acht Wochen C1 will, kommt nicht dorthin, und ich nenne die ehrliche Zahl an Monaten in der ersten Stunde. Wenn das Zielniveau falsch ist, was zweimal ein niedrigeres Zertifikat oder eine andere, ebenfalls anerkannte Prüfung bedeutete. Wenn die Hürde Angst ist statt Sprache, denn Übungsdruck macht das schlimmer. Und wenn jemand das Ergebnis ohne die Sprache will, was ein kurzes Gespräch ist.',
+					'Wenn die Zeitschiene nicht funktionieren kann — wer solide A2 hat und in acht Wochen C1 will, kommt nicht dorthin, und wir nennen die ehrliche Zahl an Monaten in der ersten Stunde. Wenn das Zielniveau falsch ist, was zweimal ein niedrigeres Zertifikat oder eine andere, ebenfalls anerkannte Prüfung bedeutete. Wenn die Hürde Angst ist statt Sprache, denn Übungsdruck macht das schlimmer. Und wenn jemand das Ergebnis ohne die Sprache will, was ein kurzes Gespräch ist.',
 				cost: 'Alle drei Wochen ein vollständiger Probetest unter echten Bedingungen, unbequem und nicht verhandelbar. Zehn Minuten nach jeder Schreibaufgabe. Und etwa zehn Tage der Übung, die sie vermieden haben.',
 				quotes: [
 					{
@@ -1621,20 +1621,20 @@ export default {
 		title: 'Vier Phasen, jedes Mal.',
 		steps: [
 			{
-				title: 'Ich setze mich in die Woche.',
+				title: 'Wir setzen uns in die Woche.',
 				text: 'Zwei bis fünf Tage in der tatsächlichen Arbeitswoche. Kein Workshop, kein Fragebogen — das Postfach, die Ordnernamen, die Klebezettel, der Behelf, für den Sie sich schämen. Der Behelf ist meistens die Stelle, an die das System gehört.'
 			},
 			{
-				title: 'Ich benenne die Naht laut.',
-				text: 'Eine Seite darüber, was Mechanik ist und was Urteilsvermögen, Ihnen vorgelesen. Zucken Sie bei etwas, das ich Mechanik genannt habe, haben Sie recht und ich unrecht. Ihr Zucken ist Information. Diese Seite ist der Vertrag.'
+				title: 'Wir benennen die Naht laut.',
+				text: 'Eine Seite darüber, was Mechanik ist und was Urteilsvermögen, Ihnen vorgelesen. Zucken Sie bei etwas, das wir Mechanik genannt haben, haben Sie recht und wir unrecht. Ihr Zucken ist Information. Diese Seite ist der Vertrag.'
 			},
 			{
-				title: 'Ich baue das Kleinste, das die Menge wegnimmt.',
+				title: 'Wir bauen das Kleinste, das die Menge wegnimmt.',
 				text: 'Keine Plattform. Das eine System, das Ihnen die wiederholende Masse abnimmt. Es geht in Wochen live, nicht in Quartalen, und es tut eine Sache so vollständig, dass Sie aufhören, daran zu denken.'
 			},
 			{
-				title: 'Ich übergebe die Regler und gehe.',
-				text: 'Sie müssen die Regeln ohne mich ändern können: die Filter, die Schwellen, die Vorlagen, die Ablehnungsgründe. Braucht ein System mich dauerhaft, habe ich es falsch gebaut.'
+				title: 'Wir übergeben die Regler und gehen.',
+				text: 'Sie müssen die Regeln ohne uns ändern können: die Filter, die Schwellen, die Vorlagen, die Ablehnungsgründe. Braucht ein System uns dauerhaft, haben wir es falsch gebaut.'
 			}
 		],
 		noPrices:
@@ -1644,16 +1644,16 @@ export default {
 		title: 'Drei Versprechen.',
 		items: [
 			{
-				title: 'Ich baue bis an die Naht, nie darüber hinaus.',
-				text: 'Die Maschine übernimmt die Menge. Die Entscheidung, die Diagnose, die Note, der Wert, das Urteil bleiben Ihre — und ich weigere mich, den Knopf zu bauen, der sie Ihnen abnimmt.'
+				title: 'Wir bauen bis an die Naht, nie darüber hinaus.',
+				text: 'Die Maschine übernimmt die Menge. Die Entscheidung, die Diagnose, die Note, der Wert, das Urteil bleiben Ihre — und wir weigern uns, den Knopf zu bauen, der sie Ihnen abnimmt.'
 			},
 			{
-				title: 'Ich sage laut Nein.',
-				text: 'Ist das Volumen zu klein, die Varianz zu hoch, oder würde ein Kalender es lösen, hören Sie das statt eines Angebots. Das hat mich Aufträge gekostet, und es ist der Grund, warum Menschen mir ihre Bekannten schicken.'
+				title: 'Wir sagen laut Nein.',
+				text: 'Ist das Volumen zu klein, die Varianz zu hoch, oder würde ein Kalender es lösen, hören Sie das statt eines Angebots. Das hat uns Aufträge gekostet, und es ist der Grund, warum Menschen uns ihre Bekannten schicken.'
 			},
 			{
-				title: 'Braucht ein System mich dauerhaft, habe ich es falsch gebaut.',
-				text: 'Sie bekommen die Regler — Filter, Schwellen, Vorlagen — und eine schriftliche Seite darüber, was das System darf und was nicht. Nichts hängt für immer an mir.'
+				title: 'Braucht ein System uns dauerhaft, haben wir es falsch gebaut.',
+				text: 'Sie bekommen die Regler — Filter, Schwellen, Vorlagen — und eine schriftliche Seite darüber, was das System darf und was nicht. Nichts hängt für immer an uns.'
 			}
 		]
 	},
@@ -1661,7 +1661,7 @@ export default {
 		eyebrow: `Wer ${contact.brand} ist`,
 		title: 'Der Übersetzer zwischen Ihnen und den Maschinen.',
 		photoAlt: contact.name,
-		text: `${contact.brand} ist keine Agentur, sondern ein Experte: ${contact.name} — und Sie haben vom ersten Gespräch bis zur Übergabe direkt mit ihm zu tun. ` + 'Fast niemand kommt zu mir und fragt nach KI. Man kommt, weil ein bestimmter Teil der Woche unerträglich geworden ist. Was ich tatsächlich tue: Ich setze mich in diese Woche, bis ich sehen kann, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und das ist die seltenere Fähigkeit, denn die meisten, die solche Systeme bauen können, hören das Problem nicht, und die meisten, die das Problem hören, können nicht bauen. Ich mache beides, mit einem Menschen nach dem anderen. Ich arbeite in zwei Registern: In einem Unternehmen betreibe ich ein Produktivsystem, das eine echte Rechtsabteilung nutzt, und daneben sitze ich mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt mich, was Audits und Übergaben übersteht; die Einzelarbeit hält mich ehrlich darüber, wie wenig die meisten wirklich brauchen. Ich höre also zu, wie Sie ohnehin arbeiten, baue oder erkläre genau so viel — und sage klar, wenn die Antwort lautet, dass KI sich für Sie nicht rechnet.'
+		text: `${contact.brand} ist keine Agentur, sondern ein Experte: ${contact.name} — und Sie haben vom ersten Gespräch bis zur Übergabe direkt mit ihm zu tun. ` + 'Fast niemand kommt zu uns und fragt nach KI. Man kommt, weil ein bestimmter Teil der Woche unerträglich geworden ist. Was wir tatsächlich tun: Wir setzen uns in diese Woche, bis wir sehen können, welcher Teil davon Mechanik im Gewand von Urteilsvermögen ist — und das ist die seltenere Fähigkeit, denn die meisten, die solche Systeme bauen können, hören das Problem nicht, und die meisten, die das Problem hören, können nicht bauen. Wir machen beides, mit einem Menschen nach dem anderen. Wir arbeiten in zwei Registern: In einem Unternehmen betreiben wir ein Produktivsystem, das eine echte Rechtsabteilung nutzt, und daneben sitzen wir mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt uns, was Audits und Übergaben übersteht; die Einzelarbeit hält uns ehrlich darüber, wie wenig die meisten wirklich brauchen. Wir hören also zu, wie Sie ohnehin arbeiten, bauen oder erklären genau so viel — und sagen klar, wenn die Antwort lautet, dass KI sich für Sie nicht rechnet.'
 	},
 	testimonials: {
 		eyebrow: 'Freundliche Worte',
@@ -1675,11 +1675,11 @@ export default {
 		items: [
 			{
 				q: 'Brauche ich technisches Vorwissen?',
-				a: 'Überhaupt keines. Sie beschreiben Ihre Arbeit in Ihren eigenen Worten, alles Technische bleibt mein Problem. Die erste Phase ist, dass ich Ihre tatsächliche Woche beobachte — kein Workshop, kein Fragebogen. Wenn Sie Ihren Beruf können, können wir zusammenarbeiten.'
+				a: 'Überhaupt keines. Sie beschreiben Ihre Arbeit in Ihren eigenen Worten, alles Technische bleibt unser Problem. Die erste Phase ist, dass wir Ihre tatsächliche Woche beobachten — kein Workshop, kein Fragebogen. Wenn Sie Ihren Beruf können, können wir zusammenarbeiten.'
 			},
 			{
 				q: 'Trifft es Entscheidungen für mich?',
-				a: 'Nein, und darauf ist alles ausgelegt. Die Note bleibt bei der Lehrkraft, der Wert beim Gutachter, die Diagnose beim Zahnarzt, die Priorisierung bei der Produktmanagerin. Die Maschine übernimmt die Menge und bereitet das Material vor; Sie entscheiden. Den „Alle übernehmen“-Knopf habe ich mehr als einmal abgelehnt.'
+				a: 'Nein, und darauf ist alles ausgelegt. Die Note bleibt bei der Lehrkraft, der Wert beim Gutachter, die Diagnose beim Zahnarzt, die Priorisierung bei der Produktmanagerin. Die Maschine übernimmt die Menge und bereitet das Material vor; Sie entscheiden. Den „Alle übernehmen“-Knopf haben wir mehr als einmal abgelehnt.'
 			},
 			{
 				q: 'Was kostet das?',
@@ -1691,7 +1691,7 @@ export default {
 			},
 			{
 				q: 'Was, wenn KI für mich die falsche Antwort ist?',
-				a: 'Dann hören Sie das im kostenlosen Gespräch, bevor Sie etwas ausgegeben haben. Das kommt oft vor. Drei von fünf Coaches, mit denen ich gearbeitet habe, brauchten ein Buchungssystem mit Erinnerungen und keine KI — ich habe das eingerichtet, den Nachmittag berechnet und es gesagt.'
+				a: 'Dann hören Sie das im kostenlosen Gespräch, bevor Sie etwas ausgegeben haben. Das kommt oft vor. Drei von fünf Coaches, mit denen wir gearbeitet haben, brauchten ein Buchungssystem mit Erinnerungen und keine KI — wir haben das eingerichtet, den Nachmittag berechnet und es gesagt.'
 			},
 			{
 				q: 'Müssen wir in Berlin sein?',
@@ -1705,8 +1705,8 @@ export default {
 	},
 	contactSection: {
 		eyebrow: 'Kontakt',
-		title: 'Erzählen Sie mir, wie Ihre Woche aussieht.',
-		lead: 'Ich sage Ihnen ehrlich, welche Teile Sie abgeben können — und welche nicht.',
+		title: 'Erzählen Sie uns, wie Ihre Woche aussieht.',
+		lead: 'Wir sagen Ihnen ehrlich, welche Teile Sie abgeben können — und welche nicht.',
 		form: {
 			subject: 'Worum geht es',
 			// Sortiert die Anfrage, bevor sie bei Ihnen landet.
@@ -1717,16 +1717,16 @@ export default {
 				'Etwas anderes'
 			],
 			messageHint: 'Ein Satz über Ihre Woche genügt. Keine Vorbereitung nötig.',
-			emailHint: 'Damit ich antworten kann.',
+			emailHint: 'Damit wir antworten können.',
 			sending: 'Wird gesendet…',
-			reply: 'Ich antworte innerhalb eines Werktags.',
+			reply: 'Wir antworten innerhalb eines Werktags.',
 			name: 'Name',
 			email: 'E-Mail',
 			message: 'Nachricht',
 			send: 'Nachricht senden',
-			success: 'Vielen Dank — ich melde mich innerhalb eines Tages.',
-			error: 'Das hat nicht geklappt. Bitte schreiben Sie mir eine E-Mail.',
-			note: 'Kein Formular? Über die Buttons links erreichen Sie mich schneller.'
+			success: 'Vielen Dank — wir melden uns innerhalb eines Tages.',
+			error: 'Das hat nicht geklappt. Bitte schreiben Sie uns eine E-Mail.',
+			note: 'Kein Formular? Über die Buttons links erreichen Sie uns schneller.'
 		}
 	},
 	footer: {

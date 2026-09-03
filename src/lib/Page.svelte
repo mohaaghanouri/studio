@@ -188,6 +188,7 @@
 				'@id': `${site}/#business`,
 				name: contact.business,
 				url: canonical,
+				logo: `${site}/brand/dinobridge-badge-512.png`,
 				image: `${site}/og/${isEn ? '' : 'de-'}home.png`,
 				description: copy.meta.description,
 				inLanguage: copy.lang,
@@ -278,7 +279,9 @@
 
 <header>
 	<div class="bar wrap">
-		<a class="name" href="#top">{contact.brand}</a>
+		<a class="name" href="#top">
+			<img src="{base}/brand/dinobridge-horizontal-compact-white.svg" alt={contact.brand} height="36" />
+		</a>
 
 		<nav class="desk" aria-label="Sections">
 			{#each sections as section, i}
@@ -750,11 +753,17 @@
 	}
 
 	.name {
-		text-decoration: none;
-		color: var(--text);
 		display: inline-flex;
 		align-items: center;
 		min-height: 1.5rem;
+	}
+
+	/* Compact lockup: the brand guide wants it below 60px and sized by height only
+	   (3.84:1), so the wordmark never stretches. */
+	.name img {
+		display: block;
+		height: 2.25rem;
+		width: auto;
 	}
 
 	.desk {

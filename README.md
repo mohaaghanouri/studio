@@ -27,6 +27,7 @@ tells you which commit is live.
 | Case illustrations | `static/work/<slug>.svg` + a tint per slug in `src/lib/art.js`. Motifs must sit between y 230–520 of the 1200×750 canvas — the case-page hero is a wide centre crop and anything outside that band is cut off |
 | All copy, both languages | `src/lib/copy/en.js`, `src/lib/copy/de.js` (identical key shape) |
 | Design tokens | `src/app.css` |
+| Brand assets (logo lockups, favicon, badge) | `static/brand/` + `static/favicon.*` + `static/apple-touch-icon.png` — stripped copies of the master files in `Logos/`. White variants only: the site is dark. Guide: `Logos/README.md` |
 | The `noindex` safety gate | `src/lib/preview.js` |
 | Legal pages | `src/routes/impressum/`, `src/routes/datenschutz/` |
 | The 404 page | `static/404.html` — self-contained (GitHub Pages serves it for unknown paths; the app's hashed assets can't be referenced from it) |

@@ -7,7 +7,7 @@ export default {
 	meta: {
 		title: `${contact.brand} — AI for the boring half of your job`,
 		description:
-			'I find the part of your week that is machinery pretending to be judgement, and I build up to that line and no further. Lawyers, teachers, dentists, surveyors and nineteen other fields. Berlin, English & German. The first conversation is free.'
+			'We find the part of your week that is machinery pretending to be judgement, and we build up to that line and no further. Lawyers, teachers, dentists, surveyors and nineteen other fields. Berlin, English & German. The first conversation is free.'
 	},
 	nav: {
 		contact: 'Contact',
@@ -18,13 +18,13 @@ export default {
 		headline: 'The boring half of your job can do itself.',
 		subline:
 			`${contact.brand} sits inside your actual working week until we can see which part of it is machinery pretending to be judgement — then builds up to that line and never across it. The machine takes the volume. You keep the decision.`,
-		button: 'Message me — the first conversation is free',
+		button: 'Message us — the first conversation is free',
 		note: `Berlin · the work is done by ${contact.name}`
 	},
 	studio: {
 		// Label only — the list itself lives in contact.js. Framed as tools, NOT clients,
 		// so the row reads as true rather than as an implied client list.
-		toolsLabel: 'Tools I work with',
+		toolsLabel: 'Tools we work with',
 		worksLabel: 'Use cases',
 		capabilitiesLabel: 'How it works',
 		bookLabel: 'Book a call',
@@ -34,7 +34,7 @@ export default {
 		// No count in the heading: the list grows as each profession gets written up.
 		worksHeading: 'What AI already does for people like you.',
 		worksIntro:
-			"Each of these is something I built and ran myself, for real people with real deadlines. Pick the one closest to your work.",
+			"Each of these is something we built and ran ourselves, for real people with real deadlines. Pick the one closest to your work.",
 		worksMeta:
 			`Real use cases: contract review for lawyers, content, house hunting, job search, research, marketing and exam prep. Built and run by ${contact.brand} — ${contact.name}, AI coaching in Berlin.`,
 		workName: 'Use case',
@@ -42,22 +42,22 @@ export default {
 		workCovers: 'What it takes over',
 		workMachinery: 'What the machine takes',
 		workJudgement: 'What stays yours',
-		workBuilds: 'What I build',
+		workBuilds: 'What we build',
 		workStops: 'Where it stops',
 		workProof: 'What proof looks like',
-		workRefuse: 'When I say no',
+		workRefuse: 'When we say no',
 		workCost: 'What it costs you',
 		bookCta: 'Or book a call',
 		close: 'Close',
 		priceLabel: 'What it costs'
 	},
 	who: {
-		eyebrow: 'Who I help',
+		eyebrow: 'Who we help',
 		// Labels for roster.js. The counts live there; only the words live here.
 		rosterEyebrow: 'Since 2022',
-		rosterTitle: 'Who I have actually worked with.',
+		rosterTitle: 'Who we have actually worked with.',
 		rosterIntro:
-			'Not a target audience — the fields whose work I have already been inside, one person at a time. Pick the one closest to yours.',
+			'Not a target audience — the fields whose work we have already been inside, one person at a time. Pick the one closest to yours.',
 		// Labels for the two aggregate numbers from roster.js.
 		statPeople: 'People helped',
 		statFields: 'Professions',
@@ -82,19 +82,19 @@ export default {
 			chefs: 'Chefs',
 			'volunteer-orgs': 'Non-profits'
 		},
-		notListed: "Your profession isn't listed? It almost certainly still applies — ask me."
+		notListed: "Your profession isn't listed? It almost certainly still applies — ask us."
 	},
 	method: {
 		label: 'The method',
-		title: 'How I decide what to build — the method — AI coaching Berlin',
+		title: 'How we decide what to build — the method — AI coaching Berlin',
 		metaDescription:
-			'One question decides everything: which part of this week is machinery pretending to be judgement? The four tests, the four phases, and the five reasons I say no.',
+			'One question decides everything: which part of this week is machinery pretending to be judgement? The four tests, the four phases, and the five reasons we say no.',
 		headline: 'Which part of this week is machinery pretending to be judgement?',
 		intro: [
-			'Every person I have worked with arrived with a different job title and the same sentence: one part of my week has become unbearable. The profession changes. The shape of the problem almost never does.',
-			'Everything I build follows from the question above. I do not ask what someone wants automated, because almost nobody knows — they know what hurts, not where the seam is. Finding the seam is the work. Building on the right side of it is the easy part.'
+			'Every person we have worked with arrived with a different job title and the same sentence: one part of my week has become unbearable. The profession changes. The shape of the problem almost never does.',
+			'Everything we build follows from the question above. We do not ask what someone wants automated, because almost nobody knows — they know what hurts, not where the seam is. Finding the seam is the work. Building on the right side of it is the easy part.'
 		],
-		testsTitle: 'How I tell one from the other.',
+		testsTitle: 'How we tell one from the other.',
 		machineryLabel: 'Machinery — all four are true',
 		machinery: [
 			'It repeats. More than once a week, in roughly the same shape.',
@@ -109,10 +109,10 @@ export default {
 			'The relationship is the product. A patient, a student, a client, a reader.',
 			'It is a real decision under uncertainty. Not a lookup with extra steps.'
 		],
-		seam: 'I build up to the seam. I never build across it. Nearly every failed AI project I have been asked to rescue failed because somebody built across the seam, and the person quietly stopped trusting the output.',
-		refuseTitle: 'When I say no.',
+		seam: 'We build up to the seam. We never build across it. Nearly every failed AI project we have been asked to rescue failed because somebody built across the seam, and the person quietly stopped trusting the output.',
+		refuseTitle: 'When we say no.',
 		refuseIntro:
-			'I say no out loud, and I keep the relationship. Saying no is most of the reason people send me their friends.',
+			'We say no out loud, and we keep the relationship. Saying no is most of the reason people send us their friends.',
 		refuse: [
 			{
 				title: 'Volume is too low.',
@@ -128,7 +128,7 @@ export default {
 			},
 			{
 				title: 'A boring tool already exists.',
-				text: 'A calendar, a form, a shared spreadsheet, a template. I will set that up and bill for the afternoon, not the quarter.'
+				text: 'A calendar, a form, a shared spreadsheet, a template. We will set that up and bill for the afternoon, not the quarter.'
 			},
 			{
 				title: 'It is a decision, not a workload.',
@@ -137,7 +137,7 @@ export default {
 		],
 		registersTitle: 'Two registers.',
 		registersText:
-			'I work inside a company, where I own and run a production system used by a real legal department, and I work one-to-one with a yoga teacher or a chef at their kitchen table. The company work teaches me what survives contact with audits, handovers, and people who did not ask for it. The one-to-one work keeps me honest about how little most people actually need.',
+			'We work inside a company, where we own and run a production system used by a real legal department, and we work one-to-one with a yoga teacher or a chef at their kitchen table. The company work teaches us what survives contact with audits, handovers, and people who did not ask for it. The one-to-one work keeps us honest about how little most people actually need.',
 		casesCta: 'See it applied, field by field'
 	},
 	built: {
@@ -192,7 +192,7 @@ export default {
 				stops: {
 					title: 'The tool refuses to exaggerate your experience.',
 					text: [
-						'This is not a setting. If a requirement is absent, it says absent and offers you the choice: skip the application, or address the gap honestly in the letter. I have been asked to soften this. I do not.',
+						'This is not a setting. If a requirement is absent, it says absent and offers you the choice: skip the application, or address the gap honestly in the letter. We have been asked to soften this. We do not.',
 						'It is the reason the thirty people who got jobs kept the jobs — nothing was promised in the room that could not be delivered on Monday. It also does not decide where to apply. It ranks and filters; you choose.'
 					]
 				},
@@ -262,14 +262,14 @@ export default {
 				stops: {
 					title: 'It never prescribes a session and never assesses an injury.',
 					text: [
-						'It shows the trend and puts the number in front of the athlete and, where there is one, the coach or physio. I have refused three requests to add a recommended load for tomorrow. The consequence of being wrong is somebody’s season, and the machine cannot feel the knee.',
+						'It shows the trend and puts the number in front of the athlete and, where there is one, the coach or physio. We have refused three requests to add a recommended load for tomorrow. The consequence of being wrong is somebody’s season, and the machine cannot feel the knee.',
 						'It also does not talk to clubs. Drafts wait for the player to send.'
 					]
 				},
 				proof:
 					'Minutes from the final whistle to a reel a scout could open. Clubs contacted with a follow-up actually sent. And whether the log is still being filled in eight weeks later — that one is the real test, and it is why the form has five fields.',
 				refuse:
-					'When the athlete’s problem is that they are not good enough at this level yet. That happens, and no highlight reel changes it. The honest version of the conversation is worth more than the system, and I have had it twice.',
+					'When the athlete’s problem is that they are not good enough at this level yet. That happens, and no highlight reel changes it. The honest version of the conversation is worth more than the system, and we have had it twice.',
 				cost: 'Ten seconds after every session. Twenty minutes after every match.',
 				quotes: [
 					{
@@ -334,14 +334,14 @@ export default {
 				stops: {
 					title: 'It does not write the take and it does not write in your voice.',
 					text: [
-						'No AI-generated scripts, no synthetic narration, no "in the style of". The reason is commercial as much as ethical: the voice is the entire asset. A creator whose voice becomes generatable has sold the only thing that was theirs. I say this in the first meeting and I have lost one engagement over it.',
-						'Hooks stay human. For thumbnails I generate variants of your own photograph — crops, text placement — never a synthetic image.'
+						'No AI-generated scripts, no synthetic narration, no "in the style of". The reason is commercial as much as ethical: the voice is the entire asset. A creator whose voice becomes generatable has sold the only thing that was theirs. We say this in the first meeting and we have lost one engagement over it.',
+						'Hooks stay human. For thumbnails we generate variants of your own photograph — crops, text placement — never a synthetic image.'
 					]
 				},
 				proof:
 					'Hours between "filming ended" and "published" — typically from around six to under two. Uploads per week without an increase in filming days. And the one they mention unprompted six months later: they have their evenings back.',
 				refuse:
-					'When someone is not posting because they have nothing they want to say. Faster publishing makes that worse, visibly and quickly. Twice I have told a creator that their problem is upstream of the edit.',
+					'When someone is not posting because they have nothing they want to say. Faster publishing makes that worse, visibly and quickly. Twice we have told a creator that their problem is upstream of the edit.',
 				cost: 'Fifteen minutes of picking. Everything else runs while you sleep.',
 				quotes: [
 					{
@@ -390,7 +390,7 @@ export default {
 					},
 					{
 						name: 'The true-cost line',
-						text: 'Every surviving listing carries one number: what leaving the notary actually costs, and the monthly figure at your stated deposit — with the rate as an input you set, not one I invent.'
+						text: 'Every surviving listing carries one number: what leaving the notary actually costs, and the monthly figure at your stated deposit — with the rate as an input you set, not one we invent.'
 					},
 					{
 						name: 'The viewing brief',
@@ -404,14 +404,14 @@ export default {
 				stops: {
 					title: 'It never tells you whether to buy, and it never touches money.',
 					text: [
-						'No valuation opinion, no "this is underpriced", no financing recommendation. I am not a financial adviser and neither is the software. It computes what is arithmetic and hands the decision back untouched. Where a listing looks anomalous it says anomalous and suggests asking a professional — it does not conclude.',
+						'No valuation opinion, no "this is underpriced", no financing recommendation. We are not financial advisers and neither is the software. It computes what is arithmetic and hands the decision back untouched. Where a listing looks anomalous it says anomalous and suggests asking a professional — it does not conclude.',
 						'It also does not contact agents. Enquiries are drafted; you send them.'
 					]
 				},
 				proof:
 					'Viewings per hundred listings seen, which should rise sharply. Minutes from listing published to enquiry sent. Weekend hours on portals, which should go to zero.',
 				refuse:
-					'When the budget and the requirements cannot both be true. The system would then simply produce silence, week after week, which is a cruel way to learn it. I say it in week one instead, with the arithmetic on the table.',
+					'When the budget and the requirements cannot both be true. The system would then simply produce silence, week after week, which is a cruel way to learn it. We say it in week one instead, with the arithmetic on the table.',
 				cost: 'Nothing weekly. The constraints session is the whole price.',
 				quotes: [
 					{
@@ -476,7 +476,7 @@ export default {
 				stops: {
 					title: 'No legal judgement, ever, and no output leaves the building unread.',
 					text: [
-						'No advice, to anyone, at any point, internal or external. No auto-send to a counterparty. No clause redrafted without a stated reason the lawyer can evaluate. Every extraction pinned to its source so verification takes four seconds. There is no "accept all" — I was asked to build one and refused.',
+						'No advice, to anyone, at any point, internal or external. No auto-send to a counterparty. No clause redrafted without a stated reason the lawyer can evaluate. Every extraction pinned to its source so verification takes four seconds. There is no "accept all" — we were asked to build one and refused.',
 						'Alongside that, the constraints that make it usable at all in Germany: DSGVO compliance with an AV-Vertrag in place, EU data residency, no training on client content, privilege preserved, a full audit trail, and a documented answer to the Kammer question "who did this and can you show me?" A legal AI system without an audit log is not deployable, whatever it can do.'
 					]
 				},
@@ -555,7 +555,7 @@ export default {
 				proof:
 					'Sunday hours. Marking minutes per set. Report season measured in evenings instead of weeks. And whether the feedback students receive got more specific, which teachers can tell within one cycle.',
 				refuse:
-					'When the school wants this as a monitoring system — engagement scores, behaviour prediction, comparative dashboards on children. That is not what any of the eight teachers asked for. It is what management occasionally asks for afterwards, and I do not build it.',
+					'When the school wants this as a monitoring system — engagement scores, behaviour prediction, comparative dashboards on children. That is not what any of the eight teachers asked for. It is what management occasionally asks for afterwards, and we do not build it.',
 				cost: 'An afternoon entering your rubric. It pays back in one marking set.',
 				quotes: [
 					{
@@ -597,11 +597,11 @@ export default {
 				builds: [
 					{
 						name: 'The boring infrastructure first',
-						text: 'A proper booking system with reminders and card payment removed about six of the nine hours, and I said so in week one. No AI in it at all. The AI layer that follows is thin and specific.'
+						text: 'A proper booking system with reminders and card payment removed about six of the nine hours, and we said so in week one. No AI in it at all. The AI layer that follows is thin and specific.'
 					},
 					{
 						name: 'The voice note to session note',
-						text: 'You talk for ninety seconds after the client leaves. It becomes a structured note — what was worked, what to watch, what to open with next time — filed against the client. The single most valued thing I have built for this group, because it means the note gets written at all, and arriving at a session already knowing where you left off is what people are actually paying for.'
+						text: 'You talk for ninety seconds after the client leaves. It becomes a structured note — what was worked, what to watch, what to open with next time — filed against the client. The single most valued thing we have built for this group, because it means the note gets written at all, and arriving at a session already knowing where you left off is what people are actually paying for.'
 					},
 					{
 						name: 'The sequence library',
@@ -609,24 +609,24 @@ export default {
 					},
 					{
 						name: 'The description drafter',
-						text: 'Six words to a workshop description in your voice — which I build from twenty of your own past descriptions, not from a style prompt.'
+						text: 'Six words to a workshop description in your voice — which we build from twenty of your own past descriptions, not from a style prompt.'
 					},
 					{
 						name: 'The reactivation list',
-						text: 'Who has not booked in six weeks, with the last note attached so the message can be real rather than "we miss you!"'
+						text: 'Who has not booked in six weeks, with the last note attached so the message can be real rather than "We miss you!"'
 					}
 				],
 				stops: {
 					title: 'No health guidance, and no message goes out as you without you reading it.',
 					text: [
 						'The health line: no modification advice, no injury interpretation, no "suitable for pregnancy", no nutrition. Your insurance, your liability, your judgement. Where a client note mentions a condition, the system stores it as text and offers nothing.',
-						'The voice line matters more than people expect. Your clients can tell. A generated check-in message that lands wrong costs more than the ten minutes it saved, because the product here is that somebody is actually paying attention. I draft; you send.'
+						'The voice line matters more than people expect. Your clients can tell. A generated check-in message that lands wrong costs more than the ten minutes it saved, because the product here is that somebody is actually paying attention. We draft; you send.'
 					]
 				},
 				proof:
 					'Admin hours per week, counted honestly. No-show rate — reminders alone usually halve it. Percentage of sessions with a note actually written, which starts near 30% and ends near 95%. Reactivated clients per quarter.',
 				refuse:
-					'Often, in this group. Three of the five came asking for an AI assistant and needed a calendar with automatic reminders. I set that up, charged for the afternoon, and told them the AI part would not pay for itself yet. Two of them have since sent me four people. Saying no is the marketing.',
+					'Often, in this group. Three of the five came asking for an AI assistant and needed a calendar with automatic reminders. We set that up, charged for the afternoon, and told them the AI part would not pay for itself yet. Two of them have since sent us four people. Saying no is the marketing.',
 				cost: 'Ninety seconds after each session. Nothing else.',
 				quotes: [
 					{
@@ -717,9 +717,9 @@ export default {
 				metaDescription:
 					'Price history that exposes the fake discount, reviews filtered for what breaks, a return and warranty diary, and a subscription audit. One afternoon, and often the answer is not much.',
 				label: 'Online shoppers',
-				headline: 'The smallest job on this list, and the one I most often turn down.',
+				headline: 'The smallest job on this list, and the one we most often turn down.',
 				story: [
-					'Two people who buy a lot and lose track of it. One who researches every purchase for weeks and still feels cheated. One small reseller who buys to resell and needs to know real prices. This is the smallest-value group in the list and I include it honestly, because it is also where I most often say the answer is not much.',
+					'Two people who buy a lot and lose track of it. One who researches every purchase for weeks and still feels cheated. One small reseller who buys to resell and needs to know real prices. This is the smallest-value group in the list and we include it honestly, because it is also where we most often say the answer is not much.',
 					'Comparison paralysis, mostly. Eleven browser tabs, four review sites that are all affiliate-funded, a price that was different yesterday, and a nagging suspicion that the sale is not one. Plus the slow leak: subscriptions nobody cancelled, returns nobody sent back within the window, warranties nobody registered.'
 				],
 				machinery: [
@@ -757,14 +757,14 @@ export default {
 				stops: {
 					title: 'It does not buy anything, and it does not recommend.',
 					text: [
-						'No stored card, no auto-purchase, no "best pick". Partly because the consequence of a wrong autonomous purchase is real money, and partly because a recommendation engine built by me for one person is a worse version of what you can do in ten minutes with the filtered data in front of you.',
+						'No stored card, no auto-purchase, no "best pick". Partly because the consequence of a wrong autonomous purchase is real money, and partly because a recommendation engine built by us for one person is a worse version of what you can do in ten minutes with the filtered data in front of you.',
 						'It also does not compile a profile. No cross-site tracking of your own behaviour, no "you also might want". Enough of that exists already.'
 					]
 				},
 				proof:
-					'Money recovered from cancelled subscriptions and returns actually made in window — in all four cases this exceeded my fee within a month. Hours per purchase decision. Whether you still feel cheated, which is the real complaint underneath.',
+					'Money recovered from cancelled subscriptions and returns actually made in window — in all four cases this exceeded our fee within a month. Hours per purchase decision. Whether you still feel cheated, which is the real complaint underneath.',
 				refuse:
-					'Often, and this is the group where I say it most. Three people have asked me for a shopping AI and I told two of them they would save more by writing down what they intend to buy that month. The compulsive-research pattern is not a tooling problem — more information makes it worse, because the research is doing an emotional job.',
+					'Often, and this is the group where we say it most. Three people have asked us for a shopping AI and we told two of them they would save more by writing down what they intend to buy that month. The compulsive-research pattern is not a tooling problem — more information makes it worse, because the research is doing an emotional job.',
 				cost: 'An afternoon, once. There is no ongoing effort, and that is deliberate.',
 				quotes: [
 					{
@@ -928,7 +928,7 @@ export default {
 				label: 'Building surveyors',
 				headline: 'The machine never assesses, never concludes, and never estimates a value.',
 				story: [
-					'A Bausachverständiger doing Bauschäden and Beweissicherung, one specialising in Verkehrswertgutachten, and one who does mostly Wohnungsübergaben and small defect reports. All three are personally liable for every sentence they sign, and this single fact determines the entire shape of what I am allowed to build.',
+					'A Bausachverständiger doing Bauschäden and Beweissicherung, one specialising in Verkehrswertgutachten, and one who does mostly Wohnungsübergaben and small defect reports. All three are personally liable for every sentence they sign, and this single fact determines the entire shape of what we are allowed to build.',
 					'The site work takes three hours and the writing takes eight. Photos have to be numbered, placed and cross-referenced. Defects have to be described in the standard formulation. Norms have to be cited exactly. The structure has to be the same every time because a court expects it to be. And it must be defensible line by line under cross-examination, so it is written slowly, at night, twice.'
 				],
 				machinery: [
@@ -1068,7 +1068,7 @@ export default {
 				metaDescription:
 					'Recall engine, cancellation filling and dictation-to-note with confirmation. No diagnosis, no image reading, no symptom triage — and patient data never leaves the practice system.',
 				label: 'Dentists',
-				headline: 'Nothing clinical. No exceptions, and I have turned down work over it.',
+				headline: 'Nothing clinical. No exceptions, and we have turned down work over it.',
 				story: [
 					'Two Zahnarztpraxen, both owner-operated: one with three chairs, one solo with two staff. Neither wanted AI. One wanted to stop losing €4,000 a month to no-shows. The other wanted to stop writing notes at 20:00.',
 					'For the first practice it is the recall list: patients due for a check-up who quietly never return, because reminding them is somebody’s afternoon and nobody has the afternoon. For the second it is documentation — notes dictated between patients, written up after closing, plus the Heil- und Kostenplan explanations that patients do not understand and therefore do not accept.'
@@ -1120,7 +1120,7 @@ export default {
 				proof:
 					'No-show rate. Recall gap — patients overdue and uncontacted. Empty chair hours per week. Minutes of documentation after closing. Treatment plan acceptance rate.',
 				refuse:
-					'Anything approaching clinical decision support, symptom triage or image reading. Both practices asked about image reading and both accepted the answer. The regulatory route for that exists — it runs through medical device certification — and it does not run through me.',
+					'Anything approaching clinical decision support, symptom triage or image reading. Both practices asked about image reading and both accepted the answer. The regulatory route for that exists — it runs through medical device certification — and it does not run through us.',
 				cost: 'Confirming every note. Which is the legal requirement anyway.',
 				quotes: [
 					{
@@ -1162,7 +1162,7 @@ export default {
 				builds: [
 					{
 						name: 'The person record',
-						text: 'One private file per team member, held by you, containing what they said they would do, what happened, and your own observations with dates. Ninety seconds of dictation after each 1:1. It is the entire system and it changes management quality more than anything else I build, because specificity is the difference between feedback that lands and feedback that does not.'
+						text: 'One private file per team member, held by you, containing what they said they would do, what happened, and your own observations with dates. Ninety seconds of dictation after each 1:1. It is the entire system and it changes management quality more than anything else we build, because specificity is the difference between feedback that lands and feedback that does not.'
 					},
 					{
 						name: 'The prep sheet',
@@ -1185,13 +1185,13 @@ export default {
 					title: 'No assessment of a person is ever generated, and nobody is measured by the machine.',
 					text: [
 						'It never rates, never ranks, never predicts flight risk, never suggests who is underperforming, never writes the review conclusion. A performance judgement produced by software and signed by a manager is a lie that a person’s career is built on.',
-						'It also never reaches into anyone’s work. No commit counts, no ticket velocity per person, no message analysis, no activity monitoring. Both leaders had access to tools that would do this and I recommended neither. Surveillance changes what a team tells you long before it changes what they do, and then you are blind in a way you cannot detect. The person records are your own notes about employees, so DSGVO rights including access apply — write nothing you would not show the person.'
+						'It also never reaches into anyone’s work. No commit counts, no ticket velocity per person, no message analysis, no activity monitoring. Both leaders had access to tools that would do this and we recommended neither. Surveillance changes what a team tells you long before it changes what they do, and then you are blind in a way you cannot detect. The person records are your own notes about employees, so DSGVO rights including access apply — write nothing you would not show the person.'
 					]
 				},
 				proof:
 					'1:1s that begin with a follow-up rather than a blank: from occasional to standard. Time spent on review season. Percentage of your week actually spent with the team. And whether feedback got specific, which the team notices before you do.',
 				refuse:
-					'When a leader wants visibility into their team’s activity. That is a trust problem and tooling makes it worse. I say so, and I have had that conversation both times.',
+					'When a leader wants visibility into their team’s activity. That is a trust problem and tooling makes it worse. We say so, and we have had that conversation both times.',
 				cost: 'Ninety seconds after every conversation.',
 				quotes: [
 					{
@@ -1245,7 +1245,7 @@ export default {
 					},
 					{
 						name: 'The description drafter',
-						text: 'From the property’s actual attributes, in your voice, with no invented features. Estate agent copy has a deserved reputation and I am not adding to it — if the machine has no data for a claim, it does not make the claim.'
+						text: 'From the property’s actual attributes, in your voice, with no invented features. Estate agent copy has a deserved reputation and we are not adding to it — if the machine has no data for a claim, it does not make the claim.'
 					},
 					{
 						name: 'The owner update',
@@ -1283,7 +1283,7 @@ export default {
 				label: 'Executives',
 				headline: 'Walking into a meeting knowing what was promised last time.',
 				story: [
-					'The founder-CEO of a company of about 90 people. Not a corporate chief executive with a chief of staff and two assistants — someone who still personally answers investors, still gets pulled into hiring, and whose calendar has been colonised by other people’s needs. The presenting complaint was "I have no time to think", which in my experience is the only complaint CEOs actually have.',
+					'The founder-CEO of a company of about 90 people. Not a corporate chief executive with a chief of staff and two assistants — someone who still personally answers investors, still gets pulled into hiring, and whose calendar has been colonised by other people’s needs. The presenting complaint was "I have no time to think", which in our experience is the only complaint CEOs actually have.',
 					'Not an hour — the whole shape of the week. About 300 emails a day of which perhaps twelve matter. Meetings entered cold, with no idea what happened last time or what was promised. Board preparation eating a weekend a quarter. A reading pile that is now purely theoretical. And the deep consequence: every decision made in the eleven minutes between two meetings, on the information that happened to be in the room.'
 				],
 				machinery: [
@@ -1345,7 +1345,7 @@ export default {
 				label: 'Chefs',
 				headline: 'The machine touches money, stock and paperwork. It does not touch the plate.',
 				story: [
-					'Chef-patron of a small restaurant — about 40 covers, a changing menu, six staff. He came to me because his food cost had drifted from 28% to 34% over a year and he could not say why, and because he was doing paperwork until midnight after service. He had no interest whatsoever in AI and said so in the first sentence.',
+					'Chef-patron of a small restaurant — about 40 covers, a changing menu, six staff. He came to us because his food cost had drifted from 28% to 34% over a year and he could not say why, and because he was doing paperwork until midnight after service. He had no interest whatsoever in AI and said so in the first sentence.',
 					'After service: prep lists for tomorrow written by hand, supplier orders placed from memory, invoices in a pile, the rota rebuilt weekly in a notebook. And the thing that was actually costing him money — nobody knew what anything cost any more, because supplier prices had moved and the menu prices had not.'
 				],
 				machinery: [
@@ -1395,7 +1395,7 @@ export default {
 				proof:
 					'Food cost percentage — 34% back to 28.5% within a quarter, and this was almost entirely visibility. Minutes of paperwork after service, from about 70 to about 15. Waste by category. Whether the allergen matrix is current, which it now always is.',
 				refuse:
-					'He asked, half seriously, whether it could suggest specials from surplus stock. I built the surplus list and stopped there. Which ingredients are going over is arithmetic; what to do with them is thirty years of cooking.',
+					'He asked, half seriously, whether it could suggest specials from surplus stock. We built the surplus list and stopped there. Which ingredients are going over is arithmetic; what to do with them is thirty years of cooking.',
 				cost: 'Photographing invoices. Thirty seconds of waste logging at close.',
 				quotes: [
 					{
@@ -1412,7 +1412,7 @@ export default {
 				label: 'Non-profits',
 				headline: 'Free tools, boring by design, operable by whoever holds the role in two years.',
 				story: [
-					'A registered Verein — around 40 active volunteers, one part-time paid coordinator, funded by a mix of small grants, membership fees and donations. Nobody there has a technology budget, and the coordinator is doing the work of three people on 20 hours a week. This engagement was partly unpaid and I would do it again.',
+					'A registered Verein — around 40 active volunteers, one part-time paid coordinator, funded by a mix of small grants, membership fees and donations. Nobody there has a technology budget, and the coordinator is doing the work of three people on 20 hours a week. This engagement was partly unpaid and we would do it again.',
 					'The acute break is grant applications. Each funder wants the same information in a different structure — organisational description, project plan, budget, impact evidence, previous funding — and each application takes two full days that come out of the delivery work, which is the whole point of the organisation. Behind that: rota coordination across 40 volunteers, membership admin, donor thank-yous and the annual report.'
 				],
 				machinery: [
@@ -1455,7 +1455,7 @@ export default {
 				stops: {
 					title: 'No impact claim is ever generated, and no funder communication is auto-sent.',
 					text: [
-						'Every number in a grant application comes from the activity log or the accounts. If the log does not support it, the application says so. Overstating impact to a funder is fraud, it happens by accident under deadline pressure, and a fluent drafting tool makes it easier to do accidentally — so the shaper is built to refuse. Where evidence is missing it writes "we do not yet measure this" and leaves it for a human.',
+						'Every number in a grant application comes from the activity log or the accounts. If the log does not support it, the application says so. Overstating impact to a funder is fraud, it happens by accident under deadline pressure, and a fluent drafting tool makes it easier to do accidentally — so the shaper is built to refuse. Where evidence is missing it writes "We do not yet measure this" and leaves it for a human.',
 						'Nothing is written about a beneficiary. Where the organisation works with vulnerable people, no personal data enters any external tool at all. Aggregate counts only. And everything must run on free or near-free tools and be operable by whoever holds the role in two years — anything requiring a subscription or a specialist will be abandoned.'
 					]
 				},
@@ -1509,7 +1509,7 @@ export default {
 					},
 					{
 						name: 'The supervision record',
-						text: 'One private file per doctoral candidate: what was agreed, what happened, milestones against the Betreuungsvereinbarung, obstacles raised. Ninety seconds of dictation after each meeting. The piece I would install first if I could install only one — because meetings currently begin with both people trying to remember, reference letters two years later are written from a blank page, and when a candidate is quietly in trouble the record shows it four months before anyone notices in conversation.'
+						text: 'One private file per doctoral candidate: what was agreed, what happened, milestones against the Betreuungsvereinbarung, obstacles raised. Ninety seconds of dictation after each meeting. The piece we would install first if we could install only one — because meetings currently begin with both people trying to remember, reference letters two years later are written from a blank page, and when a candidate is quietly in trouble the record shows it four months before anyone notices in conversation.'
 					},
 					{
 						name: 'The screening pipeline',
@@ -1524,7 +1524,7 @@ export default {
 					title: 'It never generates a citation, and never summarises a paper you will cite.',
 					text: [
 						'Citations come from the reference manager and are resolved by DOI. Nothing that produces prose is permitted to produce a reference, ever, under any framing. Fabricated references are the single most common and most destructive failure mode of language models in research, and they are undetectable to a tired author at 23:00 because they look exactly right. Screening a thousand abstracts to find forty papers is machinery; reading those forty is the job — so screening produces titles, abstracts and links, never a synopsis presented as sufficient.',
-						'No manuscript under review touches an external service: peer review is confidential and a manuscript is unpublished work belonging to someone else. It never writes the argument, the hypothesis or the interpretation. It never ranks candidates in an appointment procedure — a Berufungsverfahren is legally reviewable, documented, and subject to the AGG; I have refused this twice. And no data is fabricated, no figure generated, and no cleaning happens silently: raw stays raw. Every engagement ends with a one-page document the client keeps, naming which tasks used a machine and which funder and publisher disclosure rules apply.'
+						'No manuscript under review touches an external service: peer review is confidential and a manuscript is unpublished work belonging to someone else. It never writes the argument, the hypothesis or the interpretation. It never ranks candidates in an appointment procedure — a Berufungsverfahren is legally reviewable, documented, and subject to the AGG; we have refused this twice. And no data is fabricated, no figure generated, and no cleaning happens silently: raw stays raw. Every engagement ends with a one-page document the client keeps, naming which tasks used a machine and which funder and publisher disclosure rules apply.'
 					]
 				},
 				proof:
@@ -1589,7 +1589,7 @@ export default {
 					},
 					{
 						name: 'The countdown and the retake check',
-						text: 'From today to the exam date against the hours they genuinely have, with a fresh mock every three weeks. Plus the modular retake question: several of these exams allow a single failed module to be retaken alone, which can mean a fraction of the fee. The system raises the question and names the office to ask — it does not assert the answer. I have watched someone re-sit an entire exam because nobody told them to ask.'
+						text: 'From today to the exam date against the hours they genuinely have, with a fresh mock every three weeks. Plus the modular retake question: several of these exams allow a single failed module to be retaken alone, which can mean a fraction of the fee. The system raises the question and names the office to ask — it does not assert the answer. We have watched someone re-sit an entire exam because nobody told them to ask.'
 					}
 				],
 				stops: {
@@ -1602,7 +1602,7 @@ export default {
 				proof:
 					'Not the overall band — bands move slowly and hide everything. Movement on the weakest criterion, which is the only number that matters and the one twelve weeks of self-study never moved. Error frequency per hundred words by class over time. The distribution of study hours, which typically starts at seventy per cent on the strong skill and should invert within a month. And whether the ledger is still being updated eight weeks in, which predicts the outcome better than any single mock.',
 				refuse:
-					'When the timeline cannot work — someone at a solid A2 wanting C1 in eight weeks is not going to get there, and I say the honest number of months in the first hour. When the target level is wrong, which twice meant a lower certificate or a different exam the institution also accepts. When the barrier is anxiety rather than language, because drills make that worse. And when someone wants the score without the language, which is a short conversation.',
+					'When the timeline cannot work — someone at a solid A2 wanting C1 in eight weeks is not going to get there, and we say the honest number of months in the first hour. When the target level is wrong, which twice meant a lower certificate or a different exam the institution also accepts. When the barrier is anxiety rather than language, because drills make that worse. And when someone wants the score without the language, which is a short conversation.',
 				cost: 'One full mock every three weeks under real conditions, which is uncomfortable and non-negotiable. Ten minutes after each writing task. And about ten days of doing the practice they have been avoiding.',
 				quotes: [
 					{
@@ -1621,20 +1621,20 @@ export default {
 		title: 'Four phases, every time.',
 		steps: [
 			{
-				title: 'I sit in the week.',
+				title: 'We sit in the week.',
 				text: 'Two to five days watching the actual working week. Not a workshop, not a questionnaire — the mailbox, the folder names, the sticky notes, the workaround you are embarrassed about. The workaround is usually where the system goes.'
 			},
 			{
-				title: 'I name the seam out loud.',
-				text: 'One page saying what is machinery and what is judgement, read back to you. If you flinch at something I called machinery, you are right and I am wrong. Your flinch is data. That page is the contract.'
+				title: 'We name the seam out loud.',
+				text: 'One page saying what is machinery and what is judgement, read back to you. If you flinch at something we called machinery, you are right and we are wrong. Your flinch is data. That page is the contract.'
 			},
 			{
-				title: 'I build the smallest thing that removes the volume.',
+				title: 'We build the smallest thing that removes the volume.',
 				text: 'Not a platform. The one system that takes the repetitive mass off you. It ships in weeks, not quarters, and it does one thing so completely that you stop thinking about it.'
 			},
 			{
-				title: 'I hand over the controls and leave.',
-				text: 'You must be able to change the rules without me: the filters, the thresholds, the templates, the reject reasons. If a system requires me to stay, I built it wrong.'
+				title: 'We hand over the controls and leave.',
+				text: 'You must be able to change the rules without us: the filters, the thresholds, the templates, the reject reasons. If a system requires us to stay, we built it wrong.'
 			}
 		],
 		noPrices:
@@ -1644,16 +1644,16 @@ export default {
 		title: 'Three promises.',
 		items: [
 			{
-				title: 'I build up to the seam, never across it.',
-				text: 'The machine takes the volume. The decision, the diagnosis, the grade, the valuation, the verdict stay yours — and I will refuse to build the button that takes them away.'
+				title: 'We build up to the seam, never across it.',
+				text: 'The machine takes the volume. The decision, the diagnosis, the grade, the valuation, the verdict stay yours — and we will refuse to build the button that takes them away.'
 			},
 			{
-				title: 'I say no out loud.',
-				text: "If the volume is too low, the variance too high, or a calendar would fix it, you will hear that instead of a proposal. It has cost me work and it is why people send me their friends."
+				title: 'We say no out loud.',
+				text: "If the volume is too low, the variance too high, or a calendar would fix it, you will hear that instead of a proposal. It has cost us work and it is why people send us their friends."
 			},
 			{
-				title: 'If a system needs me to stay, I built it wrong.',
-				text: 'You get the controls — the filters, the thresholds, the templates — and a written page of what the system may and may not do. Nothing depends on me forever.'
+				title: 'If a system needs us to stay, we built it wrong.',
+				text: 'You get the controls — the filters, the thresholds, the templates — and a written page of what the system may and may not do. Nothing depends on us forever.'
 			}
 		]
 	},
@@ -1661,7 +1661,7 @@ export default {
 		eyebrow: `Who ${contact.brand} is`,
 		title: 'The translator between you and the machines.',
 		photoAlt: contact.name,
-		text: `${contact.brand} is one expert, not an agency: ${contact.name}, and you deal with him directly from the first call to the handover. ` + "Almost nobody comes to me asking for AI. They come because one specific part of their week has become unbearable. What I actually do is sit inside that week until I can see which part of it is machinery pretending to be judgement — and that is the rarer skill, because most people who can build these systems cannot hear the problem, and most people who can hear the problem cannot build. I do both, one person at a time. I work in two registers: inside a company I own and run a production system used by a real legal department, and outside it I sit at a kitchen table with a yoga teacher or a chef. The company work teaches me what survives audits and handovers; the one-to-one work keeps me honest about how little most people actually need. So I listen to how you already work, I build or teach exactly that much, and I say so plainly when the answer is that AI will not pay off for you."
+		text: `${contact.brand} is one expert, not an agency: ${contact.name}, and you deal with him directly from the first call to the handover. ` + "Almost nobody comes to us asking for AI. They come because one specific part of their week has become unbearable. What we actually do is sit inside that week until we can see which part of it is machinery pretending to be judgement — and that is the rarer skill, because most people who can build these systems cannot hear the problem, and most people who can hear the problem cannot build. We do both, one person at a time. We work in two registers: inside a company we own and run a production system used by a real legal department, and outside it we sit at a kitchen table with a yoga teacher or a chef. The company work teaches us what survives audits and handovers; the one-to-one work keeps us honest about how little most people actually need. So we listen to how you already work, we build or teach exactly that much, and we say so plainly when the answer is that AI will not pay off for you."
 	},
 	testimonials: {
 		eyebrow: 'Kind words',
@@ -1675,11 +1675,11 @@ export default {
 		items: [
 			{
 				q: 'Do I need any technical knowledge?',
-				a: "None at all. You explain your work in your own words and everything technical stays my problem. The first phase is me watching your actual week — not a workshop, not a questionnaire — so if you can do your job, we can work together."
+				a: "None at all. You explain your work in your own words and everything technical stays our problem. The first phase is us watching your actual week — not a workshop, not a questionnaire — so if you can do your job, we can work together."
 			},
 			{
 				q: 'Will it make decisions for me?',
-				a: "No, and that is the whole design. The grade stays the teacher's, the valuation the surveyor's, the diagnosis the dentist's, the prioritisation the product manager's. The machine takes the volume and prepares the material; you decide. I have refused to build the accept-all button more than once."
+				a: "No, and that is the whole design. The grade stays the teacher's, the valuation the surveyor's, the diagnosis the dentist's, the prioritisation the product manager's. The machine takes the volume and prepares the material; you decide. We have refused to build the accept-all button more than once."
 			},
 			{
 				q: 'What does it cost?',
@@ -1691,7 +1691,7 @@ export default {
 			},
 			{
 				q: 'What if AI is the wrong answer for me?',
-				a: "Then you'll hear it in the free conversation, before you have spent anything. It happens often. Three of five coaches I have worked with needed a booking system with reminders, not AI — I set that up, charged for the afternoon, and said so."
+				a: "Then you'll hear it in the free conversation, before you have spent anything. It happens often. Three of five coaches we have worked with needed a booking system with reminders, not AI — we set that up, charged for the afternoon, and said so."
 			},
 			{
 				q: 'Do we have to be in Berlin?',
@@ -1699,14 +1699,14 @@ export default {
 			},
 			{
 				q: 'How much of my time does this take?',
-				a: "Less than you'd think, and it is front-loaded. The first phase costs you being observed. After handover most of my clients spend seconds, not hours: ninety seconds of dictation after a meeting, ten seconds after a training session, one photograph of an invoice."
+				a: "Less than you'd think, and it is front-loaded. The first phase costs you being observed. After handover most of our clients spend seconds, not hours: ninety seconds of dictation after a meeting, ten seconds after a training session, one photograph of an invoice."
 			}
 		]
 	},
 	contactSection: {
 		eyebrow: 'Get in touch',
-		title: 'Tell me what your week looks like.',
-		lead: "I'll tell you honestly which parts you can hand over — and which you can't.",
+		title: 'Tell us what your week looks like.',
+		lead: "We'll tell you honestly which parts you can hand over — and which you can't.",
 		form: {
 			name: 'Name',
 			email: 'Email',
@@ -1720,13 +1720,13 @@ export default {
 			],
 			message: 'Message',
 			messageHint: 'A sentence about your week is plenty. No preparation needed.',
-			emailHint: 'So I can reply.',
+			emailHint: 'So we can reply.',
 			send: 'Send message',
 			sending: 'Sending…',
-			reply: 'I reply within one working day.',
-			success: "Thank you — I'll get back to you within a day.",
-			error: "That didn't go through. Please email me instead.",
-			note: 'Prefer not to use a form? The buttons on the left reach me faster.'
+			reply: 'We reply within one working day.',
+			success: "Thank you — we'll get back to you within a day.",
+			error: "That didn't go through. Please email us instead.",
+			note: 'Prefer not to use a form? The buttons on the left reach us faster.'
 		}
 	},
 	footer: {
