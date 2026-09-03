@@ -17,7 +17,7 @@
 
 <footer class="foot" class:wrap>
 	<p class="brand">
-		<img src="{base}/brand/dinobridge-mark-icon-white.svg" alt="" height="20" />
+		<img src="{base}/brand/dinobridge-mark-icon-white.svg" alt="" height="24" />
 		© {contact.brand} · {contact.address || contact.city}
 	</p>
 	<p>
