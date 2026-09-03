@@ -15,8 +15,8 @@ export const contact = {
 	// The studio. This is the name on the header, the titles, the footer and the
 	// JSON-LD business entity — the thing that takes the work on.
 	brand: 'Dinobridge',
-	// The person behind it. Stays on the Person entity, the legal pages and the
-	// places where the site says who actually does the work.
+	// The owner. Stays on the Person entity, the legal pages, the About section
+	// and the places where the site says who leads the work.
 	name: 'Moha Aghanoori',
 	// ProfessionalService name in JSON-LD. Same string as `brand`; @id-linked to
 	// the Person in one @graph so search engines fuse studio and expert into one

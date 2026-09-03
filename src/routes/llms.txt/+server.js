@@ -46,7 +46,8 @@ export function GET() {
 > ${contact.brand} — AI consulting for working professionals: small AI tools that take over the
 > repetitive part of the week while every decision stays with the person. Lawyers, teachers,
 > dentists, surveyors, researchers and other fields. ${contact.city}, English and German.
-> ${contact.brand} is one expert, ${contact.name}: you deal with him directly, no agency, no handoffs.
+> ${contact.brand} is owned and led by ${contact.name}, who brings around eight years of professional
+> experience, including about five years focused on AI. Owner-led: no handoffs to a junior.
 
 Honest note on this file: as of 2026 no major LLM provider consumes /llms.txt as a
 ranking or citation signal, and Google Search states in writing that it ignores it.

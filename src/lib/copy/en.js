@@ -19,7 +19,7 @@ export default {
 		subline:
 			`${contact.brand} builds small AI tools for practices, teams and self-employed professionals. We take over the paperwork, the sorting and the chasing that eat your evenings, and we never touch the part that needs your judgement. You keep every decision.`,
 		button: 'Book a free first conversation',
-		note: `Berlin · the work is done personally by ${contact.name}`
+		note: 'Berlin · owner-led, from the first call to the handover'
 	},
 	studio: {
 		worksLabel: 'Real examples',
@@ -134,7 +134,7 @@ export default {
 		],
 		registersTitle: 'Two kinds of experience.',
 		registersText:
-			'Inside a company, we run an AI system that a real legal department uses every day. Outside it, we sit at a kitchen table with a yoga teacher or a chef. The company work teaches us what survives audits, handovers and colleagues who never asked for the tool. The one-to-one work keeps us honest about how little most people actually need.',
+			`Our owner, ${contact.name}, runs an AI system inside a company that a real legal department uses every day. At ${contact.brand}, we sit at a kitchen table with a yoga teacher or a chef. The company work teaches us what survives audits, handovers and colleagues who never asked for the tool. The one-to-one work keeps us honest about how little most people actually need.`,
 		casesCta: 'See the real examples'
 	},
 	built: {
@@ -1616,10 +1616,15 @@ export default {
 		]
 	},
 	about: {
-		eyebrow: `Who ${contact.brand} is`,
-		title: 'One expert, no handoffs.',
-		photoAlt: contact.name,
-		text: `${contact.brand} is one expert, not an agency: ${contact.name}. You deal with him directly from the first call to the handover. ` + 'Almost nobody comes to us asking for AI. People come because one part of their week has become unbearable. We sit inside that week until we can see exactly which part repeats and which part needs their judgement, and then we build only for the repetitive part. That combination is rarer than it sounds: most people who can build these tools cannot hear the problem, and most people who can hear the problem cannot build. We do both, one person at a time. Inside a company, we run an AI system that a real legal department uses every day. Outside it, we sit at a kitchen table with a yoga teacher or a chef. The company work teaches us what survives audits and handovers. The one-to-one work keeps us honest about how little most people actually need. So we listen to how you already work, we build or teach exactly that much, and we tell you plainly when AI will not pay off for you.'
+		eyebrow: `About ${contact.brand}`,
+		title: 'Practical tools, hands-on support.',
+		photoAlt: `${contact.name}, owner of ${contact.brand}`,
+		// Two paragraphs: the company first, then the owner behind it. The second
+		// one is also the Person description in the JSON-LD.
+		text: [
+			`${contact.brand} helps practices, teams and self-employed professionals take the repetitive work off their desks. Almost nobody comes to us asking for AI. People come because one part of their week has become unbearable. We sit inside that week until we can see exactly which part repeats and which part needs their judgement, and then we build only for the repetitive part. That combination is rarer than it sounds: most people who can build these tools cannot hear the problem, and most people who can hear the problem cannot build. We do both. We listen to how you already work, we build or teach exactly that much, and we tell you plainly when AI will not pay off for you.`,
+			`${contact.brand} is owned and led by ${contact.name}, who brings around eight years of professional experience, including about five years focused on AI. Alongside ${contact.brand}, he runs an AI system inside a company that a real legal department uses every day. That mix shows up in the work: practical advice in plain language, tools built for your business rather than for the technology, and an owner who takes personal responsibility for every project from the first call to the handover.`
+		]
 	},
 	testimonials: {
 		eyebrow: 'What clients say',
@@ -1657,7 +1662,7 @@ export default {
 			},
 			{
 				q: 'Who actually does the work?',
-				a: `${contact.name} does, personally. There is no team behind the scenes and no handover to a junior. The person you speak to in the first call is the person who watches your week, builds the tool and hands it over.`
+				a: `${contact.brand} is owner-led. ${contact.name} takes personal responsibility for every project: the person you speak to in the first call is the person who watches your week, builds the tool and hands it over. Nothing is passed to a junior.`
 			},
 			{
 				q: 'Do we have to be in Berlin?',

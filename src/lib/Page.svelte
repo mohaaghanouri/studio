@@ -168,8 +168,9 @@
 				name: contact.name,
 				url: canonical,
 				image: `${site}/moha.webp`,
-				jobTitle: isEn ? 'AI Consultant' : 'KI-Berater',
-				description: copy.about.text,
+				jobTitle: isEn ? `Owner and AI Consultant, ${contact.business}` : `Inhaber und KI-Berater, ${contact.business}`,
+				// The owner paragraph, not the company one: this describes the Person.
+				description: copy.about.text[1],
 				email: `mailto:${contact.email}`,
 				sameAs: profiles,
 				knowsLanguage: ['de', 'en'],
@@ -465,7 +466,9 @@
 				loading="lazy"
 			/>
 			<div>
-				<p>{copy.about.text}</p>
+				{#each copy.about.text as paragraph}
+					<p>{paragraph}</p>
+				{/each}
 				<h3 class="promises-title">{copy.principles.title}</h3>
 				<ul class="promises">
 					{#each copy.principles.items as item}
@@ -1441,6 +1444,10 @@
 	.about p {
 		color: var(--muted);
 		max-width: 40rem;
+	}
+
+	.about p + p {
+		margin-top: 1em;
 	}
 
 	.promises-title {

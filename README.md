@@ -1,6 +1,6 @@
 # studio
 
-Consulting site for **Dinobridge** (dinobridge.de) — the studio name; Moha Aghanoori is the expert behind it. SvelteKit + `adapter-static` — fully prerendered,
+Consulting site for **Dinobridge** (dinobridge.de) — the company, owned and led by Moha Aghanoori. SvelteKit + `adapter-static` — fully prerendered,
 no backend, hosted on GitHub Pages behind Cloudflare. Bilingual EN (`/`) + DE (`/de/`).
 
 ```bash
@@ -21,7 +21,7 @@ tells you which commit is live.
 | | |
 |---|---|
 | Contact, domain, email | `src/lib/copy/contact.js` — **single source of truth** |
-| Who I've helped, and how many | `src/lib/copy/roster.js` — counts only; labels live in `en.js`/`de.js` under `who.roster`. The home page shows the labels **without** the counts; the counts appear in the rail of each case page |
+| Who has been helped, and how many | `src/lib/copy/roster.js` — counts only; labels live in `en.js`/`de.js` under `who.roster`. The home page shows the labels **without** the counts; the counts appear in the rail of each case page |
 | The 21 case pages | `built.items` in `en.js`/`de.js`, one entry per field. Source material: `researches/projects/` in the private **studio-research** repo |
 | Client quotes | `quotes` on each case in `built.items` — next to the work they are about. There is no separate testimonials list: the home page shows the first voice from each of the six featured cases |
 | Case illustrations | `static/work/<slug>.svg` + a tint per slug in `src/lib/art.js`. Motifs must sit between y 230–520 of the 1200×750 canvas — the case-page hero is a wide centre crop and anything outside that band is cut off |

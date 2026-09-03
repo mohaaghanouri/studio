@@ -15,7 +15,7 @@
 	<h2>Wer verantwortlich ist</h2>
 	<p>
 		{contact.brand} — Inhaber {contact.name}, {contact.city} (vollständige Anschrift im
-		<a href="{base}/impressum">Impressum</a>). Bei Fragen zum Datenschutz erreichen Sie mich unter
+		<a href="{base}/impressum">Impressum</a>). Bei Fragen zum Datenschutz erreichen Sie uns unter
 		<a href="mailto:{contact.email}">{contact.email}</a>.
 	</p>
 
@@ -32,7 +32,7 @@
 		nach dem EU-US Data Privacy Framework zertifiziert. Beim Aufruf der Website verarbeitet GitHub
 		technisch notwendige Daten (etwa IP-Adresse, Zeitpunkt des Aufrufs, aufgerufene Seite) in
 		sogenannten Server-Logs. Das ist für den sicheren Betrieb jeder Website erforderlich (Art. 6
-		Abs. 1 lit. f DSGVO). Auf diese Logs habe ich keinen direkten Zugriff.
+		Abs. 1 lit. f DSGVO). Auf diese Logs haben wir keinen direkten Zugriff.
 	</p>
 
 	<h2>Content Delivery Network (Cloudflare)</h2>
@@ -41,14 +41,14 @@
 		EU-US Data Privacy Framework zertifiziert ist. Cloudflare liefert die Seiten von einem Server
 		in Ihrer Nähe aus und filtert Angriffe ab. Dabei verarbeitet Cloudflare technisch notwendige
 		Verbindungsdaten (IP-Adresse, Zeitpunkt, aufgerufene Adresse, Browserkennung). Rechtsgrundlage
-		ist mein berechtigtes Interesse an einem sicheren und schnellen Betrieb der Website (Art. 6
+		ist unser berechtigtes Interesse an einem sicheren und schnellen Betrieb der Website (Art. 6
 		Abs. 1 lit. f DSGVO). Cloudflare setzt dabei keine Cookies auf dieser Website.
 	</p>
 
 	<h2>E-Mail-Weiterleitung</h2>
 	<p>
 		E-Mails an die Adresse dieser Domain werden über Cloudflare Email Routing (Cloudflare, Inc.,
-		USA) an mein Postfach weitergeleitet. Cloudflare verarbeitet dabei die Absenderadresse und den
+		USA) an unser Postfach weitergeleitet. Cloudflare verarbeitet dabei die Absenderadresse und den
 		Inhalt Ihrer Nachricht ausschließlich zur Übermittlung. Rechtsgrundlage ist die Bearbeitung
 		Ihrer Anfrage bzw. die Anbahnung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO).
 	</p>
@@ -56,9 +56,9 @@
 	<h2>Kontaktformular</h2>
 	<p>
 		Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail-Adresse, Nachricht)
-		durch den Dienst Formspree Inc. (USA) verarbeitet und an mich weitergeleitet. Rechtsgrundlage
+		durch den Dienst Formspree Inc. (USA) verarbeitet und an uns weitergeleitet. Rechtsgrundlage
 		ist die Anbahnung eines Vertrags bzw. Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Wenn Sie das
-		Formular nicht nutzen möchten, schreiben Sie mir einfach direkt per E-Mail oder Messenger.
+		Formular nicht nutzen möchten, schreiben Sie uns einfach direkt per E-Mail oder Messenger.
 	</p>
 
 	<h2>Terminbuchung (Cal.com)</h2>
@@ -69,13 +69,13 @@
 		statt. Dabei werden Ihre IP-Adresse und Browserdaten an Cal.com übertragen; die von Ihnen im
 		Buchungsformular eingegebenen Daten (Name, E-Mail-Adresse, Anlass) werden dort zur
 		Terminverwaltung verarbeitet. Rechtsgrundlage ist die Anbahnung eines Vertrags bzw. Ihre
-		Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Wenn Sie das nicht möchten, erreichen Sie mich jederzeit
+		Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Wenn Sie das nicht möchten, erreichen Sie uns jederzeit
 		direkt per E-Mail.
 	</p>
 
 	<h2>Schriftarten</h2>
 	<p>
-		Alle Schriftarten werden von meinem eigenen Server geladen. Es besteht keine Verbindung zu
+		Alle Schriftarten werden von unserem eigenen Server geladen. Es besteht keine Verbindung zu
 		Google Fonts oder einem anderen externen Schriftarten-Dienst, und es werden dafür keine Daten
 		an Dritte übertragen.
 	</p>
@@ -92,7 +92,7 @@
 	<h2>Ihre Rechte</h2>
 	<p>
 		Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten sowie das Recht, sich
-		bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Schreiben Sie mir dazu einfach eine
+		bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Schreiben Sie uns dazu einfach eine
 		E-Mail.
 	</p>
 

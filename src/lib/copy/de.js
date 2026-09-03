@@ -18,7 +18,7 @@ export default {
 		headline: 'Die Routinehälfte Ihrer Woche kann von allein laufen.',
 		subline: `${contact.brand} baut kleine KI-Werkzeuge für Praxen, Teams und Selbstständige. Wir übernehmen den Papierkram, das Sortieren und das Nachfassen, die Ihre Abende auffressen. Den Teil, der Ihr Urteil braucht, fassen wir nicht an. Jede Entscheidung bleibt bei Ihnen.`,
 		button: 'Kostenloses Erstgespräch vereinbaren',
-		note: `Berlin · die Arbeit macht ${contact.name} persönlich`
+		note: 'Berlin · inhabergeführt, vom ersten Gespräch bis zur Übergabe'
 	},
 	studio: {
 		worksLabel: 'Beispiele aus der Praxis',
@@ -134,7 +134,7 @@ export default {
 		],
 		registersTitle: 'Zwei Arten von Erfahrung.',
 		registersText:
-			'In einem Unternehmen betreiben wir ein KI-System, das eine echte Rechtsabteilung jeden Tag nutzt. Außerhalb sitzen wir mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt uns, was Prüfungen, Übergaben und Kollegen übersteht, die nie nach dem Werkzeug gefragt haben. Die Einzelarbeit hält uns ehrlich darüber, wie wenig die meisten wirklich brauchen.',
+			`Unser Inhaber ${contact.name} betreibt in einem Unternehmen ein KI-System, das eine echte Rechtsabteilung jeden Tag nutzt. Bei ${contact.brand} sitzen wir mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt uns, was Prüfungen, Übergaben und Kollegen übersteht, die nie nach dem Werkzeug gefragt haben. Die Einzelarbeit hält uns ehrlich darüber, wie wenig die meisten wirklich brauchen.`,
 		casesCta: 'Die Beispiele ansehen'
 	},
 	built: {
@@ -1607,10 +1607,15 @@ export default {
 		]
 	},
 	about: {
-		eyebrow: `Wer ${contact.brand} ist`,
-		title: 'Ein Experte, keine Übergaben.',
-		photoAlt: contact.name,
-		text: `${contact.brand} ist keine Agentur, sondern ein Experte: ${contact.name}. Sie haben vom ersten Gespräch bis zur Übergabe direkt mit ihm zu tun. ` + 'Fast niemand kommt zu uns und fragt nach KI. Man kommt, weil ein Teil der Woche unerträglich geworden ist. Wir setzen uns in diese Woche, bis wir genau sehen, welcher Teil sich wiederholt und welcher das eigene Urteil braucht, und dann bauen wir nur für den Routineteil. Diese Kombination ist seltener, als sie klingt: Die meisten, die solche Werkzeuge bauen können, hören das Problem nicht, und die meisten, die das Problem hören, können nicht bauen. Wir machen beides, mit einem Menschen nach dem anderen. In einem Unternehmen betreiben wir ein KI-System, das eine echte Rechtsabteilung jeden Tag nutzt. Außerhalb sitzen wir mit einer Yogalehrerin oder einem Küchenchef am Küchentisch. Die Unternehmensarbeit lehrt uns, was Prüfungen und Übergaben übersteht. Die Einzelarbeit hält uns ehrlich darüber, wie wenig die meisten wirklich brauchen. Wir hören also zu, wie Sie ohnehin arbeiten, bauen oder erklären genau so viel, und sagen Ihnen klar, wenn KI sich für Sie nicht rechnet.'
+		eyebrow: `Über ${contact.brand}`,
+		title: 'Praktische Werkzeuge, persönliche Betreuung.',
+		photoAlt: `${contact.name}, Inhaber von ${contact.brand}`,
+		// Zwei Absätze: zuerst das Unternehmen, dann der Inhaber dahinter. Der
+		// zweite ist zugleich die Person-Beschreibung im JSON-LD.
+		text: [
+			`${contact.brand} hilft Praxen, Teams und Selbstständigen, die Routinearbeit vom Schreibtisch zu bekommen. Fast niemand kommt zu uns und fragt nach KI. Man kommt, weil ein Teil der Woche unerträglich geworden ist. Wir setzen uns in diese Woche, bis wir genau sehen, welcher Teil sich wiederholt und welcher das eigene Urteil braucht, und dann bauen wir nur für den Routineteil. Diese Kombination ist seltener, als sie klingt: Die meisten, die solche Werkzeuge bauen können, hören das Problem nicht, und die meisten, die das Problem hören, können nicht bauen. Wir machen beides. Wir hören zu, wie Sie ohnehin arbeiten, bauen oder erklären genau so viel, und sagen Ihnen klar, wenn KI sich für Sie nicht rechnet.`,
+			`${contact.brand} gehört ${contact.name} und wird von ihm geführt. Er bringt rund acht Jahre Berufserfahrung mit, davon etwa fünf Jahre mit Schwerpunkt KI. Neben ${contact.brand} betreibt er in einem Unternehmen ein KI-System, das eine echte Rechtsabteilung jeden Tag nutzt. Diese Mischung merkt man der Arbeit an: praktischer Rat in klarer Sprache, Werkzeuge, die für Ihren Betrieb gebaut sind und nicht für die Technik, und ein Inhaber, der vom ersten Gespräch bis zur Übergabe persönlich die Verantwortung für jedes Projekt trägt.`
+		]
 	},
 	testimonials: {
 		eyebrow: 'Was Kunden sagen',
@@ -1648,7 +1653,7 @@ export default {
 			},
 			{
 				q: 'Wer macht die Arbeit eigentlich?',
-				a: `${contact.name}, persönlich. Es gibt kein Team im Hintergrund und keine Übergabe an einen Junior. Die Person, mit der Sie im Erstgespräch sprechen, ist die Person, die sich Ihre Woche anschaut, das Werkzeug baut und es übergibt.`
+				a: `${contact.brand} ist inhabergeführt. ${contact.name} trägt für jedes Projekt persönlich die Verantwortung: Die Person, mit der Sie im Erstgespräch sprechen, ist die Person, die sich Ihre Woche anschaut, das Werkzeug baut und es übergibt. Nichts wird an einen Junior weitergereicht.`
 			},
 			{
 				q: 'Müssen wir in Berlin sein?',
