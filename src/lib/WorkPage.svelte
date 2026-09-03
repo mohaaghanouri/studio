@@ -1,6 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { contact, site } from '$lib/copy/contact.js';
+	import { contact, site, bookUrl } from '$lib/copy/contact.js';
 	import Footer from '$lib/Footer.svelte';
 	import { artFor } from '$lib/art.js';
 	import { PLACEHOLDERS } from '$lib/preview.js';
@@ -180,11 +180,8 @@
 			<h2>{copy.contactSection.title}</h2>
 			<p class="lead">{copy.contactSection.lead}</p>
 			<div class="cta-row">
-				<a class="btn btn-primary" href="{home}#contact">{copy.hero.button}</a>
-				<a class="btn" href="mailto:{contact.email}">{copy.contactSection.form.email}</a>
-				{#if contact.whatsapp}
-					<a class="btn" href="https://wa.me/{contact.whatsapp}" rel="noopener">WhatsApp</a>
-				{/if}
+				<a class="btn btn-primary" href={bookUrl || `${home}#contact`} rel="noopener">{copy.hero.button}</a>
+				<a class="btn" href="{home}#contact">{copy.studio.bookCta}</a>
 			</div>
 		</section>
 

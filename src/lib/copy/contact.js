@@ -57,6 +57,10 @@ export const contact = {
 	calEvent: 'discovery-call'
 };
 
+// Direct booking link for pages without the booking drawer (method, work index,
+// case pages). Empty when no Cal handle is configured, so callers can hide it.
+export const bookUrl = contact.cal ? `https://cal.com/${contact.cal}/${contact.calEvent}` : '';
+
 // Profiles that are the same person as this site. These become Person.sameAs in
 // the JSON-LD, which is what lets search engines and LLMs fuse scattered mentions
 // of one name into a single entity — the strongest correlate of AI-search

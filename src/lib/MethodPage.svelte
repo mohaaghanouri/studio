@@ -1,6 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { contact, site } from '$lib/copy/contact.js';
+	import { contact, site, bookUrl } from '$lib/copy/contact.js';
 	import Footer from '$lib/Footer.svelte';
 	import { PLACEHOLDERS } from '$lib/preview.js';
 
@@ -125,7 +125,8 @@
 		<h2 class="cta-title">{copy.contactSection.title}</h2>
 		<p class="lead">{copy.contactSection.lead}</p>
 		<div class="row">
-			<a class="btn btn-primary" href="{home}#contact">{copy.hero.button}</a>
+			<a class="btn btn-primary" href={bookUrl || `${home}#contact`} rel="noopener">{copy.hero.button}</a>
+			<a class="btn" href="{home}#contact">{copy.studio.bookCta}</a>
 			<a class="btn" href="{base}{prefix}/work/">{m.casesCta}</a>
 		</div>
 	</section>

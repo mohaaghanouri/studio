@@ -355,18 +355,22 @@
 		<div class="hero-foot rise rise-3">
 			<p class="subline">{copy.hero.subline}</p>
 			<div class="hero-cta">
+				<!-- One primary action everywhere: the free first conversation. Writing is
+				     the low-pressure alternative and points at the form. -->
 				<div class="cta-stack">
-					<a class="btn btn-primary" href="#contact">
-						{copy.hero.button}
-					</a>
-					<button
-						class="btn btn-ghost"
-						type="button"
-						on:click={openBook}
-						on:pointerenter={warmCal}
-					>
-						{copy.studio.bookCta}
-					</button>
+					{#if contact.cal}
+						<button
+							class="btn btn-primary"
+							type="button"
+							on:click={openBook}
+							on:pointerenter={warmCal}
+						>
+							{copy.hero.button}
+						</button>
+					{:else}
+						<a class="btn btn-primary" href="#contact">{copy.hero.button}</a>
+					{/if}
+					<a class="btn btn-ghost" href="#contact">{copy.studio.bookCta}</a>
 				</div>
 				<p class="hero-note">
 					<span>{noteParts[0]}<strong>{contact.city}</strong>{noteParts[1] ?? ''}</span>
@@ -413,40 +417,6 @@
 				</article>
 			{/each}
 		</div>
-	</section>
-
-	<section class="wrap" id="roster" use:fade>
-		<div class="row-head">
-			<span class="meta">{copy.who.rosterEyebrow}</span>
-		</div>
-		<h2 class="statement">{copy.who.rosterTitle}</h2>
-		<p class="aside roster-intro">{copy.who.rosterIntro}</p>
-		<!-- The two aggregate facts from roster.js — per-group counts stay on the case pages. -->
-		<dl class="stats">
-			<div>
-				<dd>{totalHelped}</dd>
-				<dt class="meta">{copy.who.statPeople}</dt>
-			</div>
-			<div>
-				<dd>{groupCount}</dd>
-				<dt class="meta">{copy.who.statFields}</dt>
-			</div>
-		</dl>
-		<!-- Counts come from roster.js; only the labels are translated. -->
-		<ul class="roster">
-			{#each roster as group}
-				<li>
-					{#if written.has(group.slug)}
-						<a class="who-label" href="{base}{isEn ? '' : '/de'}/work/{group.slug}/"
-							>{copy.who.roster[group.slug]} <span class="go" aria-hidden="true">↗</span></a
-						>
-					{:else}
-						<span class="who-label">{copy.who.roster[group.slug]}</span>
-					{/if}
-				</li>
-			{/each}
-		</ul>
-		<p class="aside">{copy.who.notListed}</p>
 	</section>
 
 	<section class="wrap" id="process" use:fade>
@@ -506,6 +476,43 @@
 		</div>
 	</section>
 
+	<!-- Proof block: the roster (who we have actually worked with) sits directly
+	     before the client quotes, so the numbers and the voices read as one
+	     section of evidence after the promises. -->
+	<section class="wrap" id="roster" use:fade>
+		<div class="row-head">
+			<span class="meta">{copy.who.rosterEyebrow}</span>
+		</div>
+		<h2 class="statement">{copy.who.rosterTitle}</h2>
+		<p class="aside roster-intro">{copy.who.rosterIntro}</p>
+		<!-- The two aggregate facts from roster.js — per-group counts stay on the case pages. -->
+		<dl class="stats">
+			<div>
+				<dd>{totalHelped}</dd>
+				<dt class="meta">{copy.who.statPeople}</dt>
+			</div>
+			<div>
+				<dd>{groupCount}</dd>
+				<dt class="meta">{copy.who.statFields}</dt>
+			</div>
+		</dl>
+		<!-- Counts come from roster.js; only the labels are translated. -->
+		<ul class="roster">
+			{#each roster as group}
+				<li>
+					{#if written.has(group.slug)}
+						<a class="who-label" href="{base}{isEn ? '' : '/de'}/work/{group.slug}/"
+							>{copy.who.roster[group.slug]} <span class="go" aria-hidden="true">↗</span></a
+						>
+					{:else}
+						<span class="who-label">{copy.who.roster[group.slug]}</span>
+					{/if}
+				</li>
+			{/each}
+		</ul>
+		<p class="aside">{copy.who.notListed}</p>
+	</section>
+
 	{#if voices.length}
 		<section class="wrap" use:fade>
 			<div class="row-head">
@@ -551,10 +558,10 @@
 				<div class="buttons">
 					{#if contact.cal}
 						<button class="btn btn-primary" type="button" on:click={openBook}>
-							{copy.studio.bookLabel}
+							{copy.hero.button}
 						</button>
 					{/if}
-					<a class="btn" href="mailto:{contact.email}">{copy.contactSection.form.email}</a>
+					<a class="btn" href="mailto:{contact.email}">{contact.email}</a>
 					{#if contact.whatsapp}
 						<a class="btn" href="https://wa.me/{contact.whatsapp}" rel="noopener">WhatsApp</a>
 					{/if}
